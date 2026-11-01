@@ -1,0 +1,2597 @@
+[
+  {
+    "id": "dw-nicos-weg-a1",
+    "title": "DW Nicos Weg: Ankunft am Flughafen",
+    "level": "A1",
+    "source": "DW Learn German · Nicos Weg",
+    "topic": "机场抵达与问路",
+    "audioUrl": "/audio/dw-nicos-weg-a1.mp3",
+    "duration": 12.816,
+    "segments": [
+      {
+        "id": "dw-a1-s1",
+        "startTime": 0.0,
+        "endTime": 4.896,
+        "german": "Entschuldigung, ich suche meine Tasche. Sie ist schwarz und ziemlich groß.",
+        "chinese": "打扰一下，我在找我的包。它是黑色的，而且相当大。",
+        "clozeWords": [
+          "Entschuldigung",
+          "suche",
+          "Tasche"
+        ],
+        "vocab": [
+          {
+            "word": "die Tasche",
+            "plural": "die Taschen",
+            "pos": "Nomen",
+            "meaning": "手提包，袋子",
+            "exampleDe": "Ich suche meine schwarze Tasche.",
+            "exampleZh": "我在找我的黑色手提包。"
+          }
+        ]
+      },
+      {
+        "id": "dw-a1-s2",
+        "startTime": 4.896,
+        "endTime": 7.992,
+        "german": "Wie komme ich am besten mit dem Bus ins Stadtzentrum?",
+        "chinese": "我坐公交车怎么去市中心最方便？",
+        "clozeWords": [
+          "komme",
+          "besten",
+          "Stadtzentrum"
+        ],
+        "vocab": [
+          {
+            "word": "das Stadtzentrum",
+            "plural": "die Stadtzentren",
+            "pos": "Nomen",
+            "meaning": "市中心",
+            "exampleDe": "Der Bus fährt direkt ins Stadtzentrum.",
+            "exampleZh": "这辆公交车直达市中心。"
+          }
+        ]
+      },
+      {
+        "id": "dw-a1-s3",
+        "startTime": 7.992,
+        "endTime": 12.816,
+        "german": "Nehmen Sie die Linie achtundzwanzig, die Haltestelle ist direkt vor dem Ausgang.",
+        "chinese": "请您乘坐28路车，车站就在出口正前方。",
+        "clozeWords": [
+          "Nehmen",
+          "Haltestelle",
+          "Ausgang"
+        ],
+        "vocab": [
+          {
+            "word": "die Haltestelle",
+            "plural": "die Haltestellen",
+            "pos": "Nomen",
+            "meaning": "（公交或电车）车站",
+            "exampleDe": "Die Haltestelle ist direkt vor dem Ausgang.",
+            "exampleZh": "车站就在出口正前方。"
+          },
+          {
+            "word": "der Ausgang",
+            "plural": "die Ausgänge",
+            "pos": "Nomen",
+            "meaning": "出口",
+            "exampleDe": "Wir treffen uns am Ausgang.",
+            "exampleZh": "我们在出口碰面。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goethe-a1-vorstellung",
+    "title": "Goethe-Zertifikat A1: Sich im Sprachkurs vorstellen",
+    "source": "Goethe-Institut 官方样题精选",
+    "topic": "初识德语与日常问候",
+    "originalAudioUrl": "https://goethe-institut.stationista.com/fd/63ef5908f5fbcd3a7b578efd/audio/09/68b709a6b57ce93a9b062d09/7cef91d1198d281d017598587af19e55.mp3",
+    "segments": [
+      {
+        "id": "goethe-a1-v-s1",
+        "german": "Guten Morgen! Mein Name ist Lukas und ich komme aus Österreich.",
+        "chinese": "早上好！我的名字是卢卡斯，我来自奥地利。",
+        "clozeWords": [
+          "Guten",
+          "Lukas",
+          "Österreich"
+        ],
+        "vocab": [
+          {
+            "word": "kommen aus (+Dat)",
+            "pos": "Verb",
+            "meaning": "来自（某国或某地）",
+            "exampleDe": "Ich komme aus Österreich.",
+            "exampleZh": "我来自奥地利。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 4.44
+      },
+      {
+        "id": "goethe-a1-v-s2",
+        "german": "Ich lerne seit drei Monaten Deutsch in Berlin und wohne in einer kleinen WG.",
+        "chinese": "我在柏林学了三个月德语，住在一个小合租公寓里。",
+        "clozeWords": [
+          "Monaten",
+          "Berlin",
+          "kleinen"
+        ],
+        "vocab": [
+          {
+            "word": "die WG",
+            "plural": "die WGs",
+            "pos": "Nomen",
+            "meaning": "合租公寓（Wohngemeinschaft 简称）",
+            "exampleDe": "Er wohnt in einer Dreier-WG.",
+            "exampleZh": "他住在一个三人合租公寓里。"
+          }
+        ],
+        "startTime": 4.44,
+        "endTime": 8.832
+      },
+      {
+        "id": "goethe-a1-v-s3",
+        "german": "In meiner Freizeit koche ich gerne mit Freunden und fahre am Wochenende Fahrrad.",
+        "chinese": "在闲暇时间我喜欢和朋友一起做饭，周末喜欢骑自行车。",
+        "clozeWords": [
+          "Freizeit",
+          "Freunden",
+          "Fahrrad"
+        ],
+        "vocab": [
+          {
+            "word": "die Freizeit",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "闲暇时间，业余时间",
+            "exampleDe": "Was machst du gerne in deiner Freizeit?",
+            "exampleZh": "你业余时间喜欢做什么？"
+          }
+        ],
+        "startTime": 8.832,
+        "endTime": 13.368
+      }
+    ],
+    "level": "A1",
+    "audioUrl": "/audio/goethe-a1-vorstellung.mp3",
+    "duration": 13.368
+  },
+  {
+    "id": "a1-wohnung-01",
+    "title": "Meine neue Wohnung und der Balkon",
+    "level": "A1",
+    "source": "水木德语 A1 同步精听",
+    "topic": "租房与日常起居",
+    "segments": [
+      {
+        "id": "a1-s1",
+        "german": "Hallo! Heute zeige ich dir meine neue Wohnung in Berlin.",
+        "chinese": "你好！今天我带你看看我在柏林的新公寓。",
+        "clozeWords": [
+          "zeige",
+          "Wohnung"
+        ],
+        "vocab": [
+          {
+            "word": "die Wohnung",
+            "plural": "die Wohnungen",
+            "pos": "Nomen",
+            "meaning": "公寓，住宅",
+            "exampleDe": "Heute zeige ich dir meine neue Wohnung.",
+            "exampleZh": "今天我带你看看我的新公寓。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 5.208
+      },
+      {
+        "id": "a1-s2",
+        "german": "Das Zimmer ist nicht groß, aber der Balkon ist sehr sonnig und ruhig.",
+        "chinese": "房间不大，但阳台非常阳光充足且安静。",
+        "clozeWords": [
+          "Zimmer",
+          "Balkon",
+          "sonnig"
+        ],
+        "vocab": [
+          {
+            "word": "der Balkon",
+            "plural": "die Balkone",
+            "pos": "Nomen",
+            "meaning": "阳台",
+            "exampleDe": "Der Balkon ist sehr sonnig und ruhig.",
+            "exampleZh": "阳台非常阳光充足且安静。"
+          }
+        ],
+        "startTime": 5.208,
+        "endTime": 10.488
+      },
+      {
+        "id": "a1-s3",
+        "german": "Jeden Morgen trinke ich hier einen Kaffee und lerne eine Stunde Deutsch.",
+        "chinese": "每天早上我在这里喝一杯咖啡，并学习一小时德语。",
+        "clozeWords": [
+          "trinke",
+          "einen",
+          "Stunde"
+        ],
+        "vocab": [
+          {
+            "word": "die Stunde",
+            "plural": "die Stunden",
+            "pos": "Nomen",
+            "meaning": "小时，课时",
+            "exampleDe": "Ich lerne eine Stunde Deutsch.",
+            "exampleZh": "我学习一小时德语。"
+          }
+        ],
+        "startTime": 10.488,
+        "endTime": 15.384
+      }
+    ],
+    "audioUrl": "/audio/a1-wohnung-01.mp3",
+    "duration": 15.384
+  },
+  {
+    "id": "shuimu-a1-01",
+    "title": "水木德语 A1 核心句型精听 #1",
+    "level": "A1",
+    "source": "水木德语 A1 讲义提取",
+    "topic": "讲义同步语法与听说",
+    "audioUrl": "/audio/shuimu-a1-01.mp3",
+    "duration": 14.688,
+    "segments": [
+      {
+        "id": "shuimu-a1-01-s1",
+        "startTime": 0.0,
+        "endTime": 2.712,
+        "german": "Mein Name ist Sophie Lehmann.",
+        "chinese": "我的 Mein Name ist Sophie Lehmann",
+        "clozeWords": [
+          "Lehmann",
+          "Sophie",
+          "Mein"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-01-s2",
+        "startTime": 2.712,
+        "endTime": 5.352,
+        "german": "Sophie und ich lernen Deutsch.",
+        "chinese": "和 Sophie und ich lernen Deutsch",
+        "clozeWords": [
+          "Deutsch",
+          "Sophie",
+          "lernen"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-01-s3",
+        "startTime": 5.352,
+        "endTime": 9.144,
+        "german": "Morgens um 8 Uhr geht mein Vater zur Arbeit.",
+        "chinese": "在德语中，也经常用现在时代替将来时，因此，句子中时常会出现诸如 morgen",
+        "clozeWords": [
+          "Morgens",
+          "Arbeit",
+          "Vater"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-01-s4",
+        "startTime": 9.144,
+        "endTime": 12.0,
+        "german": "Heute Abend habe ich keine Zeit.",
+        "chinese": "德语中没有",
+        "clozeWords": [
+          "Heute",
+          "Abend",
+          "Zeit"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-01-s5",
+        "startTime": 12.0,
+        "endTime": 14.688,
+        "german": "Der Lehrer schreibt an der Tafel.",
+        "chinese": "黑板 Der Lehrer schreibt an der Tafel",
+        "clozeWords": [
+          "Lehrer",
+          "Tafel",
+          "schreibt"
+        ],
+        "vocab": [
+          {
+            "word": "der Tafel",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A1》讲义例句",
+            "exampleDe": "Der Lehrer schreibt an der Tafel.",
+            "exampleZh": "黑板 Der Lehrer schreibt an der Tafel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shuimu-a1-02",
+    "title": "水木德语 A1 核心句型精听 #2",
+    "level": "A1",
+    "source": "水木德语 A1 讲义提取",
+    "topic": "讲义同步语法与听说",
+    "audioUrl": "/audio/shuimu-a1-02.mp3",
+    "duration": 13.2,
+    "segments": [
+      {
+        "id": "shuimu-a1-02-s1",
+        "startTime": 0.0,
+        "endTime": 2.352,
+        "german": "Ich habe kein Papier mehr.",
+        "chinese": "纸 Ich habe kein Papier mehr",
+        "clozeWords": [
+          "Papier",
+          "habe",
+          "kein"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-02-s2",
+        "startTime": 2.352,
+        "endTime": 5.232,
+        "german": "Wie heißt das auf Deutsch, bitte?",
+        "chinese": "手 auf Deutsch",
+        "clozeWords": [
+          "Deutsch",
+          "heißt",
+          "bitte"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-02-s3",
+        "startTime": 5.232,
+        "endTime": 7.896,
+        "german": "Wer ist wer und kommt woher?",
+        "chinese": "第 4 讲 Wer ist wer und kommt woher",
+        "clozeWords": [
+          "kommt",
+          "woher"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-02-s4",
+        "startTime": 7.896,
+        "endTime": 10.464,
+        "german": "Wir lernen jeden Tag Deutsch.",
+        "chinese": "疑问句（Fragesatz）：询问或反问某一件事情，句末用问号（？）。疑问句分为特殊疑",
+        "clozeWords": [
+          "Deutsch",
+          "lernen",
+          "jeden"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a1-02-s5",
+        "startTime": 10.464,
+        "endTime": 13.2,
+        "german": "Nein, das ist nicht Herr Meier.",
+        "chinese": "一般来说，句子成分有五种：主语、谓语、宾语（表语）、状语和定语。句子成分可以",
+        "clozeWords": [
+          "Meier",
+          "Nein",
+          "Herr"
+        ],
+        "vocab": []
+      }
+    ]
+  },
+  {
+    "id": "goethe-a2-modellsatz",
+    "title": "Goethe-Zertifikat A2: Termin beim Arzt vereinbaren",
+    "level": "A2",
+    "source": "Goethe-Institut 官方样题精选",
+    "topic": "看病预约与健康咨询",
+    "audioUrl": "/audio/goethe-a2-modellsatz.mp3",
+    "duration": 17.016,
+    "segments": [
+      {
+        "id": "goethe-a2-s1",
+        "startTime": 0.0,
+        "endTime": 5.616,
+        "german": "Guten Tag, Praxis Doktor Müller. Was kann ich für Sie tun?",
+        "chinese": "您好，这里是穆勒医生诊所。请问有什么可以帮您？",
+        "clozeWords": [
+          "Praxis",
+          "Doktor",
+          "für"
+        ],
+        "vocab": [
+          {
+            "word": "die Praxis",
+            "plural": "die Praxen",
+            "pos": "Nomen",
+            "meaning": "诊所，事务所",
+            "exampleDe": "Die Praxis ist heute bis achtzehn Uhr geöffnet.",
+            "exampleZh": "诊所今天营业到18点。"
+          }
+        ]
+      },
+      {
+        "id": "goethe-a2-s2",
+        "startTime": 5.616,
+        "endTime": 9.984,
+        "german": "Ich habe seit gestern starke Halsschmerzen und leichtes Fieber.",
+        "chinese": "我从昨天开始嗓子剧痛，还有点低烧。",
+        "clozeWords": [
+          "gestern",
+          "Halsschmerzen",
+          "Fieber"
+        ],
+        "vocab": [
+          {
+            "word": "das Fieber",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "发烧，体温过高",
+            "exampleDe": "Er hat leichtes Fieber und muss im Bett bleiben.",
+            "exampleZh": "他有点低烧，必须卧床休息。"
+          }
+        ]
+      },
+      {
+        "id": "goethe-a2-s3",
+        "startTime": 9.984,
+        "endTime": 17.016,
+        "german": "Kommen Sie bitte heute Nachmittag um fünfzehn Uhr dreißig vorbei und bringen Sie Ihre Versichertenkarte mit.",
+        "chinese": "请您今天下午15点30分过来一趟，并带上您的医保卡。",
+        "clozeWords": [
+          "Nachmittag",
+          "vorbei",
+          "Versichertenkarte"
+        ],
+        "vocab": [
+          {
+            "word": "die Versichertenkarte",
+            "plural": "die Versichertenkarten",
+            "pos": "Nomen",
+            "meaning": "医疗保险卡",
+            "exampleDe": "Vergessen Sie Ihre Versichertenkarte bitte nicht.",
+            "exampleZh": "请不要忘记带您的医保卡。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slow-german-kaffee-a2",
+    "title": "Slow German: Kaffee und Kuchen am Sonntagnachmittag",
+    "source": "Slow German · Annik Rubens",
+    "topic": "德式传统烘焙与下午茶社交",
+    "originalAudioUrl": "https://slowgerman.cdn.svmaudio.com/slowgerman/sg326.mp3",
+    "segments": [
+      {
+        "id": "sg-kk-s1",
+        "german": "Am Sonntagnachmittag treffen sich viele deutsche Familien traditionell zu Kaffee und Kuchen.",
+        "chinese": "在周日下午，许多德国家庭传统上会聚在一起享用咖啡和甜点蛋糕。",
+        "clozeWords": [
+          "Sonntagnachmittag",
+          "Familien",
+          "Kuchen"
+        ],
+        "vocab": [
+          {
+            "word": "der Kuchen",
+            "plural": "die Kuchen",
+            "pos": "Nomen",
+            "meaning": "蛋糕",
+            "exampleDe": "Sie backt am Sonntag einen frischen Kuchen.",
+            "exampleZh": "她在周日烤了一个新鲜蛋糕。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 5.256
+      },
+      {
+        "id": "sg-kk-s2",
+        "german": "In den Bäckereien gibt es frischen Apfelkuchen, Käsekuchen und leckere Schwarzwälder Kirschtorte.",
+        "chinese": "在面包糕点店里有刚出炉的苹果蛋糕、奶酪蛋糕以及美味的黑森林樱桃蛋糕。",
+        "clozeWords": [
+          "Bäckereien",
+          "Käsekuchen",
+          "Kirschtorte"
+        ],
+        "vocab": [
+          {
+            "word": "die Bäckerei",
+            "plural": "die Bäckereien",
+            "pos": "Nomen",
+            "meaning": "面包房，烘焙店",
+            "exampleDe": "Der Duft aus der Bäckerei ist wunderbar.",
+            "exampleZh": "面包房里飘出的香味妙不可言。"
+          }
+        ],
+        "startTime": 5.256,
+        "endTime": 10.776
+      },
+      {
+        "id": "sg-kk-s3",
+        "german": "Man sitzt gemütlich zusammen, trinkt eine Tasse heißen Kaffee und unterhält sich über die vergangene Woche.",
+        "chinese": "大家惬意地围坐在一起，喝着热气腾腾的咖啡，轻松闲聊过去一周的生活琐事。",
+        "clozeWords": [
+          "gemütlich",
+          "trinkt",
+          "unterhält"
+        ],
+        "vocab": [
+          {
+            "word": "sich unterhalten",
+            "pos": "Verb",
+            "meaning": "交谈，聊天",
+            "exampleDe": "Wir haben uns stundenlang unterhalten.",
+            "exampleZh": "我们聊了好几个小时。"
+          }
+        ],
+        "startTime": 10.776,
+        "endTime": 16.512
+      }
+    ],
+    "level": "A2",
+    "audioUrl": "/audio/slow-german-kaffee-a2.mp3",
+    "duration": 16.512
+  },
+  {
+    "id": "zdf-logo-ozeane-b1",
+    "title": "ZDF logo!: Kampf gegen Plastikmüll in den Weltmeeren",
+    "source": "ZDF logo! · Kindernachrichten",
+    "topic": "海洋生物多样性与微塑料防治",
+    "originalAudioUrl": "https://podfileszdf-a.akamaihd.net/podcast/zdf_podcasts/26/10/261031_1950_sendung_log/1/261031_1950_sendung_log_224k_p41v17.mp3",
+    "segments": [
+      {
+        "id": "zdf-lg-o-s1",
+        "german": "Jedes Jahr landen Millionen Tonnen Plastikmüll in den Ozeanen und gefährden dort Wale, Schildkröten und Seevögel.",
+        "chinese": "每年有数百万吨塑料垃圾流入各大洋，严重危及生活在其中的鲸鱼、海龟与海鸟。",
+        "clozeWords": [
+          "Millionen",
+          "Plastikmüll",
+          "gefährden"
+        ],
+        "vocab": [
+          {
+            "word": "gefährden",
+            "pos": "Verb",
+            "meaning": "危害，威胁",
+            "exampleDe": "Abgase gefährden die Umwelt und Gesundheit.",
+            "exampleZh": "废气危害环境和身体健康。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.304
+      },
+      {
+        "id": "zdf-lg-o-s2",
+        "german": "Meeresbiologen entwickeln nun innovative Filtersysteme, um Mikroplastik an Flussmündungen abzufangen.",
+        "chinese": "海洋生物学家们目前正在研发创新的智能过滤系统，以便在入海河流口截留下微塑料微粒。",
+        "clozeWords": [
+          "Meeresbiologen",
+          "Filtersysteme",
+          "Flussmündungen"
+        ],
+        "vocab": [
+          {
+            "word": "die Flussmündung",
+            "plural": "die Flussmündungen",
+            "pos": "Nomen",
+            "meaning": "入海口，河口",
+            "exampleDe": "An der Flussmündung sammelt sich oft Treibgut.",
+            "exampleZh": "入海口处常常积聚漂浮物。"
+          }
+        ],
+        "startTime": 8.304,
+        "endTime": 16.056
+      },
+      {
+        "id": "zdf-lg-o-s3",
+        "german": "Auch Jugendliche können mithelfen, indem sie auf Einwegverpackungen verzichten und Strände sauber halten.",
+        "chinese": "青少年们同样可以贡献一份力量：尽量拒绝使用一次性塑料包装，并主动维护海滩的整洁。",
+        "clozeWords": [
+          "Einwegverpackungen",
+          "verzichten",
+          "Strände"
+        ],
+        "vocab": [
+          {
+            "word": "verzichten auf (+Akk)",
+            "pos": "Verb",
+            "meaning": "放弃，舍弃不用",
+            "exampleDe": "Sie verzichtet ganz auf Plastiktüten.",
+            "exampleZh": "她完全放弃使用塑料袋。"
+          }
+        ],
+        "startTime": 16.056,
+        "endTime": 23.328
+      }
+    ],
+    "level": "A2",
+    "audioUrl": "/audio/zdf-logo-ozeane-b1.mp3",
+    "duration": 23.328
+  },
+  {
+    "id": "zdf-logo-schulen-a2",
+    "title": "ZDF logo!: Schülerproteste für modernere Klassenzimmer",
+    "source": "ZDF logo! · Kindernachrichten",
+    "topic": "校园数字化与教学硬件设施",
+    "originalAudioUrl": "https://podfileszdf-a.akamaihd.net/podcast/zdf_podcasts/26/10/261031_1950_sendung_log/1/261031_1950_sendung_log_224k_p41v17.mp3",
+    "segments": [
+      {
+        "id": "zdf-lg-s-s1",
+        "german": "Tausende Schülerinnen und Schüler sind heute auf die Straße gegangen, um für bessere Schulen zu demonstrieren.",
+        "chinese": "成千上万的中小学生今天走上街头，为争取更好的学校硬件设施而举行游行。",
+        "clozeWords": [
+          "Schülerinnen",
+          "Straße",
+          "demonstrieren"
+        ],
+        "vocab": [
+          {
+            "word": "der Schüler",
+            "plural": "die Schüler",
+            "pos": "Nomen",
+            "meaning": "中小学生",
+            "exampleDe": "Die Schüler lernen fleißig für die Prüfung.",
+            "exampleZh": "学生们正在为考试勤奋复习。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.696
+      },
+      {
+        "id": "zdf-lg-s-s2",
+        "german": "Sie fordern saubere Toiletten, funktionierende Heizungen und stabiles WLAN in allen Klassenräumen.",
+        "chinese": "他们要求所有教室都有干净卫生的洗手间、正常制热的暖气以及稳定的无线网络。",
+        "clozeWords": [
+          "Toiletten",
+          "Heizungen",
+          "Klassenräumen"
+        ],
+        "vocab": [
+          {
+            "word": "die Heizung",
+            "plural": "die Heizungen",
+            "pos": "Nomen",
+            "meaning": "暖气，暖气设备",
+            "exampleDe": "Im Winter drehen wir die Heizung auf.",
+            "exampleZh": "冬天我们把暖气打开。"
+          }
+        ],
+        "startTime": 6.696,
+        "endTime": 13.56
+      },
+      {
+        "id": "zdf-lg-s-s3",
+        "german": "Viele Politiker haben versprochen, zügig mehr Geld für Sanierungen und digitale Tafeln bereitzustellen.",
+        "chinese": "许多政界代表已经许下承诺，将迅速下拨更多财政资金用于校舍翻修以及配备数字互动白板。",
+        "clozeWords": [
+          "Politiker",
+          "Sanierungen",
+          "bereitzustellen"
+        ],
+        "vocab": [
+          {
+            "word": "die Sanierung",
+            "plural": "die Sanierungen",
+            "pos": "Nomen",
+            "meaning": "翻新修缮，整修",
+            "exampleDe": "Das Schulgebäude benötigt eine umfassende Sanierung.",
+            "exampleZh": "这栋教学楼需要进行一次全面修缮。"
+          }
+        ],
+        "startTime": 13.56,
+        "endTime": 20.64
+      }
+    ],
+    "level": "A2",
+    "audioUrl": "/audio/zdf-logo-schulen-a2.mp3",
+    "duration": 20.64
+  },
+  {
+    "id": "a2-alltag-01",
+    "title": "Tagesablauf und Einkaufen am Wochenende",
+    "level": "A2",
+    "source": "水木德语 A2 同步精听",
+    "topic": "周末采购与日常作息",
+    "segments": [
+      {
+        "id": "a2-s1",
+        "german": "Am Samstagmorgen stehe ich meistens erst um neun Uhr auf.",
+        "chinese": "周六早上我通常直到九点才起床。",
+        "clozeWords": [
+          "Samstagmorgen",
+          "stehe",
+          "auf"
+        ],
+        "vocab": [
+          {
+            "word": "aufstehen",
+            "pos": "Verb (trennbar)",
+            "meaning": "起床（可分动词）",
+            "exampleDe": "Ich stehe meistens um neun Uhr auf.",
+            "exampleZh": "我通常九点起床。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 4.224
+      },
+      {
+        "id": "a2-s2",
+        "german": "Nach dem Frühstück gehe ich auf den Markt, weil das Gemüse dort besonders frisch ist.",
+        "chinese": "早饭后我去集市，因为那里的蔬菜特别新鲜。",
+        "clozeWords": [
+          "Frühstück",
+          "Markt",
+          "Gemüse"
+        ],
+        "vocab": [
+          {
+            "word": "das Gemüse",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "蔬菜（集合名词，通常无复数）",
+            "exampleDe": "Das Gemüse auf dem Markt ist frisch.",
+            "exampleZh": "集市上的蔬菜很新鲜。"
+          }
+        ],
+        "startTime": 4.224,
+        "endTime": 9.576
+      }
+    ],
+    "audioUrl": "/audio/a2-alltag-01.mp3",
+    "duration": 9.576
+  },
+  {
+    "id": "shuimu-a2-01",
+    "title": "水木德语 A2 核心句型精听 #1",
+    "level": "A2",
+    "source": "水木德语 A2 讲义提取",
+    "topic": "讲义同步语法与听说",
+    "audioUrl": "/audio/shuimu-a2-01.mp3",
+    "duration": 14.664,
+    "segments": [
+      {
+        "id": "shuimu-a2-01-s1",
+        "startTime": 0.0,
+        "endTime": 2.976,
+        "german": "Die Mutter wäscht dem Kind die Hände.",
+        "chinese": "这位妈妈给孩子洗手",
+        "clozeWords": [
+          "Mutter",
+          "Hände",
+          "Kind"
+        ],
+        "vocab": [
+          {
+            "word": "die Hände",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Die Mutter wäscht dem Kind die Hände.",
+            "exampleZh": "这位妈妈给孩子洗手"
+          }
+        ]
+      },
+      {
+        "id": "shuimu-a2-01-s2",
+        "startTime": 2.976,
+        "endTime": 5.64,
+        "german": "Die Mutter wäscht sich die Hände.",
+        "chinese": "这位妈妈洗（自己的手）",
+        "clozeWords": [
+          "Mutter",
+          "Hände",
+          "wäscht"
+        ],
+        "vocab": [
+          {
+            "word": "die Hände",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Die Mutter wäscht sich die Hände.",
+            "exampleZh": "这位妈妈洗（自己的手）"
+          }
+        ]
+      },
+      {
+        "id": "shuimu-a2-01-s3",
+        "startTime": 5.64,
+        "endTime": 8.808,
+        "german": "Er meldet sich für einen Sprachkurs an.",
+        "chinese": "报名后 Er meldet sich f",
+        "clozeWords": [
+          "Sprachkurs",
+          "meldet",
+          "einen"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a2-01-s4",
+        "startTime": 8.808,
+        "endTime": 11.664,
+        "german": "Ich freue mich sehr auf die Ferien.",
+        "chinese": "感到无聊 Er ist arbeitslos und langweilt sich zu",
+        "clozeWords": [
+          "Ferien",
+          "freue",
+          "mich"
+        ],
+        "vocab": [
+          {
+            "word": "die Ferien",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Ich freue mich sehr auf die Ferien.",
+            "exampleZh": "感到无聊 Er ist arbeitslos und langweilt sich zu"
+          }
+        ]
+      },
+      {
+        "id": "shuimu-a2-01-s5",
+        "startTime": 11.664,
+        "endTime": 14.664,
+        "german": "Sie hat sich gekämmt und geschminkt.",
+        "chinese": "梳头 Sie hat sich gek",
+        "clozeWords": [
+          "geschminkt",
+          "gekämmt",
+          "sich"
+        ],
+        "vocab": []
+      }
+    ]
+  },
+  {
+    "id": "shuimu-a2-02",
+    "title": "水木德语 A2 核心句型精听 #2",
+    "level": "A2",
+    "source": "水木德语 A2 讲义提取",
+    "topic": "讲义同步语法与听说",
+    "audioUrl": "/audio/shuimu-a2-02.mp3",
+    "duration": 16.008,
+    "segments": [
+      {
+        "id": "shuimu-a2-02-s1",
+        "startTime": 0.0,
+        "endTime": 2.856,
+        "german": "Was machst du am übernächsten Tag?",
+        "chinese": "再下一（个） Was machst du am",
+        "clozeWords": [
+          "übernächsten",
+          "machst"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a2-02-s2",
+        "startTime": 2.856,
+        "endTime": 6.048,
+        "german": "Er hat sich verspätet und muss sich beeilen.",
+        "chinese": "他迟到了，必须加快赶路了。",
+        "clozeWords": [
+          "verspätet",
+          "beeilen",
+          "sich"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-a2-02-s3",
+        "startTime": 6.048,
+        "endTime": 10.368,
+        "german": "Die Mutter w scht das Kind und das Kind wäscht die Mutter.",
+        "chinese": "母亲帮孩子洗，孩子帮母亲",
+        "clozeWords": [
+          "Mutter",
+          "Kind",
+          "wäscht"
+        ],
+        "vocab": [
+          {
+            "word": "das Kind",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Die Mutter w scht das Kind und das Kind wäscht die Mutter.",
+            "exampleZh": "母亲帮孩子洗，孩子帮母亲"
+          },
+          {
+            "word": "die Mutter",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Die Mutter w scht das Kind und das Kind wäscht die Mutter.",
+            "exampleZh": "母亲帮孩子洗，孩子帮母亲"
+          }
+        ]
+      },
+      {
+        "id": "shuimu-a2-02-s4",
+        "startTime": 10.368,
+        "endTime": 13.056,
+        "german": "Die Mutter und das Kind waschen sich.",
+        "chinese": "母亲和孩子互相洗。",
+        "clozeWords": [
+          "Mutter",
+          "Kind",
+          "waschen"
+        ],
+        "vocab": [
+          {
+            "word": "das Kind",
+            "pos": "Nomen",
+            "meaning": "源自《水木德语 A2》讲义例句",
+            "exampleDe": "Die Mutter und das Kind waschen sich.",
+            "exampleZh": "母亲和孩子互相洗。"
+          }
+        ]
+      },
+      {
+        "id": "shuimu-a2-02-s5",
+        "startTime": 13.056,
+        "endTime": 16.008,
+        "german": "Er hat sich um eine Stunde verspätet.",
+        "chinese": "迟到 Er hat sich um eine Stunde versp",
+        "clozeWords": [
+          "Stunde",
+          "verspätet",
+          "sich"
+        ],
+        "vocab": []
+      }
+    ]
+  },
+  {
+    "id": "b1-audiolingua-01",
+    "title": "Mit dem Fahrrad durch die Stadt",
+    "level": "B1",
+    "source": "Audio Lingua 原声话题精选",
+    "topic": "城市绿色出行",
+    "originalAudioUrl": "https://www.audio-lingua.eu/spip.php?rubrique2",
+    "segments": [
+      {
+        "id": "b1-s1",
+        "german": "Obwohl es im Herbst oft regnet, fahre ich fast jeden Tag mit dem Fahrrad zur Universität.",
+        "chinese": "尽管秋天经常下雨，我几乎每天还是骑自行车去大学。",
+        "clozeWords": [
+          "Obwohl",
+          "regnet",
+          "Fahrrad"
+        ],
+        "vocab": [
+          {
+            "word": "das Fahrrad",
+            "plural": "die Fahrräder",
+            "pos": "Nomen",
+            "meaning": "自行车",
+            "exampleDe": "Ich fahre mit dem Fahrrad zur Universität.",
+            "exampleZh": "我骑自行车去大学。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.768
+      },
+      {
+        "id": "b1-s2",
+        "german": "Man steht nie im Stau und tut gleichzeitig etwas Gutes für die Umwelt.",
+        "chinese": "人们绝不会堵在路上，同时还能为环境做点好事。",
+        "clozeWords": [
+          "Stau",
+          "gleichzeitig",
+          "Umwelt"
+        ],
+        "vocab": [
+          {
+            "word": "der Stau",
+            "plural": "die Staus",
+            "pos": "Nomen",
+            "meaning": "交通拥堵，堵车",
+            "exampleDe": "Mit dem Fahrrad steht man nie im Stau.",
+            "exampleZh": "骑车绝不会堵车。"
+          }
+        ],
+        "startTime": 6.768,
+        "endTime": 12.36
+      }
+    ],
+    "audioUrl": "/audio/b1-audiolingua-01.mp3",
+    "duration": 12.36
+  },
+  {
+    "id": "dw-top-thema-b1",
+    "title": "DW Top-Thema: Warum immer mehr Studierende im Homeoffice arbeiten",
+    "level": "B1",
+    "source": "DW Learn German · Top-Thema",
+    "topic": "大学生兼职与远程办公",
+    "audioUrl": "/audio/dw-top-thema-b1.mp3",
+    "duration": 18.072,
+    "segments": [
+      {
+        "id": "dw-b1-s1",
+        "startTime": 0.0,
+        "endTime": 5.04,
+        "german": "Viele Studierende in Deutschland finanzieren ihr Studium durch einen Nebenjob.",
+        "chinese": "许多在德国的大学生通过兼职工作来负担自己的学业。",
+        "clozeWords": [
+          "finanzieren",
+          "Studium",
+          "Nebenjob"
+        ],
+        "vocab": [
+          {
+            "word": "der Nebenjob",
+            "plural": "die Nebenjobs",
+            "pos": "Nomen",
+            "meaning": "兼职工作，副业",
+            "exampleDe": "Sie sucht einen flexiblen Nebenjob an der Universität.",
+            "exampleZh": "她正在大学里找一份时间灵活的兼职。"
+          }
+        ]
+      },
+      {
+        "id": "dw-b1-s2",
+        "startTime": 5.04,
+        "endTime": 11.832,
+        "german": "Durch flexible Arbeitszeiten lassen sich Vorlesungen und Berufstätigkeit viel besser miteinander verbinden.",
+        "chinese": "通过灵活的工作时间，大学课程与职业工作可以更好地结合在一起。",
+        "clozeWords": [
+          "Arbeitszeiten",
+          "Vorlesungen",
+          "verbinden"
+        ],
+        "vocab": [
+          {
+            "word": "die Arbeitszeit",
+            "plural": "die Arbeitszeiten",
+            "pos": "Nomen",
+            "meaning": "工作时间，工时",
+            "exampleDe": "Flexible Arbeitszeiten sind für Studierende sehr wichtig.",
+            "exampleZh": "灵活的工作时间对大学生非常重要。"
+          }
+        ]
+      },
+      {
+        "id": "dw-b1-s3",
+        "startTime": 11.832,
+        "endTime": 18.072,
+        "german": "Allerdings fehlt manchen jungen Leuten zu Hause der direkte Austausch mit den Kolleginnen und Kollegen.",
+        "chinese": "不过，一些年轻人在家里缺少与同事们的直接交流。",
+        "clozeWords": [
+          "Allerdings",
+          "Austausch",
+          "Kollegen"
+        ],
+        "vocab": [
+          {
+            "word": "der Austausch",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "交流，交换",
+            "exampleDe": "Der persönliche Austausch im Team ist unersetzlich.",
+            "exampleZh": "团队中面对面的交流是不可替代的。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dw-top-thema-protein-b1",
+    "title": "DW Top-Thema: Proteinprodukte – Trend und Risiken",
+    "source": "DW Learn German · Top-Thema",
+    "topic": "青少年健身热与健康膳食",
+    "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/A5CEEECF_2-podcast-2296-79773669.mp3",
+    "segments": [
+      {
+        "id": "dw-tt-p-s1",
+        "german": "Immer mehr Jugendliche greifen heute im Supermarkt zu speziellen Proteinprodukten wie Shakes oder Riegeln.",
+        "chinese": "如今越来越多的年轻人会在超市购买专门的蛋白产品，如奶昔或蛋白棒。",
+        "clozeWords": [
+          "Jugendliche",
+          "Supermarkt",
+          "Proteinprodukten"
+        ],
+        "vocab": [
+          {
+            "word": "der Riegel",
+            "plural": "die Riegel",
+            "pos": "Nomen",
+            "meaning": "长条块状物（如能量棒、巧克力条）",
+            "exampleDe": "Er isst nach dem Training einen Proteinriegel.",
+            "exampleZh": "他在训练后吃了一根蛋白棒。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.984
+      },
+      {
+        "id": "dw-tt-p-s2",
+        "german": "Fitness-Influencer auf Social Media versprechen durch diese Nahrungsergänzungsmittel einen besonders schnellen Muskelaufbau.",
+        "chinese": "社交媒体上的健身博主们承诺，通过这些膳食营养补充剂可以特别快速地实现增肌。",
+        "clozeWords": [
+          "versprechen",
+          "Nahrungsergänzungsmittel",
+          "Muskelaufbau"
+        ],
+        "vocab": [
+          {
+            "word": "das Nahrungsergänzungsmittel",
+            "plural": "die Nahrungsergänzungsmittel",
+            "pos": "Nomen",
+            "meaning": "膳食营养补充剂",
+            "exampleDe": "Vitamine werden oft als Nahrungsergänzungsmittel verkauft.",
+            "exampleZh": "维生素常作为膳食补充剂出售。"
+          },
+          {
+            "word": "der Muskelaufbau",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "肌肉增长，增肌",
+            "exampleDe": "Regelmäßiges Krafttraining fördert den Muskelaufbau.",
+            "exampleZh": "规律的力量训练促进增肌。"
+          }
+        ],
+        "startTime": 6.984,
+        "endTime": 14.376
+      },
+      {
+        "id": "dw-tt-p-s3",
+        "german": "Ernährungswissenschaftler warnen jedoch davor, dass eine übermäßige Zufuhr von Eiweiß die Nieren belasten kann.",
+        "chinese": "然而营养学专家警告说，过量摄入蛋白质可能会给肾脏带来沉重负担。",
+        "clozeWords": [
+          "Ernährungswissenschaftler",
+          "übermäßige",
+          "belasten"
+        ],
+        "vocab": [
+          {
+            "word": "belasten",
+            "pos": "Verb",
+            "meaning": "给……带来负担，损害",
+            "exampleDe": "Zu viel Zucker belastet den Körper.",
+            "exampleZh": "过多的糖分会给身体带来负担。"
+          }
+        ],
+        "startTime": 14.376,
+        "endTime": 21.792
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/dw-top-thema-protein-b1.mp3",
+    "duration": 21.792
+  },
+  {
+    "id": "dw-top-thema-smart-home-b1",
+    "title": "DW Top-Thema: Smarte Haushaltsgeräte und IT-Sicherheit",
+    "source": "DW Learn German · Top-Thema",
+    "topic": "智能家居与家庭网络安全",
+    "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/03CC9651_2-podcast-2296-79729627.mp3",
+    "segments": [
+      {
+        "id": "dw-tt-sh-s1",
+        "german": "Ob Saugroboter, Kühlschrank oder Fernseher: Moderne Haushaltsgeräte lassen sich heute mühelos per Smartphone steuern.",
+        "chinese": "无论是扫地机器人、冰箱还是电视机：如今现代家电都可以通过智能手机轻松操控。",
+        "clozeWords": [
+          "Saugroboter",
+          "Haushaltsgeräte",
+          "steuern"
+        ],
+        "vocab": [
+          {
+            "word": "steuern",
+            "pos": "Verb",
+            "meaning": "控制，操纵，驾驶",
+            "exampleDe": "Man kann die Heizung per App steuern.",
+            "exampleZh": "人们可以通过手机应用控制暖气。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.904
+      },
+      {
+        "id": "dw-tt-sh-s2",
+        "german": "Doch viele dieser internetfähigen Geräte verfügen über erhebliche Sicherheitslücken bei der Datenübertragung.",
+        "chinese": "然而，许多这些能联网的设备在数据传输方面存在重大的安全漏洞。",
+        "clozeWords": [
+          "internetfähigen",
+          "erhebliche",
+          "Sicherheitslücken"
+        ],
+        "vocab": [
+          {
+            "word": "die Sicherheitslücke",
+            "plural": "die Sicherheitslücken",
+            "pos": "Nomen",
+            "meaning": "安全漏洞",
+            "exampleDe": "Das Update schließt eine gefährliche Sicherheitslücke.",
+            "exampleZh": "这次更新修补了一个危险的安全漏洞。"
+          }
+        ],
+        "startTime": 8.904,
+        "endTime": 16.464
+      },
+      {
+        "id": "dw-tt-sh-s3",
+        "german": "Verbraucherschützer raten deshalb dazu, regelmäßige Software-Updates durchzuführen und Standardpasswörter sofort zu ändern.",
+        "chinese": "因此消费者保护协会建议定期进行软件更新，并立即修改出厂默认密码。",
+        "clozeWords": [
+          "Verbraucherschützer",
+          "durchzuführen",
+          "Standardpasswörter"
+        ],
+        "vocab": [
+          {
+            "word": "der Verbraucherschützer",
+            "plural": "die Verbraucherschützer",
+            "pos": "Nomen",
+            "meaning": "消协代表，消费者保护人士",
+            "exampleDe": "Verbraucherschützer testen Produkte unabhängig.",
+            "exampleZh": "消协人士独立检测各类产品。"
+          }
+        ],
+        "startTime": 16.464,
+        "endTime": 25.056
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/dw-top-thema-smart-home-b1.mp3",
+    "duration": 25.056
+  },
+  {
+    "id": "goethe-dio-musik-b1",
+    "title": "Goethe Deutschland im Ohr: Deutsche Musikgeschichte",
+    "source": "Goethe-Institut · Deutschland im Ohr",
+    "topic": "音乐表达与时代思潮",
+    "originalAudioUrl": "https://goethe-institut.stationista.com/fd/63ef5908f5fbcd3a7b578efd/audio/ce/6890c7f679c2f89a3b04b1ce/f210b010225fbb60af01e4708c795b1e.mp3",
+    "segments": [
+      {
+        "id": "goethe-dio-m-s1",
+        "german": "Deutsche Musikerinnen und Musiker scheuen sich nicht, gesellschaftliche und politische Themen aufzugreifen.",
+        "chinese": "德国的音乐人们从不回避触及社会和政治议题。",
+        "clozeWords": [
+          "Musikerinnen",
+          "gesellschaftliche",
+          "aufzugreifen"
+        ],
+        "vocab": [
+          {
+            "word": "aufgreifen",
+            "pos": "Verb (trennbar)",
+            "meaning": "触及，探讨，采纳",
+            "exampleDe": "Der Künstler greift ein aktuelles Problem auf.",
+            "exampleZh": "这位艺术家触及了一个当下热点问题。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.72
+      },
+      {
+        "id": "goethe-dio-m-s2",
+        "german": "Songtexte spiegeln oft die Hoffnungen und Sorgen der Menschen in bewegten Zeiten wider.",
+        "chinese": "歌曲的歌词常常反映出动荡时代中人们内心的希望与忧虑。",
+        "clozeWords": [
+          "spiegeln",
+          "Hoffnungen",
+          "bewegten"
+        ],
+        "vocab": [
+          {
+            "word": "widerspiegeln",
+            "pos": "Verb (trennbar)",
+            "meaning": "反映，映射",
+            "exampleDe": "Literatur spiegelt die Epoche wider.",
+            "exampleZh": "文学反映了时代特征。"
+          }
+        ],
+        "startTime": 6.72,
+        "endTime": 12.24
+      },
+      {
+        "id": "goethe-dio-m-s3",
+        "german": "Von klassischer Musik über Hip-Hop bis zu elektronischen Beats prägt diese Vielfalt die urbane Kulturszene.",
+        "chinese": "从古典音乐到嘻哈，再到电子节拍，这种多样性深刻塑造了都市的文化生态。",
+        "clozeWords": [
+          "klassischer",
+          "elektronischen",
+          "Kulturszene"
+        ],
+        "vocab": [
+          {
+            "word": "prägen",
+            "pos": "Verb",
+            "meaning": "塑造，对……产生深刻影响",
+            "exampleDe": "Diese Erfahrungen haben seinen Charakter geprägt.",
+            "exampleZh": "这些经历塑造了他的性格。"
+          }
+        ],
+        "startTime": 12.24,
+        "endTime": 19.152
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/goethe-dio-musik-b1.mp3",
+    "duration": 19.152
+  },
+  {
+    "id": "goethe-dio-nachhaltigkeit-b1",
+    "title": "Goethe Deutschland im Ohr: Freiwilliges Ökologisches Jahr",
+    "source": "Goethe-Institut · Deutschland im Ohr",
+    "topic": "青年志愿服务与生态保护",
+    "originalAudioUrl": "https://goethe-institut.stationista.com/fd/63ef5908f5fbcd3a7b578efd/audio/09/68b709a6b57ce93a9b062d09/7cef91d1198d281d017598587af19e55.mp3",
+    "segments": [
+      {
+        "id": "goethe-dio-n-s1",
+        "german": "Viele Schulabgänger in Deutschland entscheiden sich für ein Freiwilliges Ökologisches Jahr im Naturschutz.",
+        "chinese": "德国很多中学毕业生选择在自然保护领域参加一年的“自愿生态志愿服务”。",
+        "clozeWords": [
+          "Schulabgänger",
+          "Ökologisches",
+          "Naturschutz"
+        ],
+        "vocab": [
+          {
+            "word": "der Naturschutz",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "自然保护，生态环保",
+            "exampleDe": "Naturschutz ist eine gesamtgesellschaftliche Aufgabe.",
+            "exampleZh": "自然保护是全社会的共同任务。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.864
+      },
+      {
+        "id": "goethe-dio-n-s2",
+        "german": "Die Freiwilligen pflanzen junge Bäume, pflegen geschützte Biotope und betreuen Besucherzentren in Nationalparks.",
+        "chinese": "志愿者们栽种幼树，维护受保护的生态环境，并在国家公园的访客中心提供接待服务。",
+        "clozeWords": [
+          "pflanzen",
+          "Biotope",
+          "Nationalparks"
+        ],
+        "vocab": [
+          {
+            "word": "das Biotop",
+            "plural": "die Biotope",
+            "pos": "Nomen",
+            "meaning": "生物群落生境，生态区",
+            "exampleDe": "Seltene Vögel leben in diesem geschützten Biotop.",
+            "exampleZh": "稀有鸟类生活在这个受保护的群落生境中。"
+          }
+        ],
+        "startTime": 6.864,
+        "endTime": 14.88
+      },
+      {
+        "id": "goethe-dio-n-s3",
+        "german": "Durch diese praktische Erfahrung gewinnen viele junge Menschen wertvolle Orientierung für ihren späteren Berufsweg.",
+        "chinese": "通过这种实践经验，很多年轻人为自己日后的职业生涯赢得了宝贵的方向指引。",
+        "clozeWords": [
+          "praktische",
+          "Orientierung",
+          "Berufsweg"
+        ],
+        "vocab": [
+          {
+            "word": "die Orientierung",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "方向指引，方位导向",
+            "exampleDe": "Das Praktikum gab mir eine gute berufliche Orientierung.",
+            "exampleZh": "这次实习为我提供了良好的职业方向指引。"
+          }
+        ],
+        "startTime": 14.88,
+        "endTime": 22.272
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/goethe-dio-nachhaltigkeit-b1.mp3",
+    "duration": 22.272
+  },
+  {
+    "id": "slow-german-pfand-b1",
+    "title": "Slow German: Das deutsche Pfandsystem und Mülltrennung",
+    "source": "Slow German · Annik Rubens",
+    "topic": "德国饮品押金回收与环保理念",
+    "originalAudioUrl": "https://slowgerman.cdn.svmaudio.com/slowgerman/sg326.mp3",
+    "segments": [
+      {
+        "id": "sg-pf-s1",
+        "german": "In Deutschland gibt es ein sehr effizientes Pfandsystem für Getränkeflaschen und Dosen aus Glas oder Plastik.",
+        "chinese": "在德国，针对玻璃或塑料制成的各类饮料瓶和易拉罐有一套非常高效的押金回收制度。",
+        "clozeWords": [
+          "effizientes",
+          "Pfandsystem",
+          "Getränkeflaschen"
+        ],
+        "vocab": [
+          {
+            "word": "das Pfand",
+            "plural": "die Pfänder",
+            "pos": "Nomen",
+            "meaning": "押金（瓶罐回收押金）",
+            "exampleDe": "Auf diese Flasche gibt es fünfundzwanzig Cent Pfand.",
+            "exampleZh": "这个瓶子有25欧分的押金。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 7.44
+      },
+      {
+        "id": "sg-pf-s2",
+        "german": "Beim Kauf bezahlt man einen kleinen Betrag extra, den man am Rückgabeautomaten im Supermarkt zurückbekommt.",
+        "chinese": "在付款买水时需要多付一小笔押金，喝完后可以在超市的自动回收机上如数取回。",
+        "clozeWords": [
+          "Betrag",
+          "Rückgabeautomaten",
+          "zurückbekommt"
+        ],
+        "vocab": [
+          {
+            "word": "der Rückgabeautomat",
+            "plural": "die Rückgabeautomaten",
+            "pos": "Nomen",
+            "meaning": "自动回收机（退瓶机）",
+            "exampleDe": "Man steckt die Flaschen einzeln in den Automaten.",
+            "exampleZh": "把瓶子一个个放进回收机里。"
+          }
+        ],
+        "startTime": 7.44,
+        "endTime": 15.24
+      },
+      {
+        "id": "sg-pf-s3",
+        "german": "Durch diese Maßnahme werden wertvolle Rohstoffe recycelt und die Menge an Straßenmüll spürbar reduziert.",
+        "chinese": "通过这一措施，宝贵的原材料得到了回收利用，街道上的垃圾也明显减少了。",
+        "clozeWords": [
+          "Maßnahme",
+          "Rohstoffe",
+          "Straßenmüll"
+        ],
+        "vocab": [
+          {
+            "word": "die Maßnahme",
+            "plural": "die Maßnahmen",
+            "pos": "Nomen",
+            "meaning": "措施，对策",
+            "exampleDe": "Die Regierung ergreift wirksame Maßnahmen.",
+            "exampleZh": "政府正在采取有效措施。"
+          }
+        ],
+        "startTime": 15.24,
+        "endTime": 22.32
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/slow-german-pfand-b1.mp3",
+    "duration": 22.32
+  },
+  {
+    "id": "slow-german-tempolimit-b1",
+    "title": "Slow German: Tempolimit auf deutschen Autobahnen",
+    "source": "Slow German · Annik Rubens",
+    "topic": "德国高速不限速文化与安全辩论",
+    "originalAudioUrl": "https://slowgerman.cdn.svmaudio.com/slowgerman/sg326.mp3",
+    "segments": [
+      {
+        "id": "sg-tl-s1",
+        "german": "Deutschland ist eines der wenigen Länder weltweit, in denen es auf manchen Autobahnabschnitten kein allgemeines Tempolimit gibt.",
+        "chinese": "德国是世界上少数在某些高速公路路段没有实行普遍限速规定的国家之一。",
+        "clozeWords": [
+          "Länder",
+          "Autobahnabschnitten",
+          "Tempolimit"
+        ],
+        "vocab": [
+          {
+            "word": "das Tempolimit",
+            "plural": "die Tempolimits",
+            "pos": "Nomen",
+            "meaning": "最高车速限制，限速",
+            "exampleDe": "Ein Tempolimit erhöht die Sicherheit auf Straßen.",
+            "exampleZh": "限速能够提高道路行驶安全性。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.664
+      },
+      {
+        "id": "sg-tl-s2",
+        "german": "Befürworter eines Tempolimits von hundertdreißig Kilometern pro Stunde betonen den Klimaschutz und die Verkehrssicherheit.",
+        "chinese": "支持实行每小时130公里限速的人强调气候环境保护以及降低事故风险。",
+        "clozeWords": [
+          "Befürworter",
+          "Klimaschutz",
+          "Verkehrssicherheit"
+        ],
+        "vocab": [
+          {
+            "word": "der Befürworter",
+            "plural": "die Befürworter",
+            "pos": "Nomen",
+            "meaning": "赞同者，支持者",
+            "exampleDe": "Die Befürworter des Gesetzes hielten eine Rede.",
+            "exampleZh": "该法案的支持者发表了演讲。"
+          }
+        ],
+        "startTime": 8.664,
+        "endTime": 17.16
+      },
+      {
+        "id": "sg-tl-s3",
+        "german": "Gegner argumentieren hingegen mit individueller Freiheit und der hohen Qualität der deutschen Straßeninfrastruktur.",
+        "chinese": "而反对限速的人则以个人驾驶自由以及德国道路基础设施的高标准作为论据。",
+        "clozeWords": [
+          "Gegner",
+          "Freiheit",
+          "Straßeninfrastruktur"
+        ],
+        "vocab": [
+          {
+            "word": "die Infrastruktur",
+            "plural": "die Infrastrukturen",
+            "pos": "Nomen",
+            "meaning": "基础设施",
+            "exampleDe": "Investitionen in die Infrastruktur zahlen sich aus.",
+            "exampleZh": "对基础设施的投资会获得回报。"
+          }
+        ],
+        "startTime": 17.16,
+        "endTime": 25.152
+      }
+    ],
+    "level": "B1",
+    "audioUrl": "/audio/slow-german-tempolimit-b1.mp3",
+    "duration": 25.152
+  },
+  {
+    "id": "dw-lgn-eu-kanada-b2",
+    "title": "DW 慢速新闻：欧盟与加拿大确立战略未来联盟",
+    "source": "DW Langsam gesprochene Nachrichten",
+    "topic": "国际经贸与清洁能源合作",
+    "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/F82D2D85_2-podcast-2288-79814832.mp3",
+    "segments": [
+      {
+        "id": "dw-lgn-ek-s1",
+        "german": "Die Europäische Union und Kanada haben eine sogenannte Allianz für die Zukunft begründet.",
+        "chinese": "欧盟与加拿大建立了一个所谓的“未来联盟”。",
+        "clozeWords": [
+          "Europäische",
+          "Allianz",
+          "begründet"
+        ],
+        "vocab": [
+          {
+            "word": "die Allianz",
+            "plural": "die Allianzen",
+            "pos": "Nomen",
+            "meaning": "联盟，同盟",
+            "exampleDe": "Beide Länder schlossen eine strategische Allianz.",
+            "exampleZh": "两国缔结了战略同盟。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 6.024
+      },
+      {
+        "id": "dw-lgn-ek-s2",
+        "german": "Zum Abschluss ihres zweitägigen Gipfeltreffens in Brüssel unterzeichneten beide Seiten ein weitreichendes Kooperationsabkommen.",
+        "chinese": "在布鲁塞尔为期两天的首脑峰会闭幕之际，双方签署了一份深远的合作协定。",
+        "clozeWords": [
+          "Gipfeltreffens",
+          "unterzeichneten",
+          "Kooperationsabkommen"
+        ],
+        "vocab": [
+          {
+            "word": "das Gipfeltreffen",
+            "plural": "die Gipfeltreffen",
+            "pos": "Nomen",
+            "meaning": "峰会，首脑会议",
+            "exampleDe": "Das Gipfeltreffen fand in Brüssel statt.",
+            "exampleZh": "首脑峰会在布鲁塞尔举行。"
+          },
+          {
+            "word": "das Abkommen",
+            "plural": "die Abkommen",
+            "pos": "Nomen",
+            "meaning": "协定，协议",
+            "exampleDe": "Beide Staaten ratifizierten das Abkommen.",
+            "exampleZh": "两国批准了该协定。"
+          }
+        ],
+        "startTime": 6.024,
+        "endTime": 13.8
+      },
+      {
+        "id": "dw-lgn-ek-s3",
+        "german": "Besonders in den Bereichen erneuerbare Energien und Rohstoffsicherheit wollen beide Partner künftig eng zusammenarbeiten.",
+        "chinese": "特别是在可再生能源和原材料安全保障领域，双方伙伴今后将开展密切合作。",
+        "clozeWords": [
+          "Bereichen",
+          "Rohstoffsicherheit",
+          "zusammenarbeiten"
+        ],
+        "vocab": [
+          {
+            "word": "die Rohstoffsicherheit",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "原材料供应安全",
+            "exampleDe": "Rohstoffsicherheit ist für die Industrie unerlässlich.",
+            "exampleZh": "原材料安全对工业必不可少。"
+          }
+        ],
+        "startTime": 13.8,
+        "endTime": 21.192
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/dw-lgn-eu-kanada-b2.mp3",
+    "duration": 21.192
+  },
+  {
+    "id": "dw-lgn-jugendproteste-b2",
+    "title": "DW 慢速新闻：全德逾30城青年发起权益示威",
+    "source": "DW Langsam gesprochene Nachrichten",
+    "topic": "青年参政与住房平权",
+    "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/F82D2D85_2-podcast-2288-79814832.mp3",
+    "segments": [
+      {
+        "id": "dw-lgn-jp-s1",
+        "german": "In mehr als dreißig deutschen Städten sind an diesem Samstag Demonstrationen für die Anliegen junger Menschen geplant.",
+        "chinese": "在这个周六，德国三十多个城市计划举行针对青年诉求的示威游行活动。",
+        "clozeWords": [
+          "dreißig",
+          "Demonstrationen",
+          "Anliegen"
+        ],
+        "vocab": [
+          {
+            "word": "das Anliegen",
+            "plural": "die Anliegen",
+            "pos": "Nomen",
+            "meaning": "心愿，诉求，关切之事",
+            "exampleDe": "Die Anliegen der Jugend müssen ernst genommen werden.",
+            "exampleZh": "年轻人的诉求必须得到认真对待。"
+          },
+          {
+            "word": "die Demonstration",
+            "plural": "die Demonstrationen",
+            "pos": "Nomen",
+            "meaning": "示威游行",
+            "exampleDe": "An der Demonstration nahmen tausende Menschen teil.",
+            "exampleZh": "成千上万人参加了示威游行。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 7.728
+      },
+      {
+        "id": "dw-lgn-jp-s2",
+        "german": "Die Kundgebungen richten sich vor allem gegen den zunehmenden Mangel an bezahlbarem Wohnraum und die unzureichende finanzielle Bildung.",
+        "chinese": "集会主要针对日益严重的廉价住房短缺以及学校里不足的财经教育。",
+        "clozeWords": [
+          "Kundgebungen",
+          "bezahlbarem",
+          "Wohnraum"
+        ],
+        "vocab": [
+          {
+            "word": "die Kundgebung",
+            "plural": "die Kundgebungen",
+            "pos": "Nomen",
+            "meaning": "集会，抗议集会",
+            "exampleDe": "Auf der Kundgebung sprachen verschiedene Jugendvertreter.",
+            "exampleZh": "在集会上不同的青年代表发表了讲话。"
+          },
+          {
+            "word": "der Wohnraum",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "居住空间，住房",
+            "exampleDe": "In Großstädten fehlt bezahlbarer Wohnraum.",
+            "exampleZh": "大城市里缺乏负担得起的住房。"
+          }
+        ],
+        "startTime": 7.728,
+        "endTime": 16.464
+      },
+      {
+        "id": "dw-lgn-jp-s3",
+        "german": "Die Organisatoren fordern von der Bundesregierung eine stärkere Beteiligung der jüngeren Generation an politischen Entscheidungen.",
+        "chinese": "组织者要求联邦政府让年轻一代更有力地参与各项政治决策。",
+        "clozeWords": [
+          "Organisatoren",
+          "Beteiligung",
+          "Entscheidungen"
+        ],
+        "vocab": [
+          {
+            "word": "die Beteiligung",
+            "plural": "die Beteiligungen",
+            "pos": "Nomen",
+            "meaning": "参与，分享",
+            "exampleDe": "Politische Beteiligung stärkt die Demokratie.",
+            "exampleZh": "政治参与能够增强民主。"
+          }
+        ],
+        "startTime": 16.464,
+        "endTime": 25.032
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/dw-lgn-jugendproteste-b2.mp3",
+    "duration": 25.032
+  },
+  {
+    "id": "goethe-b2-vortrag",
+    "title": "Goethe-Zertifikat B2: Künstliche Intelligenz im Alltag",
+    "level": "B2",
+    "source": "Goethe-Institut B2 听力真题训练",
+    "topic": "人工智能与社会伦理",
+    "audioUrl": "/audio/goethe-b2-vortrag.mp3",
+    "duration": 15.6,
+    "segments": [
+      {
+        "id": "goethe-b2-s1",
+        "startTime": 0.0,
+        "endTime": 8.136,
+        "german": "Künstliche Intelligenz unterstützt uns heute bereits bei der medizinischen Diagnose und in der industriellen Fertigung.",
+        "chinese": "如今人工智能已经在医疗诊断和工业制造中为我们提供支持。",
+        "clozeWords": [
+          "Intelligenz",
+          "unterstützt",
+          "Fertigung"
+        ],
+        "vocab": [
+          {
+            "word": "die Fertigung",
+            "plural": "die Fertigungen",
+            "pos": "Nomen",
+            "meaning": "制造，生产",
+            "exampleDe": "In der modernen Fertigung arbeiten viele Roboter.",
+            "exampleZh": "在现代制造业中有许多机器人在工作。"
+          }
+        ]
+      },
+      {
+        "id": "goethe-b2-s2",
+        "startTime": 8.136,
+        "endTime": 15.6,
+        "german": "Experten fordern jedoch klare gesetzliche Rahmenbedingungen, um den Datenschutz der Bürger zu gewährleisten.",
+        "chinese": "然而专家们呼吁制定明确的法律框架条件，以保障公民的数据隐私。",
+        "clozeWords": [
+          "fordern",
+          "Rahmenbedingungen",
+          "gewährleisten"
+        ],
+        "vocab": [
+          {
+            "word": "der Datenschutz",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "数据保护，隐私保护",
+            "exampleDe": "Der Datenschutz spielt in Europa eine zentrale Rolle.",
+            "exampleZh": "数据保护在欧洲扮演着核心角色。"
+          },
+          {
+            "word": "gewährleisten",
+            "pos": "Verb",
+            "meaning": "保障，确保",
+            "exampleDe": "Die Sicherheit der Daten muss gewährleistet sein.",
+            "exampleZh": "数据的安全性必须得到保障。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slow-german-duale-ausbildung-b2",
+    "title": "Slow German: Das duale Ausbildungssystem in Deutschland",
+    "source": "Slow German · Annik Rubens",
+    "topic": "双元制职业技能人才培育体系",
+    "originalAudioUrl": "https://slowgerman.cdn.svmaudio.com/slowgerman/sg326.mp3",
+    "segments": [
+      {
+        "id": "sg-da-s1",
+        "german": "Das deutsche duale Ausbildungssystem genießt international einen hervorragenden Ruf für praxisnahe Fachkräfteausbildung.",
+        "chinese": "德国的双元制职业教育体系在注重实操的专业技术人才培养方面享有极高的国际声誉。",
+        "clozeWords": [
+          "duale",
+          "Ausbildungssystem",
+          "Fachkräfteausbildung"
+        ],
+        "vocab": [
+          {
+            "word": "die Fachkraft",
+            "plural": "die Fachkräfte",
+            "pos": "Nomen",
+            "meaning": "专业技术人才，熟练工人",
+            "exampleDe": "In Deutschland herrscht Mangel an qualifizierten Fachkräften.",
+            "exampleZh": "德国面临合格专业人才短缺的问题。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 7.536
+      },
+      {
+        "id": "sg-da-s2",
+        "german": "Auszubildende lernen die theoretischen Grundlagen in der Berufsschule und sammeln praktische Erfahrungen direkt im Betrieb.",
+        "chinese": "学徒们在职业学校系统学习专业理论知识，并直接在企业岗位上积累真实工作经验。",
+        "clozeWords": [
+          "Auszubildende",
+          "theoretischen",
+          "Berufsschule"
+        ],
+        "vocab": [
+          {
+            "word": "der Auszubildende",
+            "plural": "die Auszubildenden",
+            "pos": "Nomen",
+            "meaning": "学徒，职业教育学员",
+            "exampleDe": "Der Auszubildende schließt seine Prüfung erfolgreich ab.",
+            "exampleZh": "该学徒顺利通过了结业考试。"
+          }
+        ],
+        "startTime": 7.536,
+        "endTime": 14.952
+      },
+      {
+        "id": "sg-da-s3",
+        "german": "Dieses bewährte Modell ermöglicht jungen Menschen einen nahtlosen Übergang von der Schule ins Berufsleben.",
+        "chinese": "这种经过长期验证的成熟办学模式，使年轻人们能够实现从校门到职场的无缝衔接。",
+        "clozeWords": [
+          "bewährte",
+          "nahtlosen",
+          "Berufsleben"
+        ],
+        "vocab": [
+          {
+            "word": "der Übergang",
+            "plural": "die Übergänge",
+            "pos": "Nomen",
+            "meaning": "过渡，转变",
+            "exampleDe": "Der Übergang ins Berufsleben ist ein wichtiger Schritt.",
+            "exampleZh": "迈入职场的过渡是一个至关重要的步骤。"
+          }
+        ],
+        "startTime": 14.952,
+        "endTime": 21.264
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/slow-german-duale-ausbildung-b2.mp3",
+    "duration": 21.264
+  },
+  {
+    "id": "b2-uni-testdaf-01",
+    "title": "Digitalisierung in der Hochschulbildung",
+    "level": "B2",
+    "source": "TestDaF 德福校园科研专项",
+    "topic": "高等教育与数字化",
+    "segments": [
+      {
+        "id": "b2-s1",
+        "german": "In den letzten Jahren hat sich das Studium an deutschen Universitäten stark verändert.",
+        "chinese": "近年来，德国大学的学习方式发生了巨大变化。",
+        "clozeWords": [
+          "Studium",
+          "Universitäten",
+          "verändert"
+        ],
+        "vocab": [
+          {
+            "word": "sich verändern",
+            "pos": "Verb",
+            "meaning": "改变，变化",
+            "exampleDe": "Das Studium hat sich stark verändert.",
+            "exampleZh": "大学学习发生了很大变化。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 5.448
+      },
+      {
+        "id": "b2-s2",
+        "german": "Viele Vorlesungen werden online aufgezeichnet, sodass Studierende jederzeit darauf zugreifen können.",
+        "chinese": "许多大课都被在线录制下来，以便学生随时可以访问。",
+        "clozeWords": [
+          "Vorlesungen",
+          "aufgezeichnet",
+          "zugreifen"
+        ],
+        "vocab": [
+          {
+            "word": "die Vorlesung",
+            "plural": "die Vorlesungen",
+            "pos": "Nomen",
+            "meaning": "（大学）讲座，大课",
+            "exampleDe": "Viele Vorlesungen werden online aufgezeichnet.",
+            "exampleZh": "许多大学讲座都被在线录制。"
+          },
+          {
+            "word": "zugreifen auf (+Akk)",
+            "pos": "Verb",
+            "meaning": "访问，调取，获取",
+            "exampleDe": "Studierende können jederzeit darauf zugreifen.",
+            "exampleZh": "学生可以随时访问它们。"
+          }
+        ],
+        "startTime": 5.448,
+        "endTime": 12.144
+      }
+    ],
+    "audioUrl": "/audio/b2-uni-testdaf-01.mp3",
+    "duration": 12.144
+  },
+  {
+    "id": "quarks-e-scooter-b1",
+    "title": "Quarks Daily: E-Scooter in der Großstadt – Fluch oder Segen?",
+    "source": "WDR Quarks Daily · Wissenschaft",
+    "topic": "城市最后一公里微出行与交通秩序",
+    "originalAudioUrl": "https://wdrmedien-a.akamaihd.net/media/p/public/weltweit/2026/10/27/4626d8c1-0d70-4ff1-abee-2d16a3a0ee16/4626d8c1-0d70-4ff1-abee-2d16a3a0ee16_MP3-128.mp3",
+    "segments": [
+      {
+        "id": "quarks-esc-s1",
+        "german": "Elektrische Tretroller prägen mittlerweile das Stadtbild fast jeder deutschen Metropole.",
+        "chinese": "电动滑板车如今已经成为几乎所有德国主要大都会街景中不可或缺的常见元素。",
+        "clozeWords": [
+          "Tretroller",
+          "mittlerweile",
+          "Metropole"
+        ],
+        "vocab": [
+          {
+            "word": "die Metropole",
+            "plural": "die Metropolen",
+            "pos": "Nomen",
+            "meaning": "大都会，国际大都市",
+            "exampleDe": "Berlin ist eine lebendige europäische Metropole.",
+            "exampleZh": "柏林是一座生机勃勃的欧洲大都会。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 4.8
+      },
+      {
+        "id": "quarks-esc-s2",
+        "german": "Sie bieten eine praktische Lösung für die sogenannte letzte Meile zwischen U-Bahn-Station und Wohnort.",
+        "chinese": "它们为地铁站出口到家庭住址之间的所谓“最后一公里”提供了一种快捷灵活的接驳方案。",
+        "clozeWords": [
+          "praktische",
+          "Station",
+          "Wohnort"
+        ],
+        "vocab": [
+          {
+            "word": "der Wohnort",
+            "plural": "die Wohnorte",
+            "pos": "Nomen",
+            "meaning": "居住地，住所所在地",
+            "exampleDe": "Sein Wohnort liegt unweit der Universität.",
+            "exampleZh": "他的居住地距离大学不远。"
+          }
+        ],
+        "startTime": 4.8,
+        "endTime": 10.392
+      },
+      {
+        "id": "quarks-esc-s3",
+        "german": "Allerdings sorgen wild abgestellte Scooter auf Gehwegen immer wieder für Unmut bei Fußgängern und mobilitätseingeschränkten Personen.",
+        "chinese": "然而，人行道上随处乱停乱放的滑板车屡次引发步行行人和行动不便人士的强烈不满与投诉。",
+        "clozeWords": [
+          "abgestellte",
+          "Fußgängern",
+          "mobilitätseingeschränkten"
+        ],
+        "vocab": [
+          {
+            "word": "der Unmut",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "不满，怨气，愠怒",
+            "exampleDe": "Die Preiserhöhung stieß auf großen Unmut.",
+            "exampleZh": "涨价引发了公众的极大不满。"
+          }
+        ],
+        "startTime": 10.392,
+        "endTime": 17.232
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/quarks-e-scooter-b1.mp3",
+    "duration": 17.232
+  },
+  {
+    "id": "quarks-gefuehle-job-b2",
+    "title": "Quarks Daily: Emotionen im Beruf – Zeigen oder unterdrücken?",
+    "source": "WDR Quarks Daily · Wissenschaft",
+    "topic": "职场情商沟通与容错心理安全感",
+    "originalAudioUrl": "https://wdrmedien-a.akamaihd.net/media/p/public/weltweit/2026/10/27/4626d8c1-0d70-4ff1-abee-2d16a3a0ee16/4626d8c1-0d70-4ff1-abee-2d16a3a0ee16_MP3-128.mp3",
+    "segments": [
+      {
+        "id": "quarks-emo-s1",
+        "german": "Lange Zeit galt im Berufsleben das ungeschriebene Gesetz, persönliche Emotionen strikt vor der Bürotür zu lassen.",
+        "chinese": "长期以来，职场社交中一直流传着一条不成文的教条：必须将一切个人情绪严格挡在办公室的大门之外。",
+        "clozeWords": [
+          "ungeschriebene",
+          "Emotionen",
+          "Bürotür"
+        ],
+        "vocab": [
+          {
+            "word": "ungeschrieben",
+            "pos": "Adjektiv",
+            "meaning": "不成文的，默认约定的",
+            "exampleDe": "Ein ungeschriebenes Gesetz regelt das Verhalten.",
+            "exampleZh": "一条不成文的规矩规范着人们的行为。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 7.512
+      },
+      {
+        "id": "quarks-emo-s2",
+        "german": "Neuere arbeitspsychologische Studien belegen jedoch, dass das ständige Unterdrücken von Frust oder Sorgen zu chronischem Stress und Burnout führen kann.",
+        "chinese": "然而，最新的现代劳动心理学实证研究揭示，持续压抑内心的挫折感与忧虑会导致慢性精神压力并诱发职业倦怠。",
+        "clozeWords": [
+          "arbeitspsychologische",
+          "Unterdrücken",
+          "chronischem"
+        ],
+        "vocab": [
+          {
+            "word": "das Unterdrücken",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "压抑，强行克制",
+            "exampleDe": "Das Unterdrücken von Gefühlen schadet der Gesundheit.",
+            "exampleZh": "压抑情绪会损害身心健康。"
+          }
+        ],
+        "startTime": 7.512,
+        "endTime": 16.896
+      },
+      {
+        "id": "quarks-emo-s3",
+        "german": "Teams mit einer offenen Fehlerkultur und hoher psychologischer Sicherheit erzielen erwiesenermaßen kreativere und nachhaltigere Arbeitsergebnisse.",
+        "chinese": "事实已经充分证明，拥有开明容错文化和高度心理安全感的工作团队，能产出更有突破性与持久价值的工作成果。",
+        "clozeWords": [
+          "Fehlerkultur",
+          "psychologischer",
+          "erwiesenermaßen"
+        ],
+        "vocab": [
+          {
+            "word": "erwiesenermaßen",
+            "pos": "Adverb",
+            "meaning": "按事实证明，显而易见地",
+            "exampleDe": "Sport fördert erwiesenermaßen die Gesundheit.",
+            "exampleZh": "运动据事实证明能增进身体健康。"
+          }
+        ],
+        "startTime": 16.896,
+        "endTime": 25.752
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/quarks-gefuehle-job-b2.mp3",
+    "duration": 25.752
+  },
+  {
+    "id": "zdf-heute-energie-b2",
+    "title": "ZDF heute journal: Energiewende und Stromnetzausbau",
+    "source": "ZDF heute journal",
+    "topic": "欧洲风电输送与能源基础设施",
+    "originalAudioUrl": "https://cdn.audiorella.com/podcasts/1477-heute-journal-der-podcast/257086-new-episode.mp3?v=2",
+    "segments": [
+      {
+        "id": "zdf-hj-e-s1",
+        "german": "Die europäische Energiewirtschaft steht vor einem beispiellosen Umbau hin zu klimaneutraler Stromerzeugung.",
+        "chinese": "欧洲能源行业正站在向前所未有的气候中和发电结构全面转型的十字路口。",
+        "clozeWords": [
+          "Energiewirtschaft",
+          "beispiellosen",
+          "Stromerzeugung"
+        ],
+        "vocab": [
+          {
+            "word": "beispiellos",
+            "pos": "Adjektiv",
+            "meaning": "前所未有的，史无前例的",
+            "exampleDe": "Das Land erlebt ein beispielloses Wirtschaftswachstum.",
+            "exampleZh": "该国经历着史无前例的经济增长。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 5.928
+      },
+      {
+        "id": "zdf-hj-e-s2",
+        "german": "Um den Windstrom von Nord- und Ostsee in den Süden zu transportieren, müssen tausende Kilometer neuer Hochspannungstrassen gebaut werden.",
+        "chinese": "为了将北海与波罗的海的海上风电远距离输送到南部工业中心，必须兴建数千公里的特高压输电线路。",
+        "clozeWords": [
+          "Windstrom",
+          "transportieren",
+          "Hochspannungstrassen"
+        ],
+        "vocab": [
+          {
+            "word": "die Hochspannungstrasse",
+            "plural": "die Hochspannungstrassen",
+            "pos": "Nomen",
+            "meaning": "特高压输电走廊，高压线路",
+            "exampleDe": "Die Hochspannungstrasse verläuft quer durchs Land.",
+            "exampleZh": "高压电网走廊横贯整个国家。"
+          }
+        ],
+        "startTime": 5.928,
+        "endTime": 13.32
+      },
+      {
+        "id": "zdf-hj-e-s3",
+        "german": "Bürgerinitiativen und Naturschutzverbände fordern dabei einen sensiblen Umgang mit Landschaftsbild und Tierwelt.",
+        "chinese": "各地的公民倡议组织与自然保护协会在此过程中强烈呼吁，务必审慎呵护自然风光地貌与野生动物生境。",
+        "clozeWords": [
+          "Bürgerinitiativen",
+          "Naturschutzverbände",
+          "Landschaftsbild"
+        ],
+        "vocab": [
+          {
+            "word": "die Bürgerinitiative",
+            "plural": "die Bürgerinitiativen",
+            "pos": "Nomen",
+            "meaning": "公民维权倡议行动/自发团体",
+            "exampleDe": "Die Bürgerinitiative kämpft gegen die Autobahn.",
+            "exampleZh": "该公民团体正在为反对修建高速公路抗争。"
+          }
+        ],
+        "startTime": 13.32,
+        "endTime": 19.704
+      }
+    ],
+    "level": "B2",
+    "audioUrl": "/audio/zdf-heute-energie-b2.mp3",
+    "duration": 19.704
+  },
+  {
+    "id": "shuimu-b2-01",
+    "title": "水木德语 B2 核心句型精听 #1",
+    "level": "B2",
+    "source": "水木德语 B2 讲义提取",
+    "topic": "讲义同步语法与听说",
+    "audioUrl": "/audio/shuimu-b2-01.mp3",
+    "duration": 8.76,
+    "segments": [
+      {
+        "id": "shuimu-b2-01-s1",
+        "startTime": 0.0,
+        "endTime": 4.344,
+        "german": "Japanisch-Kurs hatte- da verschiebe ich gern den Termin!",
+        "chinese": "语法练习： Umformulierung von Modalverben",
+        "clozeWords": [
+          "Japanisch",
+          "Termin",
+          "Kurs"
+        ],
+        "vocab": []
+      },
+      {
+        "id": "shuimu-b2-01-s2",
+        "startTime": 4.344,
+        "endTime": 8.76,
+        "german": "Vielleicht 80m hoch, es mag aber auch 90m sein.",
+        "chinese": "虽然某件事可能是真的，但是说话者表示不相信。",
+        "clozeWords": [
+          "Vielleicht",
+          "hoch",
+          "sein"
+        ],
+        "vocab": []
+      }
+    ]
+  },
+  {
+    "id": "goethe-c1-urbanistik",
+    "title": "Goethe-Zertifikat C1: Nachhaltige Stadtentwicklung und Mobilität",
+    "source": "Goethe-Institut C1 高阶听力真题精选",
+    "topic": "城市人居规划与生态韧性",
+    "originalAudioUrl": "https://goethe-institut.stationista.com/fd/63ef5908f5fbcd3a7b578efd/audio/09/68b709a6b57ce93a9b062d09/7cef91d1198d281d017598587af19e55.mp3",
+    "segments": [
+      {
+        "id": "goethe-c1-u-s1",
+        "german": "Angesichts des fortschreitenden Klimawandels erfordert die zukunftsorientierte Stadtplanung tiefgreifende ökologische Transformationen.",
+        "chinese": "鉴于日益加剧的气候变化，面向未来的现代城市规划需要深刻的生态转型。",
+        "clozeWords": [
+          "Klimawandels",
+          "zukunftsorientierte",
+          "Transformationen"
+        ],
+        "vocab": [
+          {
+            "word": "die Transformation",
+            "plural": "die Transformationen",
+            "pos": "Nomen",
+            "meaning": "转型，结构转变",
+            "exampleDe": "Die digitale Transformation verändert die Wirtschaft.",
+            "exampleZh": "数字化转型正在改变经济格局。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.52
+      },
+      {
+        "id": "goethe-c1-u-s2",
+        "german": "Städteplaner plädieren für die Entsiegelung urbaner Freiflächen, um hitzebedingte Mikroklimata nachhaltig abzumildern.",
+        "chinese": "城市规划学者主张对城市开阔地面进行去硬化改造，以持久缓解因高温产生的局部微气候。",
+        "clozeWords": [
+          "plädieren",
+          "Entsiegelung",
+          "Mikroklimata"
+        ],
+        "vocab": [
+          {
+            "word": "die Entsiegelung",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "（地表硬化层的）去硬化，拆除水泥路面让雨水渗透",
+            "exampleDe": "Entsiegelung schützt Städte vor Überflutungen.",
+            "exampleZh": "地面去硬化能保护城市免受内涝危害。"
+          },
+          {
+            "word": "plädieren für (+Akk)",
+            "pos": "Verb",
+            "meaning": "倡导，支持，为主张而辩护",
+            "exampleDe": "Experten plädieren für stärkere Grünflächen.",
+            "exampleZh": "专家们主张扩建绿化面积。"
+          }
+        ],
+        "startTime": 8.52,
+        "endTime": 16.176
+      },
+      {
+        "id": "goethe-c1-u-s3",
+        "german": "Gleichzeitig muss der Ausbau emissionsfreier Nahverkehrsnetze forciert werden, um den motorisierten Individualverkehr signifikant zu reduzieren.",
+        "chinese": "与此同时，必须加速扩建零排放的公共短途交通网，以显著削减私家机动车出行量。",
+        "clozeWords": [
+          "emissionsfreier",
+          "forciert",
+          "Individualverkehr"
+        ],
+        "vocab": [
+          {
+            "word": "forcieren",
+            "pos": "Verb",
+            "meaning": "加速，推动，强力促进",
+            "exampleDe": "Die Regierung will den Wohnungsbau forcieren.",
+            "exampleZh": "政府希望强力促进住房建设。"
+          },
+          {
+            "word": "der Individualverkehr",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "私家出行交通（小汽车等个体交通方式）",
+            "exampleDe": "Staus entstehen meist durch dichten Individualverkehr.",
+            "exampleZh": "交通拥堵多是由密集的个体私家车引起的。"
+          }
+        ],
+        "startTime": 16.176,
+        "endTime": 25.032
+      }
+    ],
+    "level": "C1",
+    "audioUrl": "/audio/goethe-c1-urbanistik.mp3",
+    "duration": 25.032
+  },
+  {
+    "id": "quarks-inflation-b2",
+    "title": "Quarks Daily: Inflation – Haben wir wirklich weniger Geld im Portemonnaie?",
+    "source": "WDR Quarks Daily · Wissenschaft",
+    "topic": "感知通胀心理学与购买力测算",
+    "originalAudioUrl": "https://wdrmedien-a.akamaihd.net/media/p/public/weltweit/2026/10/28/07bc7024-d4a7-4e25-9ed6-0e9d1f7468ca/07bc7024-d4a7-4e25-9ed6-0e9d1f7468ca_MP3-128.mp3",
+    "segments": [
+      {
+        "id": "quarks-inf-s1",
+        "german": "Viele Menschen haben das Gefühl, dass alltägliche Einkäufe im Supermarkt dramatisch teurer geworden sind als die offizielle Inflationsrate angibt.",
+        "chinese": "许多人强烈感觉，自己在超市的日常采购涨价幅度远比官方公布的通胀统计率要高得多。",
+        "clozeWords": [
+          "alltägliche",
+          "dramatisch",
+          "Inflationsrate"
+        ],
+        "vocab": [
+          {
+            "word": "die Inflationsrate",
+            "plural": "die Inflationsraten",
+            "pos": "Nomen",
+            "meaning": "通货膨胀率",
+            "exampleDe": "Die Zentralbank bekämpft die hohe Inflationsrate.",
+            "exampleZh": "央行正在采取措施抑制过高的通胀率。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.856
+      },
+      {
+        "id": "quarks-inf-s2",
+        "german": "Wirtschaftspsychologen erklären dieses Phänomen durch die sogenannte gefühlte Inflation: Häufig gekaufte Güter wie Brot oder Butter prägen unsere Wahrnehmung viel stärker.",
+        "chinese": "经济心理学家用“感知通胀”来解读这种现象：像面包或黄油这类高频采购的基本食品，会对人们的心理感知产生深远得多的影响。",
+        "clozeWords": [
+          "Wirtschaftspsychologen",
+          "gefühlte",
+          "Wahrnehmung"
+        ],
+        "vocab": [
+          {
+            "word": "die Wahrnehmung",
+            "plural": "die Wahrnehmungen",
+            "pos": "Nomen",
+            "meaning": "感知，认知观察",
+            "exampleDe": "Unsere visuelle Wahrnehmung lässt sich täuschen.",
+            "exampleZh": "我们的视觉感知很容易被假象所蒙骗。"
+          }
+        ],
+        "startTime": 8.856,
+        "endTime": 19.104
+      },
+      {
+        "id": "quarks-inf-s3",
+        "german": "Statistische Warenkörbe hingegen berücksichtigen auch langlebige Konsumgüter, deren Preise oft stabil bleiben oder sogar fallen.",
+        "chinese": "而官方统计的价格商品篮还会将使用寿命长的耐用消费品计入在内，后者的价格走势往往保持平稳甚至有所下调。",
+        "clozeWords": [
+          "Warenkörbe",
+          "langlebige",
+          "Konsumgüter"
+        ],
+        "vocab": [
+          {
+            "word": "das Konsumgut",
+            "plural": "die Konsumgüter",
+            "pos": "Nomen",
+            "meaning": "消费品",
+            "exampleDe": "Elektronikartikel gehören zu den Konsumgütern.",
+            "exampleZh": "电子产品属于日用消费品。"
+          }
+        ],
+        "startTime": 19.104,
+        "endTime": 27.312
+      }
+    ],
+    "level": "C1",
+    "audioUrl": "/audio/quarks-inflation-b2.mp3",
+    "duration": 27.312
+  },
+  {
+    "id": "zdf-heute-diplomatie-c1",
+    "title": "ZDF heute journal: Geopolitische Spannungen und multilaterale Verträge",
+    "source": "ZDF heute journal",
+    "topic": "多边外交博弈与安全战略条约",
+    "originalAudioUrl": "https://cdn.audiorella.com/podcasts/1477-heute-journal-der-podcast/257462-new-episode.mp3?v=2",
+    "segments": [
+      {
+        "id": "zdf-hj-d-s1",
+        "german": "Die Verhandlungen auf dem internationalen Gipfel gestalten sich infolge divergierender Sicherheitsinteressen als außerordentlich komplex.",
+        "chinese": "由于各缔约国在国家安全利益诉求上分歧显著，本届国际峰会的谈判进程显得极为盘根错节。",
+        "clozeWords": [
+          "Verhandlungen",
+          "divergierender",
+          "Sicherheitsinteressen"
+        ],
+        "vocab": [
+          {
+            "word": "divergieren",
+            "pos": "Verb",
+            "meaning": "分歧，产生分道扬镳的差异",
+            "exampleDe": "Die Meinungen beider Seiten divergieren stark.",
+            "exampleZh": "双方的意见存在巨大分歧。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 8.832
+      },
+      {
+        "id": "zdf-hj-d-s2",
+        "german": "Diplomaten betonen unablässig, dass multilaterale Abkommen das unabdingbare Fundament für globale Stabilität und wirtschaftlichen Wohlstand bilden.",
+        "chinese": "资深外交官们不断反复强调，多边国际协定构成了维护全球和平稳定与维系经贸繁荣不可或缺的坚实基石。",
+        "clozeWords": [
+          "multilaterale",
+          "unabdingbare",
+          "Wohlstand"
+        ],
+        "vocab": [
+          {
+            "word": "unabdingbar",
+            "pos": "Adjektiv",
+            "meaning": "不可或缺的，绝对必要的",
+            "exampleDe": "Gegenseitiges Vertrauen ist unabdingbar.",
+            "exampleZh": "相互信任是不可或缺的前提。"
+          }
+        ],
+        "startTime": 8.832,
+        "endTime": 19.248
+      },
+      {
+        "id": "zdf-hj-d-s3",
+        "german": "Gleichwohl verharren wesentliche Akteure in starren Verhandlungspositionen, was die Verabschiedung einer gemeinsamen Schlusserklärung erschwert.",
+        "chinese": "尽管如此，核心主体依然固守在僵化刻板的谈判预设中，这使得各方通过一份有实质约束力的共同最后声明变得尤为艰难。",
+        "clozeWords": [
+          "verharren",
+          "Verhandlungspositionen",
+          "Schlusserklärung"
+        ],
+        "vocab": [
+          {
+            "word": "verharren in (+Dat)",
+            "pos": "Verb",
+            "meaning": "固守，僵持在……状态中不变",
+            "exampleDe": "Er verharrt stur in seiner Meinung.",
+            "exampleZh": "他顽固地坚持自己的看法不肯松动。"
+          }
+        ],
+        "startTime": 19.248,
+        "endTime": 28.512
+      }
+    ],
+    "level": "C1",
+    "audioUrl": "/audio/zdf-heute-diplomatie-c1.mp3",
+    "duration": 28.512
+  },
+  {
+    "id": "testdaf-hv3-energie",
+    "title": "TestDaF Hörverstehen 3: Erneuerbare Energien und Speichertechnologien",
+    "level": "TestDaF",
+    "source": "TestDaF 德福满分16+ 专家访谈模拟",
+    "topic": "可再生能源与储能科技",
+    "audioUrl": "/audio/testdaf-hv3-energie.mp3",
+    "duration": 16.464,
+    "segments": [
+      {
+        "id": "td-s1",
+        "startTime": 0.0,
+        "endTime": 8.4,
+        "german": "Der Ausbau von Windkraft und Solarenergie schreitet voran, doch die schwankende Stromerzeugung stellt das Netz vor große Herausforderungen.",
+        "chinese": "风能和太阳能的扩建正在推进，但波动的发电量使电网面临巨大挑战。",
+        "clozeWords": [
+          "Ausbau",
+          "schwankende",
+          "Herausforderungen"
+        ],
+        "vocab": [
+          {
+            "word": "der Ausbau",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "扩建，扩展，发展",
+            "exampleDe": "Der Ausbau erneuerbarer Energien ist entscheidend.",
+            "exampleZh": "可再生能源的扩建至关重要。"
+          },
+          {
+            "word": "die Herausforderung",
+            "plural": "die Herausforderungen",
+            "pos": "Nomen",
+            "meaning": "挑战",
+            "exampleDe": "Das stellt die Forscher vor eine große Herausforderung.",
+            "exampleZh": "这使研究人员面临巨大挑战。"
+          }
+        ]
+      },
+      {
+        "id": "td-s2",
+        "startTime": 8.4,
+        "endTime": 16.464,
+        "german": "Deshalb erforschen Wissenschaftler derzeit leistungsfähige Wasserstoffspeicher, mit denen sich überschüssige Energie langfristig sichern lässt.",
+        "chinese": "因此科学家们目前正在研究高效氢能储存器，借此可以将过剩的能源长期保存下来。",
+        "clozeWords": [
+          "erforschen",
+          "leistungsfähige",
+          "überschüssige"
+        ],
+        "vocab": [
+          {
+            "word": "erforschen",
+            "pos": "Verb",
+            "meaning": "研究，探索，勘探",
+            "exampleDe": "Wissenschaftler erforschen neue Speichertechnologien.",
+            "exampleZh": "科学家们正在研究新的储能技术。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quarks-schlaf-hirn-testdaf",
+    "title": "Quarks Daily: Schlafmangel und neuronale Leistungsfähigkeit",
+    "source": "WDR Quarks Daily · Wissenschaft",
+    "topic": "神经脑科学与深睡眠代谢清除机制",
+    "originalAudioUrl": "https://wdrmedien-a.akamaihd.net/media/p/public/weltweit/2026/10/28/d628a5ab-a4d0-4b0f-86f3-e2854dae9c89/d628a5ab-a4d0-4b0f-86f3-e2854dae9c89_MP3-128.mp3",
+    "segments": [
+      {
+        "id": "quarks-sl-s1",
+        "german": "Während des Tiefschlafs aktiviert das menschliche Gehirn das sogenannte glymphatische System, um toxische Stoffwechselprodukte abzutransportieren.",
+        "chinese": "在深度睡眠阶段，人类大脑会激活所谓的胶质淋巴清除系统，以高效运转清除蓄积的有毒代谢副产物。",
+        "clozeWords": [
+          "Tiefschlafs",
+          "glymphatische",
+          "Stoffwechselprodukte"
+        ],
+        "vocab": [
+          {
+            "word": "das Stoffwechselprodukt",
+            "plural": "die Stoffwechselprodukte",
+            "pos": "Nomen",
+            "meaning": "新陈代谢产物",
+            "exampleDe": "Die Nieren filtern schädliche Stoffwechselprodukte aus dem Blut.",
+            "exampleZh": "肾脏负责从血液中过滤清除有害的代谢废物。"
+          }
+        ],
+        "startTime": 0.0,
+        "endTime": 9.912
+      },
+      {
+        "id": "quarks-sl-s2",
+        "german": "Wissenschaftliche Experimente belegen, dass chronischer Schlafmangel die neuronale Plastizität im Hippocampus massiv beeinträchtigt und Lernprozesse blockiert.",
+        "chinese": "多项科学严谨的对照实验证实，长期的睡眠匮乏会大幅损害海马体区域的神经元可塑性，并直接阻滞知识的学习内化。",
+        "clozeWords": [
+          "Plastizität",
+          "Hippocampus",
+          "beeinträchtigt"
+        ],
+        "vocab": [
+          {
+            "word": "die Plastizität",
+            "plural": "-",
+            "pos": "Nomen",
+            "meaning": "（神经元结构的）可塑性，适应改变能力",
+            "exampleDe": "Neuronale Plastizität ist die Basis lebenslangen Lernens.",
+            "exampleZh": "神经元可塑性是进行终身学习的生理基础。"
+          }
+        ],
+        "startTime": 9.912,
+        "endTime": 20.688
+      },
+      {
+        "id": "quarks-sl-s3",
+        "german": "Für Studierende und Forschende ist ausreichender Nachtschlaf daher keine passive Ruhephase, sondern eine biologische Grundvoraussetzung für geistige Spitzenleistungen.",
+        "chinese": "因此对于在校大学生与科学研究学者而言，充足的高质量夜间睡眠绝非消极的停顿，而是产出巅峰心智表现的生物学基石前提。",
+        "clozeWords": [
+          "Forschende",
+          "biologische",
+          "Spitzenleistungen"
+        ],
+        "vocab": [
+          {
+            "word": "die Spitzenleistung",
+            "plural": "die Spitzenleistungen",
+            "pos": "Nomen",
+            "meaning": "顶尖成就，卓越表现",
+            "exampleDe": "Im Labor erbrachten die Forscher Spitzenleistungen.",
+            "exampleZh": "研究人员在实验室里取得了顶尖成果。"
+          }
+        ],
+        "startTime": 20.688,
+        "endTime": 32.016
+      }
+    ],
+    "level": "TestDaF",
+    "audioUrl": "/audio/quarks-schlaf-hirn-testdaf.mp3",
+    "duration": 32.016
+  }
+]
