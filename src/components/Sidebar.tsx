@@ -73,7 +73,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSelectTrack }) => {
       </div>
 
       {/* 曲目列表 */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-2 pb-36 lg:pb-3">
+      <div className="flex-1 overflow-y-auto p-3 space-y-2 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] lg:pb-3">
         {filteredTracks.length === 0 ? (
           <div className="text-center py-12 text-slate-400 text-sm">
             该等级暂无曲目数据

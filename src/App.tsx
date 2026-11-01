@@ -96,7 +96,7 @@ export const App: React.FC = () => {
       <PlayerBar track={currentTrack} player={player} />
 
       {/* 移动端原生 iOS 风格底部导航栏 (Bottom Tab Bar) */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-white/95 backdrop-blur-md border-t border-slate-200/90 z-40 select-none flex items-center justify-around px-3 shadow-[0_-2px_12px_rgba(15,23,42,0.04)]">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 h-[calc(3.5rem+env(safe-area-inset-bottom,0px))] pb-[env(safe-area-inset-bottom,0px)] bg-white/95 backdrop-blur-md border-t border-slate-200/90 z-40 select-none flex items-center justify-around px-3 shadow-[0_-2px_12px_rgba(15,23,42,0.04)]">
         <button
           onClick={() => setMobilePane('tracks')}
           className={`flex-1 flex flex-col items-center justify-center gap-1 py-1 transition cursor-pointer ${

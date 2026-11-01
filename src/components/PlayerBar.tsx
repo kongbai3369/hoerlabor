@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Play,
   Pause,
@@ -26,7 +26,7 @@ interface PlayerBarProps {
   player: AudioPlayerControls;
 }
 
-const SPEED_OPTIONS = [0.75, 0.9, 1.0, 1.2, 1.5];
+const SPEED_OPTIONS = [0.8, 0.9, 1.0, 1.2, 1.5];
 const PAUSE_OPTIONS = [0, 2, 4];
 
 const MODE_OPTIONS: Array<{
@@ -62,6 +62,32 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
     player.duration > 0
       ? Math.min(100, Math.max(0, (player.currentTime / player.duration) * 100))
       : ((player.activeSegmentIndex + 1) / totalSegments) * 100;
+
+  const touchStartY = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartY.current === null) return;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    if (deltaY > 60) {
+      setIsDrawerOpen(false);
+    }
+    touchStartY.current = null;
+  };
+
+  useEffect(() => {
+    if (!isDrawerOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsDrawerOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isDrawerOpen]);
 
   return (
     <>
@@ -247,11 +273,11 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
       {/* ============================================================ */}
       {/* 移动端紧凑型 56px 迷你播放条 (粘附于移动端底部导航栏上方) */}
       {/* ============================================================ */}
-      <div className="lg:hidden fixed bottom-14 left-0 right-0 h-14 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-2px_12px_rgba(15,23,42,0.06)] z-30 select-none">
+      <div className="lg:hidden fixed bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px))] left-0 right-0 h-14 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-2px_12px_rgba(15,23,42,0.06)] z-30 select-none">
         {/* 顶部超细进度线 */}
         <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-slate-100 overflow-hidden">
           <div
-            className="h-full bg-indigo-600 transition-all duration-150"
+            className="h-full bg-indigo-600 transition-[width] duration-75 ease-linear"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
@@ -333,12 +359,16 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
         <>
           {/* 半透明遮罩层 */}
           <div
-            className="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 transition-opacity animate-in fade-in duration-200"
+            className="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 transition-opacity animate-fade-in"
             onClick={() => setIsDrawerOpen(false)}
           />
 
           {/* 上滑抽屉面板 */}
-          <div className="lg:hidden fixed inset-x-0 bottom-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl z-50 border-t border-slate-200/90 flex flex-col p-5 pb-8 overflow-y-auto animate-in slide-in-from-bottom duration-250 select-none">
+          <div
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="lg:hidden fixed inset-x-0 bottom-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl z-50 border-t border-slate-200/90 flex flex-col p-5 pb-[calc(2rem+env(safe-area-inset-bottom,0px))] overflow-y-auto animate-slide-up select-none"
+          >
             {/* 顶部居中下推把手条 */}
             <div
               className="w-12 h-1.5 bg-slate-300 hover:bg-slate-400 rounded-full mx-auto mb-4 cursor-pointer transition"
@@ -359,6 +389,8 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
                   <span className="text-xs text-slate-500 font-medium truncate">
                     {track.source}
                   </span>
+                  <span className="text-slate-300">·</span>
+                  <span className="text-xs text-indigo-600 font-semibold">{track.topic}</span>
                   {track.originalAudioUrl && (
                     <a
                       href={track.originalAudioUrl}

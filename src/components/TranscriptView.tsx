@@ -157,7 +157,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
     if (displayMode !== 'dictation') {
       return (
         <p
-          className={`text-xl font-medium leading-[1.8] tracking-normal transition-colors ${
+          className={`text-lg sm:text-xl font-medium leading-[1.8] tracking-normal transition-colors ${
             isActive ? 'text-slate-900 font-semibold' : 'text-slate-700'
           }`}
         >
@@ -264,7 +264,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
 
   return (
     <main className="flex-1 flex flex-col h-full bg-slate-50/50 overflow-hidden relative">
-      <header className="px-5 py-3.5 border-b border-slate-200/80 bg-white/95 backdrop-blur-md flex flex-wrap items-center justify-between gap-3 shrink-0 shadow-xs z-10">
+      <header className="px-4 py-3 sm:px-5 sm:py-3.5 border-b border-slate-200/80 bg-white/95 backdrop-blur-md flex flex-wrap items-center justify-between gap-2.5 sm:gap-3 shrink-0 shadow-xs z-10">
         <div className="flex items-center gap-3">
           {onToggleSidebar && (
             <button
@@ -362,6 +362,10 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                       e.preventDefault();
                       handleInsertGermanChar(ch);
                     }}
+                    onTouchStart={(e) => {
+                      e.preventDefault();
+                      handleInsertGermanChar(ch);
+                    }}
                     className="w-6 h-6 rounded bg-white hover:bg-indigo-600 hover:text-white border border-slate-200 text-slate-700 text-xs font-mono font-semibold transition cursor-pointer shadow-2xs active:scale-95"
                   >
                     {ch}
@@ -426,8 +430,8 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
         </div>
       )}
 
-      {/* 句子卡片流：留足 pb-36 md:pb-40 确保末句绝不被底部播放器与底部导航遮挡 */}
-      <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 pb-36 md:pb-40 space-y-4">
+      {/* 句子卡片流：留足 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] 确保末句绝不被底部播放器与底部导航遮挡 */}
+      <div className="flex-1 overflow-y-auto px-3.5 sm:px-4 md:px-8 py-5 sm:py-6 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] md:pb-40 space-y-4">
         {track.segments.map((seg, idx) => {
           const isStarred = starredSegmentIds.includes(seg.id);
           if (onlyStarred && !isStarred) return null;
@@ -442,7 +446,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                 segmentRefs.current[idx] = el;
               }}
               onClick={() => player.seekToSegment(idx, true)}
-              className={`group relative rounded-2xl p-5 md:p-6 transition-all duration-200 cursor-pointer overflow-hidden ${
+              className={`group relative rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-200 cursor-pointer overflow-hidden ${
                 isActive
                   ? 'bg-white border border-indigo-200/90 shadow-[0_8px_24px_-4px_rgba(79,70,229,0.12),0_2px_6px_-1px_rgba(79,70,229,0.08)] ring-1 ring-indigo-500/15'
                   : 'bg-white/85 hover:bg-white border border-slate-200/80 hover:border-indigo-200/70 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-sm'
@@ -466,14 +470,21 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                   </span>
 
                   {isActive && !player.isShadowingPause && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50/90 px-2.5 py-0.5 rounded-full border border-indigo-200/70 shadow-2xs">
-                      <Volume2 className="w-3.5 h-3.5 animate-pulse text-indigo-600" />
-                      <span>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-indigo-200/70 shadow-2xs">
+                      <Volume2 className="w-3.5 h-3.5 animate-pulse text-indigo-600 shrink-0" />
+                      <span className="hidden sm:inline">
                         {player.isLoopingSentence
                           ? '单句循环精听中'
                           : isWordLookupActive
                           ? '当前朗读句 · 点词查音中'
                           : '当前原声朗读中 · 点击卡片复读'}
+                      </span>
+                      <span className="sm:hidden">
+                        {player.isLoopingSentence
+                          ? '单句循环'
+                          : isWordLookupActive
+                          ? '点词查音'
+                          : '原声朗读中'}
                       </span>
                     </span>
                   )}

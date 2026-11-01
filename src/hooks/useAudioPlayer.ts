@@ -25,16 +25,21 @@ export interface AudioPlayerControls {
 const wiktionaryAudioCache = new Map<string, string>();
 let currentWordAudio: HTMLAudioElement | null = null;
 
+const supportsOgg =
+  typeof window !== 'undefined' &&
+  typeof Audio !== 'undefined' &&
+  Boolean(new Audio().canPlayType('audio/ogg'));
+
 /**
  * 独立单词/词组即点即读：优先使用 Wiktionary (维基词典) 真实母语者原声录音，
- * 若未收录则自动无缝兜底至浏览器原生德语发音引擎。
+ * 若未收录或平台不支持 OGG (如 iOS Safari)，自动无缝切换至浏览器德语发音引擎。
  */
 export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 'tts'> {
   if (currentWordAudio) {
     currentWordAudio.pause();
     currentWordAudio = null;
   }
-  if ('speechSynthesis' in window) {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
 
@@ -64,63 +69,74 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
     }
   }
 
-  // 探测 Wiktionary Commons 真实德语母语者音频
-  const tryLoadAudio = (wordVariant: string): Promise<string | null> => {
-    return new Promise((resolve) => {
-      const url = `https://commons.wikimedia.org/wiki/Special:FilePath/De-${encodeURIComponent(wordVariant)}.ogg`;
-      const audio = new Audio(url);
-      let resolved = false;
+  // 探测 Wiktionary Commons 真实德语母语者音频（仅在支持 OGG 的平台，如 Android Chrome、桌面浏览器运行）
+  if (supportsOgg) {
+    const tryLoadAudio = (wordVariant: string): Promise<string | null> => {
+      return new Promise((resolve) => {
+        const url = `https://commons.wikimedia.org/wiki/Special:FilePath/De-${encodeURIComponent(wordVariant)}.ogg`;
+        const audio = new Audio(url);
+        let resolved = false;
 
-      const timer = window.setTimeout(() => {
-        if (!resolved) {
-          resolved = true;
-          audio.src = '';
-          resolve(null);
+        const timer = window.setTimeout(() => {
+          if (!resolved) {
+            resolved = true;
+            audio.src = '';
+            resolve(null);
+          }
+        }, 800);
+
+        audio.oncanplaythrough = () => {
+          if (!resolved) {
+            resolved = true;
+            window.clearTimeout(timer);
+            resolve(url);
+          }
+        };
+
+        audio.onerror = () => {
+          if (!resolved) {
+            resolved = true;
+            window.clearTimeout(timer);
+            resolve(null);
+          }
+        };
+      });
+    };
+
+    for (const cand of candidates) {
+      const verifiedUrl = await tryLoadAudio(cand);
+      if (verifiedUrl) {
+        wiktionaryAudioCache.set(clean, verifiedUrl);
+        wiktionaryAudioCache.set(cand, verifiedUrl);
+        try {
+          const audio = new Audio(verifiedUrl);
+          currentWordAudio = audio;
+          await audio.play();
+          return 'wiktionary';
+        } catch {
+          break;
         }
-      }, 1500);
-
-      audio.oncanplaythrough = () => {
-        if (!resolved) {
-          resolved = true;
-          window.clearTimeout(timer);
-          resolve(url);
-        }
-      };
-
-      audio.onerror = () => {
-        if (!resolved) {
-          resolved = true;
-          window.clearTimeout(timer);
-          resolve(null);
-        }
-      };
-    });
-  };
-
-  for (const cand of candidates) {
-    const verifiedUrl = await tryLoadAudio(cand);
-    if (verifiedUrl) {
-      wiktionaryAudioCache.set(clean, verifiedUrl);
-      wiktionaryAudioCache.set(cand, verifiedUrl);
-      try {
-        const audio = new Audio(verifiedUrl);
-        currentWordAudio = audio;
-        await audio.play();
-        return 'wiktionary';
-      } catch {
-        break;
       }
     }
   }
 
-  // 若维基词典未收录该变形词，自动兜底至 Web Speech API
-  if ('speechSynthesis' in window) {
+  // 若维基词典未收录该变形词，或平台不支持 OGG，立即调用 Web Speech API
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     const utter = new SpeechSynthesisUtterance(clean);
     utter.lang = 'de-DE';
     utter.rate = 0.95;
     const voices = window.speechSynthesis.getVoices();
     const deVoice =
-      voices.find((v) => v.lang.startsWith('de') && (v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google') || v.name.includes('Premium'))) ||
+      voices.find(
+        (v) =>
+          v.lang.startsWith('de') &&
+          (v.name.includes('Natural') ||
+            v.name.includes('Online') ||
+            v.name.includes('Google') ||
+            v.name.includes('Premium') ||
+            v.name.includes('Anna') ||
+            v.name.includes('Helena'))
+      ) ||
       voices.find((v) => v.lang === 'de-DE') ||
       voices.find((v) => v.lang.startsWith('de'));
     if (deVoice) utter.voice = deVoice;
@@ -343,21 +359,6 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     speakSegmentByIndexRef.current = speakSegmentByIndex;
   });
 
-  // 移动端 WebKit / Safari 触控音频通道解锁
-  useEffect(() => {
-    const handleFirstTouch = () => {
-      if (audioRef.current && audioRef.current.paused && audioRef.current.readyState === 0) {
-        audioRef.current.load();
-      }
-    };
-    window.addEventListener('touchstart', handleFirstTouch, { once: true, passive: true });
-    window.addEventListener('pointerdown', handleFirstTouch, { once: true, passive: true });
-    return () => {
-      window.removeEventListener('touchstart', handleFirstTouch);
-      window.removeEventListener('pointerdown', handleFirstTouch);
-    };
-  }, []);
-
   useEffect(() => {
     stopRaf();
     stopTts();
@@ -385,6 +386,12 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       audio.preservesPitch = true;
       audio.playbackRate = playbackRateRef.current;
 
+      try {
+        audio.load();
+      } catch {
+        // 部分测试环境可能没有 load 方法
+      }
+
       const handleLoadedMetadata = () => {
         setDuration(audio.duration || track.duration || 0);
       };
@@ -395,6 +402,18 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         isPlayingRef.current = false;
       };
 
+      // 针对移动端 WebKit / iOS Safari 的首次触控预热解锁
+      const unlockAudio = () => {
+        if (audio.paused && audio.readyState === 0) {
+          try {
+            audio.load();
+          } catch {}
+        }
+      };
+
+      window.addEventListener('touchstart', unlockAudio, { passive: true, once: true });
+      window.addEventListener('pointerdown', unlockAudio, { passive: true, once: true });
+
       audio.addEventListener('loadedmetadata', handleLoadedMetadata);
       audio.addEventListener('ended', handleEnded);
       audioRef.current = audio;
@@ -402,12 +421,14 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       return () => {
         stopRaf();
         clearShadowingTimer();
+        window.removeEventListener('touchstart', unlockAudio);
+        window.removeEventListener('pointerdown', unlockAudio);
         audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
         audio.removeEventListener('ended', handleEnded);
         audio.pause();
       };
     } else {
-      if ('speechSynthesis' in window) {
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
         window.speechSynthesis.getVoices();
       }
       return () => {
@@ -438,37 +459,40 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       if (engineMode === 'audio') {
         const audio = audioRef.current;
         const targetSeg = track.segments[safeIndex];
-        if (audio && targetSeg && targetSeg.startTime !== null) {
-          const performSeekAndPlay = () => {
-            try {
-              audio.currentTime = targetSeg.startTime!;
-              setCurrentTime(targetSeg.startTime!);
-            } catch {
-              // 某些移动浏览器尚未就绪时的保护
-            }
-
-            if (autoPlay) {
-              setIsPlaying(true);
-              isPlayingRef.current = true;
-              const playPromise = audio.play();
-              if (playPromise !== undefined) {
-                playPromise.then(startRafLoop).catch((err) => {
-                  console.warn('Audio playback prevented on mobile gesture:', err);
-                  setIsPlaying(false);
-                  isPlayingRef.current = false;
-                });
-              }
-            }
-          };
+        if (audio && targetSeg) {
+          const targetTime = targetSeg.startTime ?? 0;
 
           if (audio.readyState >= 1) {
-            performSeekAndPlay();
+            try {
+              audio.currentTime = targetTime;
+              setCurrentTime(targetTime);
+            } catch {
+              // 保护
+            }
           } else {
             const onMetadata = () => {
               audio.removeEventListener('loadedmetadata', onMetadata);
-              performSeekAndPlay();
+              try {
+                audio.currentTime = targetTime;
+                setCurrentTime(targetTime);
+              } catch {}
             };
             audio.addEventListener('loadedmetadata', onMetadata);
+          }
+
+          // 核心修复：audio.play() 必须直接在用户点击手势的同步调用栈中立即触发，
+          // 切勿包裹在异步 loadedmetadata 回调内部，否则 iOS Safari 会判定手势失效并拒绝播放！
+          if (autoPlay) {
+            setIsPlaying(true);
+            isPlayingRef.current = true;
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+              playPromise.then(startRafLoop).catch((err) => {
+                console.warn('Audio playback prevented on mobile gesture:', err);
+                setIsPlaying(false);
+                isPlayingRef.current = false;
+              });
+            }
           }
         }
       } else {
@@ -495,6 +519,18 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       if (engineMode === 'audio') {
         const audio = audioRef.current;
         if (audio) {
+          const currentSeg = track.segments[activeIndexRef.current];
+          if (
+            currentSeg &&
+            currentSeg.startTime !== null &&
+            (audio.currentTime < currentSeg.startTime ||
+              (currentSeg.endTime !== null && audio.currentTime >= currentSeg.endTime))
+          ) {
+            try {
+              audio.currentTime = currentSeg.startTime;
+              setCurrentTime(currentSeg.startTime);
+            } catch {}
+          }
           const playPromise = audio.play();
           if (playPromise !== undefined) {
             playPromise.then(startRafLoop).catch((err) => {
@@ -508,14 +544,16 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         speakSegmentByIndex(activeIndexRef.current);
       }
     }
-  }, [engineMode, pause, speakSegmentByIndex, startRafLoop]);
+  }, [engineMode, pause, speakSegmentByIndex, startRafLoop, track.segments]);
 
   const seekToTime = useCallback(
     (time: number) => {
       clearShadowingTimer();
       if (engineMode !== 'audio' || !audioRef.current) return;
-      audioRef.current.currentTime = time;
-      setCurrentTime(time);
+      try {
+        audioRef.current.currentTime = time;
+        setCurrentTime(time);
+      } catch {}
 
       const matchedIdx = track.segments.findIndex(
         (seg) =>

@@ -260,8 +260,8 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
         )}
       </div>
 
-      {/* 底部 Anki 导出区（移动端留出 pb-36 确保绝不被迷你播放条与底部导航栏遮挡） */}
-      <div className="p-3 border-t border-slate-200/80 bg-slate-50/95 space-y-2 pb-36 lg:pb-28 select-none">
+      {/* 底部 Anki 导出区（移动端留出 safe-area pb 确保绝不被迷你播放条与底部导航栏遮挡） */}
+      <div className="p-3 border-t border-slate-200/80 bg-slate-50/95 space-y-2 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] lg:pb-28 select-none">
         <div className="text-[11px] text-slate-500 flex items-center justify-between font-medium">
           <span>Anki 制表符格式导出 (FSRS 兼容)</span>
           <span className="text-indigo-600 font-semibold">

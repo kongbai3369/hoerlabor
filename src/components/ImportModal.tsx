@@ -70,7 +70,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
     >
       <div
         onClick={(e) => e.stopPropagation()}
