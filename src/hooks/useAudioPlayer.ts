@@ -21,8 +21,11 @@ export interface AudioPlayerControls {
   toggleLoopSentence: () => void;
 }
 
-// Wiktionary 真实母语发音缓存与并发音频控制
-const wiktionaryAudioCache = new Map<string, string>();
+import { md5 } from '../utils/md5';
+import { BUNDLED_WORD_AUDIO } from '../data/bundledWordAudio';
+
+// 德语母语发音缓存与并发音频控制
+const wordAudioCache = new Map<string, string>();
 let currentWordAudio: HTMLAudioElement | null = null;
 
 const supportsOgg =
@@ -31,12 +34,88 @@ const supportsOgg =
   Boolean(new Audio().canPlayType('audio/ogg'));
 
 /**
- * 独立单词/词组即点即读：优先使用 Wiktionary (维基词典) 真实母语者原声录音，
- * 若未收录或平台不支持 OGG (如 iOS Safari)，自动无缝切换至浏览器德语发音引擎。
+ * 根据 MediaWiki / Wikimedia Commons 规范，利用 MD5 计算 OGG 原始发音文件的 MP3 转码衍生 URL。
+ * 全面兼容 iOS Safari、iPadOS 及各类不支持原生 OGG 容器的移动端浏览器。
+ */
+function getWikimediaMp3Url(filename: string): string {
+  const titleForHash = filename.replace(/ /g, '_');
+  const hash = md5(titleForHash);
+  const h1 = hash[0];
+  const h2 = hash.substring(0, 2);
+  return `https://upload.wikimedia.org/wikipedia/commons/transcoded/${h1}/${h2}/${encodeURIComponent(titleForHash)}/${encodeURIComponent(titleForHash)}.mp3`;
+}
+
+/**
+ * 尝试在 Audio 实例中加载并播放指定音频地址
+ */
+function tryPlayAudioUrl(url: string, timeoutMs = 2500): Promise<boolean> {
+  return new Promise((resolve) => {
+    const audio = new Audio();
+    currentWordAudio = audio;
+    let finished = false;
+
+    const cleanup = () => {
+      audio.oncanplay = null;
+      audio.onerror = null;
+    };
+
+    const timer = window.setTimeout(() => {
+      if (!finished) {
+        finished = true;
+        cleanup();
+        try {
+          audio.pause();
+          audio.src = '';
+        } catch {
+          // ignore
+        }
+        resolve(false);
+      }
+    }, timeoutMs);
+
+    audio.oncanplay = async () => {
+      if (!finished) {
+        finished = true;
+        window.clearTimeout(timer);
+        cleanup();
+        try {
+          await audio.play();
+          resolve(true);
+        } catch {
+          resolve(false);
+        }
+      }
+    };
+
+    audio.onerror = () => {
+      if (!finished) {
+        finished = true;
+        window.clearTimeout(timer);
+        cleanup();
+        resolve(false);
+      }
+    };
+
+    audio.src = url;
+    audio.load();
+  });
+}
+
+/**
+ * 独立单词/词组即点即读：
+ * 1. 优先使用本地同源预置的 800+ 核心词汇母语 MP3（零网络延时、iOS Safari 100% 畅播）
+ * 2. 动态探测 Wiktionary / Wikimedia Commons 维基德语母语者 MP3 转码源（突破 iOS .ogg 限制）
+ * 3. 动态备选高质量德语神经网络自然原声 MP3 接口（杜绝机械生硬的系统 TTS）
+ * 4. 离线/全平台极端情况优雅降级至浏览器本地德语语音合成
  */
 export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 'tts'> {
   if (currentWordAudio) {
-    currentWordAudio.pause();
+    try {
+      currentWordAudio.pause();
+      currentWordAudio.src = '';
+    } catch {
+      // ignore
+    }
     currentWordAudio = null;
   }
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -47,17 +126,37 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
   const clean = wordText
     .replace(/^(der|die|das|sich|den|dem|des|ein|eine)\s+/i, '')
     .replace(/\s*\(\+.*\)/g, '')
-    .replace(/[.,!?;:()„“”"']/g, '')
+    .replace(/[.,!?;:()„“”"'/]/g, '')
     .trim();
 
   if (!clean) return 'tts';
 
-  const capitalized = clean.charAt(0).toUpperCase() + clean.slice(1);
   const lower = clean.toLowerCase();
-  const candidates = Array.from(new Set([clean, capitalized, lower]));
+  const capitalized = clean.charAt(0).toUpperCase() + clean.slice(1);
+  const headword = clean.split(/\s+/)[0];
+  const headwordLower = headword.toLowerCase();
+  const headwordCapitalized = headword.charAt(0).toUpperCase() + headword.slice(1);
 
-  // 优先命中内存缓存
-  const cachedUrl = wiktionaryAudioCache.get(clean) || wiktionaryAudioCache.get(capitalized);
+  // 1. 第一优先级：命中本地静态预置的 800+ 课程与核心生词 MP3（解决手机端网络延时及 WebKit 交互限制）
+  const bundledUrl =
+    BUNDLED_WORD_AUDIO[lower] ||
+    BUNDLED_WORD_AUDIO[headwordLower] ||
+    BUNDLED_WORD_AUDIO[clean] ||
+    BUNDLED_WORD_AUDIO[headword];
+
+  if (bundledUrl) {
+    try {
+      const audio = new Audio(bundledUrl);
+      currentWordAudio = audio;
+      await audio.play();
+      return 'wiktionary';
+    } catch {
+      // 本地音频被浏览器拦截或异常时继续后备流程
+    }
+  }
+
+  // 2. 第二优先级：命中运行时内存缓存
+  const cachedUrl = wordAudioCache.get(lower) || wordAudioCache.get(clean);
   if (cachedUrl) {
     try {
       const audio = new Audio(cachedUrl);
@@ -65,62 +164,52 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
       await audio.play();
       return 'wiktionary';
     } catch {
-      // 缓存失效继续重试
+      wordAudioCache.delete(lower);
+      wordAudioCache.delete(clean);
     }
   }
 
-  // 探测 Wiktionary Commons 真实德语母语者音频（仅在支持 OGG 的平台，如 Android Chrome、桌面浏览器运行）
+  // 3. 第三优先级：动态构建母语原声候选地址序列（MP3 优先，确保 iOS Safari 与移动 Chrome 纯正原声）
+  const candidateUrls: string[] = [];
+
+  const wordVariants = Array.from(
+    new Set([clean, capitalized, lower, headword, headwordCapitalized, headwordLower])
+  ).filter(Boolean);
+
+  // 3.1 维基共享资源 (Wikimedia Commons) 母语原声 MP3 转码流
+  for (const variant of wordVariants) {
+    candidateUrls.push(getWikimediaMp3Url(`De-${variant}.ogg`));
+  }
+
+  // 3.2 原生支持 OGG 的平台（如桌面端、Android Chrome）同时尝试原始 OGG
   if (supportsOgg) {
-    const tryLoadAudio = (wordVariant: string): Promise<string | null> => {
-      return new Promise((resolve) => {
-        const url = `https://commons.wikimedia.org/wiki/Special:FilePath/De-${encodeURIComponent(wordVariant)}.ogg`;
-        const audio = new Audio(url);
-        let resolved = false;
-
-        const timer = window.setTimeout(() => {
-          if (!resolved) {
-            resolved = true;
-            audio.src = '';
-            resolve(null);
-          }
-        }, 800);
-
-        audio.oncanplaythrough = () => {
-          if (!resolved) {
-            resolved = true;
-            window.clearTimeout(timer);
-            resolve(url);
-          }
-        };
-
-        audio.onerror = () => {
-          if (!resolved) {
-            resolved = true;
-            window.clearTimeout(timer);
-            resolve(null);
-          }
-        };
-      });
-    };
-
-    for (const cand of candidates) {
-      const verifiedUrl = await tryLoadAudio(cand);
-      if (verifiedUrl) {
-        wiktionaryAudioCache.set(clean, verifiedUrl);
-        wiktionaryAudioCache.set(cand, verifiedUrl);
-        try {
-          const audio = new Audio(verifiedUrl);
-          currentWordAudio = audio;
-          await audio.play();
-          return 'wiktionary';
-        } catch {
-          break;
-        }
-      }
+    for (const variant of wordVariants) {
+      candidateUrls.push(
+        `https://commons.wikimedia.org/wiki/Special:FilePath/De-${encodeURIComponent(variant)}.ogg`
+      );
     }
   }
 
-  // 若维基词典未收录该变形词，或平台不支持 OGG，立即调用 Web Speech API
+  // 3.3 高品质自然母语神经网络德语 MP3 流（用于罕见变形词/未收录短语，彻底消除机械发音）
+  candidateUrls.push(
+    `https://translate.google.com/translate_tts?ie=UTF-8&tl=de&client=tw-ob&q=${encodeURIComponent(clean)}`
+  );
+  if (headword !== clean) {
+    candidateUrls.push(
+      `https://translate.google.com/translate_tts?ie=UTF-8&tl=de&client=tw-ob&q=${encodeURIComponent(headword)}`
+    );
+  }
+
+  for (const url of candidateUrls) {
+    const ok = await tryPlayAudioUrl(url);
+    if (ok) {
+      wordAudioCache.set(lower, url);
+      wordAudioCache.set(clean, url);
+      return 'wiktionary';
+    }
+  }
+
+  // 4. 第四优先级：极端无网离线降级至浏览器系统语音
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     const utter = new SpeechSynthesisUtterance(clean);
     utter.lang = 'de-DE';
@@ -134,6 +223,8 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
             v.name.includes('Online') ||
             v.name.includes('Google') ||
             v.name.includes('Premium') ||
+            v.name.includes('Enhanced') ||
+            v.name.includes('Siri') ||
             v.name.includes('Anna') ||
             v.name.includes('Helena'))
       ) ||
