@@ -120,7 +120,7 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
     utter.rate = 0.95;
     const voices = window.speechSynthesis.getVoices();
     const deVoice =
-      voices.find((v) => v.lang === 'de-DE' && v.name.includes('Natural')) ||
+      voices.find((v) => v.lang.startsWith('de') && (v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google') || v.name.includes('Premium'))) ||
       voices.find((v) => v.lang === 'de-DE') ||
       voices.find((v) => v.lang.startsWith('de'));
     if (deVoice) utter.voice = deVoice;
@@ -343,6 +343,21 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     speakSegmentByIndexRef.current = speakSegmentByIndex;
   });
 
+  // 移动端 WebKit / Safari 触控音频通道解锁
+  useEffect(() => {
+    const handleFirstTouch = () => {
+      if (audioRef.current && audioRef.current.paused && audioRef.current.readyState === 0) {
+        audioRef.current.load();
+      }
+    };
+    window.addEventListener('touchstart', handleFirstTouch, { once: true, passive: true });
+    window.addEventListener('pointerdown', handleFirstTouch, { once: true, passive: true });
+    return () => {
+      window.removeEventListener('touchstart', handleFirstTouch);
+      window.removeEventListener('pointerdown', handleFirstTouch);
+    };
+  }, []);
+
   useEffect(() => {
     stopRaf();
     stopTts();
@@ -361,6 +376,12 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
 
     if (track.audioUrl) {
       const audio = new Audio(track.audioUrl);
+      audio.preload = 'auto';
+      // 移动端 WebKit 允许原生行内播放，避免全屏或被静音拦截
+      // @ts-expect-error - playsInline is WebKit standard on iOS Safari
+      audio.playsInline = true;
+      audio.setAttribute('playsinline', 'true');
+      audio.setAttribute('webkit-playsinline', 'true');
       audio.preservesPitch = true;
       audio.playbackRate = playbackRateRef.current;
 
@@ -418,15 +439,36 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         const audio = audioRef.current;
         const targetSeg = track.segments[safeIndex];
         if (audio && targetSeg && targetSeg.startTime !== null) {
-          audio.currentTime = targetSeg.startTime;
-          setCurrentTime(targetSeg.startTime);
-          if (autoPlay) {
-            setIsPlaying(true);
-            isPlayingRef.current = true;
-            audio.play().then(startRafLoop).catch(() => {
-              setIsPlaying(false);
-              isPlayingRef.current = false;
-            });
+          const performSeekAndPlay = () => {
+            try {
+              audio.currentTime = targetSeg.startTime!;
+              setCurrentTime(targetSeg.startTime!);
+            } catch {
+              // 某些移动浏览器尚未就绪时的保护
+            }
+
+            if (autoPlay) {
+              setIsPlaying(true);
+              isPlayingRef.current = true;
+              const playPromise = audio.play();
+              if (playPromise !== undefined) {
+                playPromise.then(startRafLoop).catch((err) => {
+                  console.warn('Audio playback prevented on mobile gesture:', err);
+                  setIsPlaying(false);
+                  isPlayingRef.current = false;
+                });
+              }
+            }
+          };
+
+          if (audio.readyState >= 1) {
+            performSeekAndPlay();
+          } else {
+            const onMetadata = () => {
+              audio.removeEventListener('loadedmetadata', onMetadata);
+              performSeekAndPlay();
+            };
+            audio.addEventListener('loadedmetadata', onMetadata);
           }
         }
       } else {
@@ -453,10 +495,14 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       if (engineMode === 'audio') {
         const audio = audioRef.current;
         if (audio) {
-          audio.play().then(startRafLoop).catch(() => {
-            setIsPlaying(false);
-            isPlayingRef.current = false;
-          });
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.then(startRafLoop).catch((err) => {
+              console.warn('Audio playback prevented on mobile gesture:', err);
+              setIsPlaying(false);
+              isPlayingRef.current = false;
+            });
+          }
         }
       } else {
         speakSegmentByIndex(activeIndexRef.current);

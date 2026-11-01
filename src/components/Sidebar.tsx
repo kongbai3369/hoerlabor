@@ -73,7 +73,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSelectTrack }) => {
       </div>
 
       {/* 曲目列表 */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-2">
+      <div className="flex-1 overflow-y-auto p-3 space-y-2 pb-36 lg:pb-3">
         {filteredTracks.length === 0 ? (
           <div className="text-center py-12 text-slate-400 text-sm">
             该等级暂无曲目数据
@@ -146,8 +146,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSelectTrack }) => {
         )}
       </div>
 
-      {/* 底部快捷键提示（留出 pb-28 确保绝不被悬浮播放胶囊遮挡） */}
-      <div className="p-3 border-t border-slate-200/80 bg-slate-50/90 text-[11px] text-slate-500 space-y-1.5 pb-28 select-none">
+      {/* 底部快捷键提示（桌面端显示，留出 pb-28 确保绝不被悬浮播放胶囊遮挡） */}
+      <div className="hidden lg:block p-3 border-t border-slate-200/80 bg-slate-50/90 text-[11px] text-slate-500 space-y-1.5 pb-28 select-none">
         <div className="flex justify-between items-center">
           <span>播放 / 暂停</span>
           <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-slate-700 font-mono text-[10px] shadow-2xs">Space</kbd>

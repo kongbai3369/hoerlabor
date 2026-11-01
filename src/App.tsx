@@ -8,7 +8,7 @@ import { VocabPanel } from './components/VocabPanel';
 import { PlayerBar } from './components/PlayerBar';
 
 export const App: React.FC = () => {
-  const { currentTrackId, customTracks } = useListeningStore();
+  const { currentTrackId, customTracks, savedVocab } = useListeningStore();
   const [mobilePane, setMobilePane] = useState<'tracks' | 'listen' | 'vocab'>('listen');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isVocabOpen, setIsVocabOpen] = useState(true);
@@ -54,43 +54,6 @@ export const App: React.FC = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden flex flex-col bg-slate-50 text-slate-900 selection:bg-indigo-100 selection:text-indigo-900 font-sans">
-      {/* 移动端与平板顶部切换栏（仅在小于 lg 屏幕时显示） */}
-      <div className="lg:hidden flex items-center bg-white border-b border-slate-200/90 px-3 py-2 gap-2 shrink-0 shadow-xs z-20">
-        <button
-          onClick={() => setMobilePane('tracks')}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition cursor-pointer ${
-            mobilePane === 'tracks'
-              ? 'bg-indigo-600 text-white shadow-xs font-bold'
-              : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
-          }`}
-        >
-          <Library className="w-3.5 h-3.5" />
-          <span>曲库 ({allTracks.length})</span>
-        </button>
-        <button
-          onClick={() => setMobilePane('listen')}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition cursor-pointer ${
-            mobilePane === 'listen'
-              ? 'bg-indigo-600 text-white shadow-xs font-bold'
-              : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
-          }`}
-        >
-          <Headphones className="w-3.5 h-3.5" />
-          <span>精听训练</span>
-        </button>
-        <button
-          onClick={() => setMobilePane('vocab')}
-          className={`flex-1 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition cursor-pointer ${
-            mobilePane === 'vocab'
-              ? 'bg-indigo-600 text-white shadow-xs font-bold'
-              : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
-          }`}
-        >
-          <BookMarked className="w-3.5 h-3.5" />
-          <span>词汇与Anki</span>
-        </button>
-      </div>
-
       {/* 主体三栏：桌面端支持切换侧栏展开折叠，移动端按标签切换 */}
       <div className="flex-1 flex overflow-hidden relative">
         <div
@@ -129,7 +92,59 @@ export const App: React.FC = () => {
         </div>
       </div>
 
+      {/* 底部播放条：桌面端为居中悬浮胶囊，移动端为 56px 迷你条 */}
       <PlayerBar track={currentTrack} player={player} />
+
+      {/* 移动端原生 iOS 风格底部导航栏 (Bottom Tab Bar) */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-white/95 backdrop-blur-md border-t border-slate-200/90 z-40 select-none flex items-center justify-around px-3 shadow-[0_-2px_12px_rgba(15,23,42,0.04)]">
+        <button
+          onClick={() => setMobilePane('tracks')}
+          className={`flex-1 flex flex-col items-center justify-center gap-1 py-1 transition cursor-pointer ${
+            mobilePane === 'tracks'
+              ? 'text-indigo-600 font-bold'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className="relative">
+            <Library className="w-5 h-5" />
+            <span className="absolute -top-1 -right-2 bg-slate-100 text-slate-500 text-[9px] font-bold px-1 rounded-full border border-slate-200">
+              {allTracks.length}
+            </span>
+          </div>
+          <span className="text-[10px] leading-none">曲库</span>
+        </button>
+
+        <button
+          onClick={() => setMobilePane('listen')}
+          className={`flex-1 flex flex-col items-center justify-center gap-1 py-1 transition cursor-pointer ${
+            mobilePane === 'listen'
+              ? 'text-indigo-600 font-bold'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <Headphones className="w-5 h-5" />
+          <span className="text-[10px] leading-none">精听</span>
+        </button>
+
+        <button
+          onClick={() => setMobilePane('vocab')}
+          className={`flex-1 flex flex-col items-center justify-center gap-1 py-1 transition cursor-pointer ${
+            mobilePane === 'vocab'
+              ? 'text-indigo-600 font-bold'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className="relative">
+            <BookMarked className="w-5 h-5" />
+            {savedVocab.length > 0 && (
+              <span className="absolute -top-1 -right-2 bg-amber-500 text-white text-[9px] font-bold px-1 rounded-full">
+                {savedVocab.length}
+              </span>
+            )}
+          </div>
+          <span className="text-[10px] leading-none">核心词</span>
+        </button>
+      </nav>
     </div>
   );
 };

@@ -36,11 +36,14 @@ interface ListeningState {
   customTracks: ListeningTrack[];
   starredSegmentIds: string[];
   autoPauseSeconds: number;
+  isWordLookupActive: boolean;
   dictationInputs: Record<string, string>;
   setSelectedLevel: (level: CefrLevel | 'ALL') => void;
   setCurrentTrackId: (id: string) => void;
   setDisplayMode: (mode: DisplayMode) => void;
   setAutoPauseSeconds: (sec: number) => void;
+  setIsWordLookupActive: (active: boolean) => void;
+  toggleWordLookup: () => void;
   toggleStarSegment: (segmentId: string) => void;
   setDictationInput: (key: string, value: string) => void;
   clearTrackDictation: (trackId: string) => void;
@@ -60,12 +63,15 @@ export const useListeningStore = create<ListeningState>()(
       customTracks: [],
       starredSegmentIds: [],
       autoPauseSeconds: 0,
+      isWordLookupActive: false,
       dictationInputs: {},
 
       setSelectedLevel: (level) => set({ selectedLevel: level }),
       setCurrentTrackId: (id) => set({ currentTrackId: id }),
       setDisplayMode: (mode) => set({ displayMode: mode }),
       setAutoPauseSeconds: (sec) => set({ autoPauseSeconds: sec }),
+      setIsWordLookupActive: (active) => set({ isWordLookupActive: active }),
+      toggleWordLookup: () => set((state) => ({ isWordLookupActive: !state.isWordLookupActive })),
 
       toggleStarSegment: (segmentId) =>
         set((state) => {
