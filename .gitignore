@@ -25,3 +25,6 @@ dist-ssr
 
 # Temporary test audio in scripts
 scripts/*.mp3
+__pycache__/
+*.pyc
+

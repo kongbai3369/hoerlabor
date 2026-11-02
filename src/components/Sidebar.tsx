@@ -252,6 +252,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSelectTrack }) => {
                   {track.title}
                 </h3>
 
+                {/* 题型考点标签 */}
+                {track.taskSection && (
+                  <div className="mb-1.5 flex items-center">
+                    <span className="inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded bg-violet-50 text-violet-700 border border-violet-200/70 truncate max-w-full">
+                      🎯 {track.taskSection}
+                    </span>
+                  </div>
+                )}
+
                 {/* 底栏：原声MP3标记 + 3句精听 + 时长 */}
                 <div className="flex items-center justify-between text-xs text-slate-500 pt-1.5 border-t border-slate-100">
                   <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-medium">

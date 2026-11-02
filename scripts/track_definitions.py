@@ -1,0 +1,2063 @@
+import os
+
+RAW_GOETHE = r"D:\GermanCorpus\raw\goethe"
+RAW_TESTDAF = r"D:\GermanCorpus\raw\testdaf"
+
+GOETHE_A1_FILE = os.path.join(RAW_GOETHE, "goethe_a1_hoeren.mp3")
+GOETHE_A2_FILE = os.path.join(RAW_GOETHE, "goethe_a2_hoeren.mp3")
+GOETHE_B1_FILE = os.path.join(RAW_GOETHE, "goethe_b1_hoeren.mp3")
+GOETHE_B2_FILE = os.path.join(RAW_GOETHE, "goethe_b2_hoeren.mp3")
+GOETHE_C1_FILE = os.path.join(RAW_GOETHE, "goethe_c1_hoeren.mp3")
+TESTDAF_01_FILE = os.path.join(RAW_TESTDAF, "testdaf_modellsatz_01_hv.mp3")
+TESTDAF_02_FILE = os.path.join(RAW_TESTDAF, "testdaf_modellsatz_02_hv.mp3")
+
+TRACK_DEFINITIONS = [
+    # =========================================================================
+    # Goethe A1 (6 tracks)
+    # =========================================================================
+    {
+        "id": "goethe-a1-pullover-01",
+        "title": "Im Kaufhaus: Beratung beim Pulloverkauf",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Alltag & Einkaufen",
+        "taskSection": "歌德 A1 · Teil 1 商场购物",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "195.9",
+        "to": "218.0",
+        "out_file": "goethe_a1_pullover.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-pullover-01-s1",
+                "startTime": 0.0,
+                "endTime": 7.2,
+                "german": "Entschuldigung, was kostet dieser Pullover jetzt?",
+                "chinese": "打扰一下，请问这件毛衣现在多少钱？",
+                "clozeWords": ["Entschuldigung", "kostet", "Pullover"],
+                "vocab": [
+                    {"word": "die Entschuldigung", "pos": "Nomen", "meaning": "抱歉，打扰", "exampleDe": "Entschuldigung, darf ich kurz stören?", "exampleZh": "不好意思，我可以打扰一下吗？"},
+                    {"word": "kosten", "pos": "Verb", "meaning": "花费，价值", "exampleDe": "Was kostet das Bahnticket?", "exampleZh": "这张火车票多少钱？"},
+                    {"word": "der Pullover", "plural": "die Pullover", "pos": "Nomen", "meaning": "毛衣，套头衫", "exampleDe": "Dieser Pullover ist aus reiner Wolle.", "exampleZh": "这件毛衣是纯羊毛的。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-pullover-01-s2",
+                "startTime": 7.2,
+                "endTime": 13.5,
+                "german": "Da steht 30 Prozent billiger.",
+                "chinese": "上面写着打七折（降价30%）。",
+                "clozeWords": ["Prozent", "billiger"],
+                "vocab": [
+                    {"word": "das Prozent", "plural": "die Prozente", "pos": "Nomen", "meaning": "百分比", "exampleDe": "Heute gibt es zwanzig Prozent Rabatt.", "exampleZh": "今天有八折优惠。"},
+                    {"word": "billig", "pos": "Adjektiv", "meaning": "便宜的", "exampleDe": "Im Supermarkt sind die Äpfel billiger.", "exampleZh": "超市里的苹果更便宜。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-pullover-01-s3",
+                "startTime": 13.5,
+                "endTime": 22.1,
+                "german": "Einen Moment bitte, neunzehnfünfundneunzig Euro natürlich.",
+                "chinese": "请稍候，自然是19.95欧元。",
+                "clozeWords": ["Moment", "neunzehn", "Euro"],
+                "vocab": [
+                    {"word": "der Moment", "plural": "die Momente", "pos": "Nomen", "meaning": "片刻，稍候", "exampleDe": "Warten Sie bitte einen kleinen Moment.", "exampleZh": "请稍等片刻。"},
+                    {"word": "der Euro", "pos": "Nomen", "meaning": "欧元", "exampleDe": "Das Buch kostet fünfzehn Euro.", "exampleZh": "这本书十五欧元。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a1-buero-02",
+        "title": "Wegbeschreibung im Betriebsrat",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Alltag & Büro",
+        "taskSection": "歌德 A1 · Teil 1 办公问路",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "126.4",
+        "to": "151.0",
+        "out_file": "goethe_a1_buero.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-buero-02-s1",
+                "startTime": 0.0,
+                "endTime": 7.5,
+                "german": "Ach, Verzeihung, wo finde ich Herrn Schneider vom Betriebsrat?",
+                "chinese": "啊，对不起，请问企业职工委员会的施耐德先生在哪里？",
+                "clozeWords": ["Verzeihung", "finde", "Betriebsrat"],
+                "vocab": [
+                    {"word": "die Verzeihung", "pos": "Nomen", "meaning": "原谅，对不起", "exampleDe": "Verzeihung, ich habe Sie nicht verstanden.", "exampleZh": "对不起，我没听懂您的话。"},
+                    {"word": "finden", "pos": "Verb", "meaning": "找到，发现", "exampleDe": "Ich kann meinen Schlüssel nicht finden.", "exampleZh": "我找不到我的钥匙了。"},
+                    {"word": "der Betriebsrat", "plural": "die Betriebsräte", "pos": "Nomen", "meaning": "企业工会，职工委员会", "exampleDe": "Der Betriebsrat vertritt die Interessen der Angestellten.", "exampleZh": "职工委员会代表雇员的利益。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-buero-02-s2",
+                "startTime": 7.5,
+                "endTime": 16.8,
+                "german": "Schneider, warten Sie mal, ich glaube, der ist in Zimmer 254 im zweiten Stock.",
+                "chinese": "施耐德，等一下，我想他是在二楼254房间。",
+                "clozeWords": ["warten", "glaube", "Zimmer", "Stock"],
+                "vocab": [
+                    {"word": "warten", "pos": "Verb", "meaning": "等待", "exampleDe": "Wir warten vor dem Bahnhof auf dich.", "exampleZh": "我们在火车站前等你。"},
+                    {"word": "das Zimmer", "plural": "die Zimmer", "pos": "Nomen", "meaning": "房间", "exampleDe": "Das Zimmer liegt im ruhigen Innenhof.", "exampleZh": "这个房间朝向安静的内院。"},
+                    {"word": "der Stock", "plural": "die Stockwerke", "pos": "Nomen", "meaning": "楼层", "exampleDe": "Mein Büro befindet sich im dritten Stock.", "exampleZh": "我的办公室在三楼。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-buero-02-s3",
+                "startTime": 16.8,
+                "endTime": 24.6,
+                "german": "Da können Sie direkt den Aufzug hier nehmen.",
+                "chinese": "您可以直接乘这里的电梯上去。",
+                "clozeWords": ["direkt", "Aufzug", "nehmen"],
+                "vocab": [
+                    {"word": "direkt", "pos": "Adjektiv", "meaning": "直接的", "exampleDe": "Gibt es einen direkten Flug nach Frankfurt?", "exampleZh": "有直飞法兰克福的航班吗？"},
+                    {"word": "der Aufzug", "plural": "die Aufzüge", "pos": "Nomen", "meaning": "电梯", "exampleDe": "Nehmen Sie bitte den Aufzug nach oben.", "exampleZh": "请乘电梯上楼。"},
+                    {"word": "nehmen", "pos": "Verb", "meaning": "乘坐，拿取", "exampleDe": "Wir nehmen jeden Morgen die U-Bahn.", "exampleZh": "我们每天早晨坐地铁。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a1-restaurant-03",
+        "title": "Bestellung im Restaurant: Tagesgericht",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Essen & Trinken",
+        "taskSection": "歌德 A1 · Teil 1 餐厅点餐",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "332.2",
+        "to": "343.8",
+        "out_file": "goethe_a1_restaurant.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-restaurant-03-s1",
+                "startTime": 0.0,
+                "endTime": 3.8,
+                "german": "Was wünschen Sie bitte? Ich hätte gern die Salatplatte und ein Wasser.",
+                "chinese": "请问您需要点什么？我想要一份蔬菜拼盘和一杯水。",
+                "clozeWords": ["wünschen", "Salatplatte", "Wasser"],
+                "vocab": [
+                    {"word": "wünschen", "pos": "Verb", "meaning": "祝愿，希望得到", "exampleDe": "Was wünschen Sie zum Frühstück?", "exampleZh": "您早餐想要点什么？"},
+                    {"word": "der Salat", "plural": "die Salate", "pos": "Nomen", "meaning": "沙拉，生菜", "exampleDe": "Der grüne Salat ist sehr knackig und frisch.", "exampleZh": "这份生菜沙拉非常脆嫩新鲜。"},
+                    {"word": "das Wasser", "pos": "Nomen", "meaning": "水，矿泉水", "exampleDe": "Ein Glas stilles Wasser bitte.", "exampleZh": "请给我一杯不含气矿泉水。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-restaurant-03-s2",
+                "startTime": 3.8,
+                "endTime": 8.0,
+                "german": "Entschuldigung, die Salatplatte ist leider aus, aber die Bratwurst ist ganz frisch.",
+                "chinese": "不好意思，蔬菜沙拉盘已经卖完了，不过今天的煎香肠非常新鲜。",
+                "clozeWords": ["Entschuldigung", "Bratwurst", "frisch"],
+                "vocab": [
+                    {"word": "die Bratwurst", "plural": "die Bratwürste", "pos": "Nomen", "meaning": "煎烤香肠", "exampleDe": "In Nürnberg isst man kleine Bratwürste mit Senf.", "exampleZh": "在纽伦堡人们习惯吃配芥末的小烤肠。"},
+                    {"word": "frisch", "pos": "Adjektiv", "meaning": "新鲜的", "exampleDe": "Das Brot kommt frisch aus dem Ofen.", "exampleZh": "面包是刚出炉的新鲜面包。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-restaurant-03-s3",
+                "startTime": 8.0,
+                "endTime": 11.6,
+                "german": "Nein danke, ich esse kein Fleisch, dann nehme ich lieber die Pommes.",
+                "chinese": "不用了谢谢，我不吃肉，那我宁可来一份薯条吧。",
+                "clozeWords": ["Fleisch", "lieber", "Pommes"],
+                "vocab": [
+                    {"word": "das Fleisch", "pos": "Nomen", "meaning": "肉，肉类", "exampleDe": "Vegetarier essen grundsätzlich kein Fleisch.", "exampleZh": "素食主义者原则上完全不吃肉类。"},
+                    {"word": "die Pommes", "pos": "Nomen", "meaning": "炸薯条", "exampleDe": "Kinder bestellen im Restaurant gerne Pommes mit Ketchup.", "exampleZh": "孩子们在餐馆喜欢点薯条配番茄酱。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a1-treppe-04",
+        "title": "Im Kaufhaus: Weg zum Aufzug",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Alltag & Orientierung",
+        "taskSection": "歌德 A1 · Teil 1 商场设施",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "440.0",
+        "to": "457.5",
+        "out_file": "goethe_a1_treppe.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-treppe-04-s1",
+                "startTime": 0.0,
+                "endTime": 6.2,
+                "german": "Ach, entschuldigen Sie, wie komme ich denn hier in den zweiten Stock?",
+                "chinese": "啊，打扰一下，请问去二楼该怎么走？",
+                "clozeWords": ["entschuldigen", "zweiten", "Stock"],
+                "vocab": [
+                    {"word": "entschuldigen", "pos": "Verb", "meaning": "原谅，抱歉", "exampleDe": "Entschuldigen Sie bitte die kurze Störung.", "exampleZh": "打扰一下请原谅。"},
+                    {"word": "der Stock", "plural": "die Stockwerke", "pos": "Nomen", "meaning": "楼层", "exampleDe": "Die Abteilung für Sportbekleidung liegt im zweiten Stock.", "exampleZh": "运动服装部设在二楼。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-treppe-04-s2",
+                "startTime": 6.2,
+                "endTime": 11.2,
+                "german": "Die Rolltreppe da vorn ist heute leider außer Betrieb.",
+                "chinese": "前面的自动扶梯今天很不巧发生故障停运了。",
+                "clozeWords": ["Rolltreppe", "Betrieb"],
+                "vocab": [
+                    {"word": "die Rolltreppe", "plural": "die Rolltreppen", "pos": "Nomen", "meaning": "自动扶梯", "exampleDe": "Fahren Sie bitte vorsichtig mit der Rolltreppe.", "exampleZh": "乘坐自动扶梯时请小心。"},
+                    {"word": "der Betrieb", "plural": "die Betriebe", "pos": "Nomen", "meaning": "运转，企业（außer Betrieb 停运/故障）", "exampleDe": "Der Aufzug ist wegen Wartungsarbeiten außer Betrieb.", "exampleZh": "电梯因维护保养暂时停止运行。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-treppe-04-s3",
+                "startTime": 11.2,
+                "endTime": 17.5,
+                "german": "Da gehen Sie hier rechts um die Ecke und nehmen den Aufzug.",
+                "chinese": "您可以从这里往右拐过拐角，然后乘坐那边的升降电梯。",
+                "clozeWords": ["rechts", "Ecke", "Aufzug"],
+                "vocab": [
+                    {"word": "die Ecke", "plural": "die Ecken", "pos": "Nomen", "meaning": "角落，拐角", "exampleDe": "Gleich um die Ecke befindet sich eine Bäckerei.", "exampleZh": "拐过街角就有一家面包店。"},
+                    {"word": "rechts", "pos": "Adverb", "meaning": "向右，在右边", "exampleDe": "Biegen Sie an der nächsten Kreuzung nach rechts ab.", "exampleZh": "在下一个十字路口请向右转。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a1-reisebus-05",
+        "title": "Durchsage im Reisebus: Raststätte",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Verkehr",
+        "taskSection": "歌德 A1 · Teil 2 旅途广播",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "684.5",
+        "to": "698.0",
+        "out_file": "goethe_a1_reisebus.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-reisebus-05-s1",
+                "startTime": 0.0,
+                "endTime": 4.2,
+                "german": "Liebe Fahrgäste, wir befinden uns kurz vor Würzburg.",
+                "chinese": "亲爱的乘客们，我们的旅游大巴即将抵达维尔茨堡。",
+                "clozeWords": ["Fahrgäste", "befinden", "kurz"],
+                "vocab": [
+                    {"word": "der Fahrgast", "plural": "die Fahrgäste", "pos": "Nomen", "meaning": "乘客，旅客", "exampleDe": "Alle Fahrgäste müssen während der Fahrt angeschnallt bleiben.", "exampleZh": "所有旅客在行车期间均须系好安全带。"},
+                    {"word": "sich befinden", "pos": "Verb", "meaning": "位于，处于", "exampleDe": "Unser Hotel befindet sich in der Stadtmitte.", "exampleZh": "我们的酒店位于市中心。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-reisebus-05-s2",
+                "startTime": 4.2,
+                "endTime": 8.8,
+                "german": "An der nächsten Autobahn-Raststätte halten wir für eine Stunde.",
+                "chinese": "在前方的高速公路休息服务区，我们将停留休息一小时。",
+                "clozeWords": ["nächsten", "Raststätte", "Stunde"],
+                "vocab": [
+                    {"word": "die Raststätte", "plural": "die Raststätten", "pos": "Nomen", "meaning": "高速公路休息站，服务区", "exampleDe": "An der Raststätte tanken wir und trinken einen Kaffee.", "exampleZh": "我们在休息站加油并喝了杯咖啡。"},
+                    {"word": "halten", "pos": "Verb", "meaning": "停下，停靠", "exampleDe": "Der Zug hält planmäßig an Gleis fünf.", "exampleZh": "列车按时刻表停靠在5号站台。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-reisebus-05-s3",
+                "startTime": 8.8,
+                "endTime": 13.5,
+                "german": "Wir treffen uns wieder um halb eins am Bus, bitte seien Sie pünktlich.",
+                "chinese": "我们十二点半在大巴旁重新集合，请大家务必准时。",
+                "clozeWords": ["treffen", "Bus", "pünktlich"],
+                "vocab": [
+                    {"word": "pünktlich", "pos": "Adjektiv", "meaning": "准时的，守时的", "exampleDe": "Die Züge in Deutschland fahren meistens pünktlich ab.", "exampleZh": "德国的火车绝大多数都准点发车。"},
+                    {"word": "treffen", "pos": "Verb", "meaning": "会面，碰头", "exampleDe": "Wir treffen uns morgen um acht Uhr vor der Bibliothek.", "exampleZh": "我们明早八点在图书馆门前碰头。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a1-flughafen-06",
+        "title": "Flughafendurchsage: Flug nach Warschau",
+        "level": "A1",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Flugverkehr",
+        "taskSection": "歌德 A1 · Teil 2 机场广播",
+        "raw_file": GOETHE_A1_FILE,
+        "ss": "763.5",
+        "to": "785.0",
+        "out_file": "goethe_a1_flughafen.mp3",
+        "segments": [
+            {
+                "id": "goethe-a1-flughafen-06-s1",
+                "startTime": 0.0,
+                "endTime": 7.5,
+                "german": "Herr Stefan Janda, gebucht auf dem Flug LH 737 nach Warschau, wird zum Schalter F7 gebeten.",
+                "chinese": "预订了汉莎LH 737航班飞往华沙的斯特凡·扬达先生，请立即前往F7柜台。",
+                "clozeWords": ["gebucht", "Flug", "Schalter"],
+                "vocab": [
+                    {"word": "buchen", "pos": "Verb", "meaning": "预订，订购", "exampleDe": "Ich habe online einen günstigen Flug nach Berlin gebucht.", "exampleZh": "我在网上订了一张飞往柏林的特价机票。"},
+                    {"word": "der Flug", "plural": "die Flüge", "pos": "Nomen", "meaning": "航班，飞行", "exampleDe": "Der Flug nach Frankfurt dauert eine knappe Stunde.", "exampleZh": "飞往法兰克福的航班耗时近一小时。"},
+                    {"word": "der Schalter", "plural": "die Schalter", "pos": "Nomen", "meaning": "营业柜台，窗口", "exampleDe": "Bitte begeben Sie sich sofort zum Abflugschalter.", "exampleZh": "请您立即前往登机柜台。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-flughafen-06-s2",
+                "startTime": 7.5,
+                "endTime": 14.5,
+                "german": "Der Flug nach Warschau wird in wenigen Minuten geschlossen.",
+                "chinese": "飞往华沙的航班登机口将在几分钟后关闭。",
+                "clozeWords": ["wenigen", "Minuten", "geschlossen"],
+                "vocab": [
+                    {"word": "schließen", "pos": "Verb", "meaning": "关闭，闭合", "exampleDe": "Das Boarding-Gate schließt zehn Minuten vor dem Start.", "exampleZh": "登机口在起飞前十分钟关闭。"},
+                    {"word": "die Minute", "plural": "die Minuten", "pos": "Nomen", "meaning": "分钟", "exampleDe": "Warten Sie bitte noch fünf Minuten.", "exampleZh": "请您再稍等五分钟。"}
+                ]
+            },
+            {
+                "id": "goethe-a1-flughafen-06-s3",
+                "startTime": 14.5,
+                "endTime": 21.5,
+                "german": "Herr Janda, gebucht nach Warschau, bitte begeben Sie sich sofort zu Schalter F7.",
+                "chinese": "扬达先生，华沙航班旅客，请您立刻前往F7柜台。",
+                "clozeWords": ["sofort", "begeben", "Warschau"],
+                "vocab": [
+                    {"word": "sofort", "pos": "Adverb", "meaning": "立即，马上", "exampleDe": "Kommen Sie bitte sofort zum Schalter.", "exampleZh": "请您立刻来柜台。"},
+                    {"word": "sich begeben", "pos": "Verb", "meaning": "前往，到……去", "exampleDe": "Begeben Sie sich bitte zum Flugsteig B zwanzig.", "exampleZh": "请前往B20登机口。"}
+                ]
+            }
+        ]
+    }
+]
+
+# =========================================================================
+# Goethe A2 (6 tracks)
+# =========================================================================
+TRACK_DEFINITIONS.extend([
+    {
+        "id": "goethe-a2-olympia-01",
+        "title": "Verkehrsinformation zur Olympiahalle",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Verkehr",
+        "taskSection": "歌德 A2 · Teil 1 场馆交通",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "81.2",
+        "to": "104.3",
+        "out_file": "goethe_a2_olympia.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-olympia-01-s1",
+                "startTime": 0.0,
+                "endTime": 6.8,
+                "german": "Eine Information für die Besucher des Basketballspiels heute in der Olympiahalle.",
+                "chinese": "为今天在奥林匹克体育馆观看篮球比赛的观众播报一条通知。",
+                "clozeWords": ["Information", "Besucher", "Olympiahalle"],
+                "vocab": [
+                    {"word": "die Information", "plural": "die Informationen", "pos": "Nomen", "meaning": "信息，通知", "exampleDe": "Weitere Informationen finden Sie online.", "exampleZh": "更多信息请在线查阅。"},
+                    {"word": "der Besucher", "plural": "die Besucher", "pos": "Nomen", "meaning": "访问者，观众", "exampleDe": "Viele Besucher kamen zur Ausstellung.", "exampleZh": "许多观众来看展览。"},
+                    {"word": "die Halle", "plural": "die Hallen", "pos": "Nomen", "meaning": "大厅，场馆", "exampleDe": "Die Sporthalle öffnet um acht Uhr.", "exampleZh": "体育馆早上八点开门。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-olympia-01-s2",
+                "startTime": 6.8,
+                "endTime": 14.5,
+                "german": "Die Parkplätze in der Nähe sind schon besetzt, aber im Parkhaus gibt es noch freie Plätze.",
+                "chinese": "附近的停车位已经停满，但在购物中心的室内停车场仍有空位。",
+                "clozeWords": ["Parkplätze", "besetzt", "Parkhaus", "freie"],
+                "vocab": [
+                    {"word": "der Parkplatz", "plural": "die Parkplätze", "pos": "Nomen", "meaning": "停车位，停车场", "exampleDe": "Vor dem Supermarkt gibt es große Parkplätze.", "exampleZh": "超市前有大停车场。"},
+                    {"word": "besetzt", "pos": "Adjektiv", "meaning": "占满的，占用的", "exampleDe": "Dieser Tisch im Restaurant ist leider besetzt.", "exampleZh": "餐馆里的这张桌子已经有人了。"},
+                    {"word": "das Parkhaus", "plural": "die Parkhäuser", "pos": "Nomen", "meaning": "室内停车场，停车大楼", "exampleDe": "Das Parkhaus ist rund um die Uhr geöffnet.", "exampleZh": "停车楼全天24小时开放。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-olympia-01-s3",
+                "startTime": 14.5,
+                "endTime": 23.1,
+                "german": "Besucher von außerhalb sollten nicht mit dem Auto kommen, sondern die Bahn nehmen.",
+                "chinese": "外地赶来的观众请不要驾车前来，建议大家搭乘轨道交通列车。",
+                "clozeWords": ["Besucher", "außerhalb", "Auto", "Bahn"],
+                "vocab": [
+                    {"word": "außerhalb", "pos": "Präposition / Adverb", "meaning": "在……之外，郊外", "exampleDe": "Wir wohnen etwas außerhalb der Großstadt.", "exampleZh": "我们住在大城市近郊。"},
+                    {"word": "das Auto", "plural": "die Autos", "pos": "Nomen", "meaning": "汽车，轿车", "exampleDe": "Im Berufsverkehr bleibt das Auto oft stehen.", "exampleZh": "在早晚高峰时汽车经常走走停停。"},
+                    {"word": "die Bahn", "plural": "die Bahnen", "pos": "Nomen", "meaning": "火车，轨道交通", "exampleDe": "Mit der Bahn reist man entspannt und umweltfreundlich.", "exampleZh": "坐火车旅行既轻松又环保。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a2-bus-02",
+        "title": "Kostenlose Busverbindung am Hauptbahnhof",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Nahverkehr",
+        "taskSection": "歌德 A2 · Teil 1 接驳乘车",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "94.0",
+        "to": "114.5",
+        "out_file": "goethe_a2_bus.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-bus-02-s1",
+                "startTime": 0.0,
+                "endTime": 6.8,
+                "german": "Besucher von außerhalb sollten nicht mit dem Auto anreisen.",
+                "chinese": "来自外地的观众请尽量不要自驾车前来。",
+                "clozeWords": ["Besucher", "außerhalb", "anreisen"],
+                "vocab": [
+                    {"word": "anreisen", "pos": "Verb (trennbar)", "meaning": "启程前来，抵达", "exampleDe": "Die Konferenzgäste reisen heute bequem per Bahn an.", "exampleZh": "参会嘉宾今天乘坐火车舒适抵达。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-bus-02-s2",
+                "startTime": 6.8,
+                "endTime": 13.5,
+                "german": "Nehmen Sie stattdessen die öffentlichen Verkehrsmittel.",
+                "chinese": "请大家改乘公共交通工具出行。",
+                "clozeWords": ["stattdessen", "öffentlichen", "Verkehrsmittel"],
+                "vocab": [
+                    {"word": "das Verkehrsmittel", "plural": "die Verkehrsmittel", "pos": "Nomen", "meaning": "交通工具", "exampleDe": "Die U-Bahn ist das schnellste städtische Verkehrsmittel.", "exampleZh": "地铁是最快的市内交通工具。"},
+                    {"word": "stattdessen", "pos": "Adverb", "meaning": "作为替代，反而", "exampleDe": "Er kaufte kein Auto, sondern fuhr stattdessen Fahrrad.", "exampleZh": "他没有买汽车，反而改骑自行车。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-bus-02-s3",
+                "startTime": 13.5,
+                "endTime": 20.5,
+                "german": "Vom Hauptbahnhof gibt es heute kostenlose Busse direkt zur Halle.",
+                "chinese": "今天从中央火车站有直达比赛场馆的免费接驳大巴。",
+                "clozeWords": ["Hauptbahnhof", "kostenlose", "Busse", "direkt"],
+                "vocab": [
+                    {"word": "der Hauptbahnhof", "plural": "die Hauptbahnhöfe", "pos": "Nomen", "meaning": "火车总站，中央火车站", "exampleDe": "Wir treffen uns am Infopoint im Hauptbahnhof.", "exampleZh": "我们在中央火车站的问讯处集合。"},
+                    {"word": "kostenlos", "pos": "Adjektiv", "meaning": "免费的", "exampleDe": "Das WLAN im Hotel ist für alle Gäste kostenlos.", "exampleZh": "酒店的无线网络对所有客人免费。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a2-anzug-03",
+        "title": "Vorbereitung auf die Hochzeitsfeier",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Familie & Feste",
+        "taskSection": "歌德 A2 · Teil 1 日常待办",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "154.2",
+        "to": "176.0",
+        "out_file": "goethe_a2_anzug.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-anzug-03-s1",
+                "startTime": 0.0,
+                "endTime": 7.5,
+                "german": "Hallo Sabine, denk bitte an meinen dunklen Anzug aus der Reinigung.",
+                "chinese": "萨宾娜你好，请一定记着去干洗店取我的深色西装。",
+                "clozeWords": ["denk", "dunklen", "Anzug", "Reinigung"],
+                "vocab": [
+                    {"word": "der Anzug", "plural": "die Anzüge", "pos": "Nomen", "meaning": "西装，套装", "exampleDe": "Zur Hochzeit trägt er einen festlichen dunklen Anzug.", "exampleZh": "参加婚礼时他穿了一身庄重的深色西装。"},
+                    {"word": "die Reinigung", "plural": "die Reinigungen", "pos": "Nomen", "meaning": "干洗店，清洁", "exampleDe": "Ich muss meinen Wintermantel in die chemische Reinigung bringen.", "exampleZh": "我得把冬季大衣送到干洗店去。"},
+                    {"word": "denken an (+Akk)", "pos": "Verb", "meaning": "想到，惦记，记着", "exampleDe": "Denk bitte daran, vor der Abreise die Fenster zu schließen.", "exampleZh": "出门前请务必记着把窗户关好。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-anzug-03-s2",
+                "startTime": 7.5,
+                "endTime": 14.8,
+                "german": "Sonst weiß ich nicht, was ich bei Helenas Hochzeit morgen anziehen soll.",
+                "chinese": "否则我都不知道明天海伦娜的婚礼该穿什么好了。",
+                "clozeWords": ["Hochzeit", "morgen", "anziehen"],
+                "vocab": [
+                    {"word": "die Hochzeit", "plural": "die Hochzeiten", "pos": "Nomen", "meaning": "婚礼，结婚典礼", "exampleDe": "Zur Hochzeit kamen über einhundert Gäste aus ganz Europa.", "exampleZh": "有一百多位来自全欧的宾客出席了婚礼。"},
+                    {"word": "anziehen", "pos": "Verb (trennbar)", "meaning": "穿上（衣服）", "exampleDe": "Zieh dir eine warme Jacke an, draußen weht ein kalter Wind.", "exampleZh": "穿上一件厚外套吧，外面正刮着冷风。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-anzug-03-s3",
+                "startTime": 14.8,
+                "endTime": 21.8,
+                "german": "Das Geschenk habe ich heute schon gekauft, die Blumen holen wir morgen früh.",
+                "chinese": "礼物我今天午休时已经买好了，鲜花我们明天一早再去取。",
+                "clozeWords": ["Geschenk", "gekauft", "Blumen"],
+                "vocab": [
+                    {"word": "das Geschenk", "plural": "die Geschenke", "pos": "Nomen", "meaning": "礼物，礼品", "exampleDe": "Wir haben ein schönes Geschenk für das Brautpaar ausgewählt.", "exampleZh": "我们为新人挑选了一份精美的礼物。"},
+                    {"word": "die Blume", "plural": "die Blumen", "pos": "Nomen", "meaning": "花，花卉", "exampleDe": "Ein bunter Strauß frischer Blumen steht auf dem Esstisch.", "exampleZh": "餐桌上摆放着一束色彩缤纷的鲜花。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a2-wetter-04",
+        "title": "Wetterbericht fürs Wochenende",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Wetter & Natur",
+        "taskSection": "歌德 A2 · Teil 1 天气预报",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "302.8",
+        "to": "328.5",
+        "out_file": "goethe_a2_wetter.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-wetter-04-s1",
+                "startTime": 0.0,
+                "endTime": 8.5,
+                "german": "Am Wochenende ist es im Norden windig und bewölkt bei maximal siebzehn Grad.",
+                "chinese": "周末北部地区风力较大且云层较厚，最高气温仅为17度。",
+                "clozeWords": ["Wochenende", "windig", "bewölkt", "Grad"],
+                "vocab": [
+                    {"word": "windig", "pos": "Adjektiv", "meaning": "多风的，刮风的", "exampleDe": "An der Nordseeküste ist es im Herbst oft sehr windig.", "exampleZh": "在秋天的北海沿岸经常狂风阵阵。"},
+                    {"word": "bewölkt", "pos": "Adjektiv", "meaning": "多云的，阴天的", "exampleDe": "Der Himmel über Berlin ist heute fast durchgehend bewölkt.", "exampleZh": "柏林上空今天几乎全天多云。"},
+                    {"word": "der Grad", "plural": "die Grade", "pos": "Nomen", "meaning": "度（温度）", "exampleDe": "Das Thermometer zeigt heute sommerliche fünfundzwanzig Grad.", "exampleZh": "温度计今天显示夏日般的25摄氏度。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-wetter-04-s2",
+                "startTime": 8.5,
+                "endTime": 16.8,
+                "german": "Im Süden ist es am Samstag noch sonnig und sommerlich warm bis fünfundzwanzig Grad.",
+                "chinese": "南部地区周六依旧阳光明媚，温暖如夏，最高气温可达25度。",
+                "clozeWords": ["Samstag", "sonnig", "warm"],
+                "vocab": [
+                    {"word": "sonnig", "pos": "Adjektiv", "meaning": "晴朗的，充满阳光的", "exampleDe": "Wir genossen ein sonniges Wochenende in den bayerischen Bergen.", "exampleZh": "我们在巴伐利亚山区享受了一个晴朗明媚的周末。"},
+                    {"word": "warm", "pos": "Adjektiv", "meaning": "温暖的，暖和的", "exampleDe": "Im Frühling wird es draußen von Tag zu Tag spürbar wärmer.", "exampleZh": "春天到来，室外一天比一天明显转暖。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-wetter-04-s3",
+                "startTime": 16.8,
+                "endTime": 25.7,
+                "german": "Am Sonntag zieht die Kaltfront auch nach Süddeutschland und die Temperaturen fallen deutlich.",
+                "chinese": "周日冷空气锋面也将向德国南部推进，气温将显著大幅回落。",
+                "clozeWords": ["Sonntag", "Kaltfront", "Temperaturen", "fallen"],
+                "vocab": [
+                    {"word": "die Temperatur", "plural": "die Temperaturen", "pos": "Nomen", "meaning": "气温，温度", "exampleDe": "Die Temperaturen sinken in der Nacht bis auf den Gefrierpunkt.", "exampleZh": "夜间气温降至冰点。"},
+                    {"word": "fallen", "pos": "Verb", "meaning": "下降，跌落", "exampleDe": "Die Preise und Temperaturen fallen im Spätherbst deutlich.", "exampleZh": "物价和气温在深秋时节双双显著下降。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a2-reparatur-05",
+        "title": "Anruf bei der Hausverwaltung: Heizungsausfall",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Wohnen & Reparatur",
+        "taskSection": "歌德 A2 · Teil 3 物业报修",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "868.0",
+        "to": "891.8",
+        "out_file": "goethe_a2_reparatur.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-reparatur-05-s1",
+                "startTime": 0.0,
+                "endTime": 7.8,
+                "german": "Hallo Herr Talas, hier Miguel Alba, wir haben gestern schon wegen der Reparatur telefoniert.",
+                "chinese": "塔拉斯先生您好，我是米格尔·阿尔巴，我们昨天就维修事宜已经通了电话。",
+                "clozeWords": ["Reparatur", "telefoniert", "gestern"],
+                "vocab": [
+                    {"word": "die Reparatur", "plural": "die Reparaturen", "pos": "Nomen", "meaning": "修理，维修", "exampleDe": "Die Reparatur der Heizung wurde sofort vom Vermieter beauftragt.", "exampleZh": "房东立即委托专人修理了暖气设备。"},
+                    {"word": "telefonieren", "pos": "Verb", "meaning": "打电话，通话", "exampleDe": "Ich habe heute schon ausführlich mit dem Kundendienst telefoniert.", "exampleZh": "我今天已经跟客服中心详细通过电话了。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-reparatur-05-s2",
+                "startTime": 7.8,
+                "endTime": 15.5,
+                "german": "Der Mechaniker hat den Aufzug im Haus gestern Abend repariert und die Beleuchtung funktioniert wieder.",
+                "chinese": "技工昨晚修好了楼里的电梯，门厅入口处的照明灯也重新亮起来了。",
+                "clozeWords": ["Mechaniker", "Aufzug", "repariert", "Beleuchtung"],
+                "vocab": [
+                    {"word": "der Mechaniker", "plural": "die Mechaniker", "pos": "Nomen", "meaning": "机修工，机械技师", "exampleDe": "Ein erfahrener Mechaniker kontrollierte die Bremsen des Autos.", "exampleZh": "一位经验丰富的技工检查了汽车的制动刹车。"},
+                    {"word": "funktionieren", "pos": "Verb", "meaning": "运转正常，起作用", "exampleDe": "Die neue Software funktioniert auf allen Mobilgeräten tadellos.", "exampleZh": "新软件在所有移动设备上均正常顺畅运行。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-reparatur-05-s3",
+                "startTime": 15.5,
+                "endTime": 23.8,
+                "german": "Aber jetzt wird die Heizung in meiner Wohnung nicht mehr warm, können Sie vorbeikommen?",
+                "chinese": "但是现在我公寓里的暖气完全不热了，您能亲自过来查看一下吗？",
+                "clozeWords": ["Heizung", "Wohnung", "vorbeikommen"],
+                "vocab": [
+                    {"word": "die Heizung", "plural": "die Heizungen", "pos": "Nomen", "meaning": "暖气设施，供暖设备", "exampleDe": "Im kalten Winter muss die Heizung Tag und Nacht laufen.", "exampleZh": "在寒冬里暖气必须昼夜不停运转。"},
+                    {"word": "vorbeikommen", "pos": "Verb (trennbar)", "meaning": "顺道过来，登门走访", "exampleDe": "Kannst du heute Abend kurz bei mir vorbeikommen?", "exampleZh": "你今晚能顺道来我家坐一下吗？"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-a2-praxis-06",
+        "title": "Terminvereinbarung zur Krankengymnastik",
+        "level": "A2",
+        "source": "Goethe-Institut",
+        "topic": "Gesundheit & Medizin",
+        "taskSection": "歌德 A2 · Teil 3 诊所复健",
+        "raw_file": GOETHE_A2_FILE,
+        "ss": "917.5",
+        "to": "932.8",
+        "out_file": "goethe_a2_praxis.mp3",
+        "segments": [
+            {
+                "id": "goethe-a2-praxis-06-s1",
+                "startTime": 0.0,
+                "endTime": 5.5,
+                "german": "Ich rufe an wegen Ihrer Krankengymnastik, Sie können nächste Woche Montag und Donnerstag kommen.",
+                "chinese": "我打电话通知您的物理理疗复健时间，您下周一和周四下午可以过来。",
+                "clozeWords": ["Krankengymnastik", "Montag", "Donnerstag"],
+                "vocab": [
+                    {"word": "die Krankengymnastik", "pos": "Nomen", "meaning": "医疗体操，物理理疗康复", "exampleDe": "Nach der Knieoperation verordnete der Orthopäde regelmäßige Krankengymnastik.", "exampleZh": "膝关节手术后骨科医生开具了定期的医疗体操康复单。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-praxis-06-s2",
+                "startTime": 5.5,
+                "endTime": 10.2,
+                "german": "Sie müssen nicht an der Rezeption warten, sondern gehen direkt in den Übungsraum.",
+                "chinese": "您无需在前台导诊台排队等候，直接进入后面的康复训练活动室即可。",
+                "clozeWords": ["Rezeption", "warten", "Übungsraum"],
+                "vocab": [
+                    {"word": "die Rezeption", "plural": "die Rezeptionen", "pos": "Nomen", "meaning": "接待处，前台接待服务台", "exampleDe": "Der Schlüssel kann bei der Abreise an der Rezeption abgegeben werden.", "exampleZh": "退房时钥匙可直接交回前台。"},
+                    {"word": "der Raum", "plural": "die Räume", "pos": "Nomen", "meaning": "房间，空间", "exampleDe": "Der Konferenzraum ist mit modernster Tontechnik ausgestattet.", "exampleZh": "会议室配备了最现代化的音响系统。"}
+                ]
+            },
+            {
+                "id": "goethe-a2-praxis-06-s3",
+                "startTime": 10.2,
+                "endTime": 15.3,
+                "german": "Bitte bringen Sie unbedingt die ärztliche Verordnung und bequeme Sportkleidung mit.",
+                "chinese": "请您务必随身携带主治医生的理疗处方单以及宽松舒适的运动服装。",
+                "clozeWords": ["unbedingt", "Verordnung", "Sportkleidung"],
+                "vocab": [
+                    {"word": "die Verordnung", "plural": "die Verordnungen", "pos": "Nomen", "meaning": "（医生的）处方，医嘱规章", "exampleDe": "Für die Physiotherapie benötigen gesetzlich Versicherte eine ärztliche Verordnung.", "exampleZh": "进行物理理疗时公立医保投保人必须出具医生处方单。"},
+                    {"word": "unbedingt", "pos": "Adjektiv / Adverb", "meaning": "务必，一定，绝对的", "exampleDe": "Diesen Termin beim Facharzt darfst du keinesfalls versäumen, er ist unbedingt nötig.", "exampleZh": "专科医生的预约你绝不可错过，它绝对必要。"}
+                ]
+            }
+        ]
+    }
+])
+
+# =========================================================================
+# Goethe B1 (8 tracks)
+# =========================================================================
+TRACK_DEFINITIONS.extend([
+    {
+        "id": "goethe-b1-urlaub-01",
+        "title": "Urlaubsplanung und günstige Flüge nach Sizilien",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Freizeit",
+        "taskSection": "歌德 B1 · Teil 1 假期规划",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "80.5",
+        "to": "109.8",
+        "out_file": "goethe_b1_urlaub.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-urlaub-01-s1",
+                "startTime": 0.0,
+                "endTime": 9.5,
+                "german": "Hallo Jan, hier ist Frank. Wir wollten doch im Sommer eine Woche ans Meer fahren.",
+                "chinese": "你好扬，我是弗兰克。我们之前不是商量好夏天去海边度一周假吗？",
+                "clozeWords": ["Sommer", "Woche", "Meer"],
+                "vocab": [
+                    {"word": "das Meer", "plural": "die Meere", "pos": "Nomen", "meaning": "大海，海洋", "exampleDe": "Im Sommer fahren viele Familien ans Meer.", "exampleZh": "夏天许多家庭会去海边。"},
+                    {"word": "die Woche", "plural": "die Wochen", "pos": "Nomen", "meaning": "星期，周", "exampleDe": "Er bleibt für zwei Wochen in Italien.", "exampleZh": "他在意大利停留两周。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-urlaub-01-s2",
+                "startTime": 9.5,
+                "endTime": 19.2,
+                "german": "Ich bin gerade im Internet: im Juni gibt es noch günstige Flüge nach Sizilien.",
+                "chinese": "我正好在上网查：六月份还有飞往西西里岛的特价打折机票。",
+                "clozeWords": ["Internet", "günstige", "Flüge", "Sizilien"],
+                "vocab": [
+                    {"word": "günstig", "pos": "Adjektiv", "meaning": "优惠的，合算的", "exampleDe": "Das Angebot im Reisebüro war besonders günstig.", "exampleZh": "旅行社的这个报价特别划算。"},
+                    {"word": "der Flug", "plural": "die Flüge", "pos": "Nomen", "meaning": "航班，飞行", "exampleDe": "Der Flug nach Rom dauert nur zwei Stunden.", "exampleZh": "飞往罗马的航班只要两小时。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-urlaub-01-s3",
+                "startTime": 19.2,
+                "endTime": 29.3,
+                "german": "Die Übernachtung müssen wir noch klären, meine Tante wohnt dort oder wir gehen campen.",
+                "chinese": "住宿问题我们还得定一下，我姑姑住在那里，或者我们也可以去露营扎营。",
+                "clozeWords": ["Übernachtung", "klären", "Tante", "campen"],
+                "vocab": [
+                    {"word": "die Übernachtung", "plural": "die Übernachtungen", "pos": "Nomen", "meaning": "过夜，住宿", "exampleDe": "Die Übernachtung im Hotel ist bereits im Reisepreis enthalten.", "exampleZh": "酒店住宿费已包含在团费中。"},
+                    {"word": "klären", "pos": "Verb", "meaning": "查清，商量确定", "exampleDe": "Wir müssen noch wichtige Fragen im Meeting klären.", "exampleZh": "我们还得在会议上明确重要问题。"},
+                    {"word": "campen", "pos": "Verb", "meaning": "露营，野营", "exampleDe": "Am Wochenende wollen wir am Waldsee campen.", "exampleZh": "周末我们打算在森林湖畔露营。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-praxis-02",
+        "title": "Terminvereinbarung in der Arztpraxis",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Gesundheit & Vorsorge",
+        "taskSection": "歌德 B1 · Teil 1 门诊预约",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "172.5",
+        "to": "201.2",
+        "out_file": "goethe_b1_praxis.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-praxis-02-s1",
+                "startTime": 0.0,
+                "endTime": 9.2,
+                "german": "Hallo Frau Stein, hier ist die Praxis Dr. Becker, es geht um Ihre Grippe-Impfung.",
+                "chinese": "施泰因女士您好，这里是贝克尔医生诊所，致电通知您接种流感疫苗的事宜。",
+                "clozeWords": ["Praxis", "Grippe", "Impfung"],
+                "vocab": [
+                    {"word": "die Praxis", "plural": "die Praxen", "pos": "Nomen", "meaning": "医生诊所，执业所", "exampleDe": "Die Gemeinschaftspraxis hat heute bis 18 Uhr geöffnet.", "exampleZh": "联合诊所今天营业至下午18点。"},
+                    {"word": "die Impfung", "plural": "die Impfungen", "pos": "Nomen", "meaning": "接种疫苗，防疫注射", "exampleDe": "Eine rechtzeitige Impfung schützt zuverlässig vor der Grippe.", "exampleZh": "及时接种疫苗可有效预防流感。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-praxis-02-s2",
+                "startTime": 9.2,
+                "endTime": 19.0,
+                "german": "Frau Dr. Becker muss zu einer Operation, könnten Sie vielleicht am Freitag um 14 Uhr kommen?",
+                "chinese": "贝克尔医生届时临时有一台手术，您能否改在周五下午14点前来？",
+                "clozeWords": ["Operation", "Freitag", "kommen"],
+                "vocab": [
+                    {"word": "die Operation", "plural": "die Operationen", "pos": "Nomen", "meaning": "手术", "exampleDe": "Die Operation am Knie verlief ohne Komplikationen.", "exampleZh": "膝关节手术进行得非常顺利没有任何并发症。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-praxis-02-s3",
+                "startTime": 19.0,
+                "endTime": 28.7,
+                "german": "Geben Sie mir bitte heute noch Bescheid, und Ihre Krankenversichertenkarte ist noch bei uns.",
+                "chinese": "请您今天内答复我们能否成行，另外您的医保芯片卡上次遗落在了我们诊所。",
+                "clozeWords": ["Bescheid", "Krankenversichertenkarte", "vergessen"],
+                "vocab": [
+                    {"word": "Bescheid geben", "pos": "Redewendung", "meaning": "通知，答复", "exampleDe": "Gib mir bitte bis morgen Bescheid, ob du mitkommst.", "exampleZh": "请在明天之前告知我你是否一起来。"},
+                    {"word": "die Karte", "plural": "die Karten", "pos": "Nomen", "meaning": "卡片，芯片医保卡", "exampleDe": "Vergessen Sie bitte nicht Ihre Versichertenkarte mitzubringen.", "exampleZh": "请不要忘记带上您的医保卡。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-bewerbung-03",
+        "title": "Bewerbungsunterlagen bei der Versicherung",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Beruf & Bewerbung",
+        "taskSection": "歌德 B1 · Teil 1 求职材料",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "247.0",
+        "to": "277.5",
+        "out_file": "goethe_b1_bewerbung.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-bewerbung-03-s1",
+                "startTime": 0.0,
+                "endTime": 10.0,
+                "german": "Hallo Frau Brahms, Ulf Thomas hier von der Versicherung, Sie haben sich als Verkaufsleiterin beworben.",
+                "chinese": "布拉姆斯女士您好，我是保险公司的乌尔夫·托马斯，您应聘了我们的销售主管岗位。",
+                "clozeWords": ["Versicherung", "Verkaufsleiterin", "beworben"],
+                "vocab": [
+                    {"word": "die Versicherung", "plural": "die Versicherungen", "pos": "Nomen", "meaning": "保险公司，保险", "exampleDe": "Er arbeitet seit fünf Jahren bei einer großen Versicherung.", "exampleZh": "他在一家大型保险公司工作了五年。"},
+                    {"word": "sich bewerben um (+Akk)", "pos": "Verb", "meaning": "求职，申请", "exampleDe": "Viele Absolventen bewerben sich um diese Stelle.", "exampleZh": "许多大学毕业生应聘这个职位。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-bewerbung-03-s2",
+                "startTime": 10.0,
+                "endTime": 20.2,
+                "german": "Doch leider fehlen in Ihren Unterlagen zwei Zeugnisse, die für die Bewerbung sehr wichtig sind.",
+                "chinese": "遗憾的是您的申请档案中缺少了两份关键资质证书，这对评估录取至关重要。",
+                "clozeWords": ["fehlen", "Unterlagen", "Zeugnisse", "wichtig"],
+                "vocab": [
+                    {"word": "die Unterlagen", "pos": "Nomen (Plural)", "meaning": "申请材料，文件证明", "exampleDe": "Bitte reichen Sie die vollständigen Unterlagen fristgerecht ein.", "exampleZh": "请按时提交完整的申请文件。"},
+                    {"word": "das Zeugnis", "plural": "die Zeugnisse", "pos": "Nomen", "meaning": "毕业证明，资质鉴定", "exampleDe": "Für die Bewerbung braucht man beglaubigte Kopien aller Zeugnisse.", "exampleZh": "申请需要所有证书的公证复印件。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-bewerbung-03-s3",
+                "startTime": 20.2,
+                "endTime": 30.5,
+                "german": "Ich bitte Sie, diese Unterlagen so schnell wie möglich an uns zu schicken oder mich anzurufen.",
+                "chinese": "恳请您尽快将补充材料以电邮形式补发给我们，或回电与我沟通，非常感谢！",
+                "clozeWords": ["schnell", "schicken", "anzurufen", "Rückfragen"],
+                "vocab": [
+                    {"word": "schicken", "pos": "Verb", "meaning": "发送，邮寄", "exampleDe": "Ich schicke Ihnen den Vertrag per E-Mail zu.", "exampleZh": "我通过电子邮件将合同发送给您。"},
+                    {"word": "anrufen", "pos": "Verb (trennbar)", "meaning": "拨打电话", "exampleDe": "Sie können mich jederzeit bei Fragen anrufen.", "exampleZh": "如有疑问您可以随时给我打电话。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-verkehr-04",
+        "title": "Verkehrsfunk: Stau auf der Autobahn A8",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Verkehr & Mobilität",
+        "taskSection": "歌德 B1 · Teil 1 交通路况",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "331.0",
+        "to": "368.5",
+        "out_file": "goethe_b1_verkehr.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-verkehr-04-s1",
+                "startTime": 0.0,
+                "endTime": 12.0,
+                "german": "Achtung Autofahrer, auf der Autobahn A8 Richtung München hat sich zwischen Eschenried und Dachau ein schwerer Unfall ereignet.",
+                "chinese": "过往机动车驾驶员请注意：A8高速公路开往慕尼黑方向埃申里德与达豪出口之间发生了一起严重交通事故。",
+                "clozeWords": ["Autofahrer", "Autobahn", "ereignet", "Unfall"],
+                "vocab": [
+                    {"word": "die Autobahn", "plural": "die Autobahnen", "pos": "Nomen", "meaning": "高速公路", "exampleDe": "Auf deutschen Autobahnen gilt auf vielen Strecken ein Tempolimit.", "exampleZh": "在德国许多高速公路路段都设有最高限速。"},
+                    {"word": "der Unfall", "plural": "die Unfälle", "pos": "Nomen", "meaning": "事故，意外", "exampleDe": "Bei dem Glatteis kam es zu mehreren Verkehrsunfällen.", "exampleZh": "路面结冰引发了多起交通事故。"},
+                    {"word": "sich ereignen", "pos": "Verb", "meaning": "发生", "exampleDe": "Der Vorfall ereignete sich am späten Abend auf der Hauptstraße.", "exampleZh": "这起突发事件于深夜发生在主干道上。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-verkehr-04-s2",
+                "startTime": 12.0,
+                "endTime": 24.5,
+                "german": "Momentan ist der rechte Fahrstreifen blockiert und der Rückstau beträgt bereits zwölf Kilometer.",
+                "chinese": "目前右侧行车车道完全受阻封闭，后方车辆缓行车龙已长达整整十二公里。",
+                "clozeWords": ["Fahrstreifen", "blockiert", "Rückstau", "Kilometer"],
+                "vocab": [
+                    {"word": "der Fahrstreifen", "plural": "die Fahrstreifen", "pos": "Nomen", "meaning": "车道，行车线", "exampleDe": "Wegen der Baustelle wird der Verkehr auf einen Fahrstreifen verengt.", "exampleZh": "因道路施工车辆被迫并入一条单向车道通行。"},
+                    {"word": "blockieren", "pos": "Verb", "meaning": "阻碍，堵塞，封锁", "exampleDe": "Ein umgestürzter Baum blockiert die gesamte Landstraße.", "exampleZh": "一棵倒伏的大树封堵了整条乡村公路。"},
+                    {"word": "der Stau", "plural": "die Staus", "pos": "Nomen", "meaning": "塞车，拥堵", "exampleDe": "Wir standen zwei Stunden im zähflüssigen Wochenendstau.", "exampleZh": "我们在周末的蜗行拥堵中困滞了两个小时。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-verkehr-04-s3",
+                "startTime": 24.5,
+                "endTime": 37.5,
+                "german": "Im Stadtgebiet München kommt es wegen einer Baustelle am Tunnel zu erheblichen Verkehrsbehinderungen.",
+                "chinese": "在慕尼黑市区内部，由于理查德·施特劳斯隧道附近的道路修缮作业，早晚高峰引发了严重的交通受阻。",
+                "clozeWords": ["Stadtgebiet", "Baustelle", "Tunnel", "Behinderungen"],
+                "vocab": [
+                    {"word": "die Baustelle", "plural": "die Baustellen", "pos": "Nomen", "meaning": "工地，施工路段", "exampleDe": "An der Baustelle gilt eine Höchstgeschwindigkeit von 60 km/h.", "exampleZh": "在施工路段最高限速为每小时60公里。"},
+                    {"word": "die Behinderung", "plural": "die Behinderungen", "pos": "Nomen", "meaning": "障碍，阻碍", "exampleDe": "Aufgrund des Schneefalls kam es zu massiven Behinderungen im Bahnverkehr.", "exampleZh": "因突降大雪，铁路交通遭遇了大面积严重延误阻滞。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-bahnhof-05",
+        "title": "Bahnhofsdurchsage: Zugausfall und Anschlusszüge",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Reise & Bahnverkehr",
+        "taskSection": "歌德 B1 · Teil 1 车站通告",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "543.0",
+        "to": "588.0",
+        "out_file": "goethe_b1_bahnhof.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-bahnhof-05-s1",
+                "startTime": 0.0,
+                "endTime": 15.0,
+                "german": "Gleis dreizehn, Einfahrt des Interregios 114 nach Bern, Zofingen und Luzern, planmäßige Abfahrt acht Uhr vierunddreißig.",
+                "chinese": "13号站台，开往伯尔尼、佐芬根与卢塞恩的114次城际列车进站，正点发车时间为8点34分。",
+                "clozeWords": ["Gleis", "Einfahrt", "planmäßige", "Abfahrt"],
+                "vocab": [
+                    {"word": "das Gleis", "plural": "die Gleise", "pos": "Nomen", "meaning": "站台，轨道", "exampleDe": "Der Zug nach München fährt heute ausnahmsweise von Gleis vier ab.", "exampleZh": "开往慕尼黑的列车今天破例在4号站台发车。"},
+                    {"word": "die Abfahrt", "plural": "die Abfahrten", "pos": "Nomen", "meaning": "出发，启程", "exampleDe": "Wenige Minuten vor der Abfahrt stiegen die Fahrgäste ein.", "exampleZh": "发车前几分钟旅客们陆续登上列车。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-bahnhof-05-s2",
+                "startTime": 15.0,
+                "endTime": 30.0,
+                "german": "Wichtige Fahrgastinformation für Reisende nach Genf: Der Intercity um acht Uhr fünfundvierzig fällt wegen einer Weichenstörung aus.",
+                "chinese": "前往日内瓦方向的旅客请特别注意：原定8点45分始发的城际特快因道岔突发故障而取消停运。",
+                "clozeWords": ["Fahrgastinformation", "ausfällt", "Weichenstörung", "Intercity"],
+                "vocab": [
+                    {"word": "die Störung", "plural": "die Störungen", "pos": "Nomen", "meaning": "故障，干扰", "exampleDe": "Eine technische Störung an der Oberleitung stoppte den Zugverkehr.", "exampleZh": "接触网的一处技术故障导致铁路列车全部暂停运行。"},
+                    {"word": "ausfallen", "pos": "Verb (trennbar)", "meaning": "取消，不举行", "exampleDe": "Wegen des Streiks fiel die Vorlesung an der Universität aus.", "exampleZh": "由于大罢工大学的相关大课今天宣告停课。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-bahnhof-05-s3",
+                "startTime": 30.0,
+                "endTime": 45.0,
+                "german": "Die nächstfolgende Reisemöglichkeit nach Genf besteht über Lausanne um neun Uhr fünfundvierzig ab Gleis elf.",
+                "chinese": "下一趟前往日内瓦的可行替代班次为9点45分经由洛桑的列车，将在11站台始发。",
+                "clozeWords": ["Reisemöglichkeit", "besteht", "Verbindung"],
+                "vocab": [
+                    {"word": "die Verbindung", "plural": "die Verbindungen", "pos": "Nomen", "meaning": "交通班次，中转联程", "exampleDe": "Es gibt stündlich eine direkte Verbindung zwischen Frankfurt und Köln.", "exampleZh": "法兰克福与科隆之间每小时均有一班直达高速列车。"},
+                    {"word": "bestehen", "pos": "Verb", "meaning": "存在，由……组成", "exampleDe": "Es besteht eine hervorragende Umsteigemöglichkeit am Knotenbahnhof.", "exampleZh": "在交通枢纽站有一处极其顺畅的转乘中转通道。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-wetter-06",
+        "title": "Wetterwarnung vor kräftigen Regengüssen",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Wetter & Umwelt",
+        "taskSection": "歌德 B1 · Teil 1 气象预报",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "591.0",
+        "to": "637.0",
+        "out_file": "goethe_b1_wetter.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-wetter-06-s1",
+                "startTime": 0.0,
+                "endTime": 14.5,
+                "german": "In der Nacht zum Freitag bleibt es im Westen und Nordwesten Deutschlands nur gering bewölkt und weitgehend trocken.",
+                "chinese": "在周四入夜至周五清晨期间，德国西部与西北部大部地区晴间多云，保持整体干爽干燥。",
+                "clozeWords": ["Freitag", "bewölkt", "weitgehend", "trocken"],
+                "vocab": [
+                    {"word": "trocken", "pos": "Adjektiv", "meaning": "干燥的，无雨的", "exampleDe": "Nach wochenlanger Trockenheit sehnt sich die Landwirtschaft nach Regen.", "exampleZh": "历经数周连旱之后农业界无不翘首期盼甘霖降临。"},
+                    {"word": "weitgehend", "pos": "Adverb / Adjektiv", "meaning": "很大程度上，大体上", "exampleDe": "Die Sanierungsarbeiten am Altbau sind weitgehend abgeschlossen.", "exampleZh": "老建筑的外立面修缮工程现已大体竣工。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-wetter-06-s2",
+                "startTime": 14.5,
+                "endTime": 30.0,
+                "german": "Vom Süden her ziehen jedoch kräftige Regengüsse und teils heftige Sommergewitter bis an die östlichen Bundesländer.",
+                "chinese": "然而从南部方向正持续移来强劲的倾盆暴雨云团，局部伴有强对流强雷暴，并迅速席卷东部各州。",
+                "clozeWords": ["Regengüsse", "Sommergewitter", "östlichen", "Bundesländer"],
+                "vocab": [
+                    {"word": "der Regenguss", "plural": "die Regengüsse", "pos": "Nomen", "meaning": "倾盆大雨，骤降暴雨", "exampleDe": "Ein plötzlicher Regenguss überraschte die Spaziergänger im Stadtpark.", "exampleZh": "一阵突如其来的滂沱大雨让城市公园里的游人措手不及。"},
+                    {"word": "das Gewitter", "plural": "die Gewitter", "pos": "Nomen", "meaning": "雷暴，雷阵雨", "exampleDe": "Bei schwerem Gewitter sollte man offene Felder und Bäume meiden.", "exampleZh": "在发生强雷暴时应尽量避开开阔田野和大树。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-wetter-06-s3",
+                "startTime": 30.0,
+                "endTime": 46.0,
+                "german": "In Gewittergebieten ist mit schweren Sturmböen zu rechnen, während die Tiefstwerte auf zwölf Grad sinken.",
+                "chinese": "在强雷暴覆盖区域需特别谨防强风暴阵风突袭，同时夜间最低气温将骤降至12摄氏度左右。",
+                "clozeWords": ["Sturmböen", "rechnen", "Tiefstwerte", "sinken"],
+                "vocab": [
+                    {"word": "die Sturmböe", "plural": "die Sturmböen", "pos": "Nomen", "meaning": "狂风阵风，强突风", "exampleDe": "Heftige Sturmböen deckten in der Ortschaft mehrere Hausdächer ab.", "exampleZh": "强劲的风暴阵风掀翻了小镇上的多处房屋屋顶。"},
+                    {"word": "sinken", "pos": "Verb", "meaning": "下降，下沉", "exampleDe": "Im Spätherbst sinken die durchschnittlichen Wassertemperaturen rasch.", "exampleZh": "在深秋时节江河平均水温会急剧持续下降。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-museum-07",
+        "title": "Führung durch das Münchner Stadtmuseum",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Kultur & Geschichte",
+        "taskSection": "歌德 B1 · Teil 2 展馆导览",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "652.5",
+        "to": "677.0",
+        "out_file": "goethe_b1_museum.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-museum-07-s1",
+                "startTime": 0.0,
+                "endTime": 8.5,
+                "german": "Ich freue mich außerordentlich, Sie heute zu dieser Führung durch das Münchner Stadtmuseum begrüßen zu dürfen.",
+                "chinese": "我感到非常由衷的高兴与荣幸，欢迎各位嘉宾今天参加慕尼黑市立博物馆的专题历史导览。",
+                "clozeWords": ["außerordentlich", "Führung", "Stadtmuseum", "begrüßen"],
+                "vocab": [
+                    {"word": "die Führung", "plural": "die Führungen", "pos": "Nomen", "meaning": "导游解说，展厅导览", "exampleDe": "Die sachkundige Führung durch das Schloss dauerte knapp zwei Stunden.", "exampleZh": "由专业学者主讲的城堡历史导览持续了将近两个小时。"},
+                    {"word": "begrüßen", "pos": "Verb", "meaning": "欢迎，问候", "exampleDe": "Der Museumsdirektor begrüßte die internationalen Staatsgäste herzlich.", "exampleZh": "博物馆馆长向远道而来的外国政要嘉宾致以热烈诚挚的欢迎。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-museum-07-s2",
+                "startTime": 8.5,
+                "endTime": 16.5,
+                "german": "Mein Name ist Jan Kiefer und ich möchte Sie heute in die bewegte Geschichte der bayerischen Landeshauptstadt einweihen.",
+                "chinese": "我叫扬·基弗，今天十分荣幸将由我带领大家共同领略巴伐利亚州府慕尼黑波澜壮阔的发展变迁。",
+                "clozeWords": ["bewegte", "Geschichte", "Landeshauptstadt", "einweihen"],
+                "vocab": [
+                    {"word": "die Geschichte", "pos": "Nomen", "meaning": "历史，往事", "exampleDe": "Das Museum dokumentiert die wechselvolle Geschichte der Residenzstadt.", "exampleZh": "该博物馆系统展示记录了这处封建王城跌宕起伏的历史过往。"},
+                    {"word": "einweihen", "pos": "Verb (trennbar)", "meaning": "使了解，引导入门，揭秘", "exampleDe": "Der erfahrene Meister weihte den Lehrling in die Geheimnisse des Handwerks ein.", "exampleZh": "老工匠手把手将该项手工技艺的精髓奥秘倾囊相授给年轻学徒。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-museum-07-s3",
+                "startTime": 16.5,
+                "endTime": 24.5,
+                "german": "Wegen des herrlichen Frühlingswetters sind viele Besucher im Biergarten und wir haben die Ausstellung fast für uns.",
+                "chinese": "由于今日春光明媚暖阳普照，市民大多涌向了啤酒花园，因此我们几乎能独享整个典藏展厅！",
+                "clozeWords": ["herrlichen", "Frühlingswetters", "Ausstellung", "Besucher"],
+                "vocab": [
+                    {"word": "die Ausstellung", "plural": "die Ausstellungen", "pos": "Nomen", "meaning": "展览会，陈列展出", "exampleDe": "Die Sonderausstellung moderner Malerei zog tausende Kunstbegeisterte an.", "exampleZh": "本次现当代油画特展吸引了成千上万艺术爱好者驻足观摩。"},
+                    {"word": "herrlich", "pos": "Adjektiv", "meaning": "极好的，无比优美的", "exampleDe": "Vom Berggipfel aus bot sich uns ein herrlicher Blick auf die Alpen.", "exampleZh": "站在阿尔卑斯峰峦之巅，眼前展现出如诗如画的壮丽全景。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b1-krippe-08",
+        "title": "Diskussion über frühkindliche Erziehung",
+        "level": "B1",
+        "source": "Goethe-Institut",
+        "topic": "Gesellschaft & Familie",
+        "taskSection": "歌德 B1 · Teil 4 焦点访谈",
+        "raw_file": GOETHE_B1_FILE,
+        "ss": "1228.0",
+        "to": "1253.5",
+        "out_file": "goethe_b1_krippe.mp3",
+        "segments": [
+            {
+                "id": "goethe-b1-krippe-08-s1",
+                "startTime": 0.0,
+                "endTime": 8.5,
+                "german": "Unsere Kinder wissen genau, wer ihre Mutter ist, aber sie lernen früh, Vertrauen zu weiteren Bezugspersonen aufzubauen.",
+                "chinese": "我们的孩子完全明确谁是自己的生母，但在托育园他们很早便能学会在家庭以外与照顾者建立信任纽带。",
+                "clozeWords": ["wissen", "Mutter", "Bezugspersonen", "aufzubauen"],
+                "vocab": [
+                    {"word": "die Bezugsperson", "plural": "die Bezugspersonen", "pos": "Nomen", "meaning": "主要依恋对象，特定依托人", "exampleDe": "Im Säuglingsalter benötigt jedes Kleinkind eine verlässliche feste Bezugsperson.", "exampleZh": "在婴幼儿早期阶段每个儿童都迫切需要一个稳定可依赖的情感依托人。"},
+                    {"word": "das Vertrauen", "pos": "Nomen", "meaning": "信任，信赖", "exampleDe": "Gegenseitiges Vertrauen ist das Fundament jeder dauerhaften Partnerschaft.", "exampleZh": "彼此信任是任何稳固长久合作与人际关系的基石所在。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-krippe-08-s2",
+                "startTime": 8.5,
+                "endTime": 17.0,
+                "german": "Weder meine Frau noch ich können für mehrere Jahre beruflich pausieren, ohne wertvolle Entwicklungschancen zu verlieren.",
+                "chinese": "不论是我夫人还是我自己，都承受不起连续中断数年职业生涯、从而丧失关键晋升积累的沉重代价。",
+                "clozeWords": ["beruflich", "pausieren", "Entwicklungschancen", "verlieren"],
+                "vocab": [
+                    {"word": "pausieren", "pos": "Verb", "meaning": "暂停，歇息", "exampleDe": "Der Musiker musste wegen einer Sehnenentzündung mehrere Monate pausieren.", "exampleZh": "该乐手因肌腱急性发炎被迫完全停止演出休养数月之久。"},
+                    {"word": "die Chance", "plural": "die Chancen", "pos": "Nomen", "meaning": "机会，良机", "exampleDe": "Der Hochschulabschluss eröffnet jungen Talenten hervorragende berufliche Chancen.", "exampleZh": "名牌大学的高等教育文凭为青年才俊打开了极具前景的职场大门。"}
+                ]
+            },
+            {
+                "id": "goethe-b1-krippe-08-s3",
+                "startTime": 17.0,
+                "endTime": 25.5,
+                "german": "In einer warmherzigen, pädagogisch qualifizierten Kita-Umgebung interagieren Kinder spielerisch mit Gleichaltrigen.",
+                "chinese": "在充满呵护关爱且具备高度专业资质的幼托环境中，孩童们在自由游戏中同龄伙伴间互助共融成长。",
+                "clozeWords": ["warmherzigen", "pädagogisch", "qualifizierten", "Gleichaltrigen"],
+                "vocab": [
+                    {"word": "der Gleichaltrige", "plural": "die Gleichaltrigen", "pos": "Nomen", "meaning": "同龄人，年纪相仿者", "exampleDe": "Jugendliche orientieren sich bei vielen Entscheidungen stark an ihren Gleichaltrigen.", "exampleZh": "青少年在面临许多日常处事选择时极易受同龄群体影响。"},
+                    {"word": "qualifiziert", "pos": "Adjektiv", "meaning": "具备合格资质的，称职的", "exampleDe": "In der Frühförderung arbeiten ausschließlich bestens qualifizierte Fachkräfte.", "exampleZh": "在该早期教育机构中执教的全部为资质过硬的资深幼教专才。"}
+                ]
+            }
+        ]
+    }
+])
+
+# =========================================================================
+# Goethe B2 (8 tracks)
+# =========================================================================
+TRACK_DEFINITIONS.extend([
+    {
+        "id": "goethe-b2-ferien-01",
+        "title": "Anmeldung zum städtischen Ferienprogramm",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Freizeit & Bildung",
+        "taskSection": "歌德 B2 · Teil 1 活动报名",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "91.0",
+        "to": "125.0",
+        "out_file": "goethe_b2_ferien.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-ferien-01-s1",
+                "startTime": 0.0,
+                "endTime": 10.5,
+                "german": "Ich wollte mich nach dem städtischen Ferienprogramm erkundigen, ab wann kann man sich dafür anmelden?",
+                "chinese": "我想咨询一下市政假期青少年活动项目的具体安排，请问从什么时候开始可以报名？",
+                "clozeWords": ["Ferienprogramm", "erkundigen", "anmelden"],
+                "vocab": [
+                    {"word": "sich erkundigen nach (+Dat)", "pos": "Verb", "meaning": "探询，打听，咨询", "exampleDe": "Ich erkundige mich nach den aktuellen Kursgebühren.", "exampleZh": "我咨询一下当前最新的培训课程收费。"},
+                    {"word": "das Ferienprogramm", "plural": "die Ferienprogramme", "pos": "Nomen", "meaning": "假期活动规划，假期特别项目", "exampleDe": "Die Stadt bietet ein abwechslungsreiches Ferienprogramm für Kinder.", "exampleZh": "市政府为全市儿童提供了丰富多彩的假期活动项目。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-ferien-01-s2",
+                "startTime": 10.5,
+                "endTime": 22.0,
+                "german": "Wie immer ab dem ersten Juni, das Programm steht ab nächster Woche ausführlich im Internet.",
+                "chinese": "和往常一样从六月一日起开放报名，完整的活动简章下周起将详尽公布在政府官网上。",
+                "clozeWords": ["Programm", "ausführlich", "Internet"],
+                "vocab": [
+                    {"word": "ausführlich", "pos": "Adjektiv", "meaning": "详尽的，详细充实的", "exampleDe": "Der Bericht enthielt eine ausführliche Analyse der Marktlage.", "exampleZh": "该调研报告对宏观市场现状进行了极其详尽的剖析。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-ferien-01-s3",
+                "startTime": 22.0,
+                "endTime": 34.0,
+                "german": "Kostenpflichtige Angebote müssen direkt vor Ort bezahlt werden, sonst können wir den Platz nicht reservieren.",
+                "chinese": "属于收费类的实践项目必须当场在前台窗口直接缴费，否则我们无法为您保留名额。",
+                "clozeWords": ["Kostenpflichtige", "bezahlt", "reservieren"],
+                "vocab": [
+                    {"word": "kostenpflichtig", "pos": "Adjektiv", "meaning": "需要付费的，有偿的", "exampleDe": "Die Nutzung der Tiefgarage ist für Besucher kostenpflichtig.", "exampleZh": "访客使用地下停车库需按时缴纳停车费。"},
+                    {"word": "reservieren", "pos": "Verb", "meaning": "预定，保留", "exampleDe": "Haben Sie einen Tisch für heute Abend reserviert?", "exampleZh": "您预定了今晚的就餐餐位吗？"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-praktikum-02",
+        "title": "Erfahrungsbericht: Praktikum in einer Anwaltskanzlei",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Recht & Karriere",
+        "taskSection": "歌德 B2 · Teil 1 律所实习",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "442.0",
+        "to": "474.0",
+        "out_file": "goethe_b2_praktikum.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-praktikum-02-s1",
+                "startTime": 0.0,
+                "endTime": 10.5,
+                "german": "Mein Praktikum war echt toll, ich war in einer renommierten Kanzlei und habe einen guten Einblick bekommen.",
+                "chinese": "我的专业实习确实收获颇丰，我在一家知名律师事务所实习，对律师日常业务有了极佳的深入了解。",
+                "clozeWords": ["Praktikum", "Kanzlei", "Einblick"],
+                "vocab": [
+                    {"word": "das Praktikum", "plural": "die Praktika", "pos": "Nomen", "meaning": "专业实习，实训", "exampleDe": "Ein dreimonatiges Praktikum im Ausland stärkt das Profil.", "exampleZh": "为期三个月的海外企业实习能大大丰富个人履历。"},
+                    {"word": "die Kanzlei", "plural": "die Kanzleien", "pos": "Nomen", "meaning": "律师事务所，公证处", "exampleDe": "Die Anwaltskanzlei vertritt Mandanten im Wirtschaftsrecht.", "exampleZh": "该律师事务所在经济法领域为委托人提供诉讼代理。"},
+                    {"word": "der Einblick", "plural": "die Einblicke", "pos": "Nomen", "meaning": "洞察，了解，深入认识", "exampleDe": "Das Projekt bot faszinierende Einblicke in moderne Forschungsmethoden.", "exampleZh": "该科研课题为我们展示了前沿现代科研方法的绝佳窗口。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-praktikum-02-s2",
+                "startTime": 10.5,
+                "endTime": 21.0,
+                "german": "Ich konnte sogar zu ein paar wichtigen Terminen bei Gericht mitgehen, das war außerordentlich spannend.",
+                "chinese": "我甚至还能跟随带教资深合伙人一同旁听了几场重要的法院庭审，过程极其扣人心弦。",
+                "clozeWords": ["Terminen", "Gericht", "spannend"],
+                "vocab": [
+                    {"word": "das Gericht", "plural": "die Gerichte", "pos": "Nomen", "meaning": "法院，审判庭", "exampleDe": "Der Fall wurde vor dem Bundesverfassungsgericht verhandelt.", "exampleZh": "该案由联邦宪法法院公开开庭审理。"},
+                    {"word": "spannend", "pos": "Adjektiv", "meaning": "扣人心弦的，极富吸引力的", "exampleDe": "Die Diskussion über künstliche Intelligenz war ungemein spannend.", "exampleZh": "关于人工智能伦理的学术研讨异常引人入胜。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-praktikum-02-s3",
+                "startTime": 21.0,
+                "endTime": 32.0,
+                "german": "Ich durfte mich in reale Fälle einlesen, was für mein juristisches Universitätsseminar echt hilfreich ist.",
+                "chinese": "我获准系统调阅翻查了大量真实的法律卷宗案例，这对我在大学的法学专业研讨课大有助益。",
+                "clozeWords": ["einlesen", "reale", "hilfreich"],
+                "vocab": [
+                    {"word": "sich einlesen in (+Akk)", "pos": "Verb (trennbar)", "meaning": "精读熟悉，深入查阅（资料）", "exampleDe": "Vor der Gerichtsverhandlung musste sich die Juristin in den Fall einlesen.", "exampleZh": "开庭审判前女法官必须仔细查阅研读全部卷宗。"},
+                    {"word": "hilfreich", "pos": "Adjektiv", "meaning": "有帮助的，有益的", "exampleDe": "Die Hinweise des Dozenten waren für die Masterarbeit sehr hilfreich.", "exampleZh": "导师的批注建议对撰写硕士毕业论文极有助益。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-lesen-03",
+        "title": "Die Faszination des Romans und mentale Entspannung",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Literatur & Wohlbefinden",
+        "taskSection": "歌德 B2 · Teil 1 休闲阅读",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "162.5",
+        "to": "190.5",
+        "out_file": "goethe_b2_lesen.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-lesen-03-s1",
+                "startTime": 0.0,
+                "endTime": 9.0,
+                "german": "Beim Versinken in anspruchsvolle Romane kann ich vollkommen abschalten und die Hektik des Alltags hinter mir lassen.",
+                "chinese": "在沉浸式研读厚重大气的小说时，我能够彻底放松紧绷的神经，将快节奏日常琐事全然抛在脑后。",
+                "clozeWords": ["Versinken", "Romane", "abschalten", "Alltags"],
+                "vocab": [
+                    {"word": "der Roman", "plural": "die Romane", "pos": "Nomen", "meaning": "长篇小说", "exampleDe": "Dieser historische Roman stand monatelang an der Spitze der Bestsellerliste.", "exampleZh": "这部历史长篇巨作数月蝉联各大畅销书榜首。"},
+                    {"word": "abschalten", "pos": "Verb (trennbar)", "meaning": "放松身心，切断干扰", "exampleDe": "Beim Joggen im schattigen Wald kann ich nach einem langen Bürotag ideal abschalten.", "exampleZh": "在林荫道慢跑是在漫长伏案工作后彻底放松头脑的绝佳方式。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-lesen-03-s2",
+                "startTime": 9.0,
+                "endTime": 18.5,
+                "german": "Ich tauche intensiv in fiktive Welten ein, empfinde die Emotionen der Romanhelden nach und durchlebe ihr Schicksal.",
+                "chinese": "我深度融入虚构的艺术时空中，设身处地体会作品主人公的真情实感，仿佛亲身共度跌宕起伏的命运旅程。",
+                "clozeWords": ["fiktive", "Emotionen", "Romanhelden", "durchlebe"],
+                "vocab": [
+                    {"word": "der Romanheld", "plural": "die Romanhelden", "pos": "Nomen", "meaning": "小说主角，书中英雄人物", "exampleDe": "Der tragische Romanheld scheitert an den unerbittlichen Konventionen seiner Epoche.", "exampleZh": "这位悲剧小说主人公最终未能冲破所处时代的冷酷教条而折戟。"},
+                    {"word": "nachempfinden", "pos": "Verb (trennbar)", "meaning": "体察，设身处地共情", "exampleDe": "Seine Trauer über den Verlust konnten alle anwesenden Freunde tief nachempfinden.", "exampleZh": "在场的所有亲朋好友均对他的痛失至亲感同身受。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-lesen-03-s3",
+                "startTime": 18.5,
+                "endTime": 28.0,
+                "german": "Verfilmungen sagen mir weniger zu, da die rasante Bildfolge kaum Muße für tiefere eigene Reflexionen lässt.",
+                "chinese": "相比之下影视化改编总难以令我完全满意，因为飞快闪过的剪辑镜头几乎不给读者留下品味与深度沉思的余地。",
+                "clozeWords": ["Verfilmungen", "Bildfolge", "Muße", "Reflexionen"],
+                "vocab": [
+                    {"word": "die Verfilmung", "plural": "die Verfilmungen", "pos": "Nomen", "meaning": "影视改编作品，搬上银幕", "exampleDe": "Die filmische Verfilmung des literarischen Meisterwerks übertraf sämtliche Erwartungen.", "exampleZh": "这部文学巨著的银幕搬演改编作品彻底超越了业界的一切预期。"},
+                    {"word": "die Reflexion", "plural": "die Reflexionen", "pos": "Nomen", "meaning": "沉思，省察，深刻反思", "exampleDe": "Philosophische Texte fordern den Leser zu intensiver intellektueller Reflexion heraus.", "exampleZh": "哲学经典文献无不对读者的深层知性思辨能力提出了严苛要求。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-radfahrer-04",
+        "title": "Kontroverse um Versicherungskennzeichen für Radfahrer",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Verkehrspolitik & Regulierung",
+        "taskSection": "歌德 B2 · Teil 1 交通治理",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "354.0",
+        "to": "391.5",
+        "out_file": "goethe_b2_radfahrer.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-radfahrer-04-s1",
+                "startTime": 0.0,
+                "endTime": 11.5,
+                "german": "Angesichts steigender Kollisionszahlen im urbanen Raum fordern Experten wirksame Strategien zur Erhöhung der Fahrradsicherheit.",
+                "chinese": "面对城市密集路网中非机动车剐蹭事故率的持续攀升，交通学者疾呼须出台管用有效的长效护航举措。",
+                "clozeWords": ["Kollisionszahlen", "urbanen", "Strategien", "Fahrradsicherheit"],
+                "vocab": [
+                    {"word": "die Kollision", "plural": "die Kollisionen", "pos": "Nomen", "meaning": "碰撞，交通事故相撞", "exampleDe": "Zur Vermeidung von Kollisionen wurden separate Radwege baulich abgetrennt.", "exampleZh": "为避免车辆刮擦相撞市政特意修建了物理隔离的专用骑行绿道。"},
+                    {"word": "urban", "pos": "Adjektiv", "meaning": "城市的，都市的", "exampleDe": "Urbane Mobilität verlangt ein harmonisches Zusammenspiel aller Verkehrsteilnehmer.", "exampleZh": "现代都市立体交通亟需各类出行参与者之间高度默契地协同配合。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-radfahrer-04-s2",
+                "startTime": 11.5,
+                "endTime": 24.5,
+                "german": "Ein breit diskutierter Vorschlag zielte darauf ab, jedes Fahrrad nach dem Vorbild von Kraftfahrzeugen mit Kennzeichen zu versehen.",
+                "chinese": "其中一项在听证会上引发激烈交锋的动议主张全面效仿机动车监管机制，强制给所有自行车加装独立号牌。",
+                "clozeWords": ["diskutierter", "Vorbild", "Kraftfahrzeugen", "Kennzeichen"],
+                "vocab": [
+                    {"word": "das Kennzeichen", "plural": "die Kennzeichen", "pos": "Nomen", "meaning": "车牌，注册牌照标识", "exampleDe": "Das amtliche Kennzeichen war durch Spritzwasser und Schlamm unleserlich.", "exampleZh": "车辆的法定挂牌号因泥浆水渍喷溅已变得模糊难辨。"},
+                    {"word": "das Vorbild", "plural": "die Vorbilder", "pos": "Nomen", "meaning": "榜样，蓝本，参照模板", "exampleDe": "Das duale Ausbildungssystem in Deutschland dient weltweit als erfolgreiches Vorbild.", "exampleZh": "德国严谨的双元制职业教育模式在全世界被公认为卓越成功的学习典范。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-radfahrer-04-s3",
+                "startTime": 24.5,
+                "endTime": 37.5,
+                "german": "Nach eingehender Prüfung bewerteten die Verkehrsministerien den immensen administrativen Erfassungsaufwand jedoch als nicht praktikabel.",
+                "chinese": "但在展开全方位严密科学论证后，交通管理当局最终认为推行该设想所涉及的极其庞大的行政发证建档成本并不可行。",
+                "clozeWords": ["Prüfung", "administrativen", "Erfassungsaufwand", "praktikabel"],
+                "vocab": [
+                    {"word": "der Aufwand", "pos": "Nomen", "meaning": "耗费，投入付出，成本开支", "exampleDe": "Der zeitliche und finanzielle Aufwand für das Forschungsvorhaben zahlte sich aus.", "exampleZh": "该前沿研发项目所倾注的巨大人力物力时间精力终获丰厚回报。"},
+                    {"word": "praktikabel", "pos": "Adjektiv", "meaning": "可实操的，切实可行的", "exampleDe": "Wir benötigen rasch praktikable Lösungsansätze für den städtischen Nahverkehr.", "exampleZh": "我们亟需针对城市公共中短途交通提出切实管用的落地解决方案。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-ernaehrung-05",
+        "title": "Ökologische Transformation der Ernährungsgewohnheiten",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Ernährung & Ökologie",
+        "taskSection": "歌德 B2 · Teil 2 科研专访",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "1126.5",
+        "to": "1157.0",
+        "out_file": "goethe_b2_ernaehrung.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-ernaehrung-05-s1",
+                "startTime": 0.0,
+                "endTime": 10.5,
+                "german": "Wir müssen ein geschärftes gesellschaftliches Bewusstsein für die ökologischen Fußabdrücke unseres Konsums etablieren.",
+                "chinese": "我们必须在公众思想意识层面深刻牢固树立起对日常餐桌消费背后所伴生生态环境负荷的理性自省。",
+                "clozeWords": ["geschärftes", "Bewusstsein", "ökologischen", "Fußabdrücke"],
+                "vocab": [
+                    {"word": "das Bewusstsein", "pos": "Nomen", "meaning": "意识，自觉觉悟", "exampleDe": "Das Bewusstsein für gesunde Ernährung hat in der Bevölkerung spürbar zugenommen.", "exampleZh": "全社会对于均衡绿色饮食摄入的健康自觉有了极为明显的普及提升。"},
+                    {"word": "der Fußabdruck", "plural": "die Fußabdrücke", "pos": "Nomen", "meaning": "生态足迹，碳排放足迹", "exampleDe": "Pflanzliche Lebensmittel weisen einen deutlich kleineren CO2-Fußabdruck auf.", "exampleZh": "纯植物性农作物食材的温室气体二氧化碳排放当量足迹显著更低。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-ernaehrung-05-s2",
+                "startTime": 10.5,
+                "endTime": 20.5,
+                "german": "Es zeitigt gravierende Umweltauswirkungen, ob Proteine aus industrieller Rinderzucht oder ressourcenschonenden Hülsenfrüchten stammen.",
+                "chinese": "人体日常蛋白质储备究竟是来自高排碳工业化养牛业、抑或是来自节水固氮的天然豆科作物，将引发云泥之别的生态效应。",
+                "clozeWords": ["gravierende", "Umweltauswirkungen", "Proteine", "Hülsenfrüchten"],
+                "vocab": [
+                    {"word": "die Auswirkung", "plural": "die Auswirkungen", "pos": "Nomen", "meaning": "影响，长远作用，后续效应", "exampleDe": "Der globale Klimawandel zeigt bereits verheerende Auswirkungen auf die Landwirtschaft.", "exampleZh": "全球气候暖化异动业已对世界农业耕种收成造成了破坏性重创。"},
+                    {"word": "gravierend", "pos": "Adjektiv", "meaning": "严重的，剧烈的，举足轻重的", "exampleDe": "Die Experten wiesen auf gravierende Mängel im ursprünglichen Gesetzesentwurf hin.", "exampleZh": "评审委员会专家明确指出了原始初版立法提案草案中所存在的重大原则缺陷。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-ernaehrung-05-s3",
+                "startTime": 20.5,
+                "endTime": 30.5,
+                "german": "Um zehn Milliarden Erdenbürger nachhaltig zu ernähren, bedarf es einer grundlegenden Agrar- und Ernährungswende.",
+                "chinese": "为了在地球资源生态红线以内永续维系将近百亿全球人口的温饱健康，一场全方位的农业生产与饮食体系大变革不可或缺。",
+                "clozeWords": ["Erdenbürger", "nachhaltig", "grundlegenden", "Ernährungswende"],
+                "vocab": [
+                    {"word": "nachhaltig", "pos": "Adjektiv", "meaning": "可持续的，生态循环的，深远的", "exampleDe": "Nachhaltiges Wirtschaften schont wertvolle natürliche Ressourcen für künftige Generationen.", "exampleZh": "推行绿色循环发展旨在为后代子孙呵护守住宝贵不可再生的自然资源。"},
+                    {"word": "die Wende", "plural": "die Wenden", "pos": "Nomen", "meaning": "转型，转折，全面变革", "exampleDe": "Die Energiewende erfordert einen massiven Ausbau von Wind- und Solarkraftwerken.", "exampleZh": "能源绿色转型变革亟需各地区大幅加速扩建风能与光伏发电基础设施。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-insekten-06",
+        "title": "Alternative Proteine: Die Zukunft des Entomophagie-Marktes",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Innovation & Nahrungsmittel",
+        "taskSection": "歌德 B2 · Teil 2 未来食品",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "1220.0",
+        "to": "1250.0",
+        "out_file": "goethe_b2_insekten.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-insekten-06-s1",
+                "startTime": 0.0,
+                "endTime": 10.0,
+                "german": "Eine hocheffiziente und ressourcenschonende Alternative zur traditionellen Tierhaltung stellt die Zucht essbarer Insekten dar.",
+                "chinese": "大力开发养殖符合食品级安全标准的食用昆虫，构成了全面替代高耗水高粮耗传统重载牧业的极具前途的突围路径。",
+                "clozeWords": ["hocheffiziente", "ressourcenschonende", "Tierhaltung", "essbarer"],
+                "vocab": [
+                    {"word": "die Tierhaltung", "pos": "Nomen", "meaning": "畜牧养殖，家畜饲养", "exampleDe": "Artgerechte Tierhaltung gewinnt bei umweltbewussten Verbrauchern zunehmend an Gewicht.", "exampleZh": "符合动物福祉的绿色生态人道散养模式在环保消费者心目中分量日益加重。"},
+                    {"word": "essbar", "pos": "Adjektiv", "meaning": "可食用的", "exampleDe": "Nicht alle im herbstlichen Wald wachsenden Pilzarten sind für den Menschen essbar.", "exampleZh": "并非深秋森林中所采摘的所有野山菌野生菌种都适宜人类安全烹食。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-insekten-06-s2",
+                "startTime": 10.0,
+                "endTime": 19.5,
+                "german": "Knusprig geröstet bestechen Heuschrecken und Mehlwürmer durch ein nussiges Aroma und reichhaltige Mikronährstoffe.",
+                "chinese": "经过精准恒温微脆烘烤的食用飞蝗与黄粉虫幼虫，不仅具备浓郁清爽的天然坚果脂香，且富含极高含量的微量矿物质与氨基酸。",
+                "clozeWords": ["geröstet", "Heuschrecken", "nussiges", "Mikronährstoffe"],
+                "vocab": [
+                    {"word": "rösten", "pos": "Verb", "meaning": "烘烤，焙炒", "exampleDe": "In der Rösterei werden Kaffeebohnen schonend bei kontrollierten Temperaturen geröstet.", "exampleZh": "在传统咖啡烘焙工坊中精选咖啡生豆会在严控恒温下徐徐慢火焙炒。"},
+                    {"word": "das Aroma", "plural": "die Aromen", "pos": "Nomen", "meaning": "香气，风味", "exampleDe": "Frische Gartenkräuter verleihen dem sommerlichen Salatdressing ein unvergleichliches Aroma.", "exampleZh": "新鲜采摘的田园香草让清爽的夏日沙拉油醋汁散发出沁人心脾的芬芳。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-insekten-06-s3",
+                "startTime": 19.5,
+                "endTime": 30.0,
+                "german": "Vermahlen zu geschmacksneutralem Pulver können sie problemlos in Backwaren oder Fleischersatzprodukte eingearbeitet werden.",
+                "chinese": "在研磨脱油成细腻无味的浓缩高蛋白微粉后，它们能够毫无门槛地按比例复配融入各类主食面点与纯素合成肉制品中。",
+                "clozeWords": ["geschmacksneutralem", "Backwaren", "Fleischersatzprodukte", "eingearbeitet"],
+                "vocab": [
+                    {"word": "das Pulver", "plural": "die Pulver", "pos": "Nomen", "meaning": "粉末，微粉冲剂", "exampleDe": "Das feine Pulver löst sich in warmem Wasser rückstandslos und vollständig auf.", "exampleZh": "这种极细颗粒粉末能够瞬间在温水中完全溶解且不留任何沉淀。"},
+                    {"word": "einarbeiten", "pos": "Verb (trennbar)", "meaning": "揉入，掺入，融入", "exampleDe": "Die Hefe muss sorgfältig unter das gesiebte Mehl im Teig eingearbeitet werden.", "exampleZh": "活性酵母必须经过充分揉捻均匀地融入到筛洗好的面团之中。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-studium-07",
+        "title": "Lebenslanges Lernen und berufsbegleitende Studiengänge",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Akademische Bildung & Arbeitsmarkt",
+        "taskSection": "歌德 B2 · Teil 3 青年研讨",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "1572.5",
+        "to": "1610.5",
+        "out_file": "goethe_b2_studium.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-studium-07-s1",
+                "startTime": 0.0,
+                "endTime": 12.0,
+                "german": "Im dynamischen Wandel von Digitalisierung und Industrie 4.0 wird die kontinuierliche Weiterbildung zur existenziellen Kernkompetenz.",
+                "chinese": "在工业4.0协同制造与全栈数字技术重构生产关系的巨变浪潮中，不间断的终身进修深造已升格为关乎职业存续的核心生命线。",
+                "clozeWords": ["dynamischen", "Weiterbildung", "existenziellen", "Kernkompetenz"],
+                "vocab": [
+                    {"word": "der Wandel", "pos": "Nomen", "meaning": "转变，变迁，演化", "exampleDe": "Der demografische Wandel stellt die Rentensysteme vor enorme strukturelle Herausforderungen.", "exampleZh": "人口老龄化少子化的剧烈变迁让现行法定退休养老统筹体系面临严峻考验。"},
+                    {"word": "die Kompetenz", "plural": "die Kompetenzen", "pos": "Nomen", "meaning": "资质胜任力，专业素养能力", "exampleDe": "Interkulturelle Kompetenz gehört für internationale Führungskräfte zur Grundausstattung.", "exampleZh": "跨文化协同沟通能力是跨国企业高级经营管理团队不可或缺的必备底色。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-studium-07-s2",
+                "startTime": 12.0,
+                "endTime": 25.0,
+                "german": "Berufsbegleitende Masterstudiengänge und Online-Modulkurse ermöglichen Berufstätigen eine flexible Verzahnung von Theorie und Praxis.",
+                "chinese": "非全日制在职硕士学术学位项目配合弹性远程微专业学分课，使得各行业骨干能够游刃有余地让前沿理论与实战沉淀无缝咬合。",
+                "clozeWords": ["Berufsbegleitende", "ermöglichen", "Verzahnung", "Praxis"],
+                "vocab": [
+                    {"word": "berufsbegleitend", "pos": "Adjektiv", "meaning": "在职的，边工作边研读的", "exampleDe": "Er absolvierte ein berufsbegleitendes Studium der Wirtschaftsinformatik mit Bestnoten.", "exampleZh": "他以各科全优的优异成绩圆满完成了在职经济信息工程硕士的研修。"},
+                    {"word": "die Verzahnung", "plural": "die Verzahnungen", "pos": "Nomen", "meaning": "紧密咬合，有机衔接融合", "exampleDe": "Die enge Verzahnung von Universität und industrieller Forschung treibt Innovationen voran.", "exampleZh": "大学前沿实验室与工业界产业转化之间的紧密挂钩咬合强力催生了技术井喷。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-studium-07-s3",
+                "startTime": 25.0,
+                "endTime": 38.0,
+                "german": "Fortschrittliche Arbeitgeber unterstützen solche Qualifizierungsmaßnahmen durch Bildungsurlaub und gezielte Studienkostenübernahme.",
+                "chinese": "具有长远战略眼光的雇主企业纷纷出台定向制度保障，通过批复带薪深造假期以及实报实销全部学费予以倾斜扶持。",
+                "clozeWords": ["Arbeitgeber", "Qualifizierungsmaßnahmen", "Bildungsurlaub", "Kostenübernahme"],
+                "vocab": [
+                    {"word": "der Arbeitgeber", "plural": "die Arbeitgeber", "pos": "Nomen", "meaning": "雇主，用人企业机构", "exampleDe": "Attraktive Arbeitgeber bieten ihren Angestellten flexible Arbeitszeiten und Homeoffice.", "exampleZh": "具备市场号召力的优秀用人企业普遍向员工提供极具弹性的工时与居家办公机制。"},
+                    {"word": "die Übernahme", "plural": "die Übernahmen", "pos": "Nomen", "meaning": "承担，报销，接手", "exampleDe": "Die Übernahme der Reisekosten erfolgte nach Vorlage aller Originalbelege unbürokratisch.", "exampleZh": "在如实提交出差凭证原件后差旅津贴的据实报销兑现流程极其高效快捷。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-b2-arbeit-08",
+        "title": "Neue Arbeitswelten: Zeitsouveränität und Teamkultur",
+        "level": "B2",
+        "source": "Goethe-Institut",
+        "topic": "Arbeitspsychologie & Organisation",
+        "taskSection": "歌德 B2 · Teil 4 职场专题",
+        "raw_file": GOETHE_B2_FILE,
+        "ss": "1665.0",
+        "to": "1701.5",
+        "out_file": "goethe_b2_arbeit.mp3",
+        "segments": [
+            {
+                "id": "goethe-b2-arbeit-08-s1",
+                "startTime": 0.0,
+                "endTime": 11.5,
+                "german": "Empirische arbeitspsychologische Studien demonstrieren, dass individuelle Zeitsouveränität die intrinsische Leistungsbereitschaft beflügelt.",
+                "chinese": "实证组织行为学与劳动心理学调研严密证实，保障雇员自主调配工时的时间主权能够极大激发员工内在的敬业与创造热忱。",
+                "clozeWords": ["arbeitspsychologische", "Zeitsouveränität", "Leistungsbereitschaft", "beflügelt"],
+                "vocab": [
+                    {"word": "die Souveränität", "pos": "Nomen", "meaning": "自主权，主权自主性", "exampleDe": "Zeitsouveränität erlaubt es den Angestellten, private und berufliche Termine zu koordinieren.", "exampleZh": "时间支配自主权赋予员工从容权衡家庭照拂与职场攻坚的充分空间。"},
+                    {"word": "die Bereitschaft", "pos": "Nomen", "meaning": "意愿，乐意效劳准备", "exampleDe": "Die Bereitschaft zur interdisziplinären Kooperation ist im Forschungsteam sehr hoch.", "exampleZh": "该多学科跨界攻坚团队展现出了令人振奋的跨领域团队协同协作意愿。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-arbeit-08-s2",
+                "startTime": 11.5,
+                "endTime": 24.0,
+                "german": "Moderne Vertrauensarbeitszeitmodelle ersetzen starre Präsenzkontrollen durch klare Vereinbarungen messbarer Zielerreichung.",
+                "chinese": "现代化扁平组织的信任工时制全面取缔了死板机械的打卡坐班人身盯防，转而建立在阶段成果量化交付的目标契约之上。",
+                "clozeWords": ["Vertrauensarbeitszeit", "starre", "Präsenzkontrollen", "Zielerreichung"],
+                "vocab": [
+                    {"word": "die Kontrolle", "plural": "die Kontrollen", "pos": "Nomen", "meaning": "监督，核查监察", "exampleDe": "Die stichprobenartige Kontrolle der Lieferqualität ergab keinerlei Beanstandungen.", "exampleZh": "对进场零配件产品质量展开的随机抽样检验未发现任何瑕疵次品。"},
+                    {"word": "die Erreichung", "pos": "Nomen", "meaning": "达成，实现", "exampleDe": "Für die Erreichung der Klimaschutzziele sind erhebliche Investitionen in Erneuerbare unverzichtbar.", "exampleZh": "若要切实兑现中长期温室气体减排指标，针对清洁绿能的资本开支必不可少。"}
+                ]
+            },
+            {
+                "id": "goethe-b2-arbeit-08-s3",
+                "startTime": 24.0,
+                "endTime": 36.5,
+                "german": "Ein partizipatives Arbeitsumfeld minimiert psychische Belastungen und schafft die Basis für langfristige Mitarbeiterbindung.",
+                "chinese": "充满尊严关怀与扁平共治参与的组织生态，不仅将职业枯竭心理重压降至最低，更为企业汇聚沉淀长期核心班底筑牢护城河。",
+                "clozeWords": ["partizipatives", "Belastungen", "Mitarbeiterbindung", "Basis"],
+                "vocab": [
+                    {"word": "das Umfeld", "plural": "die Umfelder", "pos": "Nomen", "meaning": "环境，氛围背景", "exampleDe": "Ein kreatives Umfeld inspiriert Mitarbeiter zu unkonventionellen Lösungsansätzen.", "exampleZh": "充满宽容试错包容度的创新氛围能不断催化团队迸发出惊艳的突破构想。"},
+                    {"word": "die Bindung", "plural": "die Bindungen", "pos": "Nomen", "meaning": "归属感，纽带绑定", "exampleDe": "Eine wertschätzende Unternehmenskultur stärkt die emotionale Bindung ans Haus.", "exampleZh": "充满真诚肯定与体恤的组织文化能显著增强团队对于集体的情感归属感。"}
+                ]
+            }
+        ]
+    }
+])
+
+# =========================================================================
+# Goethe C1 (6 tracks)
+# =========================================================================
+TRACK_DEFINITIONS.extend([
+    {
+        "id": "goethe-c1-literatur-01",
+        "title": "Autorenlesung und Lesekompetenz bei Kindern",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Literatur & Bildung",
+        "taskSection": "歌德 C1 · Teil 2 名家专访",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "140.7",
+        "to": "175.0",
+        "out_file": "goethe_c1_literatur.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-literatur-01-s1",
+                "startTime": 0.0,
+                "endTime": 11.2,
+                "german": "Das einzige, was mich vielleicht unterscheidet, ist die Tatsache, dass auf der Bühne ein Flipchart steht.",
+                "chinese": "唯一可能使我与其他作家有所区别的特点，在于舞台正中央放置着一块展示画板。",
+                "clozeWords": ["unterscheidet", "Tatsache", "Bühne", "Flipchart"],
+                "vocab": [
+                    {"word": "unterscheiden", "pos": "Verb", "meaning": "区分，使有区别", "exampleDe": "Wissenschaftler unterscheiden präzise zwischen verschiedenen Sprachstufen.", "exampleZh": "语言学家极其严密地界定区分各语言发展演进阶段。"},
+                    {"word": "die Tatsache", "plural": "die Tatsachen", "pos": "Nomen", "meaning": "事实，实际情况", "exampleDe": "Wir müssen den Tatsachen ins Auge sehen und schnell handeln.", "exampleZh": "我们必须正视客观事实并迅速果断采取行动。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-literatur-01-s2",
+                "startTime": 11.2,
+                "endTime": 22.5,
+                "german": "Ich habe gehört, es werden etwa vierhundert Kinder im Saal sitzen, und um ihre Aufmerksamkeit zu gewinnen, genügt oft eine Skizze.",
+                "chinese": "我听说大礼堂里将坐着大约四百名少儿听众，而为了牢牢抓住他们的注意力，现场随手画上一幅速写草图往往立竿见影。",
+                "clozeWords": ["Aufmerksamkeit", "gewinnen", "genügt", "Skizze"],
+                "vocab": [
+                    {"word": "die Aufmerksamkeit", "pos": "Nomen", "meaning": "注意力，专注度", "exampleDe": "Der Vortragende zog die ungeteilte Aufmerksamkeit aller Zuhörer auf sich.", "exampleZh": "报告人牢牢吸引住了全场听众全部专注的注意力。"},
+                    {"word": "die Skizze", "plural": "die Skizzen", "pos": "Nomen", "meaning": "素描，速写草图，梗概", "exampleDe": "Mit wenigen geschickten Strichen zeichnete der Architekt eine erste Skizze.", "exampleZh": "建筑师仅用寥寥几笔便勾勒出了最初的概念草图。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-literatur-01-s3",
+                "startTime": 22.5,
+                "endTime": 34.3,
+                "german": "Die Kinder staunen mit offenem Mund, wenn man blitzschnell zeichnet, und schon schauen sie gebannt nach vorne.",
+                "chinese": "当看到作画者能以惊人神速信手涂鸦时，孩子们常常惊讶得目瞪口呆，视线旋即被紧紧聚焦在前台。",
+                "clozeWords": ["staunen", "blitzschnell", "gebannt"],
+                "vocab": [
+                    {"word": "staunen", "pos": "Verb", "meaning": "惊异，感到惊奇诧异", "exampleDe": "Das Fachpublikum staunte über die bahnbrechende Entdeckung.", "exampleZh": "业内权威同行对这项具有划时代意义的重大突破赞叹不已。"},
+                    {"word": "blitzschnell", "pos": "Adjektiv", "meaning": "闪电般迅捷的，飞快的", "exampleDe": "Das neuronale Netzwerk verarbeitet komplexe Daten blitzschnell.", "exampleZh": "该人工神经网络能以电光石火般的速度运算处理海量复杂数据。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-c1-kochschule-02",
+        "title": "Die Ästhetik der Haute Cuisine und Oenologie",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Kultur & Genussphilosophie",
+        "taskSection": "歌德 C1 · Teil 1 美食研修",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "235.0",
+        "to": "292.0",
+        "out_file": "goethe_c1_kochschule.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-kochschule-02-s1",
+                "startTime": 0.0,
+                "endTime": 18.0,
+                "german": "Nach dem Eintritt in meinen wohlverdienten Ruhestand möchte ich mich intensiv der gehobenen Kochkunst und Weinkunde widmen.",
+                "chinese": "在圆满结束职业生涯迈入退休岁月后，我渴望全身心沉潜于欧洲高阶烹饪美学与名庄葡萄酒品鉴的研习当中。",
+                "clozeWords": ["Ruhestand", "gehobenen", "Kochkunst", "Weinkunde"],
+                "vocab": [
+                    {"word": "der Ruhestand", "pos": "Nomen", "meaning": "退休生活，退职休养状态", "exampleDe": "Im Ruhestand widmet er sich leidenschaftlich der klassischen Musik und Philosophie.", "exampleZh": "退休后的他满怀赤诚地沉浸于古典室内乐与先秦古希腊哲学的探索中。"},
+                    {"word": "sich widmen (+Dat)", "pos": "Verb", "meaning": "奉献于，潜心致力于", "exampleDe": "Die Biologin widmete ihr gesamtes Lebenswerk dem Schutz der Biodiversität.", "exampleZh": "这位杰出生物学家将整整毕生心血皆倾注于保护珍稀物种多样性事业。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-kochschule-02-s2",
+                "startTime": 18.0,
+                "endTime": 37.0,
+                "german": "Kultiviertes Genießen sowie die feinsinnige Harmonie zwischen Gaumenfreude und Spitzenweinen bereichern das menschliche Dasein ungemein.",
+                "chinese": "懂得优雅从容地品味珍馐，探求舌尖极致风味与陈年佳酿间的味觉共振，实乃升华丰盈人类精神世界的高妙途径。",
+                "clozeWords": ["Kultiviertes", "Gaumenfreude", "Spitzenweinen", "bereichern"],
+                "vocab": [
+                    {"word": "die Harmonie", "plural": "die Harmonien", "pos": "Nomen", "meaning": "和谐，融洽协调", "exampleDe": "Die architektonische Harmonie zwischen Altbau und modernem Anbau begeisterte die Jury.", "exampleZh": "古典历史遗存与现代解构主义副楼之间天然的建筑美学张力彻底折服了评审团。"},
+                    {"word": "bereichern", "pos": "Verb", "meaning": "使丰富，充实滋养", "exampleDe": "Auslandsaufenthalte und Mehrsprachigkeit bereichern den geistigen Horizont junger Forscher.", "exampleZh": "海外访学经历与多元语种融会贯通极大地开阔延展了青年学者的学术眼界。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-kochschule-02-s3",
+                "startTime": 37.0,
+                "endTime": 57.0,
+                "german": "Unsere meisterhafte Akademie offeriert über dreißig differenzierte Kochseminare unter Anleitung renommierter Gastronomen.",
+                "chinese": "本烹饪研修院特设三十余门细分专题研修班，悉数由曾执掌顶级米其林餐厅的行业领军名厨联合督导亲授。",
+                "clozeWords": ["meisterhafte", "Akademie", "differenzierte", "Gastronomen"],
+                "vocab": [
+                    {"word": "die Akademie", "plural": "die Akademien", "pos": "Nomen", "meaning": "高等研修院，学院，学会", "exampleDe": "Die Akademie der Wissenschaften zeichnete herausragende Nachwuchsforscher aus.", "exampleZh": "国家科学院在年度学术盛典上对脱颖而出的拔尖青年后进进行了隆重表彰。"},
+                    {"word": "renommiert", "pos": "Adjektiv", "meaning": "享誉业界的，声名远播的名流", "exampleDe": "Ein international renommiertes Ärzteteam leitete die komplizierte Herzoperation.", "exampleZh": "由多位享誉全球的医学泰斗领衔的专家组联合主刀完成了该例疑难心脏手术。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-c1-leselust-03",
+        "title": "Analoge Lesekultur im Kampf gegen digitale Reizüberflutung",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Literaturpädagogik & Soziologie",
+        "taskSection": "歌德 C1 · Teil 2 阅览素养",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "310.5",
+        "to": "353.0",
+        "out_file": "goethe_c1_leselust.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-leselust-03-s1",
+                "startTime": 0.0,
+                "endTime": 14.0,
+                "german": "In Stadtbibliotheken trifft man überwiegend Kinder an, die durch ihr familiäres Milieu bereits früh an Bücher herangeführt wurden.",
+                "chinese": "在各大市立图书馆阅览室流连忘返的，绝大多数是由于家庭书香门第熏陶而自幼便早早与经典文本结下不解之缘的孩童。",
+                "clozeWords": ["Stadtbibliotheken", "familiäres", "Milieu", "herangeführt"],
+                "vocab": [
+                    {"word": "das Milieu", "plural": "die Milieus", "pos": "Nomen", "meaning": "社会生活阶层圈子，文化生活背景", "exampleDe": "Soziale Ungleichheit reproduziert sich häufig über das familiäre Milieu der Eltern.", "exampleZh": "阶层跃升困境与教育差距往往通过原生家庭所处的文化资本环境隐秘传承。"},
+                    {"word": "heranführen an (+Akk)", "pos": "Verb (trennbar)", "meaning": "引导……入门，引领接触", "exampleDe": "Erfahrene Pädagogen führten die Schulklasse behutsam an klassische Dramen heran.", "exampleZh": "经验丰富的语文名师循序渐进地引导整个班级体悟古典先锋戏剧文学之美。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-leselust-03-s2",
+                "startTime": 14.0,
+                "endTime": 28.0,
+                "german": "Hält man jedoch Autorenlesungen in Schulen ab, wird ersichtlich, wie hart das Buch gegen digitale Unterhaltungsmedien konkurriert.",
+                "chinese": "然而倘若深入普通公立校园面对全样本学生举办作家巡回交流，便会清醒洞悉传统纸质铅字在抵抗碎片化数字影音吞噬时面临何等苦战。",
+                "clozeWords": ["Autorenlesungen", "ersichtlich", "Unterhaltungsmedien", "konkurriert"],
+                "vocab": [
+                    {"word": "konkurrieren mit (+Dat)", "pos": "Verb", "meaning": "竞争，角逐对抗", "exampleDe": "Europäische Technologiekonzerne konkurrieren weltweit mit asiatischen Spitzenanbietern.", "exampleZh": "欧洲老牌高科技龙头正与全球前沿科技企业在芯片算法赛道展开殊死竞逐。"},
+                    {"word": "ersichtlich", "pos": "Adjektiv", "meaning": "显而易见的，显露无疑的", "exampleDe": "Aus den vorgelegten Bilanzen wurde der wirtschaftliche Misserfolg unmissverständlich ersichtlich.", "exampleZh": "从公开发布的审计财报报表中该业务板块的结构性溃败已是一览无遗。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-leselust-03-s3",
+                "startTime": 28.0,
+                "endTime": 42.5,
+                "german": "Bei aufrichtiger Nachfrage gestehen viele Heranwachsende, dass sie primär oberflächliche Bildstrecken oder Comicstrips konsumieren.",
+                "chinese": "在避开道德绑架的促膝谈心追问下，不少青少年方才坦言，自己平日真正接触的多半仅是浮光掠影的视觉画册或消遣性连环画。",
+                "clozeWords": ["aufrichtiger", "Heranwachsende", "Comicstrips", "konsumieren"],
+                "vocab": [
+                    {"word": "der Heranwachsende", "plural": "die Heranwachsenden", "pos": "Nomen", "meaning": "成长中的青少年", "exampleDe": "In dieser sensiblen Entwicklungsphase suchen Heranwachsende nach Orientierung und Sinn.", "exampleZh": "在人生成长这一敏感动荡的转型关口，年轻后生正极度渴望确立价值坐标与自我认同。"},
+                    {"word": "konsumieren", "pos": "Verb", "meaning": "消费，吞咽吸收（信息/物质）", "exampleDe": "Viele Jugendliche konsumieren täglich mehrere Stunden videobasierte Inhalte in sozialen Netzwerken.", "exampleZh": "许多中学生每天沉溺耗费数小时在移动社交软件上反复刷取短视频信息流。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-c1-fantasie-04",
+        "title": "Die kognitive Kraft des Wortes gegen das Diktat der Filmästhetik",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Kognitionsforschung & Mediävistik",
+        "taskSection": "歌德 C1 · Teil 2 媒介思考",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "558.5",
+        "to": "615.0",
+        "out_file": "goethe_c1_fantasie.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-fantasie-04-s1",
+                "startTime": 0.0,
+                "endTime": 18.5,
+                "german": "Eine mündlich vorgetragene oder gelesene Fabel regt die kindliche Einbildungskraft auf unvergleichlich tiefere Weise an.",
+                "chinese": "一段由长辈口述转述或由孩童亲口朗读的寓言童话，对少儿大脑想象中枢的自发点燃深度，是任何工业化声光电影视剧所断难望其项背的。",
+                "clozeWords": ["vorgetragene", "Einbildungskraft", "unvergleichlich", "Weise"],
+                "vocab": [
+                    {"word": "die Einbildungskraft", "pos": "Nomen", "meaning": "想象力，内心意象构筑潜能", "exampleDe": "Große Romanciers verfügen über eine schier grenzenlose dichterische Einbildungskraft.", "exampleZh": "真正伟大的文学巨擘无不拥有几近漫无边际、造化万千的诗性超拔想象力。"},
+                    {"word": "unvergleichlich", "pos": "Adjektiv", "meaning": "无与伦比的，举世无双的", "exampleDe": "Die gotische Kathedrale besitzt eine unvergleichliche historische und ästhetische Aura.", "exampleZh": "这座耸入云霄的哥特式主教大教堂弥漫着一种绝无仅有的神圣历史美学气场。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-fantasie-04-s2",
+                "startTime": 18.5,
+                "endTime": 37.5,
+                "german": "Der kindliche Geist muss aus abstrakten Sprachchiffren eine vollkommen eigene, maßgeschneiderte Bildwelt im Kopf konstruieren.",
+                "chinese": "幼小的大脑必须在阅读进程中将抽象的黑白字母密码，在神经元意象剧场中独立重塑解码成一幕幕量身定制且色彩丰沛的壮阔图景。",
+                "clozeWords": ["Sprachchiffren", "konstruieren", "Bildwelt", "abstrakten"],
+                "vocab": [
+                    {"word": "konstruieren", "pos": "Verb", "meaning": "建构，构建，设计搭建", "exampleDe": "Der Denker konstruierte ein in sich geschlossenes theoretisches Modell der Erkenntnis.", "exampleZh": "这位哲学先哲在逻辑推演中严密构筑出了一套逻辑自洽的宏大认识论体系框架。"},
+                    {"word": "die Chiffre", "plural": "die Chiffren", "pos": "Nomen", "meaning": "密码，象征意象代码", "exampleDe": "In der expressionistischen Lyrik fungiert die Stadt als düstere Chiffre des Verfalls.", "exampleZh": "在表现主义诗歌流派的意象谱系中，工业巨兽般的都会往往沦为文明腐朽崩解的幽暗隐喻代码。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-fantasie-04-s3",
+                "startTime": 37.5,
+                "endTime": 56.5,
+                "german": "Das Fernsehbild hingegen oktroyiert dem Zuseher eine vereinheitlichte Optik auf und beraubt ihn der schöpferischen Freiheit.",
+                "chinese": "相形之下，流水线式快餐影视画面则不由分说地将主创团队预制好的统一透视模型粗暴压给观众，无形中剥夺了受众自由二度创作的灵动空间。",
+                "clozeWords": ["Fernsehbild", "oktroyiert", "vereinheitlichte", "beraubt"],
+                "vocab": [
+                    {"word": "oktroyieren", "pos": "Verb", "meaning": "强加，强行分摊施加", "exampleDe": "Kein Gesetzgeber sollte den Bürgern weltanschauliche Dogmen von oben herab oktroyieren.", "exampleZh": "任何立法国度均不应当由上而下地向全体国民强行灌输排他性意识形态教条。"},
+                    {"word": "berauben (+Gen)", "pos": "Verb", "meaning": "剥夺，抢劫使丧失", "exampleDe": "Der plötzliche Stromausfall beraubte das Labor seiner gesamten Messdaten der Nacht.", "exampleZh": "实验室遭遇的突发断电变故让科研人员彻底丧失了通宵监测积累的宝贵全套原始实验读数。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-c1-kinderbuch-05",
+        "title": "Visuelle Narration und Coverdesign im Kinderbuchsegment",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Buchkunst & Rezeptionsästhetik",
+        "taskSection": "歌德 C1 · Teil 2 图书插画",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "840.0",
+        "to": "885.0",
+        "out_file": "goethe_c1_kinderbuch.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-kinderbuch-05-s1",
+                "startTime": 0.0,
+                "endTime": 15.0,
+                "german": "Empirische Beobachtungen des Kaufverhaltens demonstrieren, dass Kinder Bücher ohne ansprechende Illustrationen fast ausnahmslos meiden.",
+                "chinese": "针对少儿图书零售端现场选书动线的大数据实证追踪无情证明：缺乏高水准灵动插画润色的纯排版文本，几乎无一例外会被低龄读者冷眼束之高阁。",
+                "clozeWords": ["Kaufverhaltens", "Illustrationen", "ausnahmslos", "meiden"],
+                "vocab": [
+                    {"word": "die Illustration", "plural": "die Illustrationen", "pos": "Nomen", "meaning": "图书插图，艺术配图", "exampleDe": "Filigrane handgezeichnete Illustrationen schmücken die bibliophile Neuausgabe des Märchens.", "exampleZh": "匠心独运的手绘细腻古典插画将这部传世童话的典藏限量复刻版装点得宛如艺术珍品。"},
+                    {"word": "meiden", "pos": "Verb", "meaning": "回避，避开，弃之不用", "exampleDe": "Pragmatische Politiker meiden polemische Scheingefechte und suchen den sachbezogenen Konsens.", "exampleZh": "务实老练的参政者往往刻意回避非理性的口舌空转骂战，一心致力于推动实质利益共识落地。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-kinderbuch-05-s2",
+                "startTime": 15.0,
+                "endTime": 30.0,
+                "german": "Die grafische Raffinesse des Einbands und die Farbgestaltung des Titelbilds determinieren maßgeblich den ersten Griff ins Regal.",
+                "chinese": "封面护封的设计感纯度与书名主图的撞色调色张力，在千钧一发之毫秒间决定性支配着小读者从茫茫书架书墙中抽取试读的本能第一抓取。",
+                "clozeWords": ["Raffinesse", "Einbands", "determinieren", "Titelbilds"],
+                "vocab": [
+                    {"word": "die Raffinesse", "pos": "Nomen", "meaning": "精巧玄妙，匠心独运的技法", "exampleDe": "Die technische Raffinesse der neuen Motorenarchitektur verblüfft selbst die versiertesten Ingenieure.", "exampleZh": "全新一代引擎架构所蕴含的惊人机械工艺精妙度令浸淫行业数十载的资深总工们叹为观止。"},
+                    {"word": "determinieren", "pos": "Verb", "meaning": "决定，界定因果关系", "exampleDe": "Geopolitische Machtkonstellationen determinieren die globale Handelsordnung seit Jahrhunderten.", "exampleZh": "数百载以来大国间地缘战略博弈的均势与张力深度决定并塑造着全球跨国贸易版图格局。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-kinderbuch-05-s3",
+                "startTime": 30.0,
+                "endTime": 45.0,
+                "german": "Eindringliche Bilderwelten fungieren als unverzichtbare Einladungsschwelle, um junge Seelen behutsam an den Fließtext heranzuführen.",
+                "chinese": "富有直击心灵感染力的视觉画境实乃不可替代的亲和门槛桥梁，它能春风化雨般引领稚嫩的心灵跨越阅读畏难、踏实步入浩瀚文字的深水区。",
+                "clozeWords": ["Eindringliche", "Einladungsschwelle", "behutsam", "Fließtext"],
+                "vocab": [
+                    {"word": "die Schwelle", "plural": "die Schwellen", "pos": "Nomen", "meaning": "门槛，临界阀值", "exampleDe": "Die kognitive Hemmschwelle zur Beschäftigung mit Hochkultur muss für bildungsferne Schichten gesenkt werden.", "exampleZh": "全社会必须多措并举大力降低弱势群体接触高雅文化艺术的认知门槛与心理距离。"},
+                    {"word": "behutsam", "pos": "Adjektiv", "meaning": "审慎轻柔的，体贴入微的", "exampleDe": "Der Restaurator behandelte das brüchige mittelalterliche Pergament mit behutsamsten Bewegungen.", "exampleZh": "古籍文物修复名家以近乎屏息的轻柔细致手法精心呵护着吹弹可破的脆弱羊皮纸中世纪珍本。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "goethe-c1-urbanistik-06",
+        "title": "Nachhaltige Stadtentwicklung und postfossile Mobilitätskonzepte",
+        "level": "C1",
+        "source": "Goethe-Institut",
+        "topic": "Stadtplanung & Urbanismus",
+        "taskSection": "歌德 C1 · Teil 3 城市建筑",
+        "raw_file": GOETHE_C1_FILE,
+        "ss": "1037.0",
+        "to": "1090.0",
+        "out_file": "goethe_c1_urbanistik.mp3",
+        "segments": [
+            {
+                "id": "goethe-c1-urbanistik-06-s1",
+                "startTime": 0.0,
+                "endTime": 17.5,
+                "german": "Moderne Stadtplanungskonzepte verabschieden sich radikal vom Dogma der autozentrierten Metropole zugunsten lebenswerter Fußgängerzonen.",
+                "chinese": "当代先进城市人居空间规划理念正大刀阔斧与昔日汽车霸权崇拜的机械教条分道扬镳，转而将最高优先级毫无保留地归还给诗意栖居的慢行步道网络。",
+                "clozeWords": ["Stadtplanungskonzepte", "autozentrierten", "lebenswerter", "Fußgängerzonen"],
+                "vocab": [
+                    {"word": "das Dogma", "plural": "die Dogmen", "pos": "Nomen", "meaning": "教条，盲从信条", "exampleDe": "Wissenschaftlicher Fortschritt vollzieht sich immer dann, wenn alte Dogmen mutig hinterfragt werden.", "exampleZh": "唯有当既有的陈腐理论教条被敢于打破时，颠覆性的划时代学术突破方才得以孕育破土。"},
+                    {"word": "lebenswert", "pos": "Adjektiv", "meaning": "宜居的，值得为之生活的", "exampleDe": "Städte wie Wien und Zürich gelten im weltweiten Ranking seit Jahren als die lebenswertesten Metropolen.", "exampleZh": "维也纳与苏黎世等多座城市在权威全球宜居榜单上多年来稳居国际公认最宜人居都市首位。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-urbanistik-06-s2",
+                "startTime": 17.5,
+                "endTime": 35.0,
+                "german": "Die Transformation aufgelassener innerstädtischer Industrieareale in gemischt genutzte Ökoquartiere revitalisiert historische Bausubstanz.",
+                "chinese": "将核心腹地废弃闲置的工业锈带与铁路棕地开发为复合功能的绿色低碳生活圈，在保护历史建筑肌理的同时为老城重新注入了勃勃生机。",
+                "clozeWords": ["Industrieareale", "Ökoquartiere", "revitalisiert", "Bausubstanz"],
+                "vocab": [
+                    {"word": "revitalisieren", "pos": "Verb", "meaning": "唤醒生机，赋予新生命力", "exampleDe": "Kulturelle Zwischennutzungen revitalisieren leerstehende Fabrikhallen und locken Kreativwirtschaft an.", "exampleZh": "前卫现代艺术展览的活化进驻让空置荒废的老旧车间重新焕发活力并迅速吸引文创资本扎根。"},
+                    {"word": "die Bausubstanz", "pos": "Nomen", "meaning": "建筑实体结构肌理", "exampleDe": "Die solide wilhelminische Bausubstanz der Gründerzeitbauten überstand zwei Weltkriege weitgehend intakt.", "exampleZh": "威廉时代宏伟奠基石造建筑那坚不可摧的建筑夯实骨架大体完好无损地跨越了两次世界大战浩劫。"}
+                ]
+            },
+            {
+                "id": "goethe-c1-urbanistik-06-s3",
+                "startTime": 35.0,
+                "endTime": 53.0,
+                "german": "Die konsequente Priorisierung emissionsfreier Nahverkehrsachsen bildet den unabdingbaren Schlüssel für klimaneutrale Agglomerationen.",
+                "chinese": "把零排放清洁公共交通走廊放到市政基建的绝对战略支点位置，乃是全球各大特大超大城市群真正问鼎零碳碳中和愿景不可逾越的通天密钥。",
+                "clozeWords": ["Priorisierung", "Nahverkehrsachsen", "unabdingbaren", "Agglomerationen"],
+                "vocab": [
+                    {"word": "unabdingbar", "pos": "Adjektiv", "meaning": "不可或缺的，必不可少的绝对应当", "exampleDe": "Unabhängige Gerichte sind eine unabdingbare Voraussetzung für einen funktionierenden Rechtsstaat.", "exampleZh": "恪守司法审判终身独立乃是一个现代文明法治国度得以有效运行的最不容剥夺妥协之基石前提。"},
+                    {"word": "die Agglomeration", "plural": "die Agglomerationen", "pos": "Nomen", "meaning": "城市群，大都市连绵区聚合体", "exampleDe": "Im Ruhrgebiet verschmolzen zahlreiche Großstädte zu einer der dichtesten industriellen Agglomerationen.", "exampleZh": "在鲁尔重工工业腹地数十座区域中心都市群紧密聚合成为了全球人口与工业密度最高的大型聚合区之一。"}
+                ]
+            }
+        ]
+    }
+])
+
+# =========================================================================
+# TestDaF (6 tracks)
+# =========================================================================
+TRACK_DEFINITIONS.extend([
+    {
+        "id": "testdaf-musikstudium-01",
+        "title": "Das Musikstudium und die Aufnahmeprüfung",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Campus & Studium",
+        "taskSection": "德福 · HV1 音乐求学",
+        "raw_file": TESTDAF_01_FILE,
+        "ss": "58.0",
+        "to": "82.5",
+        "out_file": "testdaf_01_musik.mp3",
+        "segments": [
+            {
+                "id": "testdaf-musikstudium-01-s1",
+                "startTime": 0.0,
+                "endTime": 7.5,
+                "german": "Studierst du etwa hier an der staatlichen Musikhochschule?",
+                "chinese": "你难道是在这所国立音乐学院里深造就读吗？",
+                "clozeWords": ["Studierst", "staatlichen", "Musikhochschule"],
+                "vocab": [
+                    {"word": "die Musikhochschule", "plural": "die Musikhochschulen", "pos": "Nomen", "meaning": "音乐学院", "exampleDe": "An der Musikhochschule werden herausragende Solisten und Musikpädagogen ausgebildet.", "exampleZh": "音乐学院致力于培养杰出的器乐独奏家和音乐教育专业人才。"},
+                    {"word": "staatlich", "pos": "Adjektiv", "meaning": "国家的，国立的", "exampleDe": "In Deutschland erheben staatliche Universitäten grundsätzlich keine Studiengebühren.", "exampleZh": "在德国，公立综合性大学原则上不收取本硕基础学费。"}
+                ]
+            },
+            {
+                "id": "testdaf-musikstudium-01-s2",
+                "startTime": 7.5,
+                "endTime": 15.5,
+                "german": "Nee, ich möchte nach dem Abschluss Musiklehrer am Gymnasium werden.",
+                "chinese": "没有，我本科毕业后打算去重点文理中学担任专职音乐老师。",
+                "clozeWords": ["Abschluss", "Musiklehrer", "Gymnasium"],
+                "vocab": [
+                    {"word": "der Abschluss", "plural": "die Abschlüsse", "pos": "Nomen", "meaning": "毕业，学业结业证书", "exampleDe": "Mit einem Master-Abschluss stehen Absolventen hervorragende Karrierewege offen.", "exampleZh": "拥有硕士学位文凭为毕业生开启了广阔多元的职业发展道路。"},
+                    {"word": "das Gymnasium", "plural": "die Gymnasien", "pos": "Nomen", "meaning": "高级文理中学", "exampleDe": "Das Gymnasium bereitet Schüler gezielt auf das Abitur und das Universitätsstudium vor.", "exampleZh": "高级文理中学旨在系统指导学生备战高考并顺利升读大学。"}
+                ]
+            },
+            {
+                "id": "testdaf-musikstudium-01-s3",
+                "startTime": 15.5,
+                "endTime": 24.5,
+                "german": "Ich mag sowohl die künstlerische Ausbildung als auch die wissenschaftlichen Aspekte.",
+                "chinese": "我既非常享受器乐演奏等艺术层面的训练，又同样钟爱严谨深厚的音乐学学术理论研读。",
+                "clozeWords": ["künstlerische", "Ausbildung", "wissenschaftlichen", "Aspekte"],
+                "vocab": [
+                    {"word": "künstlerisch", "pos": "Adjektiv", "meaning": "艺术的，富有艺术特质的", "exampleDe": "Ihre künstlerische Begabung zeigte sich bereits im frühen Kindesalter.", "exampleZh": "她的艺术天赋早在幼童时期便已展露无遗。"},
+                    {"word": "der Aspekt", "plural": "die Aspekte", "pos": "Nomen", "meaning": "视角，方面，要素", "exampleDe": "Im Seminar diskutierten wir die ethischen und rechtlichen Aspekte der Genforschung.", "exampleZh": "在研讨课上，我们深入研讨了基因前沿研究背后的伦理与法理视角。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "testdaf-assessment-02",
+        "title": "Assessment-Center in der Personalauswahl",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Wirtschaft & Arbeitsmarkt",
+        "taskSection": "德福 · HV2 人事测评",
+        "raw_file": TESTDAF_01_FILE,
+        "ss": "80.5",
+        "to": "112.0",
+        "out_file": "testdaf_01_assessment.mp3",
+        "segments": [
+            {
+                "id": "testdaf-assessment-02-s1",
+                "startTime": 0.0,
+                "endTime": 10.5,
+                "german": "Im heutigen Expertengespräch geht es um moderne Formen der Personalauswahl.",
+                "chinese": "在今天的高端专家访谈对话中，我们将深入聚焦现代企业人才甄选的前沿模式。",
+                "clozeWords": ["Expertengespräch", "Formen", "Personalauswahl"],
+                "vocab": [
+                    {"word": "das Gespräch", "plural": "die Gespräche", "pos": "Nomen", "meaning": "交谈，对谈访谈", "exampleDe": "Das vertrauliche Gespräch mit dem Dekan brachte rasch Klarheit in der Prüfungsfrage.", "exampleZh": "与系主任的闭门面谈很快澄清了考试争端问题。"},
+                    {"word": "die Personalauswahl", "pos": "Nomen", "meaning": "人事任用，人才选拔机制", "exampleDe": "Eine transparente Personalauswahl stärkt die Glaubwürdigkeit und Fairness im Konzern.", "exampleZh": "透明公正的人才选拔机制极大增强了跨国集团内部的公信力与凝聚力。"}
+                ]
+            },
+            {
+                "id": "testdaf-assessment-02-s2",
+                "startTime": 10.5,
+                "endTime": 21.0,
+                "german": "Neben fachlicher Qualifikation spielen soziale Kompetenzen eine immer größere Rolle.",
+                "chinese": "除了硬性的专业对口履历外，软性的团队协作沟通与情商社交综合素养正占据着愈发举足轻重的分量。",
+                "clozeWords": ["fachlicher", "Qualifikation", "soziale", "Kompetenzen"],
+                "vocab": [
+                    {"word": "die Qualifikation", "plural": "die Qualifikationen", "pos": "Nomen", "meaning": "专业资质，从业资格", "exampleDe": "Zusätzliche Qualifikationen im Datenmanagement erhöhen die Jobchancen beträchtlich.", "exampleZh": "数据分析管理领域的附加认证显著拓宽了毕业生的求职胜算。"},
+                    {"word": "die Kompetenz", "plural": "die Kompetenzen", "pos": "Nomen", "meaning": "综合素养能力，胜任力", "exampleDe": "Interkulturelle Kompetenz ist für internationale Karrieren eine unverzichtbare Voraussetzung.", "exampleZh": "跨文化交际胜任力是成就国际化职业生涯不可或缺的基石前提。"}
+                ]
+            },
+            {
+                "id": "testdaf-assessment-02-s3",
+                "startTime": 21.0,
+                "endTime": 31.5,
+                "german": "Große Konzerne verzichten daher schon länger auf das klassische Vorstellungsgespräch.",
+                "chinese": "正因如此，大型跨国集团与行业龙头在校招社招中早已不再单纯倚赖走过场式的传统单面面试。",
+                "clozeWords": ["Konzerne", "verzichten", "klassische", "Vorstellungsgespräch"],
+                "vocab": [
+                    {"word": "der Konzern", "plural": "die Konzerne", "pos": "Nomen", "meaning": "企业集团，跨国托拉斯", "exampleDe": "Der internationale Technologiekonzern investiert Milliarden in Forschung und Entwicklung.", "exampleZh": "该跨国科技巨头在核心技术研发领域豪掷重金进行战略布局。"},
+                    {"word": "verzichten auf (+Akk)", "pos": "Verb", "meaning": "放弃，放弃使用", "exampleDe": "Im Sinne des Umweltschutzes verzichten immer mehr Bürger auf innerdeutsche Kurzstreckenflüge.", "exampleZh": "出于绿色环保自觉，越来越多的国民自觉放弃搭乘境内超短途民航航班。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "testdaf-campusleben-05",
+        "title": "Atmosphäre an der Hochschule und Studienstart",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Campus & Studium",
+        "taskSection": "德福 · HV1 迎新备考",
+        "raw_file": TESTDAF_01_FILE,
+        "ss": "180.0",
+        "to": "208.5",
+        "out_file": "testdaf_01_campusleben.mp3",
+        "segments": [
+            {
+                "id": "testdaf-campusleben-05-s1",
+                "startTime": 0.0,
+                "endTime": 9.2,
+                "german": "Die persönliche Atmosphäre an der Hochschule ist für angehende Studierende einfach etwas ganz Besonderes.",
+                "chinese": "高校充满人情味的校园学术氛围，对于准大一新生而言确实是非同凡响的独特体验。",
+                "clozeWords": ["Atmosphäre", "angehende", "Studierende", "Besonderes"],
+                "vocab": [
+                    {"word": "die Atmosphäre", "plural": "die Atmosphären", "pos": "Nomen", "meaning": "氛围，环境氛围", "exampleDe": "Am Universitätscampus herrscht eine weltoffene Atmosphäre.", "exampleZh": "大学校园弥漫着包容开放的世界性学术氛围。"},
+                    {"word": "der Studierende", "plural": "die Studierenden", "pos": "Nomen", "meaning": "大学生，高校在读学生", "exampleDe": "Für internationale Studierende werden Begrüßungsveranstaltungen organisiert.", "exampleZh": "专门面向国际留学生策划举办了一系列迎新交流活动。"}
+                ]
+            },
+            {
+                "id": "testdaf-campusleben-05-s2",
+                "startTime": 9.2,
+                "endTime": 18.0,
+                "german": "Am Tag der Prüfung gibt es immer ein gemeinsames Frühstück für alle Bewerberinnen und Bewerber.",
+                "chinese": "在考核日当天，院系总会面向全体应试考生贴心备好齐聚一堂的迎考交流早餐。",
+                "clozeWords": ["Prüfung", "gemeinsames", "Frühstück", "Bewerber"],
+                "vocab": [
+                    {"word": "die Prüfung", "plural": "die Prüfungen", "pos": "Nomen", "meaning": "考核，考试", "exampleDe": "Die mündliche Prüfung wird von zwei Hochschulprüfern abgenommen.", "exampleZh": "口试由两位高校主考官联合主持测评。"},
+                    {"word": "das Frühstück", "plural": "die Frühstücke", "pos": "Nomen", "meaning": "早餐", "exampleDe": "Ein gesundes Frühstück liefert Energie für den Lerntag.", "exampleZh": "一顿营养早餐为一整天的用功研修提供充沛精力。"},
+                    {"word": "der Bewerber", "plural": "die Bewerber", "pos": "Nomen", "meaning": "申请者，应试者", "exampleDe": "Auf die Studienplätze bewarben sich zahlreiche qualifizierte Bewerber.", "exampleZh": "众多具备优异资历的申请人角逐这些大学录取名额。"}
+                ]
+            },
+            {
+                "id": "testdaf-campusleben-05-s3",
+                "startTime": 18.0,
+                "endTime": 28.5,
+                "german": "Wer möchte, kann so vor dem eigentlichen Beginn schon erste Kontakte zu Kommilitonen aus höheren Semestern knüpfen.",
+                "chinese": "有意的同学便可借此在正式开考前，与高年级的学长学姐提前建立联系并交流取经。",
+                "clozeWords": ["Beginn", "Kontakte", "Kommilitonen", "knüpfen"],
+                "vocab": [
+                    {"word": "der Kontakt", "plural": "die Kontakte", "pos": "Nomen", "meaning": "联系，交往", "exampleDe": "Auf Karrieremessen lassen sich wertvolle Kontakte zu Arbeitgebern knüpfen.", "exampleZh": "在职业招聘会上能与优质用人单位建立宝贵联系。"},
+                    {"word": "der Kommilitone", "plural": "die Kommilitonen", "pos": "Nomen", "meaning": "大学同学，校友", "exampleDe": "Ich lerne in der Universitätsbibliothek oft gemeinsam mit meinen Kommilitonen.", "exampleZh": "我经常与我的大学同学们在校图书馆共同自修。"},
+                    {"word": "knüpfen", "pos": "Verb", "meaning": "建立（联系），结识", "exampleDe": "Internationale Studierende knüpfen bei Orientierungstagen schnell Freundschaften.", "exampleZh": "外国留学生在新生迎新日期间很快结下了深厚友谊。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "testdaf-radrennen-03",
+        "title": "Hochschulsport und Vorbereitung auf das Radrennen",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Campus & Gesundheit",
+        "taskSection": "德福 · HV1 校园骑行",
+        "raw_file": TESTDAF_02_FILE,
+        "ss": "52.0",
+        "to": "76.0",
+        "out_file": "testdaf_02_radrennen.mp3",
+        "segments": [
+            {
+                "id": "testdaf-radrennen-03-s1",
+                "startTime": 0.0,
+                "endTime": 7.5,
+                "german": "Trainierst du etwa für das traditionelle Hochschul-Radrennen im kommenden Monat?",
+                "chinese": "你是在为下个月即将打响的大学传统自行车公路公开赛进行紧锣密鼓的体能备战吗？",
+                "clozeWords": ["Trainierst", "traditionelle", "Radrennen"],
+                "vocab": [
+                    {"word": "trainieren", "pos": "Verb", "meaning": "训练，锻炼体能", "exampleDe": "Die Athleten trainieren täglich mehrere Stunden für den Wettkampf.", "exampleZh": "运动员每天进行数小时的高强度对抗训练以备战赛事。"},
+                    {"word": "das Radrennen", "plural": "die Radrennen", "pos": "Nomen", "meaning": "自行车公路赛，骑行锦标赛", "exampleDe": "Das traditionsreiche Radrennen führt über anspruchsvolle Bergetappen.", "exampleZh": "这项历史悠久的经典公路赛串联起多段难度极高的阿尔卑斯山地赛道。"}
+                ]
+            },
+            {
+                "id": "testdaf-radrennen-03-s2",
+                "startTime": 7.5,
+                "endTime": 15.5,
+                "german": "Ja, ich fahre jeden Morgen fünfzig Kilometer auf anspruchsvollen Landstraßen.",
+                "chinese": "正是如此，我每天清晨都会在坡度起伏极具考验的乡村外围公路上骑行整整五十公里。",
+                "clozeWords": ["Morgen", "Kilometer", "anspruchsvollen", "Landstraßen"],
+                "vocab": [
+                    {"word": "anspruchsvoll", "pos": "Adjektiv", "meaning": "高难度的，要求严苛的，精深的", "exampleDe": "Die Vorlesung zur theoretischen Physik war inhaltlich außerordentlich anspruchsvoll.", "exampleZh": "这门理论物理导论大课在内容深度上有着极其严苛的思维要求。"},
+                    {"word": "die Landstraße", "plural": "die Landstraßen", "pos": "Nomen", "meaning": "乡村公路，省道公路", "exampleDe": "Auf kurvigen Landstraßen muss man die Fahrgeschwindigkeit stets anpassen.", "exampleZh": "在蜿蜒曲折的省道公路上，驾驶员必须时刻根据路况动态控制车速。"}
+                ]
+            },
+            {
+                "id": "testdaf-radrennen-03-s3",
+                "startTime": 15.5,
+                "endTime": 24.0,
+                "german": "Die gemeinsame Teilnahme im Team schweißt uns Studierende fest zusammen.",
+                "chinese": "大家代表院系战队并肩协作驰骋赛道，让同窗之间的战友深情磨合得坚如磐石。",
+                "clozeWords": ["Teilnahme", "Team", "schweißt", "zusammen"],
+                "vocab": [
+                    {"word": "die Teilnahme", "plural": "die Teilnahmen", "pos": "Nomen", "meaning": "参加，参与参与感", "exampleDe": "Die Teilnahme am internationalen Studierendenkongress war für uns ein Meilenstein.", "exampleZh": "出席国际青年学者学术大会对于我们全组而言是一个具有里程碑意义的飞跃。"},
+                    {"word": "zusammenschweißen", "pos": "Verb (trennbar)", "meaning": "使紧密团结，融为一体", "exampleDe": "Gemeinsam bewältigte Krisen schweißen die Belegschaft untrennbar zusammen.", "exampleZh": "并肩经历并成功跨越的种种生死考验，让整个科研攻坚团队的心紧紧贴在了一起。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "testdaf-kunstdidaktik-04",
+        "title": "Akademische Kunstdidaktik an der Universität",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Wissenschaft & Pädagogik",
+        "taskSection": "德福 · HV2 艺术教学",
+        "raw_file": TESTDAF_02_FILE,
+        "ss": "70.0",
+        "to": "98.0",
+        "out_file": "testdaf_02_kunstdidaktik.mp3",
+        "segments": [
+            {
+                "id": "testdaf-kunstdidaktik-04-s1",
+                "startTime": 0.0,
+                "endTime": 9.0,
+                "german": "Frau Professor Braun forscht seit Jahren auf dem Gebiet moderner Kunstdidaktik.",
+                "chinese": "布劳恩讲座教授多年来深耕于现当代艺术教育法与美育教学论这一前沿学术领域。",
+                "clozeWords": ["Professor", "forscht", "Gebiet", "Kunstdidaktik"],
+                "vocab": [
+                    {"word": "forschen nach / über (+Akk)", "pos": "Verb", "meaning": "从事科研，潜心学术研究", "exampleDe": "An unserem Universitätsinstitut forschen renommierte Wissenschaftler nach nachhaltigen Energielösungen.", "exampleZh": "在本校重点研究所，顶尖科学家正全力攻坚绿色可再生能源储能方案。"},
+                    {"word": "die Didaktik", "pos": "Nomen", "meaning": "教学法，教学理论与实践", "exampleDe": "Die Fachdidaktik vermittelt angehenden Lehrkräften methodische Werkzeuge für den Unterricht.", "exampleZh": "学科教学法为未来的骨干师资提供了扎实有效的课堂执教方法论武器。"}
+                ]
+            },
+            {
+                "id": "testdaf-kunstdidaktik-04-s2",
+                "startTime": 9.0,
+                "endTime": 18.0,
+                "german": "Schülerinnen und Schüler sollten im Unterricht eigene kreative Fähigkeiten entfalten können.",
+                "chinese": "广大在读中小学生理应在正规课堂美育浸润中，充分舒展并挖掘属于自身的创造性潜质。",
+                "clozeWords": ["Unterricht", "kreative", "Fähigkeiten", "entfalten"],
+                "vocab": [
+                    {"word": "kreativ", "pos": "Adjektiv", "meaning": "富有创造力的，独创的", "exampleDe": "Im Design-Labor werden kreative Ansätze für zukunftsträchtige Nutzeroberflächen entwickelt.", "exampleZh": "在交互设计实验室，团队正为打造下一代数字用户界面迸发出无限创新灵感。"},
+                    {"word": "entfalten", "pos": "Verb", "meaning": "施展，展开，充分发挥", "exampleDe": "Unter optimalen Förderbedingungen können junge Talente ihr volles Potenzial entfalten.", "exampleZh": "在最优厚精准的拔尖人才扶植土壤中，青年学子方能将其全部创造潜能尽情舒展释放。"}
+                ]
+            },
+            {
+                "id": "testdaf-kunstdidaktik-04-s3",
+                "startTime": 18.0,
+                "endTime": 28.0,
+                "german": "Dabei gilt es, traditionelle Theorien kritisch zu hinterfragen und neue Konzepte zu erproben.",
+                "chinese": "在这个过程中，必须以严谨的治学品格反思批判传统窠臼，勇于试点开拓全新的教育范式。",
+                "clozeWords": ["Theorien", "kritisch", "hinterfragen", "Konzepte"],
+                "vocab": [
+                    {"word": "die Theorie", "plural": "die Theorien", "pos": "Nomen", "meaning": "理论，学说", "exampleDe": "Moderne pädagogische Theorien betonen aktives Handeln der Lernenden.", "exampleZh": "现代教育理论高度强调并倡导学习者的能动实践。"},
+                    {"word": "hinterfragen", "pos": "Verb (nicht trennbar)", "meaning": "反思，从深层次追问质疑", "exampleDe": "Kritische Denker hinterfragen gesellschaftliche Konventionen und etablierte Machtstrukturen.", "exampleZh": "具有批判性独立思考风骨的学者时刻保持对流行世俗成见与既定权威建制的深刻省察。"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "testdaf-virus-06",
+        "title": "Virologische Epidemiologie und körpereigene Immunantwort",
+        "level": "TestDaF",
+        "source": "TestDaF",
+        "topic": "Medizin & Immunologie",
+        "taskSection": "德福 · HV3 病毒医学",
+        "raw_file": TESTDAF_01_FILE,
+        "ss": "1275.5",
+        "to": "1311.5",
+        "out_file": "testdaf_01_virus.mp3",
+        "segments": [
+            {
+                "id": "testdaf-virus-06-s1",
+                "startTime": 0.0,
+                "endTime": 11.0,
+                "german": "Was viele Leute nicht wissen, ist, dass man schon einen Tag vor dem Spüren erster Symptome infektiös sein und Viren übertragen kann.",
+                "chinese": "许多民众普遍不知道的是，早在自己察觉到丝毫不适症状的前一天，宿主体内便已具备极强传染性并可向外界排出病毒。",
+                "clozeWords": ["Symptome", "infektiös", "übertragen", "Viren"],
+                "vocab": [
+                    {"word": "das Symptom", "plural": "die Symptome", "pos": "Nomen", "meaning": "症状，征兆征象", "exampleDe": "Typische Symptome einer viralen Infektion sind Fieber, Gliederschmerzen und Müdigkeit.", "exampleZh": "病毒性急性感染的典型临床症状包括高热、周身关节酸痛与极度乏力。"},
+                    {"word": "infektiös", "pos": "Adjektiv", "meaning": "具有传染性的，致病感染的", "exampleDe": "Infektiöse Patienten müssen auf der Isolierstation der Universitätsklinik betreut werden.", "exampleZh": "处于高危排毒期的传染性确诊患者必须统一收治于医学院附属医院的负压隔离病房。"},
+                    {"word": "übertragen", "pos": "Verb", "meaning": "传播，传染", "exampleDe": "Das Virus wird primär über feinste Aerosolpartikel in geschlossenen Räumen übertragen.", "exampleZh": "该病毒主要在封闭通风不良空间内通过极细气溶胶飞沫进行高效人际传播。"}
+                ]
+            },
+            {
+                "id": "testdaf-virus-06-s2",
+                "startTime": 11.0,
+                "endTime": 23.5,
+                "german": "Chronischer beruflicher Stress sowie Rauchen schwächen die zelluläre Abwehrkraft der Schleimhäute gegen aggressive Krankheitserreger.",
+                "chinese": "长期的职场精神压力与吸烟嗜好会显著抑制人体呼吸道粘膜细胞免疫屏障的活性，大幅加剧病原微生物向下侵染肺部的风险。",
+                "clozeWords": ["Chronischer", "zelluläre", "Abwehrkraft", "Krankheitserreger"],
+                "vocab": [
+                    {"word": "der Krankheitserreger", "plural": "die Krankheitserreger", "pos": "Nomen", "meaning": "病原体，致病微生物", "exampleDe": "Unser Immunsystem identifiziert und eliminiert tagtäglich unzählige Krankheitserreger.", "exampleZh": "我们机体完备健全的免疫系统无时无刻不在精准识别并歼灭数以亿计的入侵病原体。"},
+                    {"word": "die Abwehrkraft", "plural": "die Abwehrkräfte", "pos": "Nomen", "meaning": "免疫力，抵抗抵御能力", "exampleDe": "Ausgewogene Ernährung, Schlaf und Sport stärken die körpereigenen Abwehrkräfte wirksam.", "exampleZh": "均衡的抗氧化营养膳食、充足深度睡眠与适度规律有氧运动能切实筑牢人体免疫力。"},
+                    {"word": "chronisch", "pos": "Adjektiv", "meaning": "慢性的，长期顽固的", "exampleDe": "Chronischer Schlafmangel führt zu dauerhafter Beeinträchtigung der geistigen Leistungsfähigkeit.", "exampleZh": "长期顽固性的重度睡眠匮乏会导致人类大脑知性认知分析能力遭受不可逆的持久衰退。"}
+                ]
+            },
+            {
+                "id": "testdaf-virus-06-s3",
+                "startTime": 23.5,
+                "endTime": 36.0,
+                "german": "Konsequente Händehygiene sowie das regelmäßige Desinfizieren beanspruchter Kontaktflächen minimieren die Ansteckungsrate signifikant.",
+                "chinese": "严格保持手部清洁卫生并定期对高频次接触的工作台面及键盘进行科学保洁，在实证研究中被证实能极为显著地阻断传播链。",
+                "clozeWords": ["Händehygiene", "Kontaktflächen", "minimieren", "Ansteckungsrate"],
+                "vocab": [
+                    {"word": "die Hygiene", "pos": "Nomen", "meaning": "卫生，卫生规范准则", "exampleDe": "Strenge Hygiene im Operationssaal verhindert gefährliche postoperative Infektionen.", "exampleZh": "外科手术室内部所恪守执行的近乎苛刻的无菌消毒规程有效杜绝了术后重症感染风险。"},
+                    {"word": "minimieren", "pos": "Verb", "meaning": "将……降至最低，极大化解", "exampleDe": "Durch gezielte Sicherheitsvorkehrungen lässt sich das Risiko eines Systemabsturzes minimieren.", "exampleZh": "通过部署冗余容灾安全预案，能够将复杂网络中枢系统突发宕机的概率彻底降到最低。"}
+                ]
+            }
+        ]
+    }
+])

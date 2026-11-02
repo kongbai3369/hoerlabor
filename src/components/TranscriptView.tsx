@@ -296,13 +296,20 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
               >
                 {track.source === 'Goethe-Institut' ? '🏛️ 歌德学院官网真题' : '🎓 德福官网官方真题'}
               </span>
-              <span className="text-slate-300">·</span>
               <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md border border-indigo-200/80 font-medium">
                 🏷️ {track.topic}
               </span>
+              {track.taskSection && (
+                <>
+                  <span className="text-slate-300">·</span>
+                  <span className="text-xs bg-violet-50 text-violet-700 border border-violet-200/80 px-2 py-0.5 rounded-md font-medium">
+                    🎯 {track.taskSection}
+                  </span>
+                </>
+              )}
               <span className="text-slate-300">·</span>
               <span className="text-[11px] text-emerald-700 font-medium bg-emerald-50/70 border border-emerald-200 px-2 py-0.5 rounded-full">
-                🎧 德语真题原声 · 3句精选
+                🎧 德语真题原声 · {track.segments.length}句精选
               </span>
             </div>
             <h2 className="text-base md:text-lg font-bold text-slate-900 tracking-tight">

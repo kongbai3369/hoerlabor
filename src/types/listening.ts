@@ -40,6 +40,8 @@ export interface ListeningTrack {
   level: CefrLevel;
   source: string;           // 来源标识，如 "DW", "Goethe-Institut", "Slow German", "ZDF", "Quarks Daily"
   topic: string;            // 话题分类
+  taskSection?: string;     // 官方题型/考点标签，如 "歌德 B1 · Teil 1 电话通知"
+  sourceExam?: string;      // 备用考试名称字段
   audioUrl: string | null;  // 为 null 时路由至 TTS 引擎；非空时路由至 HTML5 Audio 引擎
   originalAudioUrl?: string; // 官方原版播客/广播完整流媒体音频链接
   duration: number | null;  // 纯 TTS 模式下为 null；MP3 模式下为总时长（秒）
