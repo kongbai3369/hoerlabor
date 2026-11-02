@@ -300,14 +300,13 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                 🏷️ {track.topic}
               </span>
               {track.taskSection && (
-                <>
-                  <span className="text-slate-300">·</span>
-                  <span className="text-xs bg-violet-50 text-violet-700 border border-violet-200/80 px-2 py-0.5 rounded-md font-medium">
-                    🎯 {track.taskSection}
-                  </span>
-                </>
+                <span
+                  title={track.taskSection}
+                  className="text-xs bg-violet-50 text-violet-700 border border-violet-200/80 px-2 py-0.5 rounded-md font-medium"
+                >
+                  🎯 {track.taskSection}
+                </span>
               )}
-              <span className="text-slate-300">·</span>
               <span className="text-[11px] text-emerald-700 font-medium bg-emerald-50/70 border border-emerald-200 px-2 py-0.5 rounded-full">
                 🎧 德语真题原声 · {track.segments.length}句精选
               </span>

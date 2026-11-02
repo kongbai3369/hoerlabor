@@ -81,7 +81,7 @@ async def main():
         print("All word audios already exist!")
 
     # Now re-generate bundledWordAudio.ts
-    all_files = [f for f in os.listdir(WORDS_DIR) if f.endswith(".mp3")]
+    all_files = [f for f in os.listdir(WORDS_DIR) if f.endswith(".mp3") and os.path.getsize(os.path.join(WORDS_DIR, f)) > 1000]
     all_files.sort()
     print(f"\nBuilding bundledWordAudio.ts with {len(all_files)} audio files...")
 
@@ -90,8 +90,9 @@ async def main():
         slug = f[:-4]
         entries.append(f'  "{slug}": "/audio/words/{f}",')
 
-    # Also map the un-slugified words
-    for word_clean, _ in words_to_generate:
+    # Also map the un-slugified words deterministically
+    sorted_words = sorted(list(words_to_generate), key=lambda x: (x[0].lower(), x[0]))
+    for word_clean, _ in sorted_words:
         slug = to_ascii_slug(word_clean)
         lower = word_clean.lower()
         if f"{slug}.mp3" in all_files:

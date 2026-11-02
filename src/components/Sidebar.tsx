@@ -255,7 +255,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSelectTrack }) => {
                 {/* 题型考点标签 */}
                 {track.taskSection && (
                   <div className="mb-1.5 flex items-center">
-                    <span className="inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded bg-violet-50 text-violet-700 border border-violet-200/70 truncate max-w-full">
+                    <span
+                      title={track.taskSection}
+                      className="inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded bg-violet-50 text-violet-700 border border-violet-200/70 truncate max-w-full"
+                    >
                       🎯 {track.taskSection}
                     </span>
                   </div>
