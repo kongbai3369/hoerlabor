@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import type { ListeningTrack, EngineMode } from '../types/listening';
 import { useListeningStore } from '../store/useListeningStore';
+import { resolveAudioUrl } from '../utils/audioUrl';
+
+export type PlaybackMode = 'single' | 'continuous';
 
 export interface AudioPlayerControls {
   engineMode: EngineMode;
@@ -11,9 +14,13 @@ export interface AudioPlayerControls {
   duration: number;
   playbackRate: number;
   isLoopingSentence: boolean;
+  playbackMode: PlaybackMode;
+  setPlaybackMode: (mode: PlaybackMode) => void;
+  togglePlaybackMode: () => void;
+  playSegment: (index: number, mode?: PlaybackMode) => void;
   togglePlay: () => void;
   pause: () => void;
-  seekToSegment: (index: number, autoPlay?: boolean) => void;
+  seekToSegment: (index: number, autoPlay?: boolean, mode?: PlaybackMode) => void;
   seekToTime: (time: number) => void;
   nextSegment: () => void;
   prevSegment: () => void;
@@ -21,105 +28,62 @@ export interface AudioPlayerControls {
   toggleLoopSentence: () => void;
 }
 
-import { md5 } from '../utils/md5';
 import { BUNDLED_WORD_AUDIO } from '../data/bundledWordAudio';
 
-// 德语母语发音缓存与并发音频控制
+// 德语母语发音缓存与单例并发音频控制 (全端统一使用 Edge-TTS Katja 高保真发音)
 const wordAudioCache = new Map<string, string>();
-let currentWordAudio: HTMLAudioElement | null = null;
+let sharedWordAudio: HTMLAudioElement | null = null;
 
-const supportsOgg =
-  typeof window !== 'undefined' &&
-  typeof Audio !== 'undefined' &&
-  Boolean(new Audio().canPlayType('audio/ogg'));
-
-/**
- * 根据 MediaWiki / Wikimedia Commons 规范，利用 MD5 计算 OGG 原始发音文件的 MP3 转码衍生 URL。
- * 全面兼容 iOS Safari、iPadOS 及各类不支持原生 OGG 容器的移动端浏览器。
- */
-function getWikimediaMp3Url(filename: string): string {
-  const titleForHash = filename.replace(/ /g, '_');
-  const hash = md5(titleForHash);
-  const h1 = hash[0];
-  const h2 = hash.substring(0, 2);
-  return `https://upload.wikimedia.org/wikipedia/commons/transcoded/${h1}/${h2}/${encodeURIComponent(titleForHash)}/${encodeURIComponent(titleForHash)}.mp3`;
+function getSharedWordAudio(): HTMLAudioElement {
+  if (!sharedWordAudio && typeof Audio !== 'undefined') {
+    sharedWordAudio = new Audio();
+    sharedWordAudio.preload = 'auto';
+  }
+  return sharedWordAudio!;
 }
 
-/**
- * 尝试在 Audio 实例中加载并播放指定音频地址
- */
-function tryPlayAudioUrl(url: string, timeoutMs = 2500): Promise<boolean> {
-  return new Promise((resolve) => {
-    const audio = new Audio();
-    currentWordAudio = audio;
-    let finished = false;
-
-    const cleanup = () => {
-      audio.oncanplay = null;
-      audio.onerror = null;
-    };
-
-    const timer = window.setTimeout(() => {
-      if (!finished) {
-        finished = true;
-        cleanup();
-        try {
-          audio.pause();
-          audio.src = '';
-        } catch {
-          // ignore
-        }
-        resolve(false);
-      }
-    }, timeoutMs);
-
-    audio.oncanplay = async () => {
-      if (!finished) {
-        finished = true;
-        window.clearTimeout(timer);
-        cleanup();
-        try {
-          await audio.play();
-          resolve(true);
-        } catch {
-          resolve(false);
-        }
-      }
-    };
-
-    audio.onerror = () => {
-      if (!finished) {
-        finished = true;
-        window.clearTimeout(timer);
-        cleanup();
-        resolve(false);
-      }
-    };
-
-    audio.src = url;
-    audio.load();
-  });
-}
-
-/**
- * 独立单词/词组即点即读：
- * 1. 优先使用本地同源预置的 800+ 核心词汇母语 MP3（零网络延时、iOS Safari 100% 畅播）
- * 2. 动态探测 Wiktionary / Wikimedia Commons 维基德语母语者 MP3 转码源（突破 iOS .ogg 限制）
- * 3. 动态备选高质量德语神经网络自然原声 MP3 接口（杜绝机械生硬的系统 TTS）
- * 4. 离线/全平台极端情况优雅降级至浏览器本地德语语音合成
- */
-export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 'tts'> {
-  if (currentWordAudio) {
+// 移动端 Safari / WebKit 触控预热解锁（消除手势激活延迟与 Autoplay 拦截）
+if (typeof window !== 'undefined') {
+  const primeWordAudio = () => {
     try {
-      currentWordAudio.pause();
-      currentWordAudio.src = '';
+      const audio = getSharedWordAudio();
+      if (audio && audio.paused && !audio.src) {
+        audio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+        audio.load();
+      }
     } catch {
       // ignore
     }
-    currentWordAudio = null;
-  }
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
+  };
+  window.addEventListener('touchstart', primeWordAudio, { passive: true, once: true });
+  window.addEventListener('pointerdown', primeWordAudio, { passive: true, once: true });
+}
+
+function toAsciiSlug(word: string): string {
+  return word
+    .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]/g, '_');
+}
+
+/**
+ * 德语单词/核心词即点即读（全端统一使用微软 Edge-TTS Katja 高保真音色）：
+ * 1. 优先使用本地同源预置的 Katja MP3 (/audio/words/{slug}.mp3)
+ * 2. 次选预置字库与内存缓存
+ * 3. 彻底杜绝 Wiktionary 跨域外链与粗糙的系统机械音合成降级
+ */
+export async function speakGermanWord(wordText: string): Promise<'katja'> {
+  const audio = getSharedWordAudio();
+  if (audio) {
+    try {
+      audio.pause();
+      audio.currentTime = 0;
+    } catch {
+      // ignore
+    }
   }
 
   // 提取核心词形（去除冠词 der/die/das/sich 及标点、语法注解）
@@ -129,111 +93,44 @@ export async function speakGermanWord(wordText: string): Promise<'wiktionary' | 
     .replace(/[.,!?;:()„“”"'/]/g, '')
     .trim();
 
-  if (!clean) return 'tts';
+  if (!clean) return 'katja';
 
   const lower = clean.toLowerCase();
-  const capitalized = clean.charAt(0).toUpperCase() + clean.slice(1);
+  const slug = toAsciiSlug(lower);
   const headword = clean.split(/\s+/)[0];
   const headwordLower = headword.toLowerCase();
-  const headwordCapitalized = headword.charAt(0).toUpperCase() + headword.slice(1);
+  const headwordSlug = toAsciiSlug(headwordLower);
 
-  // 1. 第一优先级：命中本地静态预置的 800+ 课程与核心生词 MP3（解决手机端网络延时及 WebKit 交互限制）
+  // 1. 优先从 BUNDLED_WORD_AUDIO 映射中获取
   const bundledUrl =
     BUNDLED_WORD_AUDIO[lower] ||
-    BUNDLED_WORD_AUDIO[headwordLower] ||
     BUNDLED_WORD_AUDIO[clean] ||
-    BUNDLED_WORD_AUDIO[headword];
+    BUNDLED_WORD_AUDIO[headwordLower] ||
+    BUNDLED_WORD_AUDIO[headword] ||
+    BUNDLED_WORD_AUDIO[slug] ||
+    BUNDLED_WORD_AUDIO[headwordSlug];
 
-  if (bundledUrl) {
-    try {
-      const audio = new Audio(bundledUrl);
-      currentWordAudio = audio;
-      await audio.play();
-      return 'wiktionary';
-    } catch {
-      // 本地音频被浏览器拦截或异常时继续后备流程
-    }
-  }
-
-  // 2. 第二优先级：命中运行时内存缓存
-  const cachedUrl = wordAudioCache.get(lower) || wordAudioCache.get(clean);
-  if (cachedUrl) {
-    try {
-      const audio = new Audio(cachedUrl);
-      currentWordAudio = audio;
-      await audio.play();
-      return 'wiktionary';
-    } catch {
-      wordAudioCache.delete(lower);
-      wordAudioCache.delete(clean);
-    }
-  }
-
-  // 3. 第三优先级：动态构建母语原声候选地址序列（MP3 优先，确保 iOS Safari 与移动 Chrome 纯正原声）
-  const candidateUrls: string[] = [];
-
-  const wordVariants = Array.from(
-    new Set([clean, capitalized, lower, headword, headwordCapitalized, headwordLower])
-  ).filter(Boolean);
-
-  // 3.1 维基共享资源 (Wikimedia Commons) 母语原声 MP3 转码流
-  for (const variant of wordVariants) {
-    candidateUrls.push(getWikimediaMp3Url(`De-${variant}.ogg`));
-  }
-
-  // 3.2 原生支持 OGG 的平台（如桌面端、Android Chrome）同时尝试原始 OGG
-  if (supportsOgg) {
-    for (const variant of wordVariants) {
-      candidateUrls.push(
-        `https://commons.wikimedia.org/wiki/Special:FilePath/De-${encodeURIComponent(variant)}.ogg`
-      );
-    }
-  }
-
-  // 3.3 高品质自然母语神经网络德语 MP3 流（用于罕见变形词/未收录短语，彻底消除机械发音）
-  candidateUrls.push(
-    `https://translate.google.com/translate_tts?ie=UTF-8&tl=de&client=tw-ob&q=${encodeURIComponent(clean)}`
-  );
-  if (headword !== clean) {
-    candidateUrls.push(
-      `https://translate.google.com/translate_tts?ie=UTF-8&tl=de&client=tw-ob&q=${encodeURIComponent(headword)}`
-    );
-  }
+  const candidateUrls = [
+    bundledUrl,
+    `/audio/words/${slug}.mp3`,
+    `/audio/words/${headwordSlug}.mp3`,
+  ].filter(Boolean) as string[];
 
   for (const url of candidateUrls) {
-    const ok = await tryPlayAudioUrl(url);
-    if (ok) {
-      wordAudioCache.set(lower, url);
-      wordAudioCache.set(clean, url);
-      return 'wiktionary';
+    try {
+      audio.src = url;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        await playPromise;
+        wordAudioCache.set(lower, url);
+        return 'katja';
+      }
+    } catch {
+      // try next
     }
   }
 
-  // 4. 第四优先级：极端无网离线降级至浏览器系统语音
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    const utter = new SpeechSynthesisUtterance(clean);
-    utter.lang = 'de-DE';
-    utter.rate = 0.95;
-    const voices = window.speechSynthesis.getVoices();
-    const deVoice =
-      voices.find(
-        (v) =>
-          v.lang.startsWith('de') &&
-          (v.name.includes('Natural') ||
-            v.name.includes('Online') ||
-            v.name.includes('Google') ||
-            v.name.includes('Premium') ||
-            v.name.includes('Enhanced') ||
-            v.name.includes('Siri') ||
-            v.name.includes('Anna') ||
-            v.name.includes('Helena'))
-      ) ||
-      voices.find((v) => v.lang === 'de-DE') ||
-      voices.find((v) => v.lang.startsWith('de'));
-    if (deVoice) utter.voice = deVoice;
-    window.speechSynthesis.speak(utter);
-  }
-  return 'tts';
+  return 'katja';
 }
 
 export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
@@ -247,7 +144,19 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   const [duration, setDuration] = useState<number>(track.duration ?? 0);
   const [playbackRate, setPlaybackRateState] = useState(1.0);
   const [isLoopingSentence, setIsLoopingSentence] = useState(false);
+  const [playbackMode, setPlaybackMode] = useState<PlaybackMode>('single');
   const [prevTrackId, setPrevTrackId] = useState(track.id);
+
+  const playbackModeRef = useRef<PlaybackMode>('single');
+  const isSeekingRef = useRef(false);
+
+  useEffect(() => {
+    playbackModeRef.current = playbackMode;
+  }, [playbackMode]);
+
+  const togglePlaybackMode = useCallback(() => {
+    setPlaybackMode((prev) => (prev === 'single' ? 'continuous' : 'single'));
+  }, []);
 
   if (prevTrackId !== track.id) {
     setPrevTrackId(track.id);
@@ -314,7 +223,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
 
     const tick = () => {
       const audio = audioRef.current;
-      if (!audio || audio.paused) return;
+      if (!audio || audio.paused || isSeekingRef.current) return;
 
       const now = audio.currentTime;
       setCurrentTime(now);
@@ -331,6 +240,22 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         if (now >= currentSeg.endTime - 0.015) {
           audio.currentTime = currentSeg.startTime;
         }
+      } else if (
+        playbackModeRef.current === 'single' &&
+        currentSeg &&
+        currentSeg.endTime !== null &&
+        now >= currentSeg.endTime - 0.02
+      ) {
+        // 单句精听模式：句尾立即硬暂停，并精准复位至句首，阻断自动冲入下一句
+        audio.pause();
+        stopRaf();
+        if (currentSeg.startTime !== null) {
+          audio.currentTime = currentSeg.startTime;
+          setCurrentTime(currentSeg.startTime);
+        }
+        setIsPlaying(false);
+        isPlayingRef.current = false;
+        return;
       } else if (
         autoPauseRef.current > 0 &&
         currentSeg &&
@@ -404,6 +329,12 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
           return;
         }
 
+        if (playbackModeRef.current === 'single' && !isLoopingRef.current) {
+          setIsPlaying(false);
+          isPlayingRef.current = false;
+          return;
+        }
+
         const delayMs = isLoopingRef.current
           ? 300
           : autoPauseRef.current > 0
@@ -467,7 +398,8 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     }
 
     if (track.audioUrl) {
-      const audio = new Audio(track.audioUrl);
+      const finalUrl = resolveAudioUrl(track.audioUrl);
+      const audio = new Audio(finalUrl);
       audio.preload = 'auto';
       // 移动端 WebKit 允许原生行内播放，避免全屏或被静音拦截
       // @ts-expect-error - playsInline is WebKit standard on iOS Safari
@@ -542,7 +474,11 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   }, [clearShadowingTimer, engineMode, stopRaf, stopTts]);
 
   const seekToSegment = useCallback(
-    (index: number, autoPlay = true) => {
+    (index: number, autoPlay = true, mode?: PlaybackMode) => {
+      if (mode) {
+        setPlaybackMode(mode);
+        playbackModeRef.current = mode;
+      }
       clearShadowingTimer();
       const safeIndex = Math.max(0, Math.min(index, track.segments.length - 1));
       syncActiveIndex(safeIndex);
@@ -552,6 +488,24 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         const targetSeg = track.segments[safeIndex];
         if (audio && targetSeg) {
           const targetTime = targetSeg.startTime ?? 0;
+          isSeekingRef.current = true;
+          stopRaf();
+
+          const onSeekComplete = () => {
+            isSeekingRef.current = false;
+            audio.removeEventListener('seeked', onSeekComplete);
+            if (isPlayingRef.current) {
+              startRafLoop();
+            }
+          };
+          audio.addEventListener('seeked', onSeekComplete, { once: true });
+          // 兜底超时解锁
+          window.setTimeout(() => {
+            if (isSeekingRef.current) {
+              isSeekingRef.current = false;
+              if (isPlayingRef.current) startRafLoop();
+            }
+          }, 350);
 
           if (audio.readyState >= 1) {
             try {
@@ -571,8 +525,6 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
             audio.addEventListener('loadedmetadata', onMetadata);
           }
 
-          // 核心修复：audio.play() 必须直接在用户点击手势的同步调用栈中立即触发，
-          // 切勿包裹在异步 loadedmetadata 回调内部，否则 iOS Safari 会判定手势失效并拒绝播放！
           if (autoPlay) {
             setIsPlaying(true);
             isPlayingRef.current = true;
@@ -598,7 +550,14 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         }
       }
     },
-    [clearShadowingTimer, engineMode, speakSegmentByIndex, startRafLoop, stopTts, syncActiveIndex, track.segments]
+    [clearShadowingTimer, engineMode, speakSegmentByIndex, startRafLoop, stopRaf, stopTts, syncActiveIndex, track.segments]
+  );
+
+  const playSegment = useCallback(
+    (index: number, mode: PlaybackMode = 'single') => {
+      seekToSegment(index, true, mode);
+    },
+    [seekToSegment]
   );
 
   const togglePlay = useCallback(() => {
@@ -703,6 +662,10 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     duration,
     playbackRate,
     isLoopingSentence,
+    playbackMode,
+    setPlaybackMode,
+    togglePlaybackMode,
+    playSegment,
     togglePlay,
     pause,
     seekToSegment,

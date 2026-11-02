@@ -134,28 +134,29 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
             )}
           </div>
 
-          {player.engineMode === 'tts' ? (
-            <div className="flex items-center gap-1 sm:gap-1.5 py-0.5">
-              {track.segments.map((seg, idx) => {
-                const isCurrent = idx === player.activeSegmentIndex;
-                const isPassed = idx < player.activeSegmentIndex;
-                return (
-                  <button
-                    key={seg.id}
-                    onClick={() => player.seekToSegment(idx, true)}
-                    title={`跳至第 ${idx + 1} 句`}
-                    className={`h-2 flex-1 rounded-full transition-all cursor-pointer ${
-                      isCurrent
-                        ? 'bg-indigo-600 ring-2 ring-indigo-400/50 shadow-xs'
-                        : isPassed
-                        ? 'bg-indigo-200 hover:bg-indigo-300'
-                        : 'bg-slate-200 hover:bg-slate-300'
-                    }`}
-                  />
-                );
-              })}
-            </div>
-          ) : (
+          {/* 句子直切分段指示轨 (无论音频还是TTS均常驻，支持自由点播任意一句) */}
+          <div className="flex items-center gap-1 sm:gap-1.5 py-0.5">
+            {track.segments.map((seg, idx) => {
+              const isCurrent = idx === player.activeSegmentIndex;
+              const isPassed = idx < player.activeSegmentIndex;
+              return (
+                <button
+                  key={seg.id}
+                  onClick={() => player.seekToSegment(idx, true)}
+                  title={`跳至第 ${idx + 1} 句`}
+                  className={`h-2 flex-1 rounded-full transition-all cursor-pointer ${
+                    isCurrent
+                      ? 'bg-indigo-600 ring-2 ring-indigo-400/50 shadow-xs'
+                      : isPassed
+                      ? 'bg-indigo-200 hover:bg-indigo-300'
+                      : 'bg-slate-200 hover:bg-slate-300'
+                  }`}
+                />
+              );
+            })}
+          </div>
+
+          {player.engineMode === 'audio' && (
             <input
               type="range"
               min={0}
@@ -211,6 +212,23 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
           >
             <Repeat className="w-3.5 h-3.5" />
             <span>单句循环</span>
+          </button>
+
+          <button
+            onClick={player.togglePlaybackMode}
+            title={
+              player.playbackMode === 'single'
+                ? '当前：单句精听（播完当前句即停，按 1/2/3 自由切句）'
+                : '当前：连续播放（自动按顺序播放后续句子）'
+            }
+            className={`px-2.5 py-1.5 rounded-xl text-xs font-medium inline-flex items-center gap-1 border transition cursor-pointer shadow-2xs active:scale-95 ${
+              player.playbackMode === 'single'
+                ? 'bg-indigo-50 border-indigo-300 text-indigo-800 shadow-xs font-bold'
+                : 'bg-slate-100 border-slate-200 text-slate-600 hover:bg-slate-200 hover:text-slate-900'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+            <span>{player.playbackMode === 'single' ? '单句精听' : '连续连播'}</span>
           </button>
 
           <button
@@ -432,23 +450,27 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
                 )}
               </div>
 
-              {player.engineMode === 'tts' ? (
-                <div className="flex items-center gap-1 py-1">
-                  {track.segments.map((seg, idx) => (
-                    <button
-                      key={seg.id}
-                      onClick={() => player.seekToSegment(idx, true)}
-                      className={`h-2.5 flex-1 rounded-full transition-all cursor-pointer ${
-                        idx === player.activeSegmentIndex
-                          ? 'bg-indigo-600 ring-2 ring-indigo-400/50'
-                          : idx < player.activeSegmentIndex
-                          ? 'bg-indigo-200'
-                          : 'bg-slate-200'
-                      }`}
-                    />
-                  ))}
-                </div>
-              ) : (
+              {/* 句子直切分段指示轨 (无论音频还是TTS均常驻) */}
+              <div className="flex items-center gap-1.5 py-1">
+                {track.segments.map((seg, idx) => (
+                  <button
+                    key={seg.id}
+                    onClick={() => player.seekToSegment(idx, true)}
+                    title={`跳至第 ${idx + 1} 句`}
+                    className={`h-3 flex-1 rounded-full transition-all cursor-pointer flex items-center justify-center text-[10px] font-bold ${
+                      idx === player.activeSegmentIndex
+                        ? 'bg-indigo-600 text-white ring-2 ring-indigo-400/50 shadow-xs'
+                        : idx < player.activeSegmentIndex
+                        ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                        : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+                    }`}
+                  >
+                    {idx + 1}
+                  </button>
+                ))}
+              </div>
+
+              {player.engineMode === 'audio' && (
                 <input
                   type="range"
                   min={0}
@@ -491,32 +513,42 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               </button>
             </div>
 
-            {/* 辅助循环与跟读停顿 */}
-            <div className="grid grid-cols-2 gap-2.5 mb-5">
+            {/* 辅助循环与播放模式 */}
+            <div className="grid grid-cols-3 gap-2 mb-5">
               <button
                 onClick={player.toggleLoopSentence}
-                className={`py-2.5 px-3 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-1.5 border transition cursor-pointer shadow-2xs active:scale-95 ${
+                className={`py-2.5 px-2 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-1 border transition cursor-pointer shadow-2xs active:scale-95 ${
                   player.isLoopingSentence
                     ? 'bg-amber-50 border-amber-300 text-amber-800 font-bold shadow-xs'
                     : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                 }`}
               >
-                <Repeat className="w-4 h-4" />
-                <span>{player.isLoopingSentence ? '单句循环: 开' : '单句循环: 关'}</span>
+                <Repeat className="w-3.5 h-3.5" />
+                <span>{player.isLoopingSentence ? '循环: 开' : '循环: 关'}</span>
+              </button>
+
+              <button
+                onClick={player.togglePlaybackMode}
+                className={`py-2.5 px-2 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-1 border transition cursor-pointer shadow-2xs active:scale-95 ${
+                  player.playbackMode === 'single'
+                    ? 'bg-indigo-50 border-indigo-300 text-indigo-800 font-bold shadow-xs'
+                    : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+                }`}
+              >
+                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                <span>{player.playbackMode === 'single' ? '单句精听' : '连续播放'}</span>
               </button>
 
               <button
                 onClick={cycleAutoPause}
-                className={`py-2.5 px-3 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-1.5 border transition cursor-pointer shadow-2xs active:scale-95 ${
+                className={`py-2.5 px-2 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-1 border transition cursor-pointer shadow-2xs active:scale-95 ${
                   autoPauseSeconds > 0
                     ? 'bg-emerald-50 border-emerald-300 text-emerald-800 font-bold shadow-xs'
                     : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                 }`}
               >
-                <Timer className="w-4 h-4" />
-                <span>
-                  {autoPauseSeconds > 0 ? `跟读停顿: ${autoPauseSeconds}s` : '跟读停顿: 关'}
-                </span>
+                <Timer className="w-3.5 h-3.5" />
+                <span>{autoPauseSeconds > 0 ? `停顿 ${autoPauseSeconds}s` : '停顿: 关'}</span>
               </button>
             </div>
 

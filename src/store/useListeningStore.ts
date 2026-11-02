@@ -153,7 +153,7 @@ export const useListeningStore = create<ListeningState>()(
       },
     }),
     {
-      name: 'de-listening-storage-v1',
+      name: 'de-listening-storage-v3',
     }
   )
 );

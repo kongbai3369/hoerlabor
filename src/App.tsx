@@ -45,6 +45,15 @@ export const App: React.FC = () => {
       } else if (e.code === 'KeyL') {
         e.preventDefault();
         player.toggleLoopSentence();
+      } else if (e.code === 'Digit1' || e.code === 'Numpad1') {
+        e.preventDefault();
+        player.playSegment(0, 'single');
+      } else if (e.code === 'Digit2' || e.code === 'Numpad2') {
+        e.preventDefault();
+        player.playSegment(1, 'single');
+      } else if (e.code === 'Digit3' || e.code === 'Numpad3') {
+        e.preventDefault();
+        player.playSegment(2, 'single');
       }
     };
 

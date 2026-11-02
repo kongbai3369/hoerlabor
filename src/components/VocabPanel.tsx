@@ -145,7 +145,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
       {/* 词性与德语三性提示 */}
       <div className="px-4 py-2 bg-slate-50/80 border-b border-slate-200/80 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-        <span>真人音源：Wiktionary 维基母语</span>
+        <span>发音音源：微软 Katja (标准德语)</span>
         <div className="flex items-center gap-2">
           <span className="text-sky-700 font-bold">der 阳</span>
           <span className="text-rose-700 font-bold">die 阴</span>
@@ -198,7 +198,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
                   <div className="flex items-center gap-1 shrink-0">
                     <button
                       onClick={() => speakGermanWord(item.word)}
-                      title="播放维基词典真人母语发音 (Wiktionary)"
+                      title="播放微软 Katja 标准德语发音"
                       className="p-1 rounded text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition cursor-pointer"
                     >
                       <Volume2 className="w-3.5 h-3.5" />

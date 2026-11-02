@@ -9,8 +9,6 @@ import {
   Keyboard,
   Star,
   Mic,
-  Radio,
-  ExternalLink,
   PanelLeftClose,
   PanelLeftOpen,
   PanelRightClose,
@@ -177,7 +175,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                     e.stopPropagation();
                     speakGermanWord(token);
                   }}
-                  title={`点击单独听维基母语真人发音 (Wiktionary): ${token}`}
+                  title={`点击听微软 Katja 标准德语发音: ${token}`}
                   className={`rounded-md px-1 py-0.5 transition-all cursor-pointer bg-indigo-50/60 hover:bg-indigo-100/90 text-indigo-950 underline decoration-indigo-300 decoration-dotted underline-offset-4 ${
                     isKeyword ? 'font-bold decoration-indigo-600 decoration-solid' : ''
                   }`}
@@ -281,7 +279,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
           )}
 
           <div>
-            <div className="flex items-center gap-2 mb-1 flex-wrap">
+            <div className="flex items-center gap-2 mb-1.5 flex-wrap">
               <span
                 className={`px-2.5 py-0.5 text-xs font-bold rounded-md border shadow-2xs ${
                   LEVEL_BADGE_STYLE[track.level]
@@ -289,25 +287,23 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
               >
                 {track.level}
               </span>
-              <span className="text-xs text-slate-500 font-medium">{track.source}</span>
+              <span
+                className={`inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full font-semibold border ${
+                  track.source === 'Goethe-Institut'
+                    ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                    : 'bg-amber-50 text-amber-900 border-amber-300'
+                }`}
+              >
+                {track.source === 'Goethe-Institut' ? '🏛️ 歌德学院官网真题' : '🎓 德福官网官方真题'}
+              </span>
               <span className="text-slate-300">·</span>
-              <span className="text-xs text-indigo-600 font-semibold">{track.topic}</span>
-              {track.originalAudioUrl && (
-                <>
-                  <span className="text-slate-300">·</span>
-                  <a
-                    href={track.originalAudioUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] text-emerald-700 hover:text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full transition font-medium shadow-2xs"
-                    title="在新窗口直接打开/收听官方原版完整音频"
-                  >
-                    <Radio className="w-3 h-3 text-emerald-600" />
-                    <span>官方原声广播直链</span>
-                    <ExternalLink className="w-2.5 h-2.5 opacity-70" />
-                  </a>
-                </>
-              )}
+              <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md border border-indigo-200/80 font-medium">
+                🏷️ {track.topic}
+              </span>
+              <span className="text-slate-300">·</span>
+              <span className="text-[11px] text-emerald-700 font-medium bg-emerald-50/70 border border-emerald-200 px-2 py-0.5 rounded-full">
+                🎧 德语真题原声 · 3句精选
+              </span>
             </div>
             <h2 className="text-base md:text-lg font-bold text-slate-900 tracking-tight">
               {track.title}
@@ -418,7 +414,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
           <div className="flex items-center gap-2">
             <Volume2 className="w-4 h-4 text-indigo-600 shrink-0 animate-pulse" />
             <span className="font-medium">
-              点词查音已开启：轻触文中单个单词即可查询母语发音 (Wiktionary)。点击卡片左侧序号可播放整句原声。
+              点词查音已开启：轻触文中任意单词即可播放微软 Katja 标准发音。点击句首序号可单独精听该句。
             </span>
           </div>
           <button
@@ -458,16 +454,47 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
               )}
 
               <div className="flex items-center justify-between mb-2.5">
-                <div className="flex items-center gap-2.5">
-                  <span
-                    className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-colors ${
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      player.playSegment(idx, 'single');
+                    }}
+                    title={`点击立即精听第 ${idx + 1} 句`}
+                    className={`w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-indigo-600 text-white shadow-xs ring-2 ring-indigo-100'
-                        : 'bg-slate-100 text-slate-500 group-hover:bg-indigo-50 group-hover:text-indigo-600'
+                        ? 'bg-indigo-600 text-white shadow-xs ring-2 ring-indigo-200 scale-105'
+                        : 'bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white'
                     }`}
                   >
-                    {idx + 1}
-                  </span>
+                    {isActive ? (
+                      player.isPlaying ? (
+                        <Volume2 className="w-3.5 h-3.5 animate-pulse" />
+                      ) : (
+                        <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                      )
+                    ) : (
+                      idx + 1
+                    )}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      player.playSegment(idx, 'single');
+                    }}
+                    title={`单独精听第 ${idx + 1} 句`}
+                    className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${
+                      isActive
+                        ? 'bg-indigo-100 text-indigo-800'
+                        : 'bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600'
+                    }`}
+                  >
+                    <Play className="w-3 h-3 fill-current" />
+                    <span>播此句</span>
+                  </button>
 
                   {isActive && !player.isShadowingPause && (
                     <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-indigo-200/70 shadow-2xs">
@@ -477,22 +504,19 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                           ? '单句循环精听中'
                           : isWordLookupActive
                           ? '当前朗读句 · 点词查音中'
-                          : '当前原声朗读中 · 点击卡片复读'}
+                          : player.playbackMode === 'single'
+                          ? '单句精听中 · 播完即停'
+                          : '连续原声播放中'}
                       </span>
                       <span className="sm:hidden">
                         {player.isLoopingSentence
                           ? '单句循环'
                           : isWordLookupActive
                           ? '点词查音'
-                          : '原声朗读中'}
+                          : player.playbackMode === 'single'
+                          ? '单句精听'
+                          : '原声朗读'}
                       </span>
-                    </span>
-                  )}
-
-                  {!isActive && (
-                    <span className="text-[11px] text-slate-400 group-hover:text-indigo-600 font-medium inline-flex items-center gap-1 transition-colors">
-                      <Play className="w-3 h-3 fill-current" />
-                      <span className="hidden sm:inline">点击播整句</span>
                     </span>
                   )}
 
