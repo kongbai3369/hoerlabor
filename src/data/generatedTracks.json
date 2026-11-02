@@ -12,7 +12,7 @@
       {
         "id": "goethe-a1-pullover-01-s1",
         "startTime": 0.0,
-        "endTime": 11.5,
+        "endTime": 6.8,
         "german": "Entschuldigung, was kostet dieser Pullover jetzt? Da steht 30 Prozent billiger.",
         "chinese": "打扰一下，请问这件毛衣现在多少钱？上面写着便宜30%（打七折）。",
         "clozeWords": [
@@ -55,8 +55,8 @@
       },
       {
         "id": "goethe-a1-pullover-01-s2",
-        "startTime": 11.5,
-        "endTime": 16.5,
+        "startTime": 6.8,
+        "endTime": 11.4,
         "german": "Einen Moment bitte … neunzehnfünfundneunzig.",
         "chinese": "请稍等一下……十九块九毛五。",
         "clozeWords": [
@@ -76,7 +76,7 @@
       },
       {
         "id": "goethe-a1-pullover-01-s3",
-        "startTime": 16.5,
+        "startTime": 11.4,
         "endTime": 19.9,
         "german": "19,95 Euro? – Ja, Euro natürlich. – Hm, … ok, den nehme ich.",
         "chinese": "19.95欧元？——是的，当然是欧元。——嗯，……好的，我买了。",
@@ -112,12 +112,12 @@
     "topic": "Alltag & Büro",
     "taskSection": "歌德 A1 · Teil 1 办公问路",
     "audioUrl": "/audio/tracks/goethe_a1_buero.mp3",
-    "duration": 24.1,
+    "duration": 25.4,
     "segments": [
       {
         "id": "goethe-a1-buero-02-s1",
         "startTime": 0.0,
-        "endTime": 6.8,
+        "endTime": 4.6,
         "german": "Ach, Verzeihung, wo finde ich Herrn Schneider vom Betriebsrat?",
         "chinese": "啊，不好意思，请问企业职工委员会的施耐德先生在哪里？",
         "clozeWords": [
@@ -152,8 +152,8 @@
       },
       {
         "id": "goethe-a1-buero-02-s2",
-        "startTime": 6.8,
-        "endTime": 12.8,
+        "startTime": 4.6,
+        "endTime": 11.2,
         "german": "Schneider. Warten Sie mal. Ich glaube, der ist in Zimmer Nummer 254.",
         "chinese": "施耐德。等一下。我想他是在254号房间。",
         "clozeWords": [
@@ -188,8 +188,8 @@
       },
       {
         "id": "goethe-a1-buero-02-s3",
-        "startTime": 12.8,
-        "endTime": 24.1,
+        "startTime": 11.2,
+        "endTime": 25.4,
         "german": "Ja, stimmt, Zimmer 254. Das ist im zweiten Stock. Da können Sie den Aufzug hier nehmen. – Zweiter Stock, Zimmer 254. Okay, vielen Dank.",
         "chinese": "对，没错，254房间。在二楼。您可以坐这里的电梯。——二楼，254房间。好的，多谢。",
         "clozeWords": [
@@ -234,12 +234,12 @@
     "topic": "Alltag & Gastronomie",
     "taskSection": "歌德 A1 · Teil 1 餐厅点餐",
     "audioUrl": "/audio/tracks/goethe_a1_restaurant.mp3",
-    "duration": 25.8,
+    "duration": 26.4,
     "segments": [
       {
         "id": "goethe-a1-restaurant-03-s1",
         "startTime": 0.0,
-        "endTime": 7.1,
+        "endTime": 6.2,
         "german": "Was wünschen Sie bitte? – Ich hätte gern die Salatplatte und ein ...",
         "chinese": "请问您需要点什么？——我想点一份沙拉拼盘和一杯……",
         "clozeWords": [
@@ -266,8 +266,8 @@
       },
       {
         "id": "goethe-a1-restaurant-03-s2",
-        "startTime": 7.1,
-        "endTime": 13.5,
+        "startTime": 6.2,
+        "endTime": 12.5,
         "german": "Entschuldigung, die Salatplatte ist leider aus, aber die Bratwurst kann ich Ihnen empfehlen … ganz frisch heute.",
         "chinese": "不好意思，沙拉拼盘卖完了，不过我向您推荐烤香肠……今天非常新鲜。",
         "clozeWords": [
@@ -303,8 +303,8 @@
       },
       {
         "id": "goethe-a1-restaurant-03-s3",
-        "startTime": 13.5,
-        "endTime": 25.8,
+        "startTime": 12.5,
+        "endTime": 26.4,
         "german": "Nein danke ... ich esse kein Fleisch. Gibt es etwas ohne Fleisch? – Ja ... nicht mehr viel: Fisch oder ... Pommes. – Fisch ... hm ... Tja, dann wohl die Pommes.",
         "chinese": "不，谢谢……我不吃肉。有不带肉的吗？——有……不多了：鱼或者……薯条。——鱼……嗯……好吧，那就要薯条。",
         "clozeWords": [
@@ -339,12 +339,12 @@
     "topic": "Alltag & Orientierung",
     "taskSection": "歌德 A1 · Teil 1 商场设施",
     "audioUrl": "/audio/tracks/goethe_a1_treppe.mp3",
-    "duration": 17.0,
+    "duration": 13.5,
     "segments": [
       {
         "id": "goethe-a1-treppe-04-s1",
         "startTime": 0.0,
-        "endTime": 7.5,
+        "endTime": 5.0,
         "german": "Ach, entschuldigen Sie, wie komme ich denn hier in den zweiten Stock?",
         "chinese": "啊，请问一下，我该怎么去这里的二楼呢？",
         "clozeWords": [
@@ -371,8 +371,8 @@
       },
       {
         "id": "goethe-a1-treppe-04-s2",
-        "startTime": 7.5,
-        "endTime": 10.3,
+        "startTime": 5.0,
+        "endTime": 7.1,
         "german": "Die Rolltreppe da vorn ist kaputt.",
         "chinese": "前面的自动扶梯坏了。",
         "clozeWords": [
@@ -399,8 +399,8 @@
       },
       {
         "id": "goethe-a1-treppe-04-s3",
-        "startTime": 10.3,
-        "endTime": 17.0,
+        "startTime": 7.1,
+        "endTime": 13.5,
         "german": "Da gehen Sie hier rechts um die Ecke und nehmen den Aufzug. – Um die Ecke rechts. Danke.",
         "chinese": "您从这里往右转拐角走，坐电梯上去。——拐角右转，谢谢。",
         "clozeWords": [
@@ -437,12 +437,12 @@
     "topic": "Reisen & Verkehr",
     "taskSection": "歌德 A1 · Teil 2 旅途广播",
     "audioUrl": "/audio/tracks/goethe_a1_reisebus.mp3",
-    "duration": 17.1,
+    "duration": 16.0,
     "segments": [
       {
         "id": "goethe-a1-reisebus-05-s1",
         "startTime": 0.0,
-        "endTime": 4.5,
+        "endTime": 5.2,
         "german": "Liebe Fahrgäste. Wir sind kurz vor Würzburg.",
         "chinese": "各位乘客，我们快到维尔茨堡了。",
         "clozeWords": [
@@ -469,8 +469,8 @@
       },
       {
         "id": "goethe-a1-reisebus-05-s2",
-        "startTime": 4.5,
-        "endTime": 10.5,
+        "startTime": 5.2,
+        "endTime": 10.6,
         "german": "Sicherlich haben Sie schon Hunger. An der nächsten Raststätte halten wir für eine Stunde.",
         "chinese": "大家想必已经饿了。我们在下一个高速服务区停靠一小时。",
         "clozeWords": [
@@ -506,8 +506,8 @@
       },
       {
         "id": "goethe-a1-reisebus-05-s3",
-        "startTime": 10.5,
-        "endTime": 17.1,
+        "startTime": 10.6,
+        "endTime": 16.0,
         "german": "Wir treffen uns wieder um halb eins am Bus, aber bitte pünktlich sein.",
         "chinese": "我们十二点半在旅游大巴集合，请大家务必准时。",
         "clozeWords": [
@@ -543,12 +543,12 @@
     "topic": "Reisen & Flughafen",
     "taskSection": "歌德 A1 · Teil 2 机场广播",
     "audioUrl": "/audio/tracks/goethe_a1_flughafen.mp3",
-    "duration": 16.2,
+    "duration": 15.0,
     "segments": [
       {
         "id": "goethe-a1-flughafen-06-s1",
         "startTime": 0.0,
-        "endTime": 8.1,
+        "endTime": 9.0,
         "german": "Herr Stefan Janda, gebucht auf dem Flug LH 737 nach Warschau, wird zum Schalter F7 gebeten.",
         "chinese": "乘坐汉莎航空LH 737航班飞往华沙的斯特凡·扬达先生，请前往F7柜台。",
         "clozeWords": [
@@ -584,8 +584,8 @@
       },
       {
         "id": "goethe-a1-flughafen-06-s2",
-        "startTime": 8.1,
-        "endTime": 11.5,
+        "startTime": 9.0,
+        "endTime": 11.4,
         "german": "Der Flug wird in ein paar Minuten geschlossen.",
         "chinese": "该航班登机口将在几分钟内关闭。",
         "clozeWords": [
@@ -612,8 +612,8 @@
       },
       {
         "id": "goethe-a1-flughafen-06-s3",
-        "startTime": 11.5,
-        "endTime": 16.2,
+        "startTime": 11.4,
+        "endTime": 15.0,
         "german": "Herr Janda, gebucht nach Warschau, bitte nach F7.",
         "chinese": "扬达先生，前往华沙的旅客，请立刻到F7柜台。",
         "clozeWords": [
@@ -640,12 +640,12 @@
     "topic": "Verkehr & Veranstaltungen",
     "taskSection": "歌德 A2 · Teil 1 场馆交通",
     "audioUrl": "/audio/tracks/goethe_a2_olympia.mp3",
-    "duration": 16.3,
+    "duration": 12.3,
     "segments": [
       {
         "id": "goethe-a2-olympia-01-s1",
         "startTime": 0.0,
-        "endTime": 5.5,
+        "endTime": 6.5,
         "german": "Eine Information für die Besucher des Basketballspiels heute in der Olympia-Halle:",
         "chinese": "一条给今天在奥林匹亚大厅观看篮球比赛的观众的通知：",
         "clozeWords": [
@@ -674,8 +674,8 @@
       },
       {
         "id": "goethe-a2-olympia-01-s2",
-        "startTime": 5.5,
-        "endTime": 10.6,
+        "startTime": 6.5,
+        "endTime": 9.1,
         "german": "Die Parkplätze in der Nähe sind schon besetzt.",
         "chinese": "附近的停车场已经满了。",
         "clozeWords": [
@@ -703,8 +703,8 @@
       },
       {
         "id": "goethe-a2-olympia-01-s3",
-        "startTime": 10.6,
-        "endTime": 16.3,
+        "startTime": 9.1,
+        "endTime": 12.3,
         "german": "Im Parkhaus am Einkaufszentrum gibt es noch freie Plätze.",
         "chinese": "购物中心的停车库里还有空位。",
         "clozeWords": [
@@ -742,12 +742,12 @@
     "topic": "Verkehr & Mobilität",
     "taskSection": "歌德 A2 · Teil 1 接驳乘车",
     "audioUrl": "/audio/tracks/goethe_a2_bus.mp3",
-    "duration": 10.5,
+    "duration": 8.7,
     "segments": [
       {
         "id": "goethe-a2-bus-02-s1",
         "startTime": 0.0,
-        "endTime": 3.2,
+        "endTime": 3.0,
         "german": "Besucher von außerhalb sollten nicht mit dem Auto kommen.",
         "chinese": "外地来的访客请勿开车前往。",
         "clozeWords": [
@@ -767,8 +767,8 @@
       },
       {
         "id": "goethe-a2-bus-02-s2",
-        "startTime": 3.2,
-        "endTime": 5.0,
+        "startTime": 3.0,
+        "endTime": 4.2,
         "german": "Nehmen Sie die Bahn!",
         "chinese": "请乘坐轨道交通！",
         "clozeWords": [
@@ -788,8 +788,8 @@
       },
       {
         "id": "goethe-a2-bus-02-s3",
-        "startTime": 5.0,
-        "endTime": 10.5,
+        "startTime": 4.2,
+        "endTime": 8.7,
         "german": "Vom Hauptbahnhof gibt es kostenlose Busse zur Olympia-Halle.",
         "chinese": "中央火车站提供前往奥林匹亚大厅的免费接驳大巴。",
         "clozeWords": [
@@ -825,12 +825,12 @@
     "topic": "Alltag & Feste",
     "taskSection": "歌德 A2 · Teil 1 日常待办",
     "audioUrl": "/audio/tracks/goethe_a2_anzug.mp3",
-    "duration": 22.3,
+    "duration": 21.2,
     "segments": [
       {
         "id": "goethe-a2-anzug-03-s1",
         "startTime": 0.0,
-        "endTime": 6.0,
+        "endTime": 6.6,
         "german": "Hallo Sabine. Denk bitte an meinen dunklen Anzug.",
         "chinese": "喂，萨宾娜。请别忘了我那套深色西装。",
         "clozeWords": [
@@ -858,8 +858,8 @@
       },
       {
         "id": "goethe-a2-anzug-03-s2",
-        "startTime": 6.0,
-        "endTime": 14.5,
+        "startTime": 6.6,
+        "endTime": 13.8,
         "german": "Du wolltest ihn doch aus der Reinigung abholen. Sonst weiß ich nicht, was ich bei Helenas Hochzeit morgen anziehen soll.",
         "chinese": "你之前说要去干洗店取的。否则明天海伦娜的婚礼我都不知道穿什么好。",
         "clozeWords": [
@@ -896,8 +896,8 @@
       },
       {
         "id": "goethe-a2-anzug-03-s3",
-        "startTime": 14.5,
-        "endTime": 22.3,
+        "startTime": 13.8,
+        "endTime": 21.2,
         "german": "Das Geschenk hab‘ ich heute in der Mittagspause schon gekauft. Die Blumen holen wir ja erst morgen früh. Dank dir.",
         "chinese": "礼物我今天午休时已经买好了。花我们明天一早再去拿。谢谢你啦。",
         "clozeWords": [
@@ -935,12 +935,12 @@
     "topic": "Wetter & Natur",
     "taskSection": "歌德 A2 · Teil 1 天气预报",
     "audioUrl": "/audio/tracks/goethe_a2_wetter.mp3",
-    "duration": 26.7,
+    "duration": 23.5,
     "segments": [
       {
         "id": "goethe-a2-wetter-04-s1",
         "startTime": 0.0,
-        "endTime": 7.0,
+        "endTime": 6.8,
         "german": "Nun zum Wetter. Am Wochenende ist es im Norden windig und bewölkt.",
         "chinese": "现在播报天气。周末北部多风且多云。",
         "clozeWords": [
@@ -976,8 +976,8 @@
       },
       {
         "id": "goethe-a2-wetter-04-s2",
-        "startTime": 7.0,
-        "endTime": 15.6,
+        "startTime": 6.8,
+        "endTime": 15.0,
         "german": "Es regnet bei maximal 17 Grad. Im Süden am Samstag sonnig und warm bis 25 Grad.",
         "chinese": "伴有降雨，最高气温17度。南部周六晴朗温暖，气温可达25度。",
         "clozeWords": [
@@ -1006,8 +1006,8 @@
       },
       {
         "id": "goethe-a2-wetter-04-s3",
-        "startTime": 15.6,
-        "endTime": 26.7,
+        "startTime": 15.0,
+        "endTime": 23.5,
         "german": "Am Sonntag kommt das kalte Regenwetter dann auch nach Süddeutschland. Die Temperaturen fallen auch hier auf unter 15 Grad.",
         "chinese": "周日寒冷阴雨天气也将蔓延至德国南部。这里的气温也会降至15度以下。",
         "clozeWords": [
@@ -1049,7 +1049,7 @@
       {
         "id": "goethe-a2-reparatur-05-s1",
         "startTime": 0.0,
-        "endTime": 7.5,
+        "endTime": 7.8,
         "german": "Hallo Herr Talas. Hier Miguel Alba aus Haus Nr. 9. Wir haben gestern schon wegen der Reparaturen telefoniert.",
         "chinese": "您好塔拉斯先生。我是9号楼的米格尔·阿尔巴。我们昨天为了维修的事通过电话。",
         "clozeWords": [
@@ -1076,8 +1076,8 @@
       },
       {
         "id": "goethe-a2-reparatur-05-s2",
-        "startTime": 7.5,
-        "endTime": 15.0,
+        "startTime": 7.8,
+        "endTime": 15.5,
         "german": "Ja. Der Mechaniker hat den Aufzug in Ihrem Haus gestern Abend noch repariert. Und die Lampe am Eingang geht auch wieder.",
         "chinese": "是的。机修工昨晚已经修好了你们楼的电梯。门口的灯也修好了。",
         "clozeWords": [
@@ -1108,7 +1108,7 @@
       },
       {
         "id": "goethe-a2-reparatur-05-s3",
-        "startTime": 15.0,
+        "startTime": 15.5,
         "endTime": 24.0,
         "german": "Ja, ja. Aber jetzt wird die Heizung in meiner Wohnung nicht mehr warm. Können Sie vorbeikommen und sich das mal ansehen?",
         "chinese": "对对。但我公寓里的暖气现在不热了。您能过来看看吗？",
@@ -1146,12 +1146,12 @@
     "topic": "Gesundheit & Termine",
     "taskSection": "歌德 A2 · Teil 3 诊所预约",
     "audioUrl": "/audio/tracks/goethe_a2_praxis.mp3",
-    "duration": 33.0,
+    "duration": 24.0,
     "segments": [
       {
         "id": "goethe-a2-praxis-06-s1",
         "startTime": 0.0,
-        "endTime": 5.5,
+        "endTime": 5.0,
         "german": "Guten Tag, hier ist Messner von der Arztpraxis Vollmer. – Ja? Guten Tag.",
         "chinese": "您好，我是福尔默诊所的梅斯纳。——在的，您好。",
         "clozeWords": [
@@ -1172,7 +1172,7 @@
       },
       {
         "id": "goethe-a2-praxis-06-s2",
-        "startTime": 5.5,
+        "startTime": 5.0,
         "endTime": 15.0,
         "german": "Ich rufe an wegen Ihrer Krankengymnastik. Sie können nächste Woche Montag und Donnerstag um 16 Uhr kommen. – Ja, das passt.",
         "chinese": "我打电话是关于您的理疗康复训练。下周一和周四下午4点您可以过来。——好的，时间合适。",
@@ -1201,7 +1201,7 @@
       {
         "id": "goethe-a2-praxis-06-s3",
         "startTime": 15.0,
-        "endTime": 33.0,
+        "endTime": 24.0,
         "german": "Sie müssen nicht an der Information warten. Gehen Sie direkt in den Sportraum. Und bitte vergessen Sie das Rezept vom Arzt und Ihre Sportkleidung nicht.",
         "chinese": "您不需要在服务台等待。直接去体操房即可。请不要忘记带医生的处方和您的运动服。",
         "clozeWords": [
@@ -1239,12 +1239,12 @@
     "topic": "Reisen & Urlaub",
     "taskSection": "歌德 B1 · Teil 1 假期规划",
     "audioUrl": "/audio/tracks/goethe_b1_urlaub.mp3",
-    "duration": 32.5,
+    "duration": 29.3,
     "segments": [
       {
         "id": "goethe-b1-urlaub-01-s1",
         "startTime": 0.0,
-        "endTime": 7.0,
+        "endTime": 6.1,
         "german": "Hallo Jan, hier ist Frank. Wir wollten doch im Sommer eine Woche ans Meer fahren.",
         "chinese": "喂扬，我是弗兰克。我们之前不是说夏天去海边玩一周嘛。",
         "clozeWords": [
@@ -1266,8 +1266,8 @@
       },
       {
         "id": "goethe-b1-urlaub-01-s2",
-        "startTime": 7.0,
-        "endTime": 16.0,
+        "startTime": 6.1,
+        "endTime": 15.3,
         "german": "Ich bin gerade im Internet: im Juni gibt es noch günstige Flüge nach Sizilien. Die Übernachtung müssen wir noch klären.",
         "chinese": "我正在上网看：六月份还有去西西里的特价机票。住宿我们还得商量定一下。",
         "clozeWords": [
@@ -1304,8 +1304,8 @@
       },
       {
         "id": "goethe-b1-urlaub-01-s3",
-        "startTime": 16.0,
-        "endTime": 32.5,
+        "startTime": 15.3,
+        "endTime": 29.3,
         "german": "Meine Tante wohnt doch dort – bei ihr könnten wir vielleicht schlafen. Ansonsten bieten die hier auch noch billige Hotelzimmer an – oder wir gehen campen, das fände ich am besten. Ich schicke dir den Link, schau es dir doch mal an. Tschüs.",
         "chinese": "我姑妈住在那里——我们也许可以住她家。另外这里也提供便宜的酒店客房——或者我们去露营，我觉得露营最好。我把链接发给你，你看看吧。拜拜。",
         "clozeWords": [
@@ -1343,12 +1343,12 @@
     "topic": "Gesundheit & Termine",
     "taskSection": "歌德 B1 · Teil 1 门诊改约",
     "audioUrl": "/audio/tracks/goethe_b1_praxis.mp3",
-    "duration": 32.0,
+    "duration": 32.2,
     "segments": [
       {
         "id": "goethe-b1-praxis-02-s1",
         "startTime": 0.0,
-        "endTime": 6.5,
+        "endTime": 6.9,
         "german": "Hallo Frau Stein, hier ist die Praxis Dr. Becker. Es geht um Ihre Grippe-Impfung.",
         "chinese": "您好施泰因女士，这里是贝克尔医生诊所。是关于您的流感疫苗接种。",
         "clozeWords": [
@@ -1368,8 +1368,8 @@
       },
       {
         "id": "goethe-b1-praxis-02-s2",
-        "startTime": 6.5,
-        "endTime": 17.0,
+        "startTime": 6.9,
+        "endTime": 22.0,
         "german": "Frau Dr. Becker muss zu einer Operation. Könnten Sie vielleicht auch am Freitag um 14 Uhr kommen? Das ist dann noch in diesem Quartal. Sie müssten also die zehn Euro Praxisgebühr nicht zahlen.",
         "chinese": "贝克尔医生必须做一台手术。您周五下午两点能过来吗？这样还在这个季度内，您就不需要再交十欧元的门诊挂号费了。",
         "clozeWords": [
@@ -1400,8 +1400,8 @@
       },
       {
         "id": "goethe-b1-praxis-02-s3",
-        "startTime": 17.0,
-        "endTime": 32.0,
+        "startTime": 22.0,
+        "endTime": 32.2,
         "german": "Geben Sie mir bitte heute noch Bescheid, ob Sie Zeit haben? Ach, und noch etwas. Ihre Chipkarte ist bei uns, Sie haben sie letztes Mal bei uns vergessen. Danke und auf Wiederhören.",
         "chinese": "请您今天回复我一下是否有空好吗？啊对了还有一件事。您的医保芯片卡还在我们这里，您上次落在这里了。谢谢，再见。",
         "clozeWords": [
@@ -1439,12 +1439,12 @@
     "topic": "Arbeit & Bewerbung",
     "taskSection": "歌德 B1 · Teil 1 求职材料",
     "audioUrl": "/audio/tracks/goethe_b1_bewerbung.mp3",
-    "duration": 29.5,
+    "duration": 28.2,
     "segments": [
       {
         "id": "goethe-b1-bewerbung-03-s1",
         "startTime": 0.0,
-        "endTime": 5.5,
+        "endTime": 5.2,
         "german": "Hallo Frau Brahms, Ulf Thomas hier von der HGB-Versicherung.",
         "chinese": "您好布拉姆斯女士，我是HGB保险公司的乌尔夫·托马斯。",
         "clozeWords": [
@@ -1464,8 +1464,8 @@
       },
       {
         "id": "goethe-b1-bewerbung-03-s2",
-        "startTime": 5.5,
-        "endTime": 13.2,
+        "startTime": 5.2,
+        "endTime": 12.9,
         "german": "Sie haben sich bei uns als Verkaufsleiterin beworben, doch leider fehlen in Ihren Unterlagen zwei Zeugnisse, die für die Bewerbung sehr wichtig sind.",
         "chinese": "您向我们应聘销售主管一职，但很遗憾您的材料中缺少两份对申请非常重要的证明文件。",
         "clozeWords": [
@@ -1501,8 +1501,8 @@
       },
       {
         "id": "goethe-b1-bewerbung-03-s3",
-        "startTime": 13.2,
-        "endTime": 29.5,
+        "startTime": 12.9,
+        "endTime": 28.2,
         "german": "Es geht um die Zertifikate für die besuchten Computer- und Englischkurse. Die haben Sie zumindest so in Ihrem Lebenslauf genannt. Ähm, ich bitte Sie, diese Unterlagen so schnell wie möglich an uns zu schicken oder mich bei Rückfragen anzurufen. Vielen Dank!",
         "chinese": "是关于您参加计算机和英语培训的结业证书。至少您在简历中是这样写的。呃，请您尽快将这些材料补发给我们，如有疑问也可以给我来电。非常感谢！",
         "clozeWords": [
@@ -1549,12 +1549,12 @@
     "topic": "Verkehr & Radio",
     "taskSection": "歌德 B1 · Teil 1 交通广播",
     "audioUrl": "/audio/tracks/goethe_b1_verkehr.mp3",
-    "duration": 37.5,
+    "duration": 35.6,
     "segments": [
       {
         "id": "goethe-b1-verkehr-04-s1",
         "startTime": 0.0,
-        "endTime": 12.0,
+        "endTime": 11.5,
         "german": "Achtung Autofahrer. Auf der Autobahn A8 Stuttgart Richtung München zwischen Eschenried und Ausfahrt Dachau hat sich ein Unfall ereignet.",
         "chinese": "司机朋友们请注意。A8高速斯图加特往慕尼黑方向，埃申里德与达豪出口之间发生了一起交通事故。",
         "clozeWords": [
@@ -1584,8 +1584,8 @@
       },
       {
         "id": "goethe-b1-verkehr-04-s2",
-        "startTime": 12.0,
-        "endTime": 18.0,
+        "startTime": 11.5,
+        "endTime": 16.2,
         "german": "Momentan ist der rechte Fahrstreifen blockiert. 12 Kilometer Stau.",
         "chinese": "目前右侧车道受阻，拥堵达12公里。",
         "clozeWords": [
@@ -1615,8 +1615,8 @@
       },
       {
         "id": "goethe-b1-verkehr-04-s3",
-        "startTime": 18.0,
-        "endTime": 37.5,
+        "startTime": 16.2,
+        "endTime": 35.6,
         "german": "Im Stadtgebiet München kommt es aufgrund des starken Berufsverkehrs zu Behinderungen. Stau auch am Richard-Strauss-Tunnel wegen einer Baustelle. Bitte umfahren Sie dieses Gebiet weiträumig.",
         "chinese": "慕尼黑市区由于高峰通勤车流较大出现通行受阻。理查德·施特劳斯隧道也因施工发生拥堵。请大家尽量绕行该区域。",
         "clozeWords": [
@@ -1661,12 +1661,12 @@
     "topic": "Reisen & Bahn",
     "taskSection": "歌德 B1 · Teil 1 铁路广播",
     "audioUrl": "/audio/tracks/goethe_b1_bahnhof.mp3",
-    "duration": 42.0,
+    "duration": 41.8,
     "segments": [
       {
         "id": "goethe-b1-bahnhof-05-s1",
         "startTime": 0.0,
-        "endTime": 20.0,
+        "endTime": 23.1,
         "german": "Gleis 13, Einfahrt des Interregios 114 nach Bern, Zofingen, Sursee, Luzern, Abfahrt um 08 Uhr 34, erste Klasse Sektoren A und B, zweite Klasse Sektoren B, C und D, Speisewagen im Sektor B.",
         "chinese": "13站台，开往伯尔尼、佐芬根、苏尔塞、卢塞恩的114次城际列车进站，8点34分开车，一等车厢位于A区和B区，二等车厢位于B、C、D区，餐车位于B区。",
         "clozeWords": [
@@ -1705,8 +1705,8 @@
       },
       {
         "id": "goethe-b1-bahnhof-05-s2",
-        "startTime": 20.0,
-        "endTime": 33.0,
+        "startTime": 23.1,
+        "endTime": 32.8,
         "german": "Eine wichtige Information für die Passagiere nach Genf. Der Intercity um 08.45 fällt wegen einer Weichenstörung aus.",
         "chinese": "一条发往日内瓦乘客的重要通知。8点45分的城际列车因道岔故障停运。",
         "clozeWords": [
@@ -1743,8 +1743,8 @@
       },
       {
         "id": "goethe-b1-bahnhof-05-s3",
-        "startTime": 33.0,
-        "endTime": 42.0,
+        "startTime": 32.8,
+        "endTime": 41.8,
         "german": "Die nächstmögliche Verbindung nach Genf ist über Lausanne um 09.45 von Gleis 11. Wir danken Ihnen für Ihr Verständnis.",
         "chinese": "前往日内瓦最近的一趟车是9点45分从11站台经由洛桑开出的班次。感谢您的理解。",
         "clozeWords": [
@@ -1785,7 +1785,7 @@
       {
         "id": "goethe-b1-wetter-06-s1",
         "startTime": 0.0,
-        "endTime": 13.0,
+        "endTime": 12.95,
         "german": "Der Wetterbericht … Und hier noch die aktuellen Wetteraussichten: In der Nacht zum Freitag ist es im Westen und Nordwesten Deutschlands gering bewölkt und meist trocken.",
         "chinese": "天气预报……以下是最新天气展望：周四夜间至周五，德国西部和西北部地区少云且大部晴燥。",
         "clozeWords": [
@@ -1814,8 +1814,8 @@
       },
       {
         "id": "goethe-b1-wetter-06-s2",
-        "startTime": 13.0,
-        "endTime": 22.5,
+        "startTime": 12.95,
+        "endTime": 22.7,
         "german": "Sonst ziehen bei zunehmender Bewölkung von Süddeutschland her mitunter kräftige Regengüsse und Gewitter von Thüringen bis an die Elbe im Osten.",
         "chinese": "其余地区随着云量增多，从德国南部将移入强降雨和雷暴，自图林根一直蔓延到东部的易北河一带。",
         "clozeWords": [
@@ -1845,7 +1845,7 @@
       },
       {
         "id": "goethe-b1-wetter-06-s3",
-        "startTime": 22.5,
+        "startTime": 22.7,
         "endTime": 38.0,
         "german": "Dort kann es lokal sogar zu schweren Unwettern kommen und die Temperaturen sinken auf 17 bis 12 Grad. Achtung: Sturmböen in Gewittergebieten im Osten des Landes, sonst überall schwacher Wind aus unterschiedlichen Richtungen.",
         "chinese": "局地甚至可能出现强对流灾害天气，气温将降至17到12度。注意：该国东部雷雨地区有阵风强风，其余地区为来自不同方向的微风。",
@@ -1885,12 +1885,12 @@
     "topic": "Kultur & Geschichte",
     "taskSection": "歌德 B1 · Teil 2 博物馆导览",
     "audioUrl": "/audio/tracks/goethe_b1_museum.mp3",
-    "duration": 29.0,
+    "duration": 26.8,
     "segments": [
       {
         "id": "goethe-b1-museum-07-s1",
         "startTime": 0.0,
-        "endTime": 7.2,
+        "endTime": 8.5,
         "german": "Ich freue mich, Sie heute hier zu dieser Führung begrüßen zu dürfen und hoffe, Sie hatten bisher bereits einen schönen Aufenthalt hier bei uns in München.",
         "chinese": "非常高兴今天能在这里欢迎各位参加本次导览，希望大家在慕尼黑度过了愉快的时光。",
         "clozeWords": [
@@ -1920,8 +1920,8 @@
       },
       {
         "id": "goethe-b1-museum-07-s2",
-        "startTime": 7.2,
-        "endTime": 14.5,
+        "startTime": 8.5,
+        "endTime": 16.5,
         "german": "Mein Name ist Jan Kiefer und ich möchte Sie heute ein wenig in die Geschichte und die Besonderheiten der bayerischen Landeshauptstadt einweihen.",
         "chinese": "我叫扬·基弗，今天我想带大家了解巴伐利亚首府的历史与风土人情。",
         "clozeWords": [
@@ -1950,8 +1950,8 @@
       },
       {
         "id": "goethe-b1-museum-07-s3",
-        "startTime": 14.5,
-        "endTime": 29.0,
+        "startTime": 16.5,
+        "endTime": 26.8,
         "german": "Wir haben Glück, aufgrund des so wunderschönen Frühlingswetters sind die meisten Leute heute wohl eher im Biergarten zu finden und wir haben das Museum fast ganz für uns.",
         "chinese": "我们很走运，由于这么美好的春季好天气，大多数人今天大概都去啤酒花园了，博物馆几乎由我们独享。",
         "clozeWords": [
@@ -1988,12 +1988,12 @@
     "topic": "Gesellschaft & Familie",
     "taskSection": "歌德 B1 · Teil 4 托儿所辩论",
     "audioUrl": "/audio/tracks/goethe_b1_krippe.mp3",
-    "duration": 35.0,
+    "duration": 32.8,
     "segments": [
       {
         "id": "goethe-b1-krippe-08-s1",
         "startTime": 0.0,
-        "endTime": 2.2,
+        "endTime": 2.25,
         "german": "Tun Ihre Kinder das denn, Herr Bader?",
         "chinese": "巴德尔先生，您的孩子会这样做吗？",
         "clozeWords": [
@@ -2012,8 +2012,8 @@
       },
       {
         "id": "goethe-b1-krippe-08-s2",
-        "startTime": 2.2,
-        "endTime": 16.0,
+        "startTime": 2.25,
+        "endTime": 15.9,
         "german": "Nein, natürlich nicht. Unsere Kinder wissen genau, wer die „Mama“ ist, nämlich meine Frau.",
         "chinese": "不，当然不会。我们的孩子很清楚谁是“妈妈”，那就是我妻子。",
         "clozeWords": [
@@ -2041,17 +2041,17 @@
       },
       {
         "id": "goethe-b1-krippe-08-s3",
-        "startTime": 16.0,
-        "endTime": 35.0,
-        "german": "Aber sie lernen, dass sie auch auf andere Leute hören müssen, und das ist für ihr soziales Verhalten bestimmt sinnvoll.",
-        "chinese": "但他们学会了也必须听取他人的意见，这对他们的社交行为肯定是很有益的。",
+        "startTime": 15.9,
+        "endTime": 32.8,
+        "german": "Das soziale Miteinander lernen die Kinder sowieso später. Mein fünfjähriger Sohn geht seit einem Jahr in den Kindergarten und lernt jetzt, wie er mit anderen Kindern zusammen spielen kann. Unter drei Jahren brauchen Kinder keine gleichaltrigen Kinder, sondern vor allem ihre Bezugsperson.",
+        "chinese": "孩子们无论如何以后都会学会人际交往。我五岁的儿子上一年前进幼儿园，现在正在学习如何与其他孩子一起玩耍。三岁以下的孩子不需要同龄玩伴，而是首先需要他们的固定监护人。",
         "clozeWords": [
-          "lernen",
-          "Leute",
-          "hören",
-          "soziales",
-          "Verhalten",
-          "sinnvoll"
+          "Miteinander",
+          "später",
+          "fünfjähriger",
+          "Kindergarten",
+          "spielen",
+          "Bezugsperson"
         ],
         "vocab": [
           {
@@ -2080,12 +2080,12 @@
     "topic": "Freizeit & Jugend",
     "taskSection": "歌德 B2 · Teil 1 假期项目",
     "audioUrl": "/audio/tracks/goethe_b2_ferien.mp3",
-    "duration": 30.5,
+    "duration": 37.8,
     "segments": [
       {
         "id": "goethe-b2-ferien-01-s1",
         "startTime": 0.0,
-        "endTime": 10.5,
+        "endTime": 17.5,
         "german": "Ich wollte mich nach dem Ferienprogramm erkundigen. Ab wann kann man sich denn anmelden? – Wie immer ab dem 1. Juni, das Programm steht ab nächster Woche im Internet.",
         "chinese": "我想打听一下假期活动安排。从什么时候开始可以报名？——和往常一样从6月1日开始，下周起在官网上就能查到项目内容。",
         "clozeWords": [
@@ -2114,8 +2114,8 @@
       },
       {
         "id": "goethe-b2-ferien-01-s2",
-        "startTime": 10.5,
-        "endTime": 21.0,
+        "startTime": 17.5,
+        "endTime": 29.0,
         "german": "Dann kann man sich auch über das Internet anmelden? – Für die kostenlosen Angebote ja. Wenn das ein kostenpflichtiges Angebot ist, musst du dich bei uns anmelden.",
         "chinese": "那也可以网上报名吗？——免费的项目可以。如果是收费项目，你必须到我们现场报名。",
         "clozeWords": [
@@ -2145,8 +2145,8 @@
       },
       {
         "id": "goethe-b2-ferien-01-s3",
-        "startTime": 21.0,
-        "endTime": 30.5,
+        "startTime": 29.0,
+        "endTime": 37.8,
         "german": "Und wann bezahlt man dann? – Direkt bei der Anmeldung, hier bei einem unserer Mitarbeiter. Sonst können wir den Platz nicht reservieren.",
         "chinese": "那什么时候付款呢？——报名时直接交，在我们工作人员这里办理。否则我们无法保留名额。",
         "clozeWords": [
@@ -2183,12 +2183,12 @@
     "topic": "Ausbildung & Beruf",
     "taskSection": "歌德 B2 · Teil 1 律所实习",
     "audioUrl": "/audio/tracks/goethe_b2_praktikum.mp3",
-    "duration": 44.0,
+    "duration": 38.5,
     "segments": [
       {
         "id": "goethe-b2-praktikum-02-s1",
         "startTime": 0.0,
-        "endTime": 16.0,
+        "endTime": 17.1,
         "german": "Wie war denn dein Praktikum eigentlich? – Mein Praktikum? Das war echt toll! Ich war ja in der Anwaltskanzlei und hab einen echt guten Einblick in ihre Arbeit bekommen.",
         "chinese": "你实习到底怎么样啊？——我的实习？真的特别棒！我在那家律师事务所，对他们的工作有了非常深入的了解。",
         "clozeWords": [
@@ -2218,8 +2218,8 @@
       },
       {
         "id": "goethe-b2-praktikum-02-s2",
-        "startTime": 16.0,
-        "endTime": 27.0,
+        "startTime": 17.1,
+        "endTime": 26.0,
         "german": "Ich konnte sogar zu ein paar Terminen bei Gericht mitgehen. Das war sehr spannend. Aber auch die anderen Aufgaben haben mir gefallen.",
         "chinese": "我甚至还能跟着去法院参加几次庭审。特别刺激。不过其他工作我也很喜欢。",
         "clozeWords": [
@@ -2248,8 +2248,8 @@
       },
       {
         "id": "goethe-b2-praktikum-02-s3",
-        "startTime": 27.0,
-        "endTime": 44.0,
+        "startTime": 26.0,
+        "endTime": 38.5,
         "german": "Natürlich musste ich auch mal Kaffee kochen oder Kopien machen, aber das war nicht schlimm. Ich konnte mich sogar in Fälle einlesen, die für mein Seminar in Verfassungsrecht echt hilfreich sind.",
         "chinese": "当然我也得偶尔煮煮咖啡或者复印文件，但那没什么。我甚至还能研读案件卷宗，这对我宪法学研讨课非常有帮助。",
         "clozeWords": [
@@ -2287,12 +2287,12 @@
     "topic": "Literatur & Freizeit",
     "taskSection": "歌德 B2 · Teil 1 阅读漫谈",
     "audioUrl": "/audio/tracks/goethe_b2_lesen.mp3",
-    "duration": 33.0,
+    "duration": 33.2,
     "segments": [
       {
         "id": "goethe-b2-lesen-03-s1",
         "startTime": 0.0,
-        "endTime": 9.0,
+        "endTime": 12.2,
         "german": "Warum liest du Romane? – Dabei kann ich mich gut entspannen. Wenn ich lese, vergesse ich die Welt um mich herum.",
         "chinese": "你为什么喜欢读小说？——这能让我彻底放松。阅读时，我会忘掉周遭的世界。",
         "clozeWords": [
@@ -2321,8 +2321,8 @@
       },
       {
         "id": "goethe-b2-lesen-03-s2",
-        "startTime": 9.0,
-        "endTime": 21.0,
+        "startTime": 12.2,
+        "endTime": 23.8,
         "german": "Ich befinde mich in einer märchenhaften Welt, kann mit den Romanhelden fühlen und die Geschichte miterleben. Danach fühle ich mich wie andere nach einem Bad oder nach der Sauna.",
         "chinese": "我置身于一个童话般的世界，与小说的主人公同悲共喜，亲历故事发展。读完后感觉就像别人泡了个热水澡或蒸了桑拿一样通透。",
         "clozeWords": [
@@ -2351,8 +2351,8 @@
       },
       {
         "id": "goethe-b2-lesen-03-s3",
-        "startTime": 21.0,
-        "endTime": 33.0,
+        "startTime": 23.8,
+        "endTime": 33.2,
         "german": "Filme mag ich nicht so sehr. Das ist mir alles viel zu real. Da jagt eine Szene die nächste. Man kommt gar nicht zum Nachdenken.",
         "chinese": "我不太喜欢看电影。对我来说一切太写实了。一个场景追着另一个场景，让人根本来不及思考。",
         "clozeWords": [
@@ -2388,7 +2388,7 @@
     "topic": "Verkehr & Sicherheit",
     "taskSection": "歌德 B2 · Teil 1 骑行交通",
     "audioUrl": "/audio/tracks/goethe_b2_radfahrer.mp3",
-    "duration": 34.5,
+    "duration": 38.2,
     "segments": [
       {
         "id": "goethe-b2-radfahrer-04-s1",
@@ -2425,7 +2425,7 @@
       {
         "id": "goethe-b2-radfahrer-04-s2",
         "startTime": 13.0,
-        "endTime": 22.5,
+        "endTime": 22.8,
         "german": "Das Problem: Radfahrer sind schuld an einem Unfall, wenn sie einfach bei Rot über die Ampel fahren und zwei Autos deswegen zusammenstoßen.",
         "chinese": "问题在于：当骑车人闯红灯导致两辆汽车相撞时，骑车人对事故负有责任。",
         "clozeWords": [
@@ -2455,8 +2455,8 @@
       },
       {
         "id": "goethe-b2-radfahrer-04-s3",
-        "startTime": 22.5,
-        "endTime": 34.5,
+        "startTime": 22.8,
+        "endTime": 38.2,
         "german": "Wenn der Radfahrer einfach wegfährt, weiß die Polizei nicht, wer das war. Mit einem Nummernschild wie beim Auto könnten die Polizisten das aber herausfinden. Schließlich fanden die Experten den Vorschlag aber doch zu unpraktisch.",
         "chinese": "如果骑车人直接溜走，警察就不知道肇事者是谁。如果有了像汽车那样的车牌，警察就能查出来。但专家们最终还是觉得这个提议太不切实际了。",
         "clozeWords": [
@@ -2493,12 +2493,12 @@
     "topic": "Ernährung & Ökologie",
     "taskSection": "歌德 B2 · Teil 2 饮食与环境",
     "audioUrl": "/audio/tracks/goethe_b2_ernaehrung.mp3",
-    "duration": 36.5,
+    "duration": 29.7,
     "segments": [
       {
         "id": "goethe-b2-ernaehrung-05-s1",
         "startTime": 0.0,
-        "endTime": 9.5,
+        "endTime": 9.8,
         "german": "Ich begrüße heute Doktor Helene Neuhaus, Leiterin des Instituts für „gesunde Ernährung und nachhaltige Lebensmittelproduktion“.",
         "chinese": "今天我欢迎海伦娜·诺伊豪斯博士，她是“健康饮食与可持续食品生产研究所”的负责人。",
         "clozeWords": [
@@ -2527,8 +2527,8 @@
       },
       {
         "id": "goethe-b2-ernaehrung-05-s2",
-        "startTime": 9.5,
-        "endTime": 18.5,
+        "startTime": 9.8,
+        "endTime": 18.6,
         "german": "Sie sagt: Wir müssen unsere Ernährungsgewohnheiten und unsere Lebensmittelproduktion in Zukunft radikal umstellen.",
         "chinese": "她指出：未来我们必须从根本上转变我们的饮食习惯与食品生产方式。",
         "clozeWords": [
@@ -2557,8 +2557,8 @@
       },
       {
         "id": "goethe-b2-ernaehrung-05-s3",
-        "startTime": 18.5,
-        "endTime": 36.5,
+        "startTime": 18.6,
+        "endTime": 29.7,
         "german": "Fangen wir mal mit der Ernährung an, Frau Neuhaus: Was muss sich da vor allem ändern? – Auf jeden Fall ist es gut, wenn wir uns über die Folgen unserer Ernährung bewusst werden.",
         "chinese": "诺伊豪斯女士，我们先从饮食谈起：这里最需要改变的是什么？——无论如何，如果我们能清醒意识到自身饮食带来的后果，这就迈出了很好的一步。",
         "clozeWords": [
@@ -2595,12 +2595,12 @@
     "topic": "Ernährung & Zukunft",
     "taskSection": "歌德 B2 · Teil 2 替代蛋白",
     "audioUrl": "/audio/tracks/goethe_b2_insekten.mp3",
-    "duration": 29.0,
+    "duration": 33.5,
     "segments": [
       {
         "id": "goethe-b2-insekten-06-s1",
         "startTime": 0.0,
-        "endTime": 12.0,
+        "endTime": 12.2,
         "german": "Aber womit lässt sich Fleisch denn ersetzen? – Eine mögliche Alternative sind Insekten, also z. B. Käfer oder Ähnliches; frittiert schmecken sie ähnlich wie die Haut von Brathähnchen.",
         "chinese": "但是拿什么来替代肉类呢？——一种可行的替代品是昆虫，比如甲虫之类；油炸后吃起来味道很像烤鸡皮。",
         "clozeWords": [
@@ -2630,8 +2630,8 @@
       },
       {
         "id": "goethe-b2-insekten-06-s2",
-        "startTime": 12.0,
-        "endTime": 20.0,
+        "startTime": 12.2,
+        "endTime": 23.2,
         "german": "Man kann Insekten auch karamellisieren oder in Schokolade tauchen. Sie lassen sich auch gut für verarbeitete Produkte nutzen, zum Beispiel Insektenriegel statt Schokoriegel.",
         "chinese": "人们也可以把昆虫做成焦糖口味或者裹上巧克力。它们也非常适合用于深加工产品，例如用昆虫能量棒代替巧克力棒。",
         "clozeWords": [
@@ -2660,8 +2660,8 @@
       },
       {
         "id": "goethe-b2-insekten-06-s3",
-        "startTime": 20.0,
-        "endTime": 29.0,
+        "startTime": 23.2,
+        "endTime": 33.5,
         "german": "Die Zubereitung kennt keine Grenzen. Haben Sie solche Insektenriegel schon probiert? – Meine Kollegin hat sie gekostet. Sie sagt, sie sind sehr lecker.",
         "chinese": "其制作方式毫无限制。您尝过这种昆虫能量棒吗？——我的同事品尝过。她说非常好吃。",
         "clozeWords": [
@@ -2700,12 +2700,12 @@
     "topic": "Wohnen & Lebensstile",
     "taskSection": "歌德 B2 · Teil 3 青年合租",
     "audioUrl": "/audio/tracks/goethe_b2_studium.mp3",
-    "duration": 30.0,
+    "duration": 22.4,
     "segments": [
       {
         "id": "goethe-b2-studium-07-s1",
         "startTime": 0.0,
-        "endTime": 7.0,
+        "endTime": 4.8,
         "german": "Frau Gerster, wie kam es denn dazu, dass Sie in eine Wohngemeinschaft eingezogen sind?",
         "chinese": "格斯特女士，您当初是怎么决定搬进合租公寓的呢？",
         "clozeWords": [
@@ -2732,8 +2732,8 @@
       },
       {
         "id": "goethe-b2-studium-07-s2",
-        "startTime": 7.0,
-        "endTime": 14.5,
+        "startTime": 4.8,
+        "endTime": 12.0,
         "german": "Als ich zum Studium nach Berlin kam, hatte ich nicht viel Geld und zog in eine WG, also eine Wohngemeinschaft.",
         "chinese": "当我来柏林读大学时，手头没多少钱，就住进了一个WG，也就是合租公寓。",
         "clozeWords": [
@@ -2755,8 +2755,8 @@
       },
       {
         "id": "goethe-b2-studium-07-s3",
-        "startTime": 14.5,
-        "endTime": 30.0,
+        "startTime": 12.0,
+        "endTime": 22.4,
         "german": "Und da es nach dem Studium als Geisteswissenschaftlerin mit anständig bezahlten Stellen im Moment schlecht aussieht, bleibe ich vorerst dort wohnen – bis ich richtig Geld verdiene.",
         "chinese": "由于人文学科毕业生目前找高薪体面工作的前景不太乐观，我暂时就继续住在那儿——直到我真正能挣到足够的钱。",
         "clozeWords": [
@@ -2794,19 +2794,20 @@
     "topic": "Psychologie & Arbeit",
     "taskSection": "歌德 B2 · Teil 4 专注工作法",
     "audioUrl": "/audio/tracks/goethe_b2_arbeit.mp3",
-    "duration": 35.0,
+    "duration": 28.7,
     "segments": [
       {
         "id": "goethe-b2-arbeit-08-s1",
         "startTime": 0.0,
-        "endTime": 14.5,
-        "german": "Es scheint unmöglich, voll konzentriert zu arbeiten. Es andauernd zu versuchen kostet Kraft und ist wenig zielführend.",
-        "chinese": "保持完全专注地工作似乎是不可能的。持续不断地勉强自己既费力又难见成效。",
+        "endTime": 9.8,
+        "german": "Zusammenfassend kann ich nur sagen: Es ist wichtig, Ablenkungen als solche zu erkennen und wenn möglich gar nicht erst entstehen zu lassen.",
+        "chinese": "总而言之我只能说：认清这些干扰因素的本质，并且尽可能不让它们产生，这一点至关重要。",
         "clozeWords": [
-          "unmöglich",
-          "konzentriert",
-          "arbeiten",
-          "zielführend"
+          "Zusammenfassend",
+          "wichtig",
+          "Ablenkungen",
+          "erkennen",
+          "entstehen"
         ],
         "vocab": [
           {
@@ -2827,15 +2828,15 @@
       },
       {
         "id": "goethe-b2-arbeit-08-s2",
-        "startTime": 14.5,
-        "endTime": 23.5,
-        "german": "Aber das wirklich konzentrierte Arbeiten ohne Ablenkungen schafft das größte Hochgefühl.",
-        "chinese": "然而，真正不受干扰的专注投入却能带来无与伦比的充实成就感。",
+        "startTime": 9.8,
+        "endTime": 15.0,
+        "german": "Es geht nicht darum, in Zukunft nicht mehr auf äußere Einflüsse zu reagieren.",
+        "chinese": "这并不是说将来对任何外界影响都完全置之不理。",
         "clozeWords": [
-          "Arbeiten",
-          "Ablenkungen",
-          "schafft",
-          "Hochgefühl"
+          "Zukunft",
+          "äußere",
+          "Einflüsse",
+          "reagieren"
         ],
         "vocab": [
           {
@@ -2858,15 +2859,16 @@
       },
       {
         "id": "goethe-b2-arbeit-08-s3",
-        "startTime": 23.5,
-        "endTime": 35.0,
-        "german": "Zusammenfassend kann ich nur sagen: Es ist wichtig, Ablenkungen als solche zu erkennen und ihnen gezielt aus dem Weg zu gehen.",
-        "chinese": "总而言之我只能说：看清这些干扰因素的本质并有针对性地避开它们至关重要。",
+        "startTime": 15.0,
+        "endTime": 28.7,
+        "german": "Meiner Meinung nach reicht es beispielsweise, die E-Mails alle zwei bis drei Stunden anzusehen und dazwischen voll konzentriert zu arbeiten. Herzlichen Dank für Ihre Aufmerksamkeit, meine Damen und Herren.",
+        "chinese": "依我拙见，比如每两到三小时集中查看一次电子邮件，而在两次查看之间全神贯注地投入工作就足够了。女士们先生们，非常感谢各位的聆听。",
         "clozeWords": [
-          "Zusammenfassend",
-          "Ablenkungen",
-          "erkennen",
-          "gezielt"
+          "Meinung",
+          "E-Mails",
+          "Stunden",
+          "konzentriert",
+          "Aufmerksamkeit"
         ],
         "vocab": [
           {
@@ -2895,12 +2897,12 @@
     "topic": "Literatur & Medien",
     "taskSection": "歌德 C1 · Teil 1 文学播客",
     "audioUrl": "/audio/tracks/goethe_c1_literatur.mp3",
-    "duration": 38.5,
+    "duration": 38.0,
     "segments": [
       {
         "id": "goethe-c1-literatur-01-s1",
         "startTime": 0.0,
-        "endTime": 14.5,
+        "endTime": 15.1,
         "german": "Liebe Hörerinnen und Hörer, willkommen zu der heutigen Ausgabe meines Podcasts Lesezeit. Ich stelle wieder drei absolut lesenswerte Neuerscheinungen vor.",
         "chinese": "亲爱的听众朋友们，欢迎收听本期《阅读时光》播客。今天我再次向大家推荐三部绝对值得一读的出版新书。",
         "clozeWords": [
@@ -2937,8 +2939,8 @@
       },
       {
         "id": "goethe-c1-literatur-01-s2",
-        "startTime": 14.5,
-        "endTime": 25.5,
+        "startTime": 15.1,
+        "endTime": 29.1,
         "german": "Meine erste Empfehlung ist der Roman „Polarstrom“ von Frieda Strohmeier. Der erste Satz „Unser Herz schlägt nicht mehr“ zieht die Leserinnen und Leser gleich mitten ins Geschehen.",
         "chinese": "我的第一部推荐书目是弗里达·施特罗迈尔的小说《极地洋流》。开篇第一句话“我们的心已不再跳动”瞬间将读者拉入故事中心。",
         "clozeWords": [
@@ -2966,8 +2968,8 @@
       },
       {
         "id": "goethe-c1-literatur-01-s3",
-        "startTime": 25.5,
-        "endTime": 38.5,
+        "startTime": 29.1,
+        "endTime": 38.0,
         "german": "Erzählt wird von einer wissenschaftlichen Expedition und zugleich von Freundschaft und Konkurrenz. Handlungsort ist das Camp eines Polarforschungsteams.",
         "chinese": "故事讲述了一场科学考察历险，同时也是一段关于友谊与竞争的故事。发生地点位于极地科考队的大本营。",
         "clozeWords": [
@@ -3013,12 +3015,12 @@
     "topic": "Geschichte & Schifffahrt",
     "taskSection": "歌德 C1 · Teil 1 海洋历史",
     "audioUrl": "/audio/tracks/goethe_c1_kochschule.mp3",
-    "duration": 44.0,
+    "duration": 44.5,
     "segments": [
       {
         "id": "goethe-c1-kochschule-02-s1",
         "startTime": 0.0,
-        "endTime": 15.0,
+        "endTime": 14.85,
         "german": "Es vermittelt eine umfassende Weltgeschichte der Meere und Hafenstädte. Der Historiker Christoph Stumpf führt die Geschichte, in der der Mensch auf den Weltmeeren unterwegs ist, von den Anfängen bis heute aus.",
         "chinese": "该书系统呈现了海洋与港口城市的宏大世界通史。历史学家克里斯托夫·施通普夫详细梳理了人类跨越大洋航行的历史，从起源直至今日。",
         "clozeWords": [
@@ -3048,8 +3050,8 @@
       },
       {
         "id": "goethe-c1-kochschule-02-s2",
-        "startTime": 15.0,
-        "endTime": 28.0,
+        "startTime": 14.85,
+        "endTime": 28.14,
         "german": "Stumpf schildert dabei zwei Seiten: Auf der einen Seite geht es um die Menschen und ihre Arbeit auf den Schiffen und in den Häfen, auf der anderen Seite um die Waren und ihren Handel.",
         "chinese": "施通普夫在此描述了两个侧面：一面是船上与港口中劳动者的生活与生计，另一面则是商品流动与跨洋贸易。",
         "clozeWords": [
@@ -3078,8 +3080,8 @@
       },
       {
         "id": "goethe-c1-kochschule-02-s3",
-        "startTime": 28.0,
-        "endTime": 44.0,
+        "startTime": 28.14,
+        "endTime": 44.5,
         "german": "Darüber hinaus wird dargestellt, wie sich die Herrschaft über die Seewege in den letzten Jahrhunderten gewandelt hat. Stumpf illustriert mit Fallbeispielen aus der Geschichte, wie das Meer die wirtschaftliche, politische und kulturelle Entwicklung prägte.",
         "chinese": "此外书中还展示了过去几个世纪中制海权与航路的变迁。施通普夫结合具体历史案例，生动阐释了海洋如何塑造了经济、政治与文化的演进。",
         "clozeWords": [
@@ -3117,12 +3119,12 @@
     "topic": "Ökologie & Meeresbiologie",
     "taskSection": "歌德 C1 · Teil 1 海洋生态",
     "audioUrl": "/audio/tracks/goethe_c1_leselust.mp3",
-    "duration": 38.5,
+    "duration": 38.0,
     "segments": [
       {
         "id": "goethe-c1-leselust-03-s1",
         "startTime": 0.0,
-        "endTime": 7.0,
+        "endTime": 7.22,
         "german": "Ein zentraler Aspekt ihres Buches ist die Rolle der Meere für die Menschen und umgekehrt.",
         "chinese": "她著作的一个核心视角是海洋对人类的作用，反之亦然。",
         "clozeWords": [
@@ -3152,8 +3154,8 @@
       },
       {
         "id": "goethe-c1-leselust-03-s2",
-        "startTime": 7.0,
-        "endTime": 17.0,
+        "startTime": 7.22,
+        "endTime": 16.95,
         "german": "Die Autorin beschäftigt sich mit der sinkenden Wasserqualität und den Veränderungen maritimer Lebensformen, für die der Mensch mitverantwortlich ist.",
         "chinese": "作者深入探讨了水质退化以及海洋生物形态演变，人类对此负有不可推卸的责任。",
         "clozeWords": [
@@ -3190,8 +3192,8 @@
       },
       {
         "id": "goethe-c1-leselust-03-s3",
-        "startTime": 17.0,
-        "endTime": 38.5,
+        "startTime": 16.95,
+        "endTime": 38.0,
         "german": "Sie schreibt von der Tier- und Pflanzenwelt und macht, aufbauend auf empirischen Beobachtungen, auf bevorstehende Gefahren aufmerksam. Daraus leitet sie Zukunftsszenarien ab. Das Buch eignet sich für alle, die das Meer wertschätzen und besser verstehen wollen.",
         "chinese": "她描摹动植物世界，并基于实证观察揭示迫在眉睫的生态危机，由此推演未来的发展景象。这本书非常适合所有珍视并渴望更深入理解海洋的人士。",
         "clozeWords": [
@@ -3236,12 +3238,12 @@
     "topic": "Bildung & Digitalisierung",
     "taskSection": "歌德 C1 · Teil 2 基础教育",
     "audioUrl": "/audio/tracks/goethe_c1_fantasie.mp3",
-    "duration": 21.5,
+    "duration": 23.0,
     "segments": [
       {
         "id": "goethe-c1-fantasie-04-s1",
         "startTime": 0.0,
-        "endTime": 3.5,
+        "endTime": 3.68,
         "german": "Können Sie da ein Beispiel geben?",
         "chinese": "您能就此举一个例子吗？",
         "clozeWords": [
@@ -3261,8 +3263,8 @@
       },
       {
         "id": "goethe-c1-fantasie-04-s2",
-        "startTime": 3.5,
-        "endTime": 16.0,
+        "startTime": 3.68,
+        "endTime": 16.42,
         "german": "In den Vereinigten Staaten ist die Digitalisierung im Unterricht zwar weit verbreitet, dennoch gibt es nicht wenige Eltern, die hohe Summen dafür ausgeben, dass ihre Kinder sogenannte analoge Schulen besuchen.",
         "chinese": "在美国，课堂数字化普及程度很高，但依然有不少家长甘愿斥巨资让子女入读所谓的“传统纸笔模拟学校”。",
         "clozeWords": [
@@ -3291,8 +3293,8 @@
       },
       {
         "id": "goethe-c1-fantasie-04-s3",
-        "startTime": 16.0,
-        "endTime": 21.5,
+        "startTime": 16.42,
+        "endTime": 23.0,
         "german": "Dort hat man die Nachteile des digitalen Schreibens für die Entwicklung kognitiver Fähigkeiten junger Menschen erkannt.",
         "chinese": "人们在那里意识到了电子屏幕书写对青少年认知能力发展带来的弊端。",
         "clozeWords": [
@@ -3330,12 +3332,12 @@
     "topic": "Kognition & Didaktik",
     "taskSection": "歌德 C1 · Teil 2 认知写作",
     "audioUrl": "/audio/tracks/goethe_c1_kinderbuch.mp3",
-    "duration": 29.5,
+    "duration": 26.2,
     "segments": [
       {
         "id": "goethe-c1-kinderbuch-05-s1",
         "startTime": 0.0,
-        "endTime": 9.5,
+        "endTime": 7.4,
         "german": "Soeben ist Ihr neuestes Buch „Schreiben und Verstehen“ erschienen. Wie ist das entstanden – analog oder digital?",
         "chinese": "您的最新专著《书写与理解》刚刚出版。这部作品是如何诞生的——是通过传统纸笔还是数字化手段？",
         "clozeWords": [
@@ -3365,8 +3367,8 @@
       },
       {
         "id": "goethe-c1-kinderbuch-05-s2",
-        "startTime": 9.5,
-        "endTime": 17.5,
+        "startTime": 7.4,
+        "endTime": 15.3,
         "german": "Gute Frage! Aber ich weiß die Vorteile der digitalen Welt durchaus zu schätzen und nutze diese gern auch bei Publikationen.",
         "chinese": "问得好！不过我完全懂得数字化世界的优势所在，在著述出版时也很喜欢加以利用。",
         "clozeWords": [
@@ -3394,8 +3396,8 @@
       },
       {
         "id": "goethe-c1-kinderbuch-05-s3",
-        "startTime": 17.5,
-        "endTime": 29.5,
+        "startTime": 15.3,
+        "endTime": 26.2,
         "german": "Ich habe mir zuerst mit der Hand Notizen gemacht. In dieser Phase entstand das Gerüst für jedes Kapitel und dafür reichte jeweils eine Seite. Darauf habe ich alle wichtigen Inhalte notiert.",
         "chinese": "我首先是亲笔手写笔记。在这个阶段，每一章的骨架框架初具雏形，通常一页纸就足够梳理并记录全部核心要点。",
         "clozeWords": [
@@ -3434,12 +3436,12 @@
     "topic": "Urbanistik & Soziologie",
     "taskSection": "歌德 C1 · Teil 3 城市人居",
     "audioUrl": "/audio/tracks/goethe_c1_urbanistik.mp3",
-    "duration": 40.0,
+    "duration": 28.8,
     "segments": [
       {
         "id": "goethe-c1-urbanistik-06-s1",
         "startTime": 0.0,
-        "endTime": 12.0,
+        "endTime": 10.3,
         "german": "Willkommen zu unserer Sendung „Unsere Zukunft neu gedacht“. Wir widmen uns heute der Frage, wie wir in Zukunft wohnen wollen.",
         "chinese": "欢迎收听《重新构想未来》节目。今天我们聚焦于一个命题：未来我们究竟想要怎样的居住模式。",
         "clozeWords": [
@@ -3468,16 +3470,15 @@
       },
       {
         "id": "goethe-c1-urbanistik-06-s2",
-        "startTime": 12.0,
-        "endTime": 26.5,
-        "german": "Eingeladen haben wir Frau Dr. Kuhn, Soziologin an der Universität, die seit vielen Jahren zu urbanen Wohnmodellen forscht.",
-        "chinese": "我们今天邀请到了大学社会学学者库恩博士，多年来她一直从事城市居住模式的相关研究。",
+        "startTime": 10.3,
+        "endTime": 19.8,
+        "german": "Eingeladen haben wir Frau Dr. Kuhn, Soziologin an der Universität Leipzig und Herrn Hoffmann, Architekt und Städteplaner aus Köln. Guten Tag, hallo.",
+        "chinese": "今天我们邀请到了莱比锡大学社会学学者库恩博士，以及来自科隆的建筑师兼城市规划专家霍夫曼先生。二位好！",
         "clozeWords": [
           "Soziologin",
           "Universität",
-          "urbanen",
-          "Wohnmodellen",
-          "forscht"
+          "Architekt",
+          "Städteplaner"
         ],
         "vocab": [
           {
@@ -3499,15 +3500,16 @@
       },
       {
         "id": "goethe-c1-urbanistik-06-s3",
-        "startTime": 26.5,
-        "endTime": 40.0,
-        "german": "Frau Dr. Kuhn, welche Trends beobachten Sie gegenwärtig bei den Wohnformen in unseren Großstädten?",
-        "chinese": "库恩博士，对于目前大都市中涌现的居住形态演变，您观察到了哪些核心趋势？",
+        "startTime": 19.8,
+        "endTime": 28.8,
+        "german": "Frau Dr. Kuhn, in Ihrer jüngsten Publikation fordern Sie neue Leitbilder für das Wohnen. Können Sie das näher erläutern?",
+        "chinese": "库恩博士，在您最新的著述中，您呼吁树立全新的人居导向理念。您能就此展开说明一下吗？",
         "clozeWords": [
-          "Trends",
-          "beobachten",
-          "Wohnformen",
-          "Großstädten"
+          "Publikation",
+          "fordern",
+          "Leitbilder",
+          "Wohnen",
+          "erläutern"
         ],
         "vocab": [
           {
@@ -3538,12 +3540,12 @@
     "topic": "Campusleben & Musik",
     "taskSection": "德福 · Hörtext 1 校园重聚",
     "audioUrl": "/audio/tracks/testdaf_musikstudium.mp3",
-    "duration": 42.0,
+    "duration": 36.0,
     "segments": [
       {
         "id": "testdaf-musikstudium-01-s1",
         "startTime": 0.0,
-        "endTime": 10.5,
+        "endTime": 10.44,
         "german": "Hallo Frau Weller! – Hallo, ähhhm...? – Ich bin‘s, Michael. Sie waren doch 2 Jahre meine Musiklehrerin am Gymnasium.",
         "chinese": "您好韦勒老师！——您好，呃……？——我是迈克尔啊。您高中时当过我两年的音乐老师呢。",
         "clozeWords": [
@@ -3571,8 +3573,8 @@
       },
       {
         "id": "testdaf-musikstudium-01-s2",
-        "startTime": 10.5,
-        "endTime": 21.0,
+        "startTime": 10.44,
+        "endTime": 18.0,
         "german": "Ach, Michael!!! Studierst du etwa hier an der Musikhochschule? – Ja, schon einige Jahre und was machen Sie hier?",
         "chinese": "啊，迈克尔！！！难道你在音乐学院念书？——是的，读了好几年了，您怎么会在这儿呢？",
         "clozeWords": [
@@ -3593,8 +3595,8 @@
       },
       {
         "id": "testdaf-musikstudium-01-s3",
-        "startTime": 21.0,
-        "endTime": 42.0,
+        "startTime": 18.0,
+        "endTime": 36.0,
         "german": "Naja, ich habe einen Gastvortrag zum Thema „Aktuelle Perspektiven in der Musikpädagogik“ besucht. Ich komme regelmäßig zu solchen Vorträgen her. Was ist mit dir? Willst du etwa Sänger oder Komponist werden?",
         "chinese": "嗯，我来听一个题为《音乐教育学的当前视角》的特邀讲座。我经常来参加这类讲座。你呢？难道想成为歌唱家或者作曲家吗？",
         "clozeWords": [
@@ -3640,12 +3642,12 @@
     "topic": "Wirtschaft & Karriere",
     "taskSection": "德福 · Hörtext 2 招聘测评",
     "audioUrl": "/audio/tracks/testdaf_assessment.mp3",
-    "duration": 38.0,
+    "duration": 31.0,
     "segments": [
       {
         "id": "testdaf-assessment-02-s1",
         "startTime": 0.0,
-        "endTime": 10.0,
+        "endTime": 10.04,
         "german": "In unserem heutigen Gespräch geht es um eine besondere Form der Personal- bzw. Bewerberauswahl, dem sogenannten Assessment-Center.",
         "chinese": "在我们今天的访谈中，探讨的是一种特殊的人员与应聘者选拔方式，即所谓的“评价中心”。",
         "clozeWords": [
@@ -3673,8 +3675,8 @@
       },
       {
         "id": "testdaf-assessment-02-s2",
-        "startTime": 10.0,
-        "endTime": 21.0,
+        "startTime": 10.04,
+        "endTime": 20.58,
         "german": "Neben der fachlichen Qualifikation spielen persönliche Facetten oder auch soziale Kompetenzen eine immer größere Rolle bei der Einstellung neuer Mitarbeiter.",
         "chinese": "在录用新员工时，除了专业资质之外，个人性格特质及社交情商也发挥着越来越重要的作用。",
         "clozeWords": [
@@ -3705,8 +3707,8 @@
       },
       {
         "id": "testdaf-assessment-02-s3",
-        "startTime": 21.0,
-        "endTime": 38.0,
+        "startTime": 20.58,
+        "endTime": 31.0,
         "german": "Vor allem Banken und Versicherungen, große Unternehmen und Konzerne verzichten daher schon länger auf das klassische Vorstellungsgespräch. Sie setzen auf Assessment-Center.",
         "chinese": "尤其是银行与保险机构、大型企业与跨国财团，早已摒弃了传统的单向面试，转而依托评价中心进行全面考评。",
         "clozeWords": [
@@ -3745,12 +3747,12 @@
     "topic": "Campusleben & Kunst",
     "taskSection": "德福 · Hörtext 1 专业就读体验",
     "audioUrl": "/audio/tracks/testdaf_campusleben.mp3",
-    "duration": 33.0,
+    "duration": 33.8,
     "segments": [
       {
         "id": "testdaf-campusleben-05-s1",
         "startTime": 0.0,
-        "endTime": 6.5,
+        "endTime": 6.29,
         "german": "Musikalisch warst du ja schon in der Schule, ich erinnere mich gut. Wie gefällt dir denn das Studium?",
         "chinese": "你上学那会儿就很有音乐天分，我记得很清楚。那你大学读下来感觉怎么样？",
         "clozeWords": [
@@ -3778,8 +3780,8 @@
       },
       {
         "id": "testdaf-campusleben-05-s2",
-        "startTime": 6.5,
-        "endTime": 18.0,
+        "startTime": 6.29,
+        "endTime": 17.74,
         "german": "Es ist wirklich toll! Ich mag die künstlerische, kreative Ausbildung, aber auch die wissenschaftlichen Aspekte des Faches... Musik ist einfach unheimlich vielseitig.",
         "chinese": "真的很棒！我既喜欢艺术创作方面的训练，也很喜爱该学科的学术研究范畴……音乐实在太丰富多元了。",
         "clozeWords": [
@@ -3808,14 +3810,16 @@
       },
       {
         "id": "testdaf-campusleben-05-s3",
-        "startTime": 18.0,
-        "endTime": 33.0,
-        "german": "Und wie kommt es, dass du hier studierst? – Die Atmosphäre an der Hochschule ist einfach etwas Besonderes – Ich hab‘ mal ein Konzert hier besucht, danach habe ich mich direkt beworben.",
-        "chinese": "那你是怎么决定来这里读的？——学院这里的氛围非常独特——我曾来这里听过一场音乐会，之后我就立刻提交了入学申请。",
+        "startTime": 17.74,
+        "endTime": 33.8,
+        "german": "Und wie kommt es, dass du hier studierst? – Die Atmosphäre an der Hochschule ist einfach etwas Besonderes... Ich habe mal ein Konzert hier besucht, das Studierende der Hochschule organisiert hatten – danach habe ich mich direkt zum nächsten Semester beworben.",
+        "chinese": "那你是怎么来这里读大学的呢？——学院里的氛围非常特别……我曾经在这里听过一场由在校学生组织的音乐会——之后我就直接报名申请了下一个学期。",
         "clozeWords": [
           "Atmosphäre",
           "Hochschule",
           "Konzert",
+          "Studierende",
+          "Semester",
           "beworben"
         ],
         "vocab": [
@@ -3847,12 +3851,12 @@
     "topic": "Hochschulsport & Wettbewerb",
     "taskSection": "德福 · Hörtext 1 高校车赛",
     "audioUrl": "/audio/tracks/testdaf_radrennen.mp3",
-    "duration": 37.0,
+    "duration": 29.7,
     "segments": [
       {
         "id": "testdaf-radrennen-03-s1",
         "startTime": 0.0,
-        "endTime": 11.0,
+        "endTime": 11.31,
         "german": "Hallo Christian. – Hallo Sandra. Wie geht’s? – Gut. Und dir, alter Sportsfreund? Warum nimmst du eigentlich dein Rennrad mit ins Cafe?",
         "chinese": "嗨克里斯蒂安。——嗨桑德拉，最近怎么样？——挺好的。你呢，老运动健将？你怎么把公路赛车也带进咖啡馆了？",
         "clozeWords": [
@@ -3881,8 +3885,8 @@
       },
       {
         "id": "testdaf-radrennen-03-s2",
-        "startTime": 11.0,
-        "endTime": 22.0,
+        "startTime": 11.31,
+        "endTime": 19.83,
         "german": "Damit es nicht geklaut wird. – Ich warte auf Bernd, Jonas und Michael. Wir fahren nachher mit dem Zug nach Münster. – Boah, so weit? Was wollt ihr denn da?",
         "chinese": "免得被偷呀。——我在等贝恩德、约纳斯和迈克尔。我们待会儿坐火车去明斯特。——哇，那么远？你们去那里干嘛？",
         "clozeWords": [
@@ -3902,8 +3906,8 @@
       },
       {
         "id": "testdaf-radrennen-03-s3",
-        "startTime": 22.0,
-        "endTime": 37.0,
+        "startTime": 19.83,
+        "endTime": 29.7,
         "german": "An einem Radrennen teilnehmen. Du wirst es nicht glauben, aber wir haben uns für die Deutschen Meisterschaften angemeldet. Natürlich nur im Hochschulsport.",
         "chinese": "去参加自行车赛。你肯定不敢相信，我们报名参加了全德锦标赛。当然，仅限高校组别的赛事。",
         "clozeWords": [
@@ -3949,12 +3953,12 @@
     "topic": "Pädagogik & Kunsttheorie",
     "taskSection": "德福 · Hörtext 2 艺术教学法",
     "audioUrl": "/audio/tracks/testdaf_kunstdidaktik.mp3",
-    "duration": 43.0,
+    "duration": 44.0,
     "segments": [
       {
         "id": "testdaf-kunstdidaktik-04-s1",
         "startTime": 0.0,
-        "endTime": 10.0,
+        "endTime": 9.76,
         "german": "Seit 10 Jahren wird an der Universität Dortmund das Fach Kunstdidaktik gelehrt. Über dieses Fach möchte ich heute mit meinen beiden Gästen reden.",
         "chinese": "多特蒙德大学开设艺术教学法专业已有10个年头。今天我想与两位嘉宾共同探讨这一学科。",
         "clozeWords": [
@@ -3982,8 +3986,8 @@
       },
       {
         "id": "testdaf-kunstdidaktik-04-s2",
-        "startTime": 10.0,
-        "endTime": 23.0,
+        "startTime": 9.76,
+        "endTime": 23.03,
         "german": "Frau Professor Braun hat nach ihrer Tätigkeit als Kunstlehrerin eine wissenschaftliche Laufbahn eingeschlagen und ist heute Inhaberin eines Lehrstuhls für Kunstdidaktik.",
         "chinese": "布劳恩教授在担任艺术教师之后走上了学术研究之路，如今担任艺术教学法讲席教授。",
         "clozeWords": [
@@ -4014,8 +4018,8 @@
       },
       {
         "id": "testdaf-kunstdidaktik-04-s3",
-        "startTime": 23.0,
-        "endTime": 43.0,
+        "startTime": 23.03,
+        "endTime": 44.0,
         "german": "Herr Löffler unterrichtet Kunst an einem Gymnasium. Frau Professor Braun, wie würden Sie Ihr Fach definieren? – Das Thema der Kunstdidaktik ist der Umgang mit Bildern und Kunst in Vermittlungssituationen.",
         "chinese": "勒夫勒先生在文理中学教授艺术课程。布劳恩教授，您会如何定义您的学科呢？——艺术教学法的核心课题是图像与艺术在教学传播情境中的应用与传达。",
         "clozeWords": [
@@ -4053,12 +4057,12 @@
     "topic": "Medizin & Virologie",
     "taskSection": "德福 · Hörtext 3 病毒与感冒",
     "audioUrl": "/audio/tracks/testdaf_virus.mp3",
-    "duration": 35.0,
+    "duration": 30.6,
     "segments": [
       {
         "id": "testdaf-virus-06-s1",
         "startTime": 0.0,
-        "endTime": 9.0,
+        "endTime": 9.06,
         "german": "Frau Dr. Hauser, Sie sind Expertin für Viren an der Universitätsklinik. Warum bekommt man so oft Erkältungen?",
         "chinese": "豪泽博士，您是大学附属医院的病毒学专家。为什么人们会如此频繁地患上感冒呢？",
         "clozeWords": [
@@ -4088,8 +4092,8 @@
       },
       {
         "id": "testdaf-virus-06-s2",
-        "startTime": 9.0,
-        "endTime": 20.0,
+        "startTime": 9.06,
+        "endTime": 19.84,
         "german": "Was viele Leute nicht wissen, ist, dass man schon einen Tag, bevor man sich krank fühlt, andere anstecken kann. Deshalb verbreiten sich die Viren auch so leicht.",
         "chinese": "很多人不知道的是，在自己感到生病前一天，其实就已经能传染给他人了。正因如此，病毒才会传播得如此迅速普遍。",
         "clozeWords": [
@@ -4117,8 +4121,8 @@
       },
       {
         "id": "testdaf-virus-06-s3",
-        "startTime": 20.0,
-        "endTime": 35.0,
+        "startTime": 19.84,
+        "endTime": 30.6,
         "german": "Manche Menschen sind aber auch empfindlicher und bekommen eher eine Erkältung als andere. Das kann viele Gründe haben. Raucher sind zum Beispiel stärker gefährdet.",
         "chinese": "不过，有些人本身就更为敏感脆弱，比其他人更容易着凉感冒。这背后原因众多。例如吸烟人群面临的患病风险就明显更高。",
         "clozeWords": [
