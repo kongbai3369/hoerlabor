@@ -1,0 +1,119 @@
+{
+  "id": "telc-c1-mathe-interview-02",
+  "title": "Jahr der Mathematik: Glücksmomente in der Forschung",
+  "level": "C1",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Wissenschaft & Forschung",
+  "taskSection": "telc C1 Hochschule · Hörverstehen Teil 2",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_c1_mathe_interview_02.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_c1_mathe_interview_02.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 50.13,
+  "segments": [
+    {
+      "id": "telc-c1-mathe-interview-02-s1",
+      "startTime": 0.0,
+      "endTime": 6.98,
+      "german": "Solche Glücksmomente habe ich täglich, und ich beobachte sie auch bei vielen anderen Menschen.",
+      "chinese": "这样的幸福瞬间我每天都能体验到，我在许多其他人身上也观察到了同样现象。",
+      "clozeWords": [
+        "Glücksmomente",
+        "täglich",
+        "beobachte"
+      ],
+      "vocab": [
+        {
+          "word": "der Glücksmoment",
+          "pos": "Nomen",
+          "meaning": "幸福瞬间，欣喜时刻",
+          "exampleDe": "Kleine Erfolge im Alltag bescheren echte Glücksmomente.",
+          "exampleZh": "日常生活中的小小成功会带来真正的幸福感。",
+          "plural": "die Glücksmomente"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-mathe-interview-02-s2",
+      "startTime": 6.98,
+      "endTime": 18.47,
+      "german": "Wenn man in der Mathematik etwas herauskriegen möchte – von der Knobelaufgabe über ein Puzzle bis zu richtigen Forschungsthemen –, dann weiß man zunächst gar nicht, was man zu tun hat.",
+      "chinese": "每当人们想在数学中探究出点名堂——无论是脑筋急转弯、拼图游戏，还是真正的前沿科研课题——起初往往根本不知道该从何下手。",
+      "clozeWords": [
+        "herauskriegen",
+        "Knobelaufgabe",
+        "Forschungsthemen",
+        "zunächst"
+      ],
+      "vocab": [
+        {
+          "word": "herauskriegen",
+          "pos": "Verb",
+          "meaning": "弄明白，解开，查出（口语）",
+          "exampleDe": "Nach langem Nachdenken habe ich das Rätsel herausgekriegt.",
+          "exampleZh": "苦思冥想之后，我终于解开了这道谜题。"
+        },
+        {
+          "word": "die Knobelaufgabe",
+          "pos": "Nomen",
+          "meaning": "益智思考题，烧脑难题",
+          "exampleDe": "Mathematiker lieben knifflige Knobelaufgaben zum Nachdenken.",
+          "exampleZh": "数学家喜欢动脑筋的烧脑谜题。",
+          "plural": "die Knobelaufgaben"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-mathe-interview-02-s3",
+      "startTime": 18.47,
+      "endTime": 32.8,
+      "german": "Oft dauert es lange, bis sich Erfolg zeigt, und dann plötzlich, ganz unerwartet, kommt der Moment, in dem man sieht, dass es letztlich ganz einfach ist.",
+      "chinese": "常常需要很长时间才能显现出成果，然后突然间出人意料地，那个让你豁然开朗、发现其实一切竟如此简单的瞬间就降临了。",
+      "clozeWords": [
+        "Erfolg",
+        "plötzlich",
+        "unerwartet",
+        "letztlich"
+      ],
+      "vocab": [
+        {
+          "word": "unerwartet",
+          "pos": "Adjektiv",
+          "meaning": "出乎意料的，突然的",
+          "exampleDe": "Die Lösung erschien völlig unerwartet nach Wochen der Arbeit.",
+          "exampleZh": "历经数周研究后，解法出人意料地浮现出来。"
+        },
+        {
+          "word": "letztlich",
+          "pos": "Adverb",
+          "meaning": "归根结底，最终",
+          "exampleDe": "Letztlich zählt die Klarheit des mathematischen Beweises.",
+          "exampleZh": "归根结底，数学证明的清晰严谨才是最重要的。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-mathe-interview-02-s4",
+      "startTime": 32.8,
+      "endTime": 50.13,
+      "german": "Und diese Momente, wenn es „klick“ macht – das sind Glücksmomente, weil wir Menschen so gemacht sind, dass wir zufrieden oder glücklich sind, wenn wir ein bisschen was von dem verstehen, wie die Welt funktioniert.",
+      "chinese": "而这种脑袋里“叮”一声顿悟的瞬间——正是幸福所在，因为人类生来如此：只要哪怕理解了世界运转机制的微末一角，就会感到满足和快乐。",
+      "clozeWords": [
+        "zufrieden",
+        "glücklich",
+        "verstehen",
+        "funktioniert"
+      ],
+      "vocab": [
+        {
+          "word": "es macht klick",
+          "pos": "Ausdruck",
+          "meaning": "突然“咔哒”顿悟，豁然开朗",
+          "exampleDe": "Als das Prinzip erklärt wurde, machte es plötzlich klick.",
+          "exampleZh": "当原理一被讲明，我脑子里突然灵光一闪顿悟了。"
+        }
+      ]
+    }
+  ]
+}

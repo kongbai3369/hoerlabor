@@ -1,0 +1,179 @@
+{
+  "id": "nl-sexuelle-uebergriffe-franzoesisc",
+  "title": "Sexuelle Übergriffe: Französischer Schauspieler Gérard Depardieu bittet um Entschuldigung",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Gesellschaft & Recht",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/franzoesischer_schauspieler_gerard_depardieu_bittet_um_dlf_20261117_0750_2b5f2d81.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/franzoesischer_schauspieler_gerard_depardieu_bittet_um_dlf_20261117_0750_2b5f2d81.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/sexuelle-uebergriffe-franzoesischer-schauspieler-gerard-depardieu-bittet-um-entschuldigung-100.html",
+  "duration": 65.1,
+  "segments": [
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s1",
+      "startTime": 0.14,
+      "endTime": 11.88,
+      "german": "Sexuelle Übergriffe: Französischer Schauspieler Gérard Depardieu bittet um Entschuldigung. Gérard Depardieu ist ein berühmter Schauspieler aus dem Land Frankreich.",
+      "chinese": "性侵害指控：法国演员热拉尔·德帕迪约请求原谅。热拉尔·德帕迪约是一位来自法国的著名演员。",
+      "clozeWords": [
+        "Übergriffe",
+        "Entschuldigung",
+        "berühmter"
+      ],
+      "vocab": [
+        {
+          "word": "der Übergriff",
+          "pos": "Nomen",
+          "meaning": "侵犯，侵害，袭击行为",
+          "exampleDe": "Solche Übergriffe werden konsequent angezeigt.",
+          "exampleZh": "此类侵害行为会依法遭到举报。",
+          "plural": "die Übergriffe"
+        },
+        {
+          "word": "um Entschuldigung bitten",
+          "pos": "Ausdruck",
+          "meaning": "请求原谅，道歉",
+          "exampleDe": "Er hat öffentlich um Entschuldigung gebeten.",
+          "exampleZh": "他已经公开道歉。"
+        }
+      ]
+    },
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s2",
+      "startTime": 11.88,
+      "endTime": 21.39,
+      "german": "Mehrere Frauen sagen: Depardieu hat uns sexuell belästigt. Jetzt hat Depardieu zum 1. Mal um Entschuldigung gebeten.",
+      "chinese": "多名女性称：德帕迪约曾对我们实施性骚扰。如今德帕迪约首次请求谅解。",
+      "clozeWords": [
+        "Mehrere",
+        "belästigt",
+        "gebeten"
+      ],
+      "vocab": [
+        {
+          "word": "belästigen",
+          "pos": "Verb",
+          "meaning": "骚扰，纠缠",
+          "exampleDe": "Niemand darf am Arbeitsplatz belästigt werden.",
+          "exampleZh": "任何人在工作场所都不得受到骚扰。"
+        }
+      ]
+    },
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s3",
+      "startTime": 21.39,
+      "endTime": 31.69,
+      "german": "Eine betroffene Frauen sagt allerdings: Ich weiß nicht, ob Depardieu die Entschuldigung ernst meint. Denn er hat sich nicht persönlich entschuldigt.",
+      "chinese": "不过一名受害女性表示：我不知道德帕迪约的道歉是否真诚，因为他并没有亲自当面道歉。",
+      "clozeWords": [
+        "betroffene",
+        "ernst",
+        "persönlich"
+      ],
+      "vocab": [
+        {
+          "word": "betroffen",
+          "pos": "Adjektiv",
+          "meaning": "受影响的，涉事的，感到震惊的",
+          "exampleDe": "Die betroffenen Personen erhielten rechtliche Beratung.",
+          "exampleZh": "涉事人员获得了法律咨询帮助。"
+        },
+        {
+          "word": "etwas ernst meinen",
+          "pos": "Ausdruck",
+          "meaning": "认真对待某事，不是开玩笑",
+          "exampleDe": "Meinst du dieses Angebot wirklich ernst?",
+          "exampleZh": "你提出这个建议是认真的吗？"
+        }
+      ]
+    },
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s4",
+      "startTime": 31.69,
+      "endTime": 42.07,
+      "german": "Jemand anderes hat die Entschuldigung für ihn vorgelesen. Das war in einem Gerichts-Verfahren wegen sexueller Belästigung.",
+      "chinese": "是由他人代他在庭上宣读了这份道歉声明。这一幕发生在因性骚扰而审理的一起司法诉讼程序中。",
+      "clozeWords": [
+        "vorgelesen",
+        "Gerichts-Verfahren"
+      ],
+      "vocab": [
+        {
+          "word": "vorlesen",
+          "pos": "Verb",
+          "meaning": "大声朗读，宣读",
+          "exampleDe": "Die Anwältin las den Brief im Saal vor.",
+          "exampleZh": "女律师在法庭内宣读了这封信。"
+        },
+        {
+          "word": "das Gerichtsverfahren",
+          "pos": "Nomen",
+          "meaning": "司法程序，诉讼程序",
+          "exampleDe": "Das Gerichtsverfahren dauerte mehrere Monate.",
+          "exampleZh": "这起诉讼持续了几个月。",
+          "plural": "die Gerichtsverfahren"
+        }
+      ]
+    },
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s5",
+      "startTime": 42.07,
+      "endTime": 56.55,
+      "german": "2 Frauen sagen: Depardieu hat uns bei Dreh-Arbeiten im Jahr 2021 an den Brüsten und am Po angefasst. Depardieu sagt: Ich wollte die beiden Frauen nicht verletzen.",
+      "chinese": "两名女性表示：2021年拍摄工作期间，德帕迪约曾触碰我们的胸部和臀部。德帕迪约回应称：我本意并不想伤害这两位女性。",
+      "clozeWords": [
+        "Dreh-Arbeiten",
+        "angefasst",
+        "verletzen"
+      ],
+      "vocab": [
+        {
+          "word": "die Dreharbeiten",
+          "pos": "Nomen",
+          "meaning": "电影/电视拍摄工作（常用复数）",
+          "exampleDe": "Die Dreharbeiten finden in Paris statt.",
+          "exampleZh": "拍摄工作正在巴黎进行。"
+        },
+        {
+          "word": "anfassen",
+          "pos": "Verb",
+          "meaning": "触摸，触碰",
+          "exampleDe": "Bitte die empfindlichen Kunstwerke nicht anfassen!",
+          "exampleZh": "请勿触摸脆弱的艺术品！"
+        }
+      ]
+    },
+    {
+      "id": "nl-sexuelle-uebergriffe-franzoesisc-s6",
+      "startTime": 56.55,
+      "endTime": 64.93,
+      "german": "Aber sie haben sich verletzt gefühlt. Das habe ich verstanden. Deswegen nehme ich die Strafe an. Die Strafe sind 18 Monate Haft auf Bewährung.",
+      "chinese": "“但她们感到了受伤。这一点我理解，因此我接受判决。” 法院判处的刑罚是18个月缓刑监禁。",
+      "clozeWords": [
+        "verstanden",
+        "Strafe",
+        "Bewährung"
+      ],
+      "vocab": [
+        {
+          "word": "die Strafe",
+          "pos": "Nomen",
+          "meaning": "惩罚，刑罚，罚款",
+          "exampleDe": "Für das Vergehen droht eine hohe Geldstrafe.",
+          "exampleZh": "这一违法行为可能面临高额罚款。",
+          "plural": "die Strafen"
+        },
+        {
+          "word": "die Haft auf Bewährung",
+          "pos": "Ausdruck",
+          "meaning": "缓刑监禁",
+          "exampleDe": "Das Gericht verhängte eine Haftstrafe auf Bewährung.",
+          "exampleZh": "法院判处了缓刑。"
+        }
+      ]
+    }
+  ]
+}

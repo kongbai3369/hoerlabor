@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Bookmark,
   Download,
@@ -9,6 +9,8 @@ import {
   Volume2,
   ExternalLink,
   BookOpen,
+  EyeOff,
+  Eye,
 } from 'lucide-react';
 import type { ListeningTrack, VocabItem } from '../types/listening';
 import { useListeningStore } from '../store/useListeningStore';
@@ -55,17 +57,27 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
   const { savedVocab, toggleSaveVocab } = useListeningStore();
   const [activeTab, setActiveTab] = useState<'track' | 'saved'>('track');
   const [copied, setCopied] = useState(false);
+  const [isQuizMode, setIsQuizMode] = useState(false);
+  const [revealedQuizWords, setRevealedQuizWords] = useState<Record<string, boolean>>({});
   const activeItemRef = useRef<HTMLDivElement | null>(null);
 
-  const trackVocabList: Array<{ item: VocabItem; isCurrentSentence: boolean }> = [];
-  track.segments.forEach((seg, idx) => {
-    seg.vocab?.forEach((v) => {
-      trackVocabList.push({
-        item: v,
-        isCurrentSentence: idx === activeSegmentIndex,
+  // 跨句去重合并，并聚合是否命中当前朗读句
+  const trackVocabList = useMemo(() => {
+    const map = new Map<string, { item: VocabItem; isCurrentSentence: boolean }>();
+    track.segments.forEach((seg, idx) => {
+      seg.vocab?.forEach((v) => {
+        const key = v.word.trim().toLowerCase();
+        const existing = map.get(key);
+        const isCurrent = idx === activeSegmentIndex;
+        if (existing) {
+          if (isCurrent) existing.isCurrentSentence = true;
+        } else {
+          map.set(key, { item: v, isCurrentSentence: isCurrent });
+        }
       });
     });
-  });
+    return Array.from(map.values());
+  }, [track.segments, activeSegmentIndex]);
 
   const displayList: Array<{ item: VocabItem; isCurrentSentence: boolean }> =
     activeTab === 'track'
@@ -77,6 +89,10 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
       activeItemRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }, [activeSegmentIndex, activeTab]);
+
+  const toggleRevealWord = (word: string) => {
+    setRevealedQuizWords((prev) => ({ ...prev, [word]: !prev[word] }));
+  };
 
   const buildAnkiTsv = () => {
     const sourceItems =
@@ -143,13 +159,29 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
         </button>
       </div>
 
-      {/* 词性与德语三性提示 */}
-      <div className="px-4 py-2 bg-slate-50/80 border-b border-slate-200/80 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-        <span>发音音源：微软 Katja (标准德语)</span>
-        <div className="flex items-center gap-2">
-          <span className="text-sky-700 font-bold">der 阳</span>
-          <span className="text-rose-700 font-bold">die 阴</span>
-          <span className="text-emerald-700 font-bold">das 中</span>
+      {/* 词性与自测回忆开关 */}
+      <div className="px-3.5 py-2 bg-slate-50/80 border-b border-slate-200/80 flex items-center justify-between text-[11px] text-slate-500 font-medium gap-2">
+        <button
+          onClick={() => {
+            setIsQuizMode((prev) => !prev);
+            setRevealedQuizWords({});
+          }}
+          title="遮住中文释义，点词条进行闪卡自测回忆"
+          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md border text-[11px] font-semibold transition cursor-pointer ${
+            isQuizMode
+              ? 'bg-amber-50 border-amber-300 text-amber-800'
+              : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900'
+          }`}
+        >
+          {isQuizMode ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
+          <span>{isQuizMode ? '自测模式: 开' : '自测遮义'}</span>
+        </button>
+
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-sky-700 font-bold">der</span>
+          <span className="text-rose-700 font-bold">die</span>
+          <span className="text-emerald-700 font-bold">das</span>
+          <span className="text-slate-400">· Katja</span>
         </div>
       </div>
 
@@ -159,7 +191,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
           <div className="text-center py-12 text-slate-400 text-xs leading-relaxed px-4">
             {activeTab === 'saved'
               ? '生词本为空，点击卡片右上角书签即可收藏并随时导出至 Anki'
-              : '本篇暂无挂载核心词'}
+              : '本篇暂无挂载核心词（可在正文中开启“点词查音”随时点击查读）'}
           </div>
         ) : (
           displayList.map(({ item, isCurrentSentence }, itemIdx) => {
@@ -167,12 +199,18 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
             const { article, rest, colorClass } = getGenderBadge(item.word);
             const pureLookupWord = rest.replace(/\s*\(\+.*\)/g, '').trim();
             const forvoUrl = `https://de.forvo.com/word/${encodeURIComponent(pureLookupWord)}/#de`;
+            const isHidden = isQuizMode && !revealedQuizWords[item.word];
 
             return (
               <div
                 key={`${item.word}-${itemIdx}`}
                 ref={isCurrentSentence ? activeItemRef : null}
+                onClick={() => {
+                  if (isQuizMode) toggleRevealWord(item.word);
+                }}
                 className={`p-3.5 rounded-xl border transition-all ${
+                  isQuizMode ? 'cursor-pointer' : ''
+                } ${
                   isCurrentSentence
                     ? 'bg-indigo-50/80 border-indigo-200 shadow-xs ring-1 ring-indigo-500/20'
                     : 'bg-white border-slate-200/80 hover:bg-slate-50/80 hover:border-slate-300 shadow-2xs'
@@ -197,7 +235,10 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
                   <div className="flex items-center gap-1 shrink-0">
                     <button
-                      onClick={() => speakGermanWord(item.word)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        void speakGermanWord(item.word);
+                      }}
                       title="播放微软 Katja 标准德语发音"
                       className="p-1 rounded text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition cursor-pointer"
                     >
@@ -208,6 +249,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
                       href={`https://de.wiktionary.org/wiki/${encodeURIComponent(pureLookupWord)}`}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       title="在德语维基词典查看词条变位与释义"
                       className="p-1 rounded text-slate-400 hover:text-sky-600 hover:bg-sky-50 transition"
                     >
@@ -218,6 +260,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
                       href={forvoUrl}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       title="在 Forvo 中听更多母语者发音"
                       className="p-1 rounded text-slate-400 hover:text-amber-600 hover:bg-amber-50 transition"
                     >
@@ -225,7 +268,10 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
                     </a>
 
                     <button
-                      onClick={() => toggleSaveVocab(item)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleSaveVocab(item);
+                      }}
                       title={isSaved ? '从生词本移除' : '加入生词本'}
                       className={`p-1 rounded transition cursor-pointer ${
                         isSaved
@@ -241,7 +287,11 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
                   </div>
                 </div>
 
-                <div className="mt-1.5 flex items-center gap-2">
+                <div
+                  className={`mt-1.5 flex items-center gap-2 transition ${
+                    isHidden ? 'blur-sm select-none opacity-60' : ''
+                  }`}
+                >
                   <span className="text-[11px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">
                     {item.pos}
                   </span>
@@ -252,7 +302,18 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
                 <div className="mt-2.5 pt-2 border-t border-slate-200/60 text-xs space-y-1">
                   <p className="text-slate-700 italic">{item.exampleDe}</p>
-                  <p className="text-slate-500">{item.exampleZh}</p>
+                  <p
+                    className={`text-slate-500 transition ${
+                      isHidden ? 'blur-sm select-none opacity-50' : ''
+                    }`}
+                  >
+                    {item.exampleZh}
+                  </p>
+                  {isHidden && (
+                    <p className="text-[10px] text-amber-700 font-medium">
+                      点击此卡核对中文释义
+                    </p>
+                  )}
                 </div>
               </div>
             );
@@ -260,7 +321,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
         )}
       </div>
 
-      {/* 底部 Anki 导出区（移动端留出 safe-area pb 确保绝不被迷你播放条与底部导航栏遮挡） */}
+      {/* 底部 Anki 导出区 */}
       <div className="p-3 border-t border-slate-200/80 bg-slate-50/95 space-y-2 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] lg:pb-28 select-none">
         <div className="text-[11px] text-slate-500 flex items-center justify-between font-medium">
           <span>Anki 制表符格式导出 (FSRS 兼容)</span>

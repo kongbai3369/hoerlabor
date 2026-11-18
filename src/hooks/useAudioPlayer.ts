@@ -32,7 +32,26 @@ import { BUNDLED_WORD_AUDIO } from '../data/bundledWordAudio';
 
 // 德语母语发音缓存与单例并发音频控制 (全端统一使用 Edge-TTS Katja 高保真发音)
 const wordAudioCache = new Map<string, string>();
+let extraWordAudioMap: Record<string, string> | null = null;
+let extraWordMapPromise: Promise<void> | null = null;
 let sharedWordAudio: HTMLAudioElement | null = null;
+
+function ensureExtraWordMapLoaded(): Promise<void> {
+  if (extraWordAudioMap !== null) return Promise.resolve();
+  if (extraWordMapPromise) return extraWordMapPromise;
+  extraWordMapPromise = fetch('/data/wordAudioMap.json')
+    .then((res) => (res.ok ? res.json() : {}))
+    .then((data: unknown) => {
+      extraWordAudioMap =
+        data && typeof data === 'object' && !Array.isArray(data)
+          ? (data as Record<string, string>)
+          : {};
+    })
+    .catch(() => {
+      extraWordAudioMap = {};
+    });
+  return extraWordMapPromise;
+}
 
 function getSharedWordAudio(): HTMLAudioElement {
   if (!sharedWordAudio && typeof Audio !== 'undefined') {
@@ -51,6 +70,7 @@ if (typeof window !== 'undefined') {
         audio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
         audio.load();
       }
+      void ensureExtraWordMapLoaded();
     } catch {
       // ignore
     }
@@ -72,11 +92,13 @@ function toAsciiSlug(word: string): string {
 
 /**
  * 德语单词/核心词即点即读（全端统一使用微软 Edge-TTS Katja 高保真音色）：
- * 1. 优先使用本地同源预置的 Katja MP3 (/audio/words/{slug}.mp3)
- * 2. 次选预置字库与内存缓存
- * 3. 彻底杜绝 Wiktionary 跨域外链与粗糙的系统机械音合成降级
+ * 1. 优先从 BUNDLED_WORD_AUDIO 与异步 wordAudioMap 获取
+ * 2. 尝试本地静态 /audio/words/{slug}.mp3 及外链 CDN 解析地址
+ * 3. 若词库尚未收录，返回 'missing' 供界面友好提示，绝不静默误导或回退到机械合成音
  */
-export async function speakGermanWord(wordText: string): Promise<'katja'> {
+export async function speakGermanWord(wordText: string): Promise<'katja' | 'missing'> {
+  await ensureExtraWordMapLoaded();
+
   const audio = getSharedWordAudio();
   if (audio) {
     try {
@@ -94,16 +116,29 @@ export async function speakGermanWord(wordText: string): Promise<'katja'> {
     .replace(/[.,!?;:()„“”"'/]/g, '')
     .trim();
 
-  if (!clean) return 'katja';
+  if (!clean) return 'missing';
 
   const lower = clean.toLowerCase();
+  const cached = wordAudioCache.get(lower);
+  if (cached) {
+    try {
+      audio.src = cached;
+      await audio.play();
+      return 'katja';
+    } catch {
+      wordAudioCache.delete(lower);
+    }
+  }
+
   const slug = toAsciiSlug(lower);
   const headword = clean.split(/\s+/)[0];
   const headwordLower = headword.toLowerCase();
   const headwordSlug = toAsciiSlug(headwordLower);
 
-  // 1. 优先从 BUNDLED_WORD_AUDIO 映射中获取
-  const bundledUrl =
+  const mergedDict = extraWordAudioMap || {};
+  const dictUrl =
+    mergedDict[lower] ||
+    mergedDict[slug] ||
     BUNDLED_WORD_AUDIO[lower] ||
     BUNDLED_WORD_AUDIO[clean] ||
     BUNDLED_WORD_AUDIO[headwordLower] ||
@@ -111,11 +146,18 @@ export async function speakGermanWord(wordText: string): Promise<'katja'> {
     BUNDLED_WORD_AUDIO[slug] ||
     BUNDLED_WORD_AUDIO[headwordSlug];
 
-  const candidateUrls = [
-    bundledUrl,
+  const rawCandidates = [
+    dictUrl,
     `/audio/words/${slug}.mp3`,
     `/audio/words/${headwordSlug}.mp3`,
   ].filter(Boolean) as string[];
+
+  const candidateUrls: string[] = [];
+  rawCandidates.forEach((raw) => {
+    if (!candidateUrls.includes(raw)) candidateUrls.push(raw);
+    const resolved = resolveAudioUrl(raw);
+    if (resolved && !candidateUrls.includes(resolved)) candidateUrls.push(resolved);
+  });
 
   for (const url of candidateUrls) {
     try {
@@ -131,12 +173,12 @@ export async function speakGermanWord(wordText: string): Promise<'katja'> {
     }
   }
 
-  return 'katja';
+  return 'missing';
 }
 
 export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   const engineMode: EngineMode = track.audioUrl ? 'audio' : 'tts';
-  const { autoPauseSeconds } = useListeningStore();
+  const { autoPauseSeconds, markTrackCompleted } = useListeningStore();
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isShadowingPause, setIsShadowingPause] = useState(false);
@@ -149,6 +191,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   const [prevTrackId, setPrevTrackId] = useState(track.id);
 
   const playbackModeRef = useRef<PlaybackMode>('single');
+  const oneShotSingleRef = useRef(false);
   const isSeekingRef = useRef(false);
 
   useEffect(() => {
@@ -156,6 +199,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   }, [playbackMode]);
 
   const togglePlaybackMode = useCallback(() => {
+    oneShotSingleRef.current = false;
     setPlaybackMode((prev) => (prev === 'single' ? 'continuous' : 'single'));
   }, []);
 
@@ -165,6 +209,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     setIsShadowingPause(false);
     setActiveSegmentIndex(0);
     setCurrentTime(0);
+    setDuration(track.duration ?? 0);
   }
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -242,17 +287,21 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
           audio.currentTime = currentSeg.startTime;
         }
       } else if (
-        playbackModeRef.current === 'single' &&
+        (playbackModeRef.current === 'single' || oneShotSingleRef.current) &&
         currentSeg &&
         currentSeg.endTime !== null &&
         now >= currentSeg.endTime - 0.02
       ) {
-        // 单句精听模式：句尾立即硬暂停，并精准复位至句首，阻断自动冲入下一句
+        // 单句精听或「播此句」单次点播：句尾立即硬暂停并复位至句首，不破坏用户的全局连播开关
+        oneShotSingleRef.current = false;
         audio.pause();
         stopRaf();
         if (currentSeg.startTime !== null) {
           audio.currentTime = currentSeg.startTime;
           setCurrentTime(currentSeg.startTime);
+        }
+        if (activeIndexRef.current >= segments.length - 1) {
+          markTrackCompleted(track.id);
         }
         setIsPlaying(false);
         isPlayingRef.current = false;
@@ -299,7 +348,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
     };
 
     rafIdRef.current = requestAnimationFrame(tick);
-  }, [stopRaf, syncActiveIndex, track.segments]);
+  }, [markTrackCompleted, stopRaf, syncActiveIndex, track.id, track.segments]);
 
   const speakSegmentByIndex = useCallback(
     (index: number) => {
@@ -330,7 +379,14 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
           return;
         }
 
-        if (playbackModeRef.current === 'single' && !isLoopingRef.current) {
+        if (
+          (playbackModeRef.current === 'single' || oneShotSingleRef.current) &&
+          !isLoopingRef.current
+        ) {
+          oneShotSingleRef.current = false;
+          if (index >= track.segments.length - 1) {
+            markTrackCompleted(track.id);
+          }
           setIsPlaying(false);
           isPlayingRef.current = false;
           return;
@@ -358,6 +414,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
               syncActiveIndex(nextIdx);
               speakSegmentByIndexRef.current(nextIdx);
             } else {
+              markTrackCompleted(track.id);
               setIsPlaying(false);
               isPlayingRef.current = false;
             }
@@ -374,7 +431,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
     },
-    [stopTts, syncActiveIndex, track.segments]
+    [markTrackCompleted, stopTts, syncActiveIndex, track.id, track.segments]
   );
 
   useEffect(() => {
@@ -385,6 +442,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   useEffect(() => {
     stopRaf();
     stopTts();
+    oneShotSingleRef.current = false;
     if (pauseTimerRef.current !== null) {
       window.clearTimeout(pauseTimerRef.current);
       pauseTimerRef.current = null;
@@ -424,6 +482,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         stopRaf();
         setIsPlaying(false);
         isPlayingRef.current = false;
+        markTrackCompleted(track.id);
       };
 
       // 针对移动端 WebKit / iOS Safari 的首次触控预热解锁
@@ -460,10 +519,11 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
         clearShadowingTimer();
       };
     }
-  }, [clearShadowingTimer, stopRaf, stopTts, syncActiveIndex, track]);
+  }, [clearShadowingTimer, markTrackCompleted, stopRaf, stopTts, syncActiveIndex, track]);
 
   const pause = useCallback(() => {
     clearShadowingTimer();
+    oneShotSingleRef.current = false;
     setIsPlaying(false);
     isPlayingRef.current = false;
     if (engineMode === 'audio') {
@@ -476,10 +536,8 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
 
   const seekToSegment = useCallback(
     (index: number, autoPlay = true, mode?: PlaybackMode) => {
-      if (mode) {
-        setPlaybackMode(mode);
-        playbackModeRef.current = mode;
-      }
+      if (track.segments.length === 0) return;
+      oneShotSingleRef.current = mode === 'single';
       clearShadowingTimer();
       const safeIndex = Math.max(0, Math.min(index, track.segments.length - 1));
       syncActiveIndex(safeIndex);
@@ -562,9 +620,11 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   );
 
   const togglePlay = useCallback(() => {
+    if (track.segments.length === 0) return;
     if (isPlayingRef.current) {
       pause();
     } else {
+      oneShotSingleRef.current = false;
       setIsPlaying(true);
       isPlayingRef.current = true;
       if (engineMode === 'audio') {
@@ -600,6 +660,7 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
   const seekToTime = useCallback(
     (time: number) => {
       clearShadowingTimer();
+      oneShotSingleRef.current = false;
       if (engineMode !== 'audio' || !audioRef.current) return;
       try {
         audioRef.current.currentTime = time;
@@ -653,6 +714,41 @@ export function useAudioPlayer(track: ListeningTrack): AudioPlayerControls {
       return next;
     });
   }, []);
+
+  // 注册系统级 Media Session 控制（支持手机锁屏界面与蓝牙耳机按键切句）
+  useEffect(() => {
+    if (typeof navigator === 'undefined' || !('mediaSession' in navigator)) return;
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: `${track.title} (第 ${activeSegmentIndex + 1}/${Math.max(track.segments.length, 1)} 句)`,
+        artist: track.source,
+        album: `${track.level} · ${track.topic}`,
+      });
+      navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
+      navigator.mediaSession.setActionHandler('play', () => {
+        if (!isPlayingRef.current) togglePlay();
+      });
+      navigator.mediaSession.setActionHandler('pause', () => {
+        if (isPlayingRef.current) pause();
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', prevSegment);
+      navigator.mediaSession.setActionHandler('nexttrack', nextSegment);
+    } catch {
+      // ignore unsupported handlers
+    }
+  }, [
+    activeSegmentIndex,
+    isPlaying,
+    nextSegment,
+    pause,
+    prevSegment,
+    togglePlay,
+    track.level,
+    track.segments.length,
+    track.source,
+    track.title,
+    track.topic,
+  ]);
 
   return {
     engineMode,

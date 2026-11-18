@@ -1,0 +1,145 @@
+{
+  "id": "sg-auf-wohnungssuche-in-deutschla",
+  "title": "Auf Wohnungssuche in Deutschland",
+  "level": "B1",
+  "source": "Slow German",
+  "sourceCategory": "podcast",
+  "topic": "Wohnen & Lebensstile",
+  "taskSection": "Slow German · Annik Rubens (SG 325)",
+  "license": "Slow German Podcast (CC BY-NC-SA)",
+  "audioUrl": "https://audio.podigee-cdn.net/2648550-m-4cc0ed7f1a9fd273262557e29910841c.mp3?source=feed",
+  "originalAudioUrl": "https://audio.podigee-cdn.net/2648550-m-4cc0ed7f1a9fd273262557e29910841c.mp3?source=feed",
+  "originalPageUrl": "https://feed.slowgerman.com/318-auf-wohnungssuche-in-deutschland-sg-325",
+  "duration": 750.97,
+  "segments": [
+    {
+      "id": "sg-auf-wohnungssuche-in-deutschla-s1",
+      "startTime": 6.44,
+      "endTime": 10.2,
+      "german": "In Berlin wurde gerade gewählt.",
+      "chinese": "柏林刚刚举行了地方选举。",
+      "clozeWords": [
+        "Berlin",
+        "gerade",
+        "gewählt"
+      ],
+      "vocab": [
+        {
+          "word": "wählen",
+          "pos": "Verb",
+          "meaning": "选举，投票；选择",
+          "exampleDe": "Alle Bürger dürfen ab achtzehn Jahren wählen.",
+          "exampleZh": "所有年满十八岁的公民均可投票。"
+        }
+      ]
+    },
+    {
+      "id": "sg-auf-wohnungssuche-in-deutschla-s2",
+      "startTime": 10.2,
+      "endTime": 14.63,
+      "german": "Sehr stark war dabei die Partei „Die Linke“.",
+      "chinese": "在这次选举中，“左翼党”的表现尤为强劲。",
+      "clozeWords": [
+        "stark",
+        "Partei"
+      ],
+      "vocab": [
+        {
+          "word": "die Partei",
+          "pos": "Nomen",
+          "meaning": "政党",
+          "exampleDe": "Mehrere Parteien stellen ein neues Wahlprogramm vor.",
+          "exampleZh": "多个政党推出了新的竞选纲领。",
+          "plural": "die Parteien"
+        }
+      ]
+    },
+    {
+      "id": "sg-auf-wohnungssuche-in-deutschla-s3",
+      "startTime": 14.63,
+      "endTime": 20.42,
+      "german": "Ihr Hauptthema im Wahlkampf war bezahlbares Wohnen.",
+      "chinese": "他们在竞选中的核心议题是让民众负担得起的平价住房。",
+      "clozeWords": [
+        "Hauptthema",
+        "Wahlkampf",
+        "bezahlbares",
+        "Wohnen"
+      ],
+      "vocab": [
+        {
+          "word": "bezahlbar",
+          "pos": "Adjektiv",
+          "meaning": "价格适中的，负担得起的",
+          "exampleDe": "Bezahlbarer Wohnraum fehlt in fast allen Großstädten.",
+          "exampleZh": "几乎所有大城市都缺少价格适中的住房。"
+        },
+        {
+          "word": "der Wahlkampf",
+          "pos": "Nomen",
+          "meaning": "竞选活动",
+          "exampleDe": "Im Wahlkampf versprechen Politiker oft niedrigere Mieten.",
+          "exampleZh": "在竞选期间，政客们常常承诺降低房租。",
+          "plural": "die Wahlkämpfe"
+        }
+      ]
+    },
+    {
+      "id": "sg-auf-wohnungssuche-in-deutschla-s4",
+      "startTime": 20.42,
+      "endTime": 27.16,
+      "german": "Die Linke möchte Wohnungen von großen Konzernen „vergesellschaften“.",
+      "chinese": "左翼党希望将大型房地产企业手中的住房“公有化/社会化”。",
+      "clozeWords": [
+        "Wohnungen",
+        "Konzernen",
+        "vergesellschaften"
+      ],
+      "vocab": [
+        {
+          "word": "der Konzern",
+          "pos": "Nomen",
+          "meaning": "大型企业集团，康采恩",
+          "exampleDe": "Der Konzern besitzt tausende Mietwohnungen im Land.",
+          "exampleZh": "该集团在全国拥有数千套出租公寓。",
+          "plural": "die Konzerne"
+        },
+        {
+          "word": "vergesellschaften",
+          "pos": "Verb",
+          "meaning": "使公有化，社会化",
+          "exampleDe": "Der Vorschlag sieht vor, große Wohnungsbestände zu vergesellschaften.",
+          "exampleZh": "该提议主张将大规模住房存量公有化。"
+        }
+      ]
+    },
+    {
+      "id": "sg-auf-wohnungssuche-in-deutschla-s5",
+      "startTime": 27.16,
+      "endTime": 34.46,
+      "german": "Das bedeutet, dass sozusagen Berlin den Konzernen die Wohnungen abkaufen würde.",
+      "chinese": "这意味着，相当于由柏林市政府出钱把这些公寓从企业集团手中买下来。",
+      "clozeWords": [
+        "bedeutet",
+        "sozusagen",
+        "abkaufen"
+      ],
+      "vocab": [
+        {
+          "word": "sozusagen",
+          "pos": "Adverb",
+          "meaning": "可以说，好比，相当于",
+          "exampleDe": "Das Café ist sozusagen mein zweites Wohnzimmer.",
+          "exampleZh": "这家咖啡馆可以说是我第二个客厅。"
+        },
+        {
+          "word": "abkaufen",
+          "pos": "Verb",
+          "meaning": "从……手中买下",
+          "exampleDe": "Er hat seinem Nachbarn das alte Fahrrad abgekauft.",
+          "exampleZh": "他从邻居手里买下了那辆旧自行车。"
+        }
+      ]
+    }
+  ]
+}

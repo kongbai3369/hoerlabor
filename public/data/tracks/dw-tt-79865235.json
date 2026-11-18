@@ -1,0 +1,148 @@
+{
+  "id": "dw-tt-79865235",
+  "title": "Warum Unternehmen beim Einsatz von KI umdenken",
+  "level": "B1",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "podcast",
+  "topic": "Wirtschaft & Digitales",
+  "taskSection": "DW Top-Thema · 慢速专题与词汇",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/152F1F29_2-podcast-2296-79865235.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/152F1F29_2-podcast-2296-79865235.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/warum-unternehmen-beim-einsatz-von-ki-umdenken/l-79865235",
+  "duration": 178.1,
+  "segments": [
+    {
+      "id": "dw-tt-79865235-s1",
+      "startTime": 13.92,
+      "endTime": 22.71,
+      "german": "Geld sparen, schneller und effizienter arbeiten: Viele Unternehmen haben hohe Erwartungen an die Künstliche Intelligenz.",
+      "chinese": "节省开支、更加快速且高效地工作：许多企业对人工智能寄予厚望。",
+      "clozeWords": [
+        "sparen",
+        "effizienter",
+        "Erwartungen",
+        "Intelligenz"
+      ],
+      "vocab": [
+        {
+          "word": "effizient",
+          "pos": "Adjektiv",
+          "meaning": "高效的，有成效的",
+          "exampleDe": "Mit guten Werkzeugen arbeitet das Team deutlich effizienter.",
+          "exampleZh": "借助优秀工具，团队工作明显更加高效。"
+        },
+        {
+          "word": "die Erwartung",
+          "pos": "Nomen",
+          "meaning": "期待，期望",
+          "exampleDe": "Das neue System hat alle Erwartungen übertroffen.",
+          "exampleZh": "新系统超出了所有期待。",
+          "plural": "die Erwartungen"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79865235-s2",
+      "startTime": 22.71,
+      "endTime": 27.99,
+      "german": "Doch mittlerweile fragen sie sich, ob die Kosten-Nutzen-Rechnung wirklich aufgeht.",
+      "chinese": "然而如今它们开始质疑：这种投入产出比（成本效益账）真的划算吗？",
+      "clozeWords": [
+        "mittlerweile",
+        "Kosten-Nutzen-Rechnung",
+        "aufgeht"
+      ],
+      "vocab": [
+        {
+          "word": "die Kosten-Nutzen-Rechnung",
+          "pos": "Nomen",
+          "meaning": "成本效益核算，性价比盘算",
+          "exampleDe": "Vor einer Investition prüft man die Kosten-Nutzen-Rechnung.",
+          "exampleZh": "投资前会先核算成本效益比。",
+          "plural": "die Kosten-Nutzen-Rechnungen"
+        },
+        {
+          "word": "aufgehen",
+          "pos": "Verb",
+          "meaning": "（账目/计划）算得过来，成功奏效",
+          "exampleDe": "Diese Berechnung geht am Ende leider nicht auf.",
+          "exampleZh": "这笔账算下来最终并不划算。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79865235-s3",
+      "startTime": 27.99,
+      "endTime": 35.54,
+      "german": "Mit künstlicher Intelligenz wird alles billiger, einfacher und besser: So haben viele Unternehmen lange gedacht.",
+      "chinese": "“有了人工智能，一切都将变得更便宜、更简单、更优质”：许多企业长久以来都是这么想的。",
+      "clozeWords": [
+        "billiger",
+        "einfacher",
+        "gedacht"
+      ],
+      "vocab": [
+        {
+          "word": "der Einsatz",
+          "pos": "Nomen",
+          "meaning": "使用，投入，部署",
+          "exampleDe": "Der sinnvolle Einsatz neuer Technik spart Zeit.",
+          "exampleZh": "合理运用新技术能节省时间。",
+          "plural": "die Einsätze"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79865235-s4",
+      "startTime": 35.54,
+      "endTime": 37.49,
+      "german": "Doch das ändert sich gerade.",
+      "chinese": "但这种认知如今正在发生转变。",
+      "clozeWords": [
+        "ändert",
+        "gerade"
+      ],
+      "vocab": [
+        {
+          "word": "sich ändern",
+          "pos": "Verb",
+          "meaning": "改变，发生变化",
+          "exampleDe": "Die Arbeitswelt wird sich in den nächsten Jahren stark ändern.",
+          "exampleZh": "未来几年职场环境将发生巨大变化。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79865235-s5",
+      "startTime": 37.49,
+      "endTime": 51.12,
+      "german": "„Vor ein paar Jahren waren die Anwendungen noch relativ günstig, weil die Währung, mit der man […] bezahlt hat, die Daten waren“, erklärt Anne-Sophie Mayer, Professorin für Digitale Arbeit an der Universität München.",
+      "chinese": "“几年前，各类AI应用还相对便宜，因为当时人们支付的‘货币’是数据。”慕尼黑大学数字工作学教授安妮-索菲·迈尔解释说。",
+      "clozeWords": [
+        "Anwendungen",
+        "relativ",
+        "Währung",
+        "Daten"
+      ],
+      "vocab": [
+        {
+          "word": "die Anwendung",
+          "pos": "Nomen",
+          "meaning": "应用软件，应用，运用",
+          "exampleDe": "Viele Anwendungen laufen direkt im Browser.",
+          "exampleZh": "许多应用直接在浏览器中运行。",
+          "plural": "die Anwendungen"
+        },
+        {
+          "word": "die Währung",
+          "pos": "Nomen",
+          "meaning": "货币，通行交换媒介",
+          "exampleDe": "Im digitalen Zeitalter gelten persönliche Daten oft als Währung.",
+          "exampleZh": "在数字时代，个人数据往往被视作交易货币。",
+          "plural": "die Währungen"
+        }
+      ]
+    }
+  ]
+}

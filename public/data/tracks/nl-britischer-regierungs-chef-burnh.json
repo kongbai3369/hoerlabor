@@ -1,0 +1,146 @@
+{
+  "id": "nl-britischer-regierungs-chef-burnh",
+  "title": "Britischer Regierungs-Chef Burnham: Der EU-Austritt war kein Erfolg",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Politik & Weltgeschehen",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/britischer_regierungs_chef_burnham_der_eu_austritt_war_kein_dlf_20261117_0752_575e782a.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/britischer_regierungs_chef_burnham_der_eu_austritt_war_kein_dlf_20261117_0752_575e782a.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/britischer-regierungs-chef-burnham-sagt-der-eu-austritt-war-kein-erfolg-100.html",
+  "duration": 54.78,
+  "segments": [
+    {
+      "id": "nl-britischer-regierungs-chef-burnh-s1",
+      "startTime": 0.21,
+      "endTime": 12.27,
+      "german": "Britischer Regierungs-Chef Burnham: Der EU-Austritt war kein Erfolg. Das Land Groß-Britannien ist vor 6 Jahren aus der Europäischen Union ausgetreten.",
+      "chinese": "英国首相伯纳姆表示：退出欧盟并不成功。英国已在六年前正式退出了欧盟。",
+      "clozeWords": [
+        "Regierungs-Chef",
+        "Erfolg",
+        "ausgetreten"
+      ],
+      "vocab": [
+        {
+          "word": "der Regierungschef",
+          "pos": "Nomen",
+          "meaning": "政府首脑，首相/总理",
+          "exampleDe": "Der Regierungschef hielt eine Rede im Parlament.",
+          "exampleZh": "政府首脑在议会发表了演讲。",
+          "plural": "die Regierungschefs"
+        },
+        {
+          "word": "austreten",
+          "pos": "Verb",
+          "meaning": "退出（组织等）",
+          "exampleDe": "Nach langen Debatten trat das Land aus dem Bündnis aus.",
+          "exampleZh": "经过漫长辩论，该国退出了联盟。"
+        }
+      ]
+    },
+    {
+      "id": "nl-britischer-regierungs-chef-burnh-s2",
+      "startTime": 12.27,
+      "endTime": 23.53,
+      "german": "Das war der Brexit. Schon immer war die Frage: Ist das gut für Groß-Britannien? Der neue Premierminister Andy Burnham meint: Der Brexit war ein Misserfolg.",
+      "chinese": "这就是所谓的“英国脱欧”。长久以来人们一直在追问：这对英国有益吗？新任首相安迪·伯纳姆认为：脱欧是一次失败。",
+      "clozeWords": [
+        "immer",
+        "meint",
+        "Misserfolg"
+      ],
+      "vocab": [
+        {
+          "word": "der Misserfolg",
+          "pos": "Nomen",
+          "meaning": "失败，挫折",
+          "exampleDe": "Trotz großer Mühe endete das Projekt als Misserfolg.",
+          "exampleZh": "尽管付出了很大努力，项目还是以失败告终。",
+          "plural": "die Misserfolge"
+        }
+      ]
+    },
+    {
+      "id": "nl-britischer-regierungs-chef-burnh-s3",
+      "startTime": 23.53,
+      "endTime": 33.46,
+      "german": "Burnham sagt: Groß-Britannien hat mehr verloren als gewonnen. Wir haben nicht mehr Kontrolle darüber, wer nach Groß-Britannien einwandert.",
+      "chinese": "伯纳姆表示：英国失去的比得到的更多。我们并没有对进入英国的移民获得更强的控制权。",
+      "clozeWords": [
+        "verloren",
+        "gewonnen",
+        "Kontrolle",
+        "einwandert"
+      ],
+      "vocab": [
+        {
+          "word": "die Kontrolle",
+          "pos": "Nomen",
+          "meaning": "控制，管制，检查",
+          "exampleDe": "An der Grenze gibt es strengere Kontrollen.",
+          "exampleZh": "边境实行更严格的检查。",
+          "plural": "die Kontrollen"
+        },
+        {
+          "word": "einwandern",
+          "pos": "Verb",
+          "meaning": "移入，移民入境",
+          "exampleDe": "Viele Fachkräfte möchten nach Europa einwandern.",
+          "exampleZh": "许多专业人才希望移民到欧洲。"
+        }
+      ]
+    },
+    {
+      "id": "nl-britischer-regierungs-chef-burnh-s4",
+      "startTime": 33.46,
+      "endTime": 42.14,
+      "german": "Der Brexit hat auch der britischen Wirtschaft geschadet. Burnham will deshalb noch einmal mit der Europäischen Union verhandeln.",
+      "chinese": "脱欧也损害了英国经济。因此伯纳姆希望再次与欧盟展开谈判。",
+      "clozeWords": [
+        "Wirtschaft",
+        "geschadet",
+        "verhandeln"
+      ],
+      "vocab": [
+        {
+          "word": "schaden",
+          "pos": "Verb",
+          "meaning": "损害，危害（+ 第三格）",
+          "exampleDe": "Hohe Zölle können der Wirtschaft stark schaden.",
+          "exampleZh": "高关税可能会严重损害经济。"
+        },
+        {
+          "word": "verhandeln",
+          "pos": "Verb",
+          "meaning": "谈判，协商",
+          "exampleDe": "Beide Seiten verhandeln über neue Regeln.",
+          "exampleZh": "双方正在就新规则进行谈判。"
+        }
+      ]
+    },
+    {
+      "id": "nl-britischer-regierungs-chef-burnh-s5",
+      "startTime": 42.14,
+      "endTime": 54.6,
+      "german": "Er will zum Beispiel den Handel mit der EU wieder einfacher machen. Für junge Menschen soll es wieder einfacher werden, in der EU und in Groß-Britannien zu studieren oder zu arbeiten.",
+      "chinese": "例如他希望让英国与欧盟之间的贸易再次变得更加便利。此外，应当让年轻人在欧盟与英国之间求学和工作重新变得更容易。",
+      "clozeWords": [
+        "Handel",
+        "einfacher",
+        "studieren"
+      ],
+      "vocab": [
+        {
+          "word": "der Handel",
+          "pos": "Nomen",
+          "meaning": "贸易，商业",
+          "exampleDe": "Der internationale Handel schafft viele Arbeitsplätze.",
+          "exampleZh": "国际贸易创造了大量就业岗位。"
+        }
+      ]
+    }
+  ]
+}

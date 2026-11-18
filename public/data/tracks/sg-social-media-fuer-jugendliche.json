@@ -1,0 +1,129 @@
+{
+  "id": "sg-social-media-fuer-jugendliche",
+  "title": "Social Media für Jugendliche verbieten?",
+  "level": "B1",
+  "source": "Slow German",
+  "sourceCategory": "podcast",
+  "topic": "Digitales & Medien",
+  "taskSection": "Slow German · Annik Rubens (SG 321)",
+  "license": "Slow German Podcast (CC BY-NC-SA)",
+  "audioUrl": "https://audio.podigee-cdn.net/2648543-m-5ac48bbb80f661fcd046602024c23041.mp3?source=feed",
+  "originalAudioUrl": "https://audio.podigee-cdn.net/2648543-m-5ac48bbb80f661fcd046602024c23041.mp3?source=feed",
+  "originalPageUrl": "https://feed.slowgerman.com/314-social-media-fur-jugendliche-verbieten-sg-321",
+  "duration": 542.62,
+  "segments": [
+    {
+      "id": "sg-social-media-fuer-jugendliche-s1",
+      "startTime": 6.18,
+      "endTime": 10.58,
+      "german": "Ein Social-Media-Verbot für Jugendliche?",
+      "chinese": "要为青少年出台社交媒体禁令吗？",
+      "clozeWords": [
+        "Jugendliche"
+      ],
+      "vocab": [
+        {
+          "word": "das Verbot",
+          "pos": "Nomen",
+          "meaning": "禁令，禁止",
+          "exampleDe": "Über ein solches Verbot wird intensiv diskutiert.",
+          "exampleZh": "各方正在就此类禁令展开激烈讨论。",
+          "plural": "die Verbote"
+        }
+      ]
+    },
+    {
+      "id": "sg-social-media-fuer-jugendliche-s2",
+      "startTime": 10.58,
+      "endTime": 20.53,
+      "german": "Es ist die große Frage: Sollten Kinder und Jugendliche überhaupt Social Media nutzen dürfen?",
+      "chinese": "核心问题在于：儿童和青少年到底应不应该被允许使用社交媒体？",
+      "clozeWords": [
+        "große",
+        "Frage",
+        "überhaupt",
+        "nutzen"
+      ],
+      "vocab": [
+        {
+          "word": "überhaupt",
+          "pos": "Adverb",
+          "meaning": "究竟，到底；根本",
+          "exampleDe": "Hast du heute überhaupt Zeit für eine Pause?",
+          "exampleZh": "你今天到底有时间休息一下吗？"
+        },
+        {
+          "word": "nutzen",
+          "pos": "Verb",
+          "meaning": "利用，使用",
+          "exampleDe": "Viele Lernende nutzen digitale Plattformen täglich.",
+          "exampleZh": "许多学习者每天都使用数字平台。"
+        }
+      ]
+    },
+    {
+      "id": "sg-social-media-fuer-jugendliche-s3",
+      "startTime": 20.53,
+      "endTime": 24.62,
+      "german": "Diese Diskussion ist nicht neu – ich frage mich das immer wieder.",
+      "chinese": "这场讨论并不新鲜——我自己也常常琢磨这个问题。",
+      "clozeWords": [
+        "Diskussion",
+        "immer",
+        "wieder"
+      ],
+      "vocab": [
+        {
+          "word": "die Diskussion",
+          "pos": "Nomen",
+          "meaning": "讨论，辩论",
+          "exampleDe": "Die Diskussion über den Datenschutz bleibt aktuell.",
+          "exampleZh": "关于数据保护的讨论依然极具现实意义。",
+          "plural": "die Diskussionen"
+        }
+      ]
+    },
+    {
+      "id": "sg-social-media-fuer-jugendliche-s4",
+      "startTime": 24.62,
+      "endTime": 31.34,
+      "german": "Aber sie ist in den letzten Monaten sehr aktuell geworden.",
+      "chinese": "但在最近几个月里，这个话题变得格外紧迫和受到关注。",
+      "clozeWords": [
+        "letzten",
+        "Monaten",
+        "aktuell"
+      ],
+      "vocab": [
+        {
+          "word": "aktuell",
+          "pos": "Adjektiv",
+          "meaning": "当前的，热门的，时下的",
+          "exampleDe": "Das Thema ist zurzeit sehr aktuell in den Medien.",
+          "exampleZh": "这个话题目前在媒体上非常热门。"
+        }
+      ]
+    },
+    {
+      "id": "sg-social-media-fuer-jugendliche-s5",
+      "startTime": 31.34,
+      "endTime": 38.34,
+      "german": "Besonders weil Australien als erstes Land der Welt gehandelt hat.",
+      "chinese": "尤其是因为澳大利亚成为了全球第一个采取立法行动的国家。",
+      "clozeWords": [
+        "Besonders",
+        "erstes",
+        "gehandelt"
+      ],
+      "vocab": [
+        {
+          "word": "handeln",
+          "pos": "Verb",
+          "meaning": "行动，处理；涉及",
+          "exampleDe": "Die Regierung musste wegen der Krise schnell handeln.",
+          "exampleZh": "面对危机，政府必须迅速采取行动。"
+        }
+      ]
+    }
+  ]
+}

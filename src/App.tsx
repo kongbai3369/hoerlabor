@@ -8,16 +8,38 @@ import { VocabPanel } from './components/VocabPanel';
 import { PlayerBar } from './components/PlayerBar';
 
 export const App: React.FC = () => {
-  const { currentTrackId, customTracks, savedVocab } = useListeningStore();
+  const {
+    currentTrackId,
+    customTracks,
+    remoteCatalog,
+    loadedTrackDetails,
+    loadingTrackId,
+    savedVocab,
+    loadRemoteCatalog,
+    ensureTrackDetail,
+  } = useListeningStore();
   const [mobilePane, setMobilePane] = useState<'tracks' | 'listen' | 'vocab'>('listen');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isVocabOpen, setIsVocabOpen] = useState(true);
 
-  const allTracks = useMemo(() => mergeAllTracks(customTracks), [customTracks]);
+  useEffect(() => {
+    void loadRemoteCatalog();
+  }, [loadRemoteCatalog]);
+
+  const allTracks = useMemo(
+    () => mergeAllTracks(customTracks, remoteCatalog, loadedTrackDetails),
+    [customTracks, remoteCatalog, loadedTrackDetails]
+  );
 
   const currentTrack = useMemo(() => {
     return allTracks.find((t) => t.id === currentTrackId) || allTracks[0];
   }, [allTracks, currentTrackId]);
+
+  useEffect(() => {
+    if (currentTrack?.id) {
+      void ensureTrackDetail(currentTrack.id);
+    }
+  }, [currentTrack?.id, ensureTrackDetail]);
 
   const player = useAudioPlayer(currentTrack);
 
@@ -28,6 +50,7 @@ export const App: React.FC = () => {
         target &&
         (target.tagName === 'INPUT' ||
           target.tagName === 'TEXTAREA' ||
+          target.tagName === 'SELECT' ||
           target.isContentEditable)
       ) {
         return;
@@ -45,21 +68,21 @@ export const App: React.FC = () => {
       } else if (e.code === 'KeyL') {
         e.preventDefault();
         player.toggleLoopSentence();
-      } else if (e.code === 'Digit1' || e.code === 'Numpad1') {
-        e.preventDefault();
-        player.playSegment(0, 'single');
-      } else if (e.code === 'Digit2' || e.code === 'Numpad2') {
-        e.preventDefault();
-        player.playSegment(1, 'single');
-      } else if (e.code === 'Digit3' || e.code === 'Numpad3') {
-        e.preventDefault();
-        player.playSegment(2, 'single');
+      } else {
+        const digitMatch = /^(?:Digit|Numpad)([1-9])$/.exec(e.code);
+        if (digitMatch) {
+          const idx = Number(digitMatch[1]) - 1;
+          if (idx < currentTrack.segments.length) {
+            e.preventDefault();
+            player.playSegment(idx, 'single');
+          }
+        }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [player]);
+  }, [currentTrack.segments.length, player]);
 
   return (
     <div className="h-screen w-screen overflow-hidden flex flex-col bg-slate-50 text-slate-900 selection:bg-indigo-100 selection:text-indigo-900 font-sans">
@@ -68,7 +91,7 @@ export const App: React.FC = () => {
         <div
           className={`${
             mobilePane === 'tracks' ? 'flex w-full' : 'hidden'
-          } ${isSidebarOpen ? 'lg:flex lg:w-80' : 'lg:hidden'} h-full shrink-0`}
+          } ${isSidebarOpen ? 'lg:flex lg:w-88' : 'lg:hidden'} h-full shrink-0`}
         >
           <Sidebar onSelectTrack={() => setMobilePane('listen')} />
         </div>
@@ -82,6 +105,7 @@ export const App: React.FC = () => {
             key={currentTrack.id}
             track={currentTrack}
             player={player}
+            isLoadingDetail={loadingTrackId === currentTrack.id}
             isSidebarOpen={isSidebarOpen}
             onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
             isVocabOpen={isVocabOpen}
@@ -104,7 +128,7 @@ export const App: React.FC = () => {
       {/* 底部播放条：桌面端为居中悬浮胶囊，移动端为 56px 迷你条 */}
       <PlayerBar track={currentTrack} player={player} />
 
-      {/* 移动端原生 iOS 风格底部导航栏 (Bottom Tab Bar) */}
+      {/* 移动端原生 iOS 风格底部导航栏 */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 h-[calc(3.5rem+env(safe-area-inset-bottom,0px))] pb-[env(safe-area-inset-bottom,0px)] bg-white/95 backdrop-blur-md border-t border-slate-200/90 z-40 select-none flex items-center justify-around px-3 shadow-[0_-2px_12px_rgba(15,23,42,0.04)]">
         <button
           onClick={() => setMobilePane('tracks')}

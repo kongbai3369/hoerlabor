@@ -1,0 +1,114 @@
+{
+  "id": "telc-b2-mietrecht-01",
+  "title": "Nachrichten: Kürzere Kündigungsfrist für Mieter",
+  "level": "B2",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Wohnen & Lebensstile",
+  "taskSection": "telc B2 · Hörverstehen Teil 1 (Nr. 41)",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_b2_mietrecht_01.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_b2_mietrecht_01.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 23.43,
+  "segments": [
+    {
+      "id": "telc-b2-mietrecht-01-s1",
+      "startTime": 0.0,
+      "endTime": 4.99,
+      "german": "Mieter können künftig ihren Mietvertrag für die Wohnung schneller als bisher kündigen.",
+      "chinese": "今后租客将能够比以往更快地解除自己的住房租赁合同。",
+      "clozeWords": [
+        "Mieter",
+        "Mietvertrag",
+        "kündigen"
+      ],
+      "vocab": [
+        {
+          "word": "der Mietvertrag",
+          "pos": "Nomen",
+          "meaning": "租房合同，租赁契约",
+          "exampleDe": "Lesen Sie den Mietvertrag vor der Unterschrift sorgfältig.",
+          "exampleZh": "签字前请仔细阅读租房合同。",
+          "plural": "die Mietverträge"
+        },
+        {
+          "word": "kündigen",
+          "pos": "Verb",
+          "meaning": "解除（合同），辞职",
+          "exampleDe": "Man muss die Wohnung drei Monate im Voraus kündigen.",
+          "exampleZh": "退租需要提前三个月通知解约。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-mietrecht-01-s2",
+      "startTime": 4.99,
+      "endTime": 7.52,
+      "german": "Das berichtet die BILD AM SONNTAG.",
+      "chinese": "《星期日图片报》对此进行了报道。",
+      "clozeWords": [
+        "berichtet"
+      ],
+      "vocab": [
+        {
+          "word": "berichten",
+          "pos": "Verb",
+          "meaning": "报道，汇报",
+          "exampleDe": "Zahlreiche Zeitungen berichteten über das neue Gesetz.",
+          "exampleZh": "多家报纸报道了这项新法案。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-mietrecht-01-s3",
+      "startTime": 7.52,
+      "endTime": 15.26,
+      "german": "Danach plane die Bundesregierung die maximale Kündigungsfrist auch für langjährige Mieter von 12 auf 6 Monate herabzusetzen.",
+      "chinese": "报道称，德国联邦政府正计划把长期租客的法定最长解约通知期也从12个月缩短至6个月。",
+      "clozeWords": [
+        "Kündigungsfrist",
+        "langjährige",
+        "herabzusetzen"
+      ],
+      "vocab": [
+        {
+          "word": "die Kündigungsfrist",
+          "pos": "Nomen",
+          "meaning": "解约期限，提前通知解约期",
+          "exampleDe": "Die gesetzliche Kündigungsfrist beträgt für Mieter meistens drei Monate.",
+          "exampleZh": "租客的法定解约通知期通常为三个月。",
+          "plural": "die Kündigungsfristen"
+        },
+        {
+          "word": "herabsetzen",
+          "pos": "Verb",
+          "meaning": "降低，缩减（标准/期限/税率）",
+          "exampleDe": "Das Parlament will die Altersgrenze herabsetzen.",
+          "exampleZh": "议会打算降低年龄限制。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-mietrecht-01-s4",
+      "startTime": 15.26,
+      "endTime": 23.43,
+      "german": "Für Vermieter ändere sich dagegen nichts, sie müssten auch weiterhin nach 10 Jahren eine Kündigungsfrist von einem Jahr einhalten.",
+      "chinese": "而对于房东来说则没有任何变化，租期满10年后房东仍须遵守长达一年的解约通知期。",
+      "clozeWords": [
+        "Vermieter",
+        "weiterhin",
+        "einhalten"
+      ],
+      "vocab": [
+        {
+          "word": "einhalten",
+          "pos": "Verb",
+          "meaning": "遵守，履行（规定/期限）",
+          "exampleDe": "Alle Vertragsparteien müssen die Fristen genau einhalten.",
+          "exampleZh": "合同各方都必须严格遵守期限。"
+        }
+      ]
+    }
+  ]
+}

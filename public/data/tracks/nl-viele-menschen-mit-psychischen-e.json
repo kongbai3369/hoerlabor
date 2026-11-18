@@ -1,0 +1,253 @@
+{
+  "id": "nl-viele-menschen-mit-psychischen-e",
+  "title": "Viele Menschen mit psychischen Erkrankungen werden am Arbeits-Platz diskriminiert",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Psychologie & Arbeit",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/viele_menschen_mit_psychischer_erkrankungen_werden_am_dlf_20261118_0809_748b1d94.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/viele_menschen_mit_psychischer_erkrankungen_werden_am_dlf_20261118_0809_748b1d94.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/diskriminierung-psychische-krankheiten-100.html",
+  "duration": 56.76,
+  "segments": [
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s1",
+      "startTime": 0.19,
+      "endTime": 6.59,
+      "german": "Viele Menschen mit psychischen Erkrankungen werden am Arbeits-Platz diskriminiert.",
+      "chinese": "许多患有精神疾病的人在工作场所遭到歧视。",
+      "clozeWords": [
+        "psychischen",
+        "diskriminiert"
+      ],
+      "vocab": [
+        {
+          "word": "psychisch",
+          "pos": "Adjektiv",
+          "meaning": "心理的，精神的",
+          "exampleDe": "Psychische Gesundheit ist genauso wichtig wie körperliche.",
+          "exampleZh": "心理健康与身体健康同样重要。"
+        },
+        {
+          "word": "diskriminieren",
+          "pos": "Verb",
+          "meaning": "歧视，不公正对待",
+          "exampleDe": "Niemand darf wegen seines Alters diskriminiert werden.",
+          "exampleZh": "任何人都不得因年龄而受到歧视。"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s2",
+      "startTime": 6.59,
+      "endTime": 13.66,
+      "german": "Viele Menschen mit einer psychischen Erkrankung sind an ihrem Arbeits-Platz schon diskriminiert worden.",
+      "chinese": "许多有心理或精神疾病的人曾在工作岗位上受到过歧视。",
+      "clozeWords": [
+        "Erkrankung",
+        "Arbeits-Platz"
+      ],
+      "vocab": [
+        {
+          "word": "die Erkrankung",
+          "pos": "Nomen",
+          "meaning": "疾病，患病",
+          "exampleDe": "Bei einer schweren Erkrankung sollte man einen Arzt aufsuchen.",
+          "exampleZh": "如果患上重病应当就医。",
+          "plural": "die Erkrankungen"
+        },
+        {
+          "word": "der Arbeitsplatz",
+          "pos": "Nomen",
+          "meaning": "工作岗位，工作场所",
+          "exampleDe": "Ein ruhiger Arbeitsplatz fördert die Konzentration.",
+          "exampleZh": "安静的工作环境有助于集中注意力。",
+          "plural": "die Arbeitsplätze"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s3",
+      "startTime": 13.66,
+      "endTime": 17.92,
+      "german": "Das hat die Anti-Diskriminierungs-Stelle herausgefunden.",
+      "chinese": "这是德国联邦反歧视局调查发现的结果。",
+      "clozeWords": [
+        "herausgefunden"
+      ],
+      "vocab": [
+        {
+          "word": "herausfinden",
+          "pos": "Verb",
+          "meaning": "查明，调查发现",
+          "exampleDe": "Die Forscher konnten die Ursache schnell herausfinden.",
+          "exampleZh": "研究人员很快查明了原因。"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s4",
+      "startTime": 17.92,
+      "endTime": 22.67,
+      "german": "Sie hat tausende Menschen mit psychischen Erkrankungen befragt.",
+      "chinese": "该机构对数千名患有精神疾病的人士进行了问卷访问。",
+      "clozeWords": [
+        "tausende",
+        "befragt"
+      ],
+      "vocab": [
+        {
+          "word": "befragen",
+          "pos": "Verb",
+          "meaning": "询问，做调查访问",
+          "exampleDe": "Für die Studie wurden über tausend Bürger befragt.",
+          "exampleZh": "该研究调查了一千多名市民。"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s5",
+      "startTime": 22.67,
+      "endTime": 30.14,
+      "german": "Eine psychische Erkrankung ist zum Beispiel eine Depression, eine Angst-Störung oder eine Sucht.",
+      "chinese": "精神疾病包括抑郁症、焦虑症或成瘾症等。",
+      "clozeWords": [
+        "Depression",
+        "Angst-Störung",
+        "Sucht"
+      ],
+      "vocab": [
+        {
+          "word": "die Depression",
+          "pos": "Nomen",
+          "meaning": "抑郁症",
+          "exampleDe": "Eine Depression lässt sich heute oft gut behandeln.",
+          "exampleZh": "如今抑郁症通常可以得到良好治疗。",
+          "plural": "die Depressionen"
+        },
+        {
+          "word": "die Angststörung",
+          "pos": "Nomen",
+          "meaning": "焦虑症，焦虑障碍",
+          "exampleDe": "Therapien helfen Menschen mit einer Angststörung.",
+          "exampleZh": "心理治疗有助于焦虑症患者。",
+          "plural": "die Angststörungen"
+        },
+        {
+          "word": "die Sucht",
+          "pos": "Nomen",
+          "meaning": "成瘾，嗜好",
+          "exampleDe": "Hilfsangebote unterstützen Menschen im Kampf gegen die Sucht.",
+          "exampleZh": "援助项目支持人们对抗成瘾问题。",
+          "plural": "die Süchte"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s6",
+      "startTime": 30.14,
+      "endTime": 40.04,
+      "german": "Fast die Hälfte von den Befragten mit psychischen Erkrankungen hat gesagt: Ich wurde wegen meiner Krankheit auf der Arbeit diskriminiert.",
+      "chinese": "近半数受访的精神疾病患者表示：我曾因自己的病情在工作中遭到歧视。",
+      "clozeWords": [
+        "Hälfte",
+        "Befragten",
+        "Krankheit"
+      ],
+      "vocab": [
+        {
+          "word": "die Hälfte",
+          "pos": "Nomen",
+          "meaning": "一半，半数",
+          "exampleDe": "Fast die Hälfte des Teams arbeitet im Homeoffice.",
+          "exampleZh": "团队近一半人在居家办公。",
+          "plural": "die Hälften"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s7",
+      "startTime": 40.04,
+      "endTime": 46.78,
+      "german": "Den Menschen wurde zum Beispiel gesagt: Du machst deine Arbeit wegen deiner Krankheit nicht gut.",
+      "chinese": "比如曾有人对这些患者说：你因为生病而工作干不好。",
+      "clozeWords": [
+        "Arbeit",
+        "wegen"
+      ],
+      "vocab": [
+        {
+          "word": "wegen",
+          "pos": "Ausdruck",
+          "meaning": "因为，由于（介词，常接第二格）",
+          "exampleDe": "Wegen des Regens blieb das Museum länger offen.",
+          "exampleZh": "由于下雨，博物馆延长了开放时间。"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s8",
+      "startTime": 46.78,
+      "endTime": 50.11,
+      "german": "Manchmal wurden auch Witze über die Menschen gemacht.",
+      "chinese": "有时甚至还会拿这些人开玩笑嘲讽。",
+      "clozeWords": [
+        "Witze",
+        "gemacht"
+      ],
+      "vocab": [
+        {
+          "word": "der Witz",
+          "pos": "Nomen",
+          "meaning": "笑话，玩笑",
+          "exampleDe": "Über ernste Themen sollte man keine schlechten Witze machen.",
+          "exampleZh": "对严肃话题不该开恶劣的玩笑。",
+          "plural": "die Witze"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s9",
+      "startTime": 50.11,
+      "endTime": 53.45,
+      "german": "Viele verstecken ihre Krankheit deshalb lieber.",
+      "chinese": "因此，许多人宁愿隐瞒自己的病情。",
+      "clozeWords": [
+        "verstecken",
+        "deshalb",
+        "lieber"
+      ],
+      "vocab": [
+        {
+          "word": "verstecken",
+          "pos": "Verb",
+          "meaning": "隐藏，隐瞒",
+          "exampleDe": "Viele verstecken ihre Gefühle hinter einem Lächeln.",
+          "exampleZh": "许多人把情绪藏在微笑背后。"
+        }
+      ]
+    },
+    {
+      "id": "nl-viele-menschen-mit-psychischen-e-s10",
+      "startTime": 53.45,
+      "endTime": 56.58,
+      "german": "Die Krankheit wird dadurch aber manchmal noch schlimmer.",
+      "chinese": "然而，这样做有时反而会让病情变得更加严重。",
+      "clozeWords": [
+        "dadurch",
+        "schlimmer"
+      ],
+      "vocab": [
+        {
+          "word": "schlimm",
+          "pos": "Adjektiv",
+          "meaning": "严重的，糟糕的",
+          "exampleDe": "Ohne Behandlung können die Schmerzen schlimmer werden.",
+          "exampleZh": "如果不经治疗，疼痛可能会加重。"
+        }
+      ]
+    }
+  ]
+}

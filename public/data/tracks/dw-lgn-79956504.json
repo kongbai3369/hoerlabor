@@ -1,0 +1,137 @@
+{
+  "id": "dw-lgn-79956504",
+  "title": "Weltklimakonferenz in der Türkei startet in finale Phase (16.11.2026)",
+  "level": "B2",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "news",
+  "topic": "Umwelt & Energie",
+  "taskSection": "DW Langsam Nachrichten · 慢速国际新闻",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/D6FA4C89_2-podcast-2288-79956504.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/D6FA4C89_2-podcast-2288-79956504.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/16-11-2026-langsam-gesprochene-nachrichten/a-79956504",
+  "duration": 530.57,
+  "segments": [
+    {
+      "id": "dw-lgn-79956504-s1",
+      "startTime": 19.38,
+      "endTime": 27.4,
+      "german": "Weltklimakonferenz in der Türkei startet in finale Phase.",
+      "chinese": "在土耳其举行的世界气候大会进入最后冲刺阶段。",
+      "clozeWords": [
+        "Weltklimakonferenz",
+        "finale",
+        "Phase"
+      ],
+      "vocab": [
+        {
+          "word": "final",
+          "pos": "Adjektiv",
+          "meaning": "最终的，最后阶段的",
+          "exampleDe": "In der finalen Phase werden die Kompromisse ausgehandelt.",
+          "exampleZh": "在最后阶段将就折中方案展开磋商。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79956504-s2",
+      "startTime": 27.4,
+      "endTime": 40.27,
+      "german": "Bei der UN-Klimakonferenz im türkischen Antalya beginnt an diesem Montag die zweite und entscheidende Woche.",
+      "chinese": "在土耳其安塔利亚举行的联合国气候大会本周一开启决定性的第二周议程。",
+      "clozeWords": [
+        "beginnt",
+        "entscheidende",
+        "Woche"
+      ],
+      "vocab": [
+        {
+          "word": "entscheidend",
+          "pos": "Adjektiv",
+          "meaning": "决定性的，关键的",
+          "exampleDe": "Die nächsten Verhandlungstage sind entscheidend für den Vertrag.",
+          "exampleZh": "接下来的谈判日对协议能否达成至关重要。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79956504-s3",
+      "startTime": 40.27,
+      "endTime": 49.89,
+      "german": "Dabei schaltet sich auch Bundesumweltminister Carsten Schneider in die Verhandlungen ein.",
+      "chinese": "德国联邦环境部长卡斯滕·施奈德也介入了相关谈判。",
+      "clozeWords": [
+        "Bundesumweltminister",
+        "Verhandlungen"
+      ],
+      "vocab": [
+        {
+          "word": "sich einschalten",
+          "pos": "Verb",
+          "meaning": "介入，插手参与",
+          "exampleDe": "Spitzenpolitiker schalten sich oft spät in schwierige Gespräche ein.",
+          "exampleZh": "高层政治人物常在棘手会谈后期介入协调。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79956504-s4",
+      "startTime": 49.89,
+      "endTime": 75.15,
+      "german": "Er vertritt nicht nur die Bundesregierung bei der COP31, sondern ist im Auftrag der türkischen COP-Präsidentschaft zusammen mit seinem indischen Kollegen Bhupender Yadav auch als Vermittler bei dem Verhandlungsthema Emissionsminderung aktiv.",
+      "chinese": "他不仅代表德国联邦政府出席COP31峰会，而且受土耳其主席国委托，与印度同行布彭德拉·亚达夫共同担任“减排议题”的谈判协调人。",
+      "clozeWords": [
+        "vertritt",
+        "Vermittler",
+        "Emissionsminderung"
+      ],
+      "vocab": [
+        {
+          "word": "der Vermittler",
+          "pos": "Nomen",
+          "meaning": "调解人，协调人，中间人",
+          "exampleDe": "Ein erfahrener Vermittler half beiden Gruppen zur Einigung.",
+          "exampleZh": "一位经验丰富的调解人促成双方达成一致。",
+          "plural": "die Vermittler"
+        },
+        {
+          "word": "die Emissionsminderung",
+          "pos": "Nomen",
+          "meaning": "减少排放，减排",
+          "exampleDe": "Strenge Ziele zur Emissionsminderung sind im Klimaschutz zentral.",
+          "exampleZh": "严格的减排目标是气候保护的核心。",
+          "plural": "die Emissionsminderungen"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79956504-s5",
+      "startTime": 75.15,
+      "endTime": 95.11,
+      "german": "Besonders zäh gestalten sich die Verhandlungen über die Klimafinanzierung, da die Bereitschaft der Industriestaaten zu Zugeständnissen an die Entwicklungsländer dieses Jahr besonders gering ist.",
+      "chinese": "关于气候融资的谈判进展尤为艰难，因为今年工业发达国家向发展中国家做出让步的意愿格外低。",
+      "clozeWords": [
+        "Klimafinanzierung",
+        "Bereitschaft",
+        "Zugeständnissen"
+      ],
+      "vocab": [
+        {
+          "word": "sich zäh gestalten",
+          "pos": "Ausdruck",
+          "meaning": "进展艰难，拉锯胶着",
+          "exampleDe": "Die Gespräche über neue Steuern gestalteten sich sehr zäh.",
+          "exampleZh": "关于新税制的谈判推进得十分胶着。"
+        },
+        {
+          "word": "das Zugeständnis",
+          "pos": "Nomen",
+          "meaning": "让步，妥协",
+          "exampleDe": "Ohne gegenseitige Zugeständnisse gibt es keinen Kompromiss.",
+          "exampleZh": "没有相互让步就无法达成妥协。",
+          "plural": "die Zugeständnisse"
+        }
+      ]
+    }
+  ]
+}

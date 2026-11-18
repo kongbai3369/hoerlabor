@@ -1,0 +1,119 @@
+{
+  "id": "sg-expats-in-deutschland-sg-327",
+  "title": "Expats in Deutschland",
+  "level": "B1",
+  "source": "Slow German",
+  "sourceCategory": "podcast",
+  "topic": "Arbeit & Gesellschaft",
+  "taskSection": "Slow German · Annik Rubens (SG 327)",
+  "license": "Slow German Podcast (CC BY-NC-SA)",
+  "audioUrl": "https://audio.podigee-cdn.net/2648552-m-8bcabac8b269e3ef78017c793676cfe4.mp3?source=feed",
+  "originalAudioUrl": "https://audio.podigee-cdn.net/2648552-m-8bcabac8b269e3ef78017c793676cfe4.mp3?source=feed",
+  "originalPageUrl": "https://feed.slowgerman.com/320-expats-in-deutschland-sg-327",
+  "duration": 484.18,
+  "segments": [
+    {
+      "id": "sg-expats-in-deutschland-sg-327-s1",
+      "startTime": 5.42,
+      "endTime": 10.61,
+      "german": "Zugegeben, Expat ist kein deutsches Wort.",
+      "chinese": "诚然，“Expat”（外派人员/外籍专才）并不是一个德语词。",
+      "clozeWords": [
+        "Zugegeben",
+        "deutsches",
+        "Wort"
+      ],
+      "vocab": [
+        {
+          "word": "zugegeben",
+          "pos": "Adverb",
+          "meaning": "诚然，不得不承认",
+          "exampleDe": "Zugegeben, das Thema ist am Anfang nicht leicht.",
+          "exampleZh": "诚然，这个话题一开始并不简单。"
+        }
+      ]
+    },
+    {
+      "id": "sg-expats-in-deutschland-sg-327-s2",
+      "startTime": 10.61,
+      "endTime": 16.75,
+      "german": "Deutsch dafür wäre vielleicht „zugewanderte Facharbeiter“.",
+      "chinese": "它对应的德语表达或许可以是“外来技术工人”。",
+      "clozeWords": [
+        "vielleicht",
+        "zugewanderte",
+        "Facharbeiter"
+      ],
+      "vocab": [
+        {
+          "word": "der Facharbeiter",
+          "pos": "Nomen",
+          "meaning": "技术工人，专业技工",
+          "exampleDe": "Viele Firmen suchen dringend qualifizierte Facharbeiter.",
+          "exampleZh": "许多企业急需高素质技术工人。",
+          "plural": "die Facharbeiter"
+        }
+      ]
+    },
+    {
+      "id": "sg-expats-in-deutschland-sg-327-s3",
+      "startTime": 16.75,
+      "endTime": 20.22,
+      "german": "Aber das ist zu kompliziert, oder?",
+      "chinese": "不过这个词太复杂绕口了，对吧？",
+      "clozeWords": [
+        "kompliziert"
+      ],
+      "vocab": [
+        {
+          "word": "kompliziert",
+          "pos": "Adjektiv",
+          "meaning": "复杂的，棘手的",
+          "exampleDe": "Bitte erklären Sie die Regel weniger kompliziert.",
+          "exampleZh": "请把规则解释得不要这么复杂。"
+        }
+      ]
+    },
+    {
+      "id": "sg-expats-in-deutschland-sg-327-s4",
+      "startTime": 20.22,
+      "endTime": 23.7,
+      "german": "Bleiben wir also bei Expat.",
+      "chinese": "那我们还是沿用“Expat”这个词吧。",
+      "clozeWords": [
+        "Bleiben"
+      ],
+      "vocab": [
+        {
+          "word": "bei etwas bleiben",
+          "pos": "Ausdruck",
+          "meaning": "坚持，继续沿用某事物",
+          "exampleDe": "Bleiben wir bei unserem ursprünglichen Plan.",
+          "exampleZh": "我们还是按原计划推进吧。"
+        }
+      ]
+    },
+    {
+      "id": "sg-expats-in-deutschland-sg-327-s5",
+      "startTime": 23.7,
+      "endTime": 35.42,
+      "german": "Wenn wir in Deutschland von „Expats“ sprechen, meinen wir meistens Menschen, die für ihre Arbeit in ein anderes Land ziehen.",
+      "chinese": "在德国当我们谈起“Expats”时，通常指那些为了工作而移居到另一个国家生活的人。",
+      "clozeWords": [
+        "sprechen",
+        "meinen",
+        "Arbeit",
+        "ziehen"
+      ],
+      "vocab": [
+        {
+          "word": "ziehen",
+          "pos": "Verb",
+          "meaning": "迁居，搬家；拉",
+          "exampleDe": "Nächsten Monat zieht die Familie nach Hamburg.",
+          "exampleZh": "下个月这家人将搬到汉堡。"
+        }
+      ]
+    }
+  ]
+}

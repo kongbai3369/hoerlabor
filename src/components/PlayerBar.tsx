@@ -16,10 +16,11 @@ import {
   ChevronDown,
   ExternalLink,
 } from 'lucide-react';
-import type { DisplayMode, ListeningTrack } from '../types/listening';
+import type { DisplayMode, ListeningTrack, SentenceSegment } from '../types/listening';
 import { LEVEL_BADGE_STYLE } from '../types/listening';
 import type { AudioPlayerControls } from '../hooks/useAudioPlayer';
 import { useListeningStore } from '../store/useListeningStore';
+import { SourceBadge } from './SourceBadge';
 
 interface PlayerBarProps {
   track: ListeningTrack;
@@ -47,11 +48,82 @@ function formatSeconds(sec: number): string {
   return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 }
 
+interface SegmentStripProps {
+  segments: SentenceSegment[];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  showNumbers?: boolean;
+}
+
+const SegmentStrip: React.FC<SegmentStripProps> = ({
+  segments,
+  activeIndex,
+  onSelect,
+  showNumbers = false,
+}) => {
+  if (segments.length === 0) return null;
+  const isDense = segments.length > 6;
+
+  if (!isDense) {
+    return (
+      <div className="flex items-center gap-1.5 py-0.5">
+        {segments.map((seg, idx) => {
+          const isCurrent = idx === activeIndex;
+          const isPassed = idx < activeIndex;
+          return (
+            <button
+              key={seg.id}
+              onClick={() => onSelect(idx)}
+              title={`跳至第 ${idx + 1} 句`}
+              className={`${
+                showNumbers ? 'h-3 text-[10px] font-bold' : 'h-2'
+              } flex-1 rounded-full transition-all cursor-pointer flex items-center justify-center ${
+                isCurrent
+                  ? 'bg-indigo-600 text-white ring-2 ring-indigo-400/50 shadow-xs'
+                  : isPassed
+                  ? 'bg-indigo-200 text-indigo-800 hover:bg-indigo-300'
+                  : 'bg-slate-200 text-slate-600 hover:bg-slate-300'
+              }`}
+            >
+              {showNumbers ? idx + 1 : null}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-1 overflow-x-auto pb-0.5 scrollbar-none py-0.5">
+      {segments.map((seg, idx) => {
+        const isCurrent = idx === activeIndex;
+        const isPassed = idx < activeIndex;
+        return (
+          <button
+            key={seg.id}
+            onClick={() => onSelect(idx)}
+            title={`跳至第 ${idx + 1} 句`}
+            className={`shrink-0 min-w-6 h-5 px-1.5 rounded-md text-[10px] font-bold transition-all cursor-pointer flex items-center justify-center ${
+              isCurrent
+                ? 'bg-indigo-600 text-white ring-1 ring-indigo-400 shadow-xs'
+                : isPassed
+                ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+            }`}
+          >
+            {idx + 1}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+
 export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
   const { displayMode, setDisplayMode, autoPauseSeconds, setAutoPauseSeconds } =
     useListeningStore();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const totalSegments = track.segments.length;
+  const totalSegments = Math.max(track.segments.length, 1);
 
   const cycleAutoPause = () => {
     const nextIdx = (PAUSE_OPTIONS.indexOf(autoPauseSeconds) + 1) % PAUSE_OPTIONS.length;
@@ -91,13 +163,11 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
 
   return (
     <>
-      {/* ============================================================ */}
-      {/* 桌面端精美悬浮胶囊播放器 (仅在 lg 及以上屏幕显示) */}
-      {/* ============================================================ */}
+      {/* 桌面端悬浮胶囊播放器 */}
       <footer className="hidden lg:flex fixed bottom-5 left-1/2 -translate-x-1/2 w-[94%] max-w-5xl bg-white/95 backdrop-blur-md shadow-[0_12px_40px_-8px_rgba(15,23,42,0.15),0_4px_12px_-2px_rgba(15,23,42,0.06)] rounded-2xl border border-slate-200/90 z-40 px-6 py-3 select-none items-center justify-between gap-4">
         {/* 左侧进度区 */}
         <div className="w-64 lg:w-72 flex flex-col justify-center gap-1.5 shrink-0">
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex items-center justify-between text-xs gap-2">
             <span className="inline-flex items-center gap-1.5 font-medium text-slate-700 truncate">
               {player.engineMode === 'tts' ? (
                 <>
@@ -107,16 +177,18 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               ) : (
                 <>
                   <Radio className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span className="font-semibold text-slate-800">MP3 60fps 原声</span>
+                  <span className="font-semibold text-slate-800">
+                    原声音频 · 第 {player.activeSegmentIndex + 1}/{totalSegments} 句
+                  </span>
                   {track.originalAudioUrl && (
                     <a
                       href={track.originalAudioUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-[10px] text-emerald-700 hover:text-emerald-800 underline decoration-dotted ml-1 font-medium"
-                      title="收听官方原版完整音频"
+                      className="inline-flex items-center text-[10px] text-emerald-700 hover:text-emerald-800 underline decoration-dotted ml-1 font-medium shrink-0"
+                      title="打开原始音频链接"
                     >
-                      广播直链
+                      原链
                     </a>
                   )}
                 </>
@@ -134,27 +206,11 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
             )}
           </div>
 
-          {/* 句子直切分段指示轨 (无论音频还是TTS均常驻，支持自由点播任意一句) */}
-          <div className="flex items-center gap-1 sm:gap-1.5 py-0.5">
-            {track.segments.map((seg, idx) => {
-              const isCurrent = idx === player.activeSegmentIndex;
-              const isPassed = idx < player.activeSegmentIndex;
-              return (
-                <button
-                  key={seg.id}
-                  onClick={() => player.seekToSegment(idx, true)}
-                  title={`跳至第 ${idx + 1} 句`}
-                  className={`h-2 flex-1 rounded-full transition-all cursor-pointer ${
-                    isCurrent
-                      ? 'bg-indigo-600 ring-2 ring-indigo-400/50 shadow-xs'
-                      : isPassed
-                      ? 'bg-indigo-200 hover:bg-indigo-300'
-                      : 'bg-slate-200 hover:bg-slate-300'
-                  }`}
-                />
-              );
-            })}
-          </div>
+          <SegmentStrip
+            segments={track.segments}
+            activeIndex={player.activeSegmentIndex}
+            onSelect={(idx) => player.seekToSegment(idx, true)}
+          />
 
           {player.engineMode === 'audio' && (
             <input
@@ -194,7 +250,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
 
           <button
             onClick={player.nextSegment}
-            disabled={player.activeSegmentIndex >= totalSegments - 1}
+            disabled={player.activeSegmentIndex >= track.segments.length - 1}
             title="下一句 (→)"
             className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 disabled:opacity-35 transition cursor-pointer border border-slate-200/60 shadow-2xs active:scale-95"
           >
@@ -218,7 +274,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
             onClick={player.togglePlaybackMode}
             title={
               player.playbackMode === 'single'
-                ? '当前：单句精听（播完当前句即停，按 1/2/3 自由切句）'
+                ? '当前：单句精听（播完当前句即停）'
                 : '当前：连续播放（自动按顺序播放后续句子）'
             }
             className={`px-2.5 py-1.5 rounded-xl text-xs font-medium inline-flex items-center gap-1 border transition cursor-pointer shadow-2xs active:scale-95 ${
@@ -288,11 +344,8 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
         </div>
       </footer>
 
-      {/* ============================================================ */}
-      {/* 移动端紧凑型 56px 迷你播放条 (粘附于移动端底部导航栏上方) */}
-      {/* ============================================================ */}
+      {/* 移动端紧凑型 56px 迷你播放条 */}
       <div className="lg:hidden fixed bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px))] left-0 right-0 h-14 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-2px_12px_rgba(15,23,42,0.06)] z-30 select-none">
-        {/* 顶部超细进度线 */}
         <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-slate-100 overflow-hidden">
           <div
             className="h-full bg-indigo-600 transition-[width] duration-75 ease-linear"
@@ -300,9 +353,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
           />
         </div>
 
-        {/* 主内容区域 */}
         <div className="h-full px-3 flex items-center justify-between gap-2">
-          {/* 点击左中信息区弹出抽屉面板 */}
           <button
             onClick={() => setIsDrawerOpen(true)}
             className="flex-1 flex items-center gap-2.5 min-w-0 text-left cursor-pointer group py-1"
@@ -335,7 +386,6 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
             <ChevronUp className="w-4 h-4 text-slate-400 group-hover:text-indigo-600 shrink-0 transition" />
           </button>
 
-          {/* 右侧快捷播放控制 */}
           <div className="flex items-center gap-1 shrink-0">
             <button
               onClick={player.prevSegment}
@@ -360,7 +410,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
 
             <button
               onClick={player.nextSegment}
-              disabled={player.activeSegmentIndex >= totalSegments - 1}
+              disabled={player.activeSegmentIndex >= track.segments.length - 1}
               aria-label="下一句"
               className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 disabled:opacity-30 active:scale-95 transition cursor-pointer"
             >
@@ -370,30 +420,24 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
         </div>
       </div>
 
-      {/* ============================================================ */}
-      {/* 移动端 iOS 风格上滑控制抽屉 (Bottom Sheet Drawer) */}
-      {/* ============================================================ */}
+      {/* 移动端上滑控制抽屉 */}
       {isDrawerOpen && (
         <>
-          {/* 半透明遮罩层 */}
           <div
             className="lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 transition-opacity animate-fade-in"
             onClick={() => setIsDrawerOpen(false)}
           />
 
-          {/* 上滑抽屉面板 */}
           <div
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             className="lg:hidden fixed inset-x-0 bottom-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl z-50 border-t border-slate-200/90 flex flex-col p-5 pb-[calc(2rem+env(safe-area-inset-bottom,0px))] overflow-y-auto animate-slide-up select-none"
           >
-            {/* 顶部居中下推把手条 */}
             <div
               className="w-12 h-1.5 bg-slate-300 hover:bg-slate-400 rounded-full mx-auto mb-4 cursor-pointer transition"
               onClick={() => setIsDrawerOpen(false)}
             />
 
-            {/* 曲目头部信息 */}
             <div className="flex items-start justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
               <div className="min-w-0">
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
@@ -404,10 +448,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
                   >
                     {track.level}
                   </span>
-                  <span className="text-xs text-slate-500 font-medium truncate">
-                    {track.source}
-                  </span>
-                  <span className="text-slate-300">·</span>
+                  <SourceBadge track={track} compact />
                   <span className="text-xs text-indigo-600 font-semibold">{track.topic}</span>
                   {track.originalAudioUrl && (
                     <a
@@ -417,7 +458,7 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
                       className="inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium"
                     >
                       <Radio className="w-3 h-3 text-emerald-600" />
-                      <span>官方原声</span>
+                      <span>官方原链</span>
                       <ExternalLink className="w-2.5 h-2.5" />
                     </a>
                   )}
@@ -435,7 +476,6 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               </button>
             </div>
 
-            {/* 播放进度拖动条 */}
             <div className="mb-5 space-y-1.5">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-indigo-600 font-bold">
@@ -450,25 +490,12 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
                 )}
               </div>
 
-              {/* 句子直切分段指示轨 (无论音频还是TTS均常驻) */}
-              <div className="flex items-center gap-1.5 py-1">
-                {track.segments.map((seg, idx) => (
-                  <button
-                    key={seg.id}
-                    onClick={() => player.seekToSegment(idx, true)}
-                    title={`跳至第 ${idx + 1} 句`}
-                    className={`h-3 flex-1 rounded-full transition-all cursor-pointer flex items-center justify-center text-[10px] font-bold ${
-                      idx === player.activeSegmentIndex
-                        ? 'bg-indigo-600 text-white ring-2 ring-indigo-400/50 shadow-xs'
-                        : idx < player.activeSegmentIndex
-                        ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
-                        : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
-              </div>
+              <SegmentStrip
+                segments={track.segments}
+                activeIndex={player.activeSegmentIndex}
+                onSelect={(idx) => player.seekToSegment(idx, true)}
+                showNumbers
+              />
 
               {player.engineMode === 'audio' && (
                 <input
@@ -483,7 +510,6 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               )}
             </div>
 
-            {/* 大尺寸核心播放控制区 */}
             <div className="flex items-center justify-center gap-5 mb-5">
               <button
                 onClick={player.prevSegment}
@@ -506,14 +532,13 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
 
               <button
                 onClick={player.nextSegment}
-                disabled={player.activeSegmentIndex >= totalSegments - 1}
+                disabled={player.activeSegmentIndex >= track.segments.length - 1}
                 className="p-3.5 rounded-2xl bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:opacity-30 active:scale-95 transition cursor-pointer border border-slate-200/60 shadow-2xs"
               >
                 <SkipForward className="w-6 h-6" />
               </button>
             </div>
 
-            {/* 辅助循环与播放模式 */}
             <div className="grid grid-cols-3 gap-2 mb-5">
               <button
                 onClick={player.toggleLoopSentence}
@@ -552,7 +577,6 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               </button>
             </div>
 
-            {/* 播放倍速分段切换 */}
             <div className="mb-5">
               <label className="text-xs font-bold text-slate-500 mb-1.5 block">
                 播放倍速
@@ -577,7 +601,6 @@ export const PlayerBar: React.FC<PlayerBarProps> = ({ track, player }) => {
               </div>
             </div>
 
-            {/* 字幕与训练模式切换 */}
             <div>
               <label className="text-xs font-bold text-slate-500 mb-1.5 block">
                 字幕与训练模式

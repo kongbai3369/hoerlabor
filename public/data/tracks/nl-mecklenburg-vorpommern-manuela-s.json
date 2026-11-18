@@ -1,0 +1,154 @@
+{
+  "id": "nl-mecklenburg-vorpommern-manuela-s",
+  "title": "Mecklenburg-Vorpommern: Manuela Schwesig von der SPD als Minister-Präsidentin wiedergewählt",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Politik & Gesellschaft",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/manuela_schwesig_von_der_spd_als_minister_praesidentin_dlf_20261117_0751_885daeec.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/17/manuela_schwesig_von_der_spd_als_minister_praesidentin_dlf_20261117_0751_885daeec.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/mecklenburg-vorpommern-manuela-schwesig-von-der-spd-als-minister-praesidentin-wiedergewaehlt-100.html",
+  "duration": 59.14,
+  "segments": [
+    {
+      "id": "nl-mecklenburg-vorpommern-manuela-s-s1",
+      "startTime": 0.13,
+      "endTime": 13.36,
+      "german": "Mecklenburg-Vorpommern: Manuela Schwesig von der SPD als Minister-Präsidentin wiedergewählt. Manuela Schwesig bleibt Minister-Präsidentin von dem Bundes-Land Mecklenburg-Vorpommern.",
+      "chinese": "梅克伦堡-前波美拉尼亚州：来自社民党（SPD）的曼努埃拉·施韦西希再次当选州长。曼努埃拉·施韦西希将继续担任梅前州州长。",
+      "clozeWords": [
+        "wiedergewählt",
+        "Minister-Präsidentin",
+        "Bundes-Land"
+      ],
+      "vocab": [
+        {
+          "word": "der Ministerpräsident",
+          "pos": "Nomen",
+          "meaning": "（德国联邦州的）州长",
+          "exampleDe": "Die Ministerpräsidentin leitete die Kabinettssitzung.",
+          "exampleZh": "女州长主持了内阁会议。",
+          "plural": "die Ministerpräsidenten"
+        },
+        {
+          "word": "das Bundesland",
+          "pos": "Nomen",
+          "meaning": "联邦州",
+          "exampleDe": "Deutschland besteht aus sechzehn Bundesländern.",
+          "exampleZh": "德国由十六个联邦州组成。",
+          "plural": "die Bundesländer"
+        }
+      ]
+    },
+    {
+      "id": "nl-mecklenburg-vorpommern-manuela-s-s2",
+      "startTime": 13.36,
+      "endTime": 24.2,
+      "german": "Der Landtag hat Schwesig wiedergewählt. Schwesig ist von der Partei SPD. Die SPD will zusammen mit den Parteien Linke und Grüne regieren.",
+      "chinese": "州议会再次选举施韦西希连任。施韦西希隶属于德国社会民主党，社民党计划与左翼党及绿党共同联合执政。",
+      "clozeWords": [
+        "Landtag",
+        "Partei",
+        "regieren"
+      ],
+      "vocab": [
+        {
+          "word": "der Landtag",
+          "pos": "Nomen",
+          "meaning": "州议会",
+          "exampleDe": "Im Landtag werden neue Landesgesetze beschlossen.",
+          "exampleZh": "新州法将在州议会表决通过。",
+          "plural": "die Landtage"
+        },
+        {
+          "word": "regieren",
+          "pos": "Verb",
+          "meaning": "执政，治理",
+          "exampleDe": "Drei Parteien wollen das Land gemeinsam regieren.",
+          "exampleZh": "三个政党计划共同组阁执政。"
+        }
+      ]
+    },
+    {
+      "id": "nl-mecklenburg-vorpommern-manuela-s-s3",
+      "startTime": 24.2,
+      "endTime": 34.53,
+      "german": "Nach der Wahl ist Schwesig vereidigt worden. Das bedeutet: Sie hat versprochen, ihre Arbeit als Regierungs-Chefin so gut wie möglich zu machen.",
+      "chinese": "当选后施韦西希进行了宣誓就职。这意味着：她郑重承诺将尽最大努力履行政府首脑的职责。",
+      "clozeWords": [
+        "vereidigt",
+        "bedeutet",
+        "versprochen"
+      ],
+      "vocab": [
+        {
+          "word": "vereidigen",
+          "pos": "Verb",
+          "meaning": "使宣誓就职",
+          "exampleDe": "Die neue Ministerin wurde am Vormittag vereidigt.",
+          "exampleZh": "新任部长于上午宣誓就职。"
+        },
+        {
+          "word": "versprechen",
+          "pos": "Verb",
+          "meaning": "承诺，答应",
+          "exampleDe": "Sie hat schnelle Verbesserungen versprochen.",
+          "exampleZh": "她承诺尽快推进改善。"
+        }
+      ]
+    },
+    {
+      "id": "nl-mecklenburg-vorpommern-manuela-s-s4",
+      "startTime": 34.53,
+      "endTime": 45.51,
+      "german": "Auch die Minister und Ministerinnen sind vereidigt worden. 5 kommen von der SPD, 2 von der Links-Partei, 1 Ministerin ist von den Grünen.",
+      "chinese": "各位部长也一同宣誓就职。其中5位来自社民党，2位来自左翼党，还有1位女部长来自绿党。",
+      "clozeWords": [
+        "Ministerinnen",
+        "kommen"
+      ],
+      "vocab": [
+        {
+          "word": "der Minister",
+          "pos": "Nomen",
+          "meaning": "部长，大臣",
+          "exampleDe": "Der Minister präsentierte den neuen Haushaltsplan.",
+          "exampleZh": "部长提交了新的预算案。",
+          "plural": "die Minister"
+        }
+      ]
+    },
+    {
+      "id": "nl-mecklenburg-vorpommern-manuela-s-s5",
+      "startTime": 45.51,
+      "endTime": 58.95,
+      "german": "Einzige Oppositions-Partei im Landtag ist die AfD. Sie hat bei der Wahl im September die meisten Stimmen bekommen. Aber keine andere Partei wollte mit der AfD zusammen regieren.",
+      "chinese": "州议会中唯一的反对党是德国选择党（AfD）。该党在9月的州选举中获得了最多选票，但没有任何其他政党愿意与选择党合作执政。",
+      "clozeWords": [
+        "Oppositions-Partei",
+        "Stimmen",
+        "zusammen"
+      ],
+      "vocab": [
+        {
+          "word": "die Opposition",
+          "pos": "Nomen",
+          "meaning": "反对派，在野党",
+          "exampleDe": "Die Opposition kritisierte den Vorschlag scharf.",
+          "exampleZh": "在野党严厉批评了这一提案。",
+          "plural": "die Oppositionen"
+        },
+        {
+          "word": "die Stimme",
+          "pos": "Nomen",
+          "meaning": "选票，声音",
+          "exampleDe": "Jede einzelne Stimme zählt bei dieser Wahl.",
+          "exampleZh": "在这次选举中每一张选票都很关键。",
+          "plural": "die Stimmen"
+        }
+      ]
+    }
+  ]
+}

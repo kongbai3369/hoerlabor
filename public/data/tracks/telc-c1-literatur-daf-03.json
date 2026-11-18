@@ -1,0 +1,161 @@
+{
+  "id": "telc-c1-literatur-daf-03",
+  "title": "Gastvortrag: Lesen als Schlüsselqualifikation im DaF-Unterricht",
+  "level": "C1",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Bildung & Literatur",
+  "taskSection": "telc C1 Hochschule · Hörverstehen Teil 3",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_c1_literatur_daf_03.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_c1_literatur_daf_03.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 70.27,
+  "segments": [
+    {
+      "id": "telc-c1-literatur-daf-03-s1",
+      "startTime": 0.0,
+      "endTime": 9.3,
+      "german": "Lesen ist die gesellschaftliche Schlüsselqualifikation Nummer eins – gerade in einer medial vermittelten Welt.",
+      "chinese": "阅读是社会生活中的头号核心素养能力——尤其是在这样一个高度媒介化的世界里。",
+      "clozeWords": [
+        "Schlüsselqualifikation",
+        "medial",
+        "vermittelten"
+      ],
+      "vocab": [
+        {
+          "word": "die Schlüsselqualifikation",
+          "pos": "Nomen",
+          "meaning": "核心素质能力，关键技能",
+          "exampleDe": "Teamfähigkeit gilt im Beruf als wichtige Schlüsselqualifikation.",
+          "exampleZh": "团队协作能力在职场上被视为重要核心素养。",
+          "plural": "die Schlüsselqualifikationen"
+        },
+        {
+          "word": "medial vermittelt",
+          "pos": "Ausdruck",
+          "meaning": "通过媒介中介传达的",
+          "exampleDe": "Unsere Realität wird heute stark medial vermittelt.",
+          "exampleZh": "我们如今感知的现实在很大程度上经由媒介传播。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-literatur-daf-03-s2",
+      "startTime": 9.3,
+      "endTime": 27.29,
+      "german": "Lesen schult nicht nur die Fähigkeit, Texte aller Art zu verstehen, Informationen zu nutzen und zu reflektieren; Lesekompetenz ist vielmehr ein wichtiges Hilfsmittel zum Erreichen persönlicher und beruflicher Ziele.",
+      "chinese": "阅读不仅培养理解各类文本、利用信息及反思思考的能力；阅读能力更是实现个人与职业目标的重要辅助工具。",
+      "clozeWords": [
+        "Fähigkeit",
+        "reflektieren",
+        "Lesekompetenz",
+        "Hilfsmittel"
+      ],
+      "vocab": [
+        {
+          "word": "reflektieren",
+          "pos": "Verb",
+          "meaning": "反思，深思熟虑；反射",
+          "exampleDe": "Studierende lernen, Quellen kritisch zu reflektieren.",
+          "exampleZh": "大学生学习批判性地反思信息来源。"
+        },
+        {
+          "word": "die Lesekompetenz",
+          "pos": "Nomen",
+          "meaning": "阅读理解素养，阅读能力",
+          "exampleDe": "Gezielte Förderung stärkt die Lesekompetenz schon im Grundschulalter.",
+          "exampleZh": "有针对性的培养从小学阶段就能夯实阅读能力。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-literatur-daf-03-s3",
+      "startTime": 27.29,
+      "endTime": 40.64,
+      "german": "Die „Internationale Grundschul-Lese-Untersuchung“, kurz IGLU, zeigte, dass im Leseunterricht an deutschen Grundschulen herkömmliche Methoden noch immer dominieren.",
+      "chinese": "“国际小学阅读素养调查”（简称IGLU）表明，德国小学的阅读教学中依然由传统方法占据主导地位。",
+      "clozeWords": [
+        "Leseunterricht",
+        "herkömmliche",
+        "Methoden",
+        "dominieren"
+      ],
+      "vocab": [
+        {
+          "word": "herkömmlich",
+          "pos": "Adjektiv",
+          "meaning": "传统的，一贯常用的",
+          "exampleDe": "Herkömmliche Lehrmethoden reichen allein oft nicht mehr aus.",
+          "exampleZh": "传统教学方法单靠自身往往已经不够用。"
+        },
+        {
+          "word": "dominieren",
+          "pos": "Verb",
+          "meaning": "占主导地位，支配",
+          "exampleDe": "Frontalunterricht darf moderne Seminare nicht länger dominieren.",
+          "exampleZh": "单向讲授式教学不应再主导现代研讨课。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-literatur-daf-03-s4",
+      "startTime": 40.64,
+      "endTime": 52.94,
+      "german": "Anregende Formen des Unterrichts, wie etwa das Verfassen eigener Texte oder eine kreative Verarbeitung des Gelesenen, sind hingegen selten zu finden.",
+      "chinese": "而富有启发性的教学形式——譬如让学生亲自撰写文本或对所读内容进行创意加工——却依然十分罕见。",
+      "clozeWords": [
+        "Anregende",
+        "Verfassen",
+        "kreative",
+        "hingegen"
+      ],
+      "vocab": [
+        {
+          "word": "anregend",
+          "pos": "Adjektiv",
+          "meaning": "富有启发性的，引人思考的",
+          "exampleDe": "Die Diskussion lieferte viele anregende Impulse für den Unterricht.",
+          "exampleZh": "这场讨论为教学带来了众多富有启发的灵感。"
+        },
+        {
+          "word": "verfassen",
+          "pos": "Verb",
+          "meaning": "撰写，编写（文本/报告）",
+          "exampleDe": "Im Kurs verfassen die Teilnehmenden kurze eigene Essays.",
+          "exampleZh": "课程上学员们自己动手撰写短篇随笔。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-literatur-daf-03-s5",
+      "startTime": 52.94,
+      "endTime": 70.27,
+      "german": "Man muss heute aber gerade kreative Methoden einsetzen, um Schüler für das Lesen zu begeistern und sie mit ihrer Lebenserfahrung in den Unterricht einzubinden.",
+      "chinese": "然而如今人们恰恰必须运用富有创造力的方法，去激发学生对阅读的热爱，并将他们的真实生活经验融入到课堂教学之中。",
+      "clozeWords": [
+        "einsetzen",
+        "begeistern",
+        "Lebenserfahrung",
+        "einzubinden"
+      ],
+      "vocab": [
+        {
+          "word": "einbinden",
+          "pos": "Verb",
+          "meaning": "融入，纳入其中",
+          "exampleDe": "Die Lernenden sollen aktiv in das Projekt eingebunden werden.",
+          "exampleZh": "应当让学生们积极参与融入到项目中。"
+        },
+        {
+          "word": "begeistern",
+          "pos": "Verb",
+          "meaning": "使着迷，激起……的热情（für + A）",
+          "exampleDe": "Mit kreativen Ideen kann man Kinder wieder fürs Lesen begeistern.",
+          "exampleZh": "凭借创意点子就能重新激发孩子们对阅读的热情。"
+        }
+      ]
+    }
+  ]
+}

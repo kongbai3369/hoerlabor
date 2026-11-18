@@ -1,0 +1,131 @@
+{
+  "id": "dw-lgn-79977343",
+  "title": "Demokraten gewinnen letzten offenen Senatssitz in Alaska (18.11.2026)",
+  "level": "B2",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "news",
+  "topic": "Politik & Weltgeschehen",
+  "taskSection": "DW Langsam Nachrichten · 慢速国际新闻",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/3700827D_2-podcast-2288-79977343.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/3700827D_2-podcast-2288-79977343.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/18-11-2026-langsam-gesprochene-nachrichten/a-79977343",
+  "duration": 476.03,
+  "segments": [
+    {
+      "id": "dw-lgn-79977343-s1",
+      "startTime": 15.72,
+      "endTime": 22.0,
+      "german": "Demokraten gewinnen letzten offenen Senatssitz in Alaska.",
+      "chinese": "美国民主党赢下阿拉斯加州最后一个悬而未决的参议院席位。",
+      "clozeWords": [
+        "gewinnen",
+        "offenen",
+        "Senatssitz"
+      ],
+      "vocab": [
+        {
+          "word": "der Senatssitz",
+          "pos": "Nomen",
+          "meaning": "参议院席位",
+          "exampleDe": "Um diesen Senatssitz wurde monatelang gerungen.",
+          "exampleZh": "人们为争夺这一参议院席位激战数月。",
+          "plural": "die Senatssitze"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79977343-s2",
+      "startTime": 22.0,
+      "endTime": 33.74,
+      "german": "Zwei Wochen nach den US-Kongresswahlen haben die Demokraten auch den letzten noch offenen Senatssitz gewonnen.",
+      "chinese": "在美国国会选举结束两周后，民主党也赢得了最后一个仍未定局的参议员席位。",
+      "clozeWords": [
+        "Wochen",
+        "Demokraten",
+        "gewonnen"
+      ],
+      "vocab": [
+        {
+          "word": "die Kongresswahl",
+          "pos": "Nomen",
+          "meaning": "国会选举",
+          "exampleDe": "Bei den Kongresswahlen waren viele Sitze hart umkämpft.",
+          "exampleZh": "在国会选举中许多席位竞争激烈。",
+          "plural": "die Kongresswahlen"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79977343-s3",
+      "startTime": 33.74,
+      "endTime": 42.7,
+      "german": "In Alaska setzte sich Mary Peltola gegen den republikanischen Amtsinhaber Dan Sullivan durch.",
+      "chinese": "在阿拉斯加州，玛丽·佩尔托拉击败了共和党籍现任参议员丹·沙利文。",
+      "clozeWords": [
+        "setzte",
+        "republikanischen",
+        "Amtsinhaber"
+      ],
+      "vocab": [
+        {
+          "word": "sich durchsetzen",
+          "pos": "Verb",
+          "meaning": "胜出，坚持并取得胜利（gegen + A）",
+          "exampleDe": "Die Kandidatin setzte sich knapp gegen ihren Konkurrenten durch.",
+          "exampleZh": "这位女候选人微弱优势击败竞争对手。"
+        },
+        {
+          "word": "der Amtsinhaber",
+          "pos": "Nomen",
+          "meaning": "现任公职人员，在任者",
+          "exampleDe": "Der Amtsinhaber verteidigte sein Mandat über mehrere Jahre.",
+          "exampleZh": "现任者多年来一直保住自己的席位。",
+          "plural": "die Amtsinhaber"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79977343-s4",
+      "startTime": 42.7,
+      "endTime": 53.91,
+      "german": "Laut vorläufigem Ergebnis erhielt sie 50,1 Prozent der Stimmen, Sullivan kam auf 45,8 Prozent.",
+      "chinese": "根据初步统计结果，她获得了50.1%的选票，沙利文的得票率为45.8%。",
+      "clozeWords": [
+        "vorläufigem",
+        "Ergebnis",
+        "Stimmen"
+      ],
+      "vocab": [
+        {
+          "word": "vorläufig",
+          "pos": "Adjektiv",
+          "meaning": "临时的，初步的，暂定的",
+          "exampleDe": "Laut vorläufigem Ergebnis liegt die Beteiligung bei 68 Prozent.",
+          "exampleZh": "根据初步结果，投票率为68%。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79977343-s5",
+      "startTime": 53.91,
+      "endTime": 60.49,
+      "german": "Peltola ist damit die erste indigene Senatorin aus Alaska.",
+      "chinese": "佩尔托拉由此成为来自阿拉斯加州的第一位原住民女性联邦参议员。",
+      "clozeWords": [
+        "damit",
+        "indigene",
+        "Senatorin"
+      ],
+      "vocab": [
+        {
+          "word": "indigen",
+          "pos": "Adjektiv",
+          "meaning": "原住民的，土著的",
+          "exampleDe": "Indigene Gemeinschaften setzen sich stark für Naturschutz ein.",
+          "exampleZh": "原住民社区大力倡导自然保护。"
+        }
+      ]
+    }
+  ]
+}

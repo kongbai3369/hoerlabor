@@ -1,0 +1,162 @@
+{
+  "id": "telc-c1-wg-studium-01",
+  "title": "Studentische Lebensformen: Vom Einzelzimmer zur WG",
+  "level": "C1",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Studium & Wohnen",
+  "taskSection": "telc C1 Hochschule · Hörverstehen Teil 1",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_c1_wg_studium_01.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_c1_wg_studium_01.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 61.86,
+  "segments": [
+    {
+      "id": "telc-c1-wg-studium-01-s1",
+      "startTime": 0.0,
+      "endTime": 7.37,
+      "german": "Ich war zu Beginn meines Studiums ziemlich naiv, was die Wohnungs- oder Zimmersuche betrifft.",
+      "chinese": "我上大学一开始在找房子、找房间这件事上还相当天真幼稚。",
+      "clozeWords": [
+        "Beginn",
+        "Studiums",
+        "ziemlich",
+        "betrifft"
+      ],
+      "vocab": [
+        {
+          "word": "betreffen",
+          "pos": "Verb",
+          "meaning": "涉及，关乎（常用固定结构：was ... betrifft）",
+          "exampleDe": "Was die Pünktlichkeit betrifft, ist die Bahn leider unzuverlässig.",
+          "exampleZh": "就准点率而言，铁路确实不太可靠。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-wg-studium-01-s2",
+      "startTime": 7.37,
+      "endTime": 13.49,
+      "german": "Erst kurz vor Semesterbeginn habe ich nach einer Wohnung gesucht – ich wollte unbedingt alleine wohnen.",
+      "chinese": "临近开学前不久我才开始找房子——当时我一心只想一个人独居。",
+      "clozeWords": [
+        "Semesterbeginn",
+        "unbedingt",
+        "alleine"
+      ],
+      "vocab": [
+        {
+          "word": "der Semesterbeginn",
+          "pos": "Nomen",
+          "meaning": "学期伊始，开学",
+          "exampleDe": "Kurz vor Semesterbeginn steigt die Nachfrage nach Zimmern stark an.",
+          "exampleZh": "每逢临近开学，学生租房需求便会激增。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-wg-studium-01-s3",
+      "startTime": 13.49,
+      "endTime": 24.63,
+      "german": "Allerdings hatte ich mir völlig falsche Vorstellungen von der Höhe der Mieten in Köln gemacht und musste schnell feststellen, dass ich mir das nicht leisten kann.",
+      "chinese": "然而我对科隆的房租水平完全抱有不切实际的幻想，很快便不得不认清一个事实：我根本负担不起。",
+      "clozeWords": [
+        "Vorstellungen",
+        "Höhe",
+        "Mieten",
+        "feststellen"
+      ],
+      "vocab": [
+        {
+          "word": "sich etwas leisten können",
+          "pos": "Ausdruck",
+          "meaning": "在经济上负担得起某物",
+          "exampleDe": "Eine Wohnung in der Innenstadt können sich nur wenige Studierende leisten.",
+          "exampleZh": "几乎没有多少学生负担得起市中心的公寓。"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-wg-studium-01-s4",
+      "startTime": 24.63,
+      "endTime": 32.61,
+      "german": "Als ich dann zur Zimmervermittlung der Uni gegangen bin, hat mir die Mitarbeiterin auch keine Hoffnung gemacht, dass ich bald ein Zimmer bekäme.",
+      "chinese": "等我去大学的住房中介处求助时，工作人员也完全没有给我很快能分到房间的希望。",
+      "clozeWords": [
+        "Zimmervermittlung",
+        "Mitarbeiterin",
+        "Hoffnung"
+      ],
+      "vocab": [
+        {
+          "word": "die Zimmervermittlung",
+          "pos": "Nomen",
+          "meaning": "（大学等的）宿舍与租房中介服务",
+          "exampleDe": "Die Zimmervermittlung hilft Erstsemestern bei der Suche.",
+          "exampleZh": "高校租房中介处帮助新生寻找住处。",
+          "plural": "die Zimmervermittlungen"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-wg-studium-01-s5",
+      "startTime": 32.61,
+      "endTime": 47.3,
+      "german": "Also bin ich eher notgedrungen in eine Wohngemeinschaft gezogen; damals war ich alles andere als überzeugt von WGs – aber heute muss ich sagen, dass ich mir gar nicht mehr vorstellen kann, alleine zu wohnen.",
+      "chinese": "于是我算是迫不得已搬进了一间合租公寓（WG）；当时我对合租简直毫无好感——但如今我必须承认，我再也无法想象自己一个人住了。",
+      "clozeWords": [
+        "notgedrungen",
+        "Wohngemeinschaft",
+        "überzeugt",
+        "vorstellen"
+      ],
+      "vocab": [
+        {
+          "word": "notgedrungen",
+          "pos": "Adverb",
+          "meaning": "迫不得已地，无奈地",
+          "exampleDe": "Weil die Preise stiegen, musste er notgedrungen umziehen.",
+          "exampleZh": "由于房租上涨，他迫不得已只能搬家。"
+        },
+        {
+          "word": "die Wohngemeinschaft",
+          "pos": "Nomen",
+          "meaning": "合租公寓（简称 WG）",
+          "exampleDe": "In einer Wohngemeinschaft teilt man sich Küche und Bad.",
+          "exampleZh": "合租公寓里大家共用厨房和卫生间。",
+          "plural": "die Wohngemeinschaften"
+        }
+      ]
+    },
+    {
+      "id": "telc-c1-wg-studium-01-s6",
+      "startTime": 47.3,
+      "endTime": 61.86,
+      "german": "Es macht so viel Spaß und es ist natürlich auch viel günstiger, als alleine zu wohnen; so gesehen hatte ich damals doch Glück, denn freiwillig hätte ich das wahrscheinlich nicht ausprobiert.",
+      "chinese": "合租实在太有意思了，而且当然也比独居便宜得多；这么看来我当年反而算因祸得福，因为如果是自愿选择，我大概绝不会去尝试合租。",
+      "clozeWords": [
+        "natürlich",
+        "günstiger",
+        "freiwillig",
+        "ausprobiert"
+      ],
+      "vocab": [
+        {
+          "word": "so gesehen",
+          "pos": "Ausdruck",
+          "meaning": "从这个角度来看，这么说来",
+          "exampleDe": "So gesehen war der Umweg eigentlich ein großer Vorteil.",
+          "exampleZh": "这么说来，当初的弯路反而成了一大优势。"
+        },
+        {
+          "word": "freiwillig",
+          "pos": "Adjektiv",
+          "meaning": "自愿的，主动的",
+          "exampleDe": "Sie übernahm diese Aufgabe völlig freiwillig.",
+          "exampleZh": "她完全是自愿承担这项任务的。"
+        }
+      ]
+    }
+  ]
+}

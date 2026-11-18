@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { X, PlusCircle } from 'lucide-react';
-import type { CefrLevel, ListeningTrack, SentenceSegment } from '../types/listening';
+import { X, PlusCircle, Link as LinkIcon } from 'lucide-react';
+import type {
+  CefrLevel,
+  ListeningTrack,
+  SentenceSegment,
+  SourceCategory,
+} from '../types/listening';
 import { useListeningStore } from '../store/useListeningStore';
 
 interface ImportModalProps {
@@ -12,8 +17,11 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
   const { addCustomTrack } = useListeningStore();
   const [title, setTitle] = useState('');
   const [level, setLevel] = useState<CefrLevel>('B1');
-  const [source, setSource] = useState('Audio Lingua 自选导入');
+  const [source, setSource] = useState('自定义德语精听');
+  const [sourceCategory, setSourceCategory] = useState<SourceCategory>('custom');
+  const [audioUrl, setAudioUrl] = useState('');
   const [rawGerman, setRawGerman] = useState('');
+  const [rawChinese, setRawChinese] = useState('');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -31,20 +39,26 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
     if (!title.trim() || !rawGerman.trim()) return;
 
     const rawSentences = rawGerman
-      .split(/(?<=[.!?])\s+/)
+      .split(/\n+|(?<=[.!?])\s+/)
       .map((s) => s.trim())
       .filter((s) => s.length > 3);
 
+    const chineseLines = rawChinese
+      .split(/\n+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    const cleanAudioUrl = audioUrl.trim() || null;
     const trackId = `custom-${Date.now()}`;
     const segments: SentenceSegment[] = rawSentences.map((sent, idx) => {
-      const words = sent.match(/[A-Za-zÄÖÜäöüß]{5,}/g) || [];
-      const clozeWords = Array.from(new Set(words)).slice(0, 2);
+      const words = sent.match(/[A-Za-zÄÖÜäöüß]+(?:-[A-Za-zÄÖÜäöüß]+)*/g) || [];
+      const clozeWords = Array.from(new Set(words.filter((w) => w.length >= 5))).slice(0, 3);
       return {
         id: `${trackId}-s${idx + 1}`,
         startTime: null,
         endTime: null,
         german: sent,
-        chinese: '（自选导入语料 · 可配合盲听与听写模式练习）',
+        chinese: chineseLines[idx] || '（自选导入语料 · 可配合盲听与听写模式练习）',
         clozeWords,
         vocab: [],
       };
@@ -55,15 +69,20 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
       title: title.trim(),
       level,
       source: source.trim() || '自定义导入',
+      sourceCategory,
       topic: '自主拓展精听',
-      audioUrl: null,
+      license: '自选导入',
+      audioUrl: cleanAudioUrl,
+      originalAudioUrl: cleanAudioUrl || undefined,
       duration: null,
       segments,
     };
 
     addCustomTrack(newTrack);
     setTitle('');
+    setAudioUrl('');
     setRawGerman('');
+    setRawChinese('');
     onClose();
   };
 
@@ -74,7 +93,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white border border-slate-200/90 rounded-2xl w-full max-w-lg p-6 shadow-2xl"
+        className="bg-white border border-slate-200/90 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6 shadow-2xl"
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
@@ -89,7 +108,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
           </button>
         </div>
 
-        <form onSubmit={handleCreate} className="space-y-4">
+        <form onSubmit={handleCreate} className="space-y-3.5">
           <div className="grid grid-cols-3 gap-3">
             <div className="col-span-2">
               <label className="block text-xs font-semibold text-slate-700 mb-1">曲目标题</label>
@@ -98,7 +117,7 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="例如：Audio Lingua - Studium in München"
+                placeholder="例如：DW Top-Thema 或教材第 3 课"
                 className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none transition"
               />
             </div>
@@ -119,27 +138,71 @@ export const ImportModal: React.FC<ImportModalProps> = ({ isOpen, onClose }) => 
             </div>
           </div>
 
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">来源名称</label>
+              <input
+                type="text"
+                value={source}
+                onChange={(e) => setSource(e.target.value)}
+                placeholder="如 Slow German / Hueber"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none transition"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">分类板块</label>
+              <select
+                value={sourceCategory}
+                onChange={(e) => setSourceCategory(e.target.value as SourceCategory)}
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none transition cursor-pointer"
+              >
+                <option value="custom">自定义精听</option>
+                <option value="news">新闻慢速</option>
+                <option value="podcast">播客电台</option>
+                <option value="exam">考级真题</option>
+                <option value="authentic">母语口语</option>
+              </select>
+            </div>
+          </div>
+
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">来源标识</label>
+            <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1">
+              <LinkIcon className="w-3.5 h-3.5 text-slate-400" />
+              <span>外部 MP3 音频链接（可选；留空则按文本逐句朗读）</span>
+            </label>
             <input
-              type="text"
-              value={source}
-              onChange={(e) => setSource(e.target.value)}
+              type="url"
+              value={audioUrl}
+              onChange={(e) => setAudioUrl(e.target.value)}
+              placeholder="https://... .mp3（支持直接填入 DW / 播客 / R2 外链）"
               className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none transition"
             />
           </div>
 
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              德语原文段落（系统将自动切分句子并生成听写挖空）
+              德语原文段落（按句号或换行自动拆句并生成听写挖空）
             </label>
             <textarea
-              rows={5}
+              rows={4}
               required
               value={rawGerman}
               onChange={(e) => setRawGerman(e.target.value)}
-              placeholder="在此粘贴德语听力原文，支持多句连段..."
+              placeholder="在此粘贴德语听力原文，支持多句连段或每行一句..."
               className="w-full p-3 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none leading-relaxed transition"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              中文译文对照（可选，每行对应一句）
+            </label>
+            <textarea
+              rows={2}
+              value={rawChinese}
+              onChange={(e) => setRawChinese(e.target.value)}
+              placeholder="可留空，或按行粘贴对应中文翻译..."
+              className="w-full p-2.5 rounded-lg bg-slate-50 border border-slate-300 text-sm text-slate-900 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 outline-none leading-relaxed transition"
             />
           </div>
 

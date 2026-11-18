@@ -1,0 +1,146 @@
+{
+  "id": "dw-tt-79969942",
+  "title": "Was der Dackel über deutsche Geschichte erzählt",
+  "level": "B1",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "podcast",
+  "topic": "Kultur & Geschichte",
+  "taskSection": "DW Top-Thema · 慢速专题与词汇",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/9086E601_2-podcast-2296-79969942.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/9086E601_2-podcast-2296-79969942.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/was-der-dackel-über-deutsche-geschichte-erzählt/l-79969942",
+  "duration": 165.15,
+  "segments": [
+    {
+      "id": "dw-tt-79969942-s1",
+      "startTime": 13.02,
+      "endTime": 18.06,
+      "german": "Der Dackel ist mehr als nur ein Hund mit einer besonderen Form.",
+      "chinese": "腊肠犬（Dackel）不仅仅是一种体型独特的犬种。",
+      "clozeWords": [
+        "Dackel",
+        "besonderen",
+        "Form"
+      ],
+      "vocab": [
+        {
+          "word": "der Dackel",
+          "pos": "Nomen",
+          "meaning": "腊肠犬（德国典型猎犬品种）",
+          "exampleDe": "Der Dackel hat kurze Beine und einen langen Rücken.",
+          "exampleZh": "腊肠犬腿短而身长。",
+          "plural": "die Dackel"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79969942-s2",
+      "startTime": 18.06,
+      "endTime": 27.79,
+      "german": "Er ist eine beliebte Figur in der Kunst und hat eine enge Verbindung zur Geschichte und Politik Deutschlands – sowohl positiv als auch negativ.",
+      "chinese": "它在艺术领域是备受喜爱的形象，同时也与德国的历史和政治有着紧密联系——无论在积极方面还是消极方面皆是如此。",
+      "clozeWords": [
+        "beliebte",
+        "Verbindung",
+        "Geschichte",
+        "Politik"
+      ],
+      "vocab": [
+        {
+          "word": "sowohl ... als auch",
+          "pos": "Ausdruck",
+          "meaning": "既……又……，不仅……而且……",
+          "exampleDe": "Die Ausstellung bietet sowohl Kunst als auch Geschichte.",
+          "exampleZh": "该展览既展示艺术也呈现历史。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79969942-s3",
+      "startTime": 27.79,
+      "endTime": 40.15,
+      "german": "Ein Hund, der mit seinem langen runden Körper aussieht wie eine Wurst: Der Dackel ist unverwechselbar und wurde schon oft zum Gegenstand der Kunst.",
+      "chinese": "长而圆润的身体让它看起来宛如一根香肠：腊肠犬极具辨识度，并常常成为艺术创作的题材。",
+      "clozeWords": [
+        "unverwechselbar",
+        "Gegenstand",
+        "Kunst"
+      ],
+      "vocab": [
+        {
+          "word": "unverwechselbar",
+          "pos": "Adjektiv",
+          "meaning": "独一无二的，极具辨识度的，不会混淆的",
+          "exampleDe": "Seine tiefe Stimme ist einfach unverwechselbar.",
+          "exampleZh": "他低沉的嗓音让人一听就能认出来。"
+        },
+        {
+          "word": "der Gegenstand",
+          "pos": "Nomen",
+          "meaning": "题材，主题，物品",
+          "exampleDe": "Alte Fotografien wurden zum Gegenstand ihrer Forschung.",
+          "exampleZh": "老照片成了她研究的对象。",
+          "plural": "die Gegenstände"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79969942-s4",
+      "startTime": 40.15,
+      "endTime": 52.55,
+      "german": "„Das ist wirklich ein Hund mit einer ikonischen Form, die ihn eben für vieles interessant macht“, erklärt Annett Reckert, die Leiterin einer aktuellen Ausstellung zum Dackel in Bremen.",
+      "chinese": "“这确实是一种外形极具标志性的犬类，因此让它在众多领域都备受欢迎。”目前正在不来梅举办的一场腊肠犬主题展览策展人安内特·雷克特解释道。",
+      "clozeWords": [
+        "ikonischen",
+        "aktuellen",
+        "Ausstellung"
+      ],
+      "vocab": [
+        {
+          "word": "ikonisch",
+          "pos": "Adjektiv",
+          "meaning": "标志性的，经典象征性的",
+          "exampleDe": "Das Bauhaus-Design gilt bis heute als ikonisch.",
+          "exampleZh": "包豪斯设计至今仍被视为经典标志。"
+        },
+        {
+          "word": "die Ausstellung",
+          "pos": "Nomen",
+          "meaning": "展览，陈列",
+          "exampleDe": "Am Wochenende eröffnete eine neue Ausstellung im Museum.",
+          "exampleZh": "周末博物馆举办了一场新展览。",
+          "plural": "die Ausstellungen"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79969942-s5",
+      "startTime": 52.55,
+      "endTime": 66.48,
+      "german": "Doch der Hund wurde nicht nur von weltberühmten Künstlern wie Otto Dix, Andy Warhol oder Pablo Picasso gemalt, sondern er erzählt auch ein Stück Kulturgeschichte und ist eng mit Deutschland verbunden.",
+      "chinese": "然而，不仅奥托·迪克斯、安迪·沃霍尔或巴勃罗·毕加索等世界级大师画过这种狗，它本身也讲述了一段文化史，与德国密不可分。",
+      "clozeWords": [
+        "weltberühmten",
+        "Kulturgeschichte",
+        "verbunden"
+      ],
+      "vocab": [
+        {
+          "word": "die Kulturgeschichte",
+          "pos": "Nomen",
+          "meaning": "文化史",
+          "exampleDe": "Kaffeehäuser spielen eine wichtige Rolle in der Kulturgeschichte.",
+          "exampleZh": "咖啡馆在文化史上扮演重要角色。"
+        },
+        {
+          "word": "verbunden sein mit",
+          "pos": "Ausdruck",
+          "meaning": "与……紧密相连",
+          "exampleDe": "Viel Arbeit ist mit diesem Projekt verbunden.",
+          "exampleZh": "这个项目与大量工作密切相关。"
+        }
+      ]
+    }
+  ]
+}

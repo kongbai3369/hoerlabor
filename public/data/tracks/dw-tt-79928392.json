@@ -1,0 +1,135 @@
+{
+  "id": "dw-tt-79928392",
+  "title": "Die schwierige Suche nach einem Endlager",
+  "level": "B1",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "podcast",
+  "topic": "Umwelt & Energie",
+  "taskSection": "DW Top-Thema · 慢速专题与词汇",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/4B6DEE18_2-podcast-2296-79928392.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/4B6DEE18_2-podcast-2296-79928392.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/die-schwierige-suche-nach-einem-endlager/l-79928392",
+  "duration": 193.36,
+  "segments": [
+    {
+      "id": "dw-tt-79928392-s1",
+      "startTime": 12.12,
+      "endTime": 17.49,
+      "german": "Finnland hat als erstes Land der Welt ein Endlager für Atommüll genehmigt.",
+      "chinese": "芬兰成为世界上第一个批准建造核废料最终处置库的国家。",
+      "clozeWords": [
+        "Endlager",
+        "Atommüll",
+        "genehmigt"
+      ],
+      "vocab": [
+        {
+          "word": "das Endlager",
+          "pos": "Nomen",
+          "meaning": "（核废料等的）地下永久处置库",
+          "exampleDe": "Für radioaktive Abfälle wird ein sicheres Endlager benötigt.",
+          "exampleZh": "放射性废料需要安全的永久处置库。",
+          "plural": "die Endlager"
+        },
+        {
+          "word": "der Atommüll",
+          "pos": "Nomen",
+          "meaning": "核废料，放射性废物",
+          "exampleDe": "Wie soll der Atommüll langfristig gelagert werden?",
+          "exampleZh": "核废料应如何长期储存？"
+        },
+        {
+          "word": "genehmigen",
+          "pos": "Verb",
+          "meaning": "批准，核准",
+          "exampleDe": "Die Behörde hat den Bauantrag gestern genehmigt.",
+          "exampleZh": "主管部门昨天批准了建造申请。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79928392-s2",
+      "startTime": 17.49,
+      "endTime": 20.5,
+      "german": "Deutschland sucht weiter nach einem sicheren Ort.",
+      "chinese": "德国仍在继续寻找安全可靠的选址地点。",
+      "clozeWords": [
+        "sucht",
+        "sicheren",
+        "Ort"
+      ],
+      "vocab": [
+        {
+          "word": "sicher",
+          "pos": "Adjektiv",
+          "meaning": "安全的，可靠的，稳妥的",
+          "exampleDe": "Geologen prüfen, welche Gesteinsschichten besonders sicher sind.",
+          "exampleZh": "地质学家检测哪些岩层尤为安全。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79928392-s3",
+      "startTime": 20.5,
+      "endTime": 26.46,
+      "german": "Das ist nicht nur eine schwierige Aufgabe, sondern kostet gleichzeitig auch noch viel Geld.",
+      "chinese": "这不仅是一项艰巨复杂的任务，同时也需要耗费巨额资金。",
+      "clozeWords": [
+        "schwierige",
+        "Aufgabe",
+        "gleichzeitig"
+      ],
+      "vocab": [
+        {
+          "word": "die Aufgabe",
+          "pos": "Nomen",
+          "meaning": "任务，作业，课题",
+          "exampleDe": "Die Suche nach einer Lösung ist eine nationale Aufgabe.",
+          "exampleZh": "寻找解决方案是一项全国性的任务。",
+          "plural": "die Aufgaben"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79928392-s4",
+      "startTime": 26.46,
+      "endTime": 31.04,
+      "german": "Wer kann schon sagen, was in 100.000 Jahren geschehen wird?",
+      "chinese": "试问谁能预言十万年之后的世界将会发生什么呢？",
+      "clozeWords": [
+        "sagen",
+        "geschehen"
+      ],
+      "vocab": [
+        {
+          "word": "geschehen",
+          "pos": "Verb",
+          "meaning": "发生，出现",
+          "exampleDe": "Niemand weiß, was in so ferner Zukunft geschehen wird.",
+          "exampleZh": "没有人知道在那样遥远的未来会发生什么。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79928392-s5",
+      "startTime": 31.04,
+      "endTime": 33.42,
+      "german": "Wie wird die Erde dann aussehen?",
+      "chinese": "届时地球又会是一副怎样的面貌呢？",
+      "clozeWords": [
+        "Erde",
+        "aussehen"
+      ],
+      "vocab": [
+        {
+          "word": "aussehen",
+          "pos": "Verb",
+          "meaning": "看起来，呈现出……外貌",
+          "exampleDe": "Nach dem Umbau wird das Stadtzentrum völlig anders aussehen.",
+          "exampleZh": "改造后市中心将呈现截然不同的面貌。"
+        }
+      ]
+    }
+  ]
+}

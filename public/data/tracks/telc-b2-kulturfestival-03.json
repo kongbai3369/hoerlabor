@@ -1,0 +1,137 @@
+{
+  "id": "telc-b2-kulturfestival-03",
+  "title": "Wochenendtipp: Museumsuferfest und Weltgarten",
+  "level": "B2",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Kultur & Freizeit",
+  "taskSection": "telc B2 · Hörverstehen Teil 3 (Nr. 59)",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_b2_kulturfestival_03.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_b2_kulturfestival_03.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 61.49,
+  "segments": [
+    {
+      "id": "telc-b2-kulturfestival-03-s1",
+      "startTime": 1.0,
+      "endTime": 13.84,
+      "german": "Und nun unser Wochenendtipp: Diesmal schicken wir Sie zum Museumsuferfest – ist es nun ein Treffen der Kulturen oder die längste Frittenbude der Stadt?",
+      "chinese": "接下来为您送上我们的周末出行贴士：这次我们邀请您前往法兰克福博物馆岸节。它究竟是一场多元文化的交融聚会，还是全城最长的炸薯条美食街呢？",
+      "clozeWords": [
+        "Wochenendtipp",
+        "Kulturen"
+      ],
+      "vocab": [
+        {
+          "word": "das Treffen",
+          "pos": "Nomen",
+          "meaning": "聚会，会晤，聚首",
+          "exampleDe": "Das jährliche Treffen lockt Besucher aus aller Welt an.",
+          "exampleZh": "一年一度的盛会吸引了世界各地的游客。",
+          "plural": "die Treffen"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-kulturfestival-03-s2",
+      "startTime": 13.84,
+      "endTime": 23.8,
+      "german": "Wie immer kommt es ganz auf Sie selbst an, was Sie aus dem reichhaltigen Angebot an Kultur, Film und Gastronomie machen.",
+      "chinese": "一如既往，完全取决于您自己，看您如何从这样琳琅满目的文化、电影和美食菜单中挑选享受。",
+      "clozeWords": [
+        "reichhaltigen",
+        "Angebot",
+        "Gastronomie"
+      ],
+      "vocab": [
+        {
+          "word": "reichhaltig",
+          "pos": "Adjektiv",
+          "meaning": "丰富多样的，丰盛的",
+          "exampleDe": "Das Programm bietet ein reichhaltiges Angebot für Familien.",
+          "exampleZh": "活动菜单为家庭游客提供了极其丰富的选择。"
+        },
+        {
+          "word": "ankommen auf",
+          "pos": "Verb",
+          "meaning": "取决于（auf + A）",
+          "exampleDe": "Am Ende kommt es ganz auf den eigenen Geschmack an.",
+          "exampleZh": "最终完全取决于个人品味偏好。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-kulturfestival-03-s3",
+      "startTime": 23.8,
+      "endTime": 37.68,
+      "german": "Mehr als 300 Veranstaltungen konkurrieren in diesem Jahr um Aufmerksamkeit, viele davon zum Thema „Japan“, das sich wie ein roter Faden durch die Darbietungen zieht.",
+      "chinese": "今年有超过300场文化活动同场竞技吸引目光，其中许多围绕“日本”这一主题——如同一根红线贯穿在各项演出之中。",
+      "clozeWords": [
+        "Veranstaltungen",
+        "konkurrieren",
+        "Aufmerksamkeit",
+        "Faden"
+      ],
+      "vocab": [
+        {
+          "word": "konkurrieren",
+          "pos": "Verb",
+          "meaning": "竞争，角逐（um + A）",
+          "exampleDe": "Zahlreiche Bühnen konkurrieren gleichzeitig um das Publikum.",
+          "exampleZh": "多个舞台同时竞争观众的注意力。"
+        },
+        {
+          "word": "sich wie ein roter Faden durch etwas ziehen",
+          "pos": "Ausdruck",
+          "meaning": "像一条红线般贯穿始终",
+          "exampleDe": "Dieses Motiv zieht sich wie ein roter Faden durch den gesamten Roman.",
+          "exampleZh": "这一主题如同一条红线贯穿整部小说。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-kulturfestival-03-s4",
+      "startTime": 37.68,
+      "endTime": 50.13,
+      "german": "Zwei andere Höhepunkte sind der Weltgarten im Park des Museums für Völkerkunde – hier ist Musik aus aller Welt zu hören, live und vom Plattenteller.",
+      "chinese": "另外两大亮点是位于民族学博物馆公园内的“世界花园”——在这里可以欣赏到来自全球各地的音乐，既有现场演奏也有黑胶DJ打碟。",
+      "clozeWords": [
+        "Höhepunkte",
+        "Völkerkunde",
+        "Plattenteller"
+      ],
+      "vocab": [
+        {
+          "word": "der Höhepunkt",
+          "pos": "Nomen",
+          "meaning": "亮点，高潮，顶点",
+          "exampleDe": "Das Abendkonzert bildete den Höhepunkt des Festivals.",
+          "exampleZh": "晚间音乐会构成了文化节的高潮亮点。",
+          "plural": "die Höhepunkte"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-kulturfestival-03-s5",
+      "startTime": 50.13,
+      "endTime": 61.49,
+      "german": "Und im kommunalen Kino läuft nonstop das Zeichentrickprogramm mit der Kultfigur „La Linea“ – ansonsten lassen Sie sich einfach treiben.",
+      "chinese": "市属艺术影院里还将不间断放映经典动画角色“线条先生（La Linea）”的动画全集——除此之外，尽情随心漫步感受节日氛围就好。",
+      "clozeWords": [
+        "Zeichentrickprogramm",
+        "Kultfigur",
+        "treiben"
+      ],
+      "vocab": [
+        {
+          "word": "sich treiben lassen",
+          "pos": "Ausdruck",
+          "meaning": "随心漫步，随遇而安地享受时光",
+          "exampleDe": "Auf dem Straßenfest lässt man sich am besten einfach treiben.",
+          "exampleZh": "逛街头节日时，最惬意的就是随意走走停停。"
+        }
+      ]
+    }
+  ]
+}

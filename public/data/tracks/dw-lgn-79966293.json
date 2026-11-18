@@ -1,0 +1,143 @@
+{
+  "id": "dw-lgn-79966293",
+  "title": "Japan lässt Kampfjets wegen russischer Flugzeuge aufsteigen (17.11.2026)",
+  "level": "B2",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "news",
+  "topic": "Politik & Weltgeschehen",
+  "taskSection": "DW Langsam Nachrichten · 慢速国际新闻",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/E6046830_2-podcast-2288-79966293.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2288_DKpodcast_lgn_de/E6046830_2-podcast-2288-79966293.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/17-11-2026-langsam-gesprochene-nachrichten/a-79966293",
+  "duration": 572.89,
+  "segments": [
+    {
+      "id": "dw-lgn-79966293-s1",
+      "startTime": 16.76,
+      "endTime": 22.81,
+      "german": "Japan lässt Kampfjets wegen russischer Flugzeuge aufsteigen.",
+      "chinese": "因俄罗斯军机接近，日本紧急起飞战斗机拦截警戒。",
+      "clozeWords": [
+        "Kampfjets",
+        "Flugzeuge",
+        "aufsteigen"
+      ],
+      "vocab": [
+        {
+          "word": "aufsteigen",
+          "pos": "Verb",
+          "meaning": "起飞升空；攀登",
+          "exampleDe": "Bei Annäherung fremder Flugzeuge steigen Abfangjäger auf.",
+          "exampleZh": "当不明飞机接近时，拦截机紧急升空。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79966293-s2",
+      "startTime": 22.81,
+      "endTime": 29.28,
+      "german": "Japan hat Russland eine Verletzung seines Luftraums vorgeworfen.",
+      "chinese": "日本方面指责俄罗斯侵犯了其领空。",
+      "clozeWords": [
+        "Verletzung",
+        "Luftraums",
+        "vorgeworfen"
+      ],
+      "vocab": [
+        {
+          "word": "die Verletzung",
+          "pos": "Nomen",
+          "meaning": "侵犯，违反；受伤",
+          "exampleDe": "Eine Verletzung des Luftraums führt oft zu diplomatischen Krisen.",
+          "exampleZh": "侵犯领空往往引发外交危机。",
+          "plural": "die Verletzungen"
+        },
+        {
+          "word": "vorwerfen",
+          "pos": "Verb",
+          "meaning": "指责，责备（+ 第三格人 + 第四格事）",
+          "exampleDe": "Die Regierung warf der Gegenseite einen Vertragsbruch vor.",
+          "exampleZh": "政府指责对方违约。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79966293-s3",
+      "startTime": 29.28,
+      "endTime": 49.58,
+      "german": "Zwei mutmaßlich russische Flugzeuge seien am Morgen nahe der südwestlichen Insel Okinoshima in japanischen Luftraum eingedrungen, teilte Regierungssprecher Minoru Kihara mit.",
+      "chinese": "日本政府发言人木原稔通报称，当天上午两架疑似俄罗斯飞机在西南部的冲之岛附近闯入了日本领空。",
+      "clozeWords": [
+        "mutmaßlich",
+        "südwestlichen",
+        "eingedrungen"
+      ],
+      "vocab": [
+        {
+          "word": "mutmaßlich",
+          "pos": "Adjektiv",
+          "meaning": "据推测的，疑似的",
+          "exampleDe": "Die Polizei fasste den mutmaßlichen Täter am Abend.",
+          "exampleZh": "警方当晚抓获了疑似嫌疑人。"
+        },
+        {
+          "word": "eindringen",
+          "pos": "Verb",
+          "meaning": "闯入，入侵，渗入",
+          "exampleDe": "Feuchtigkeit darf nicht in die Wände eindringen.",
+          "exampleZh": "潮气不能渗入墙壁内部。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79966293-s4",
+      "startTime": 49.58,
+      "endTime": 56.5,
+      "german": "Japanische Kampfjets seien aufgestiegen, um die Maschinen zu warnen.",
+      "chinese": "他表示，日本战斗机随后升空，向这两架军机发出警告。",
+      "clozeWords": [
+        "aufgestiegen",
+        "Maschinen",
+        "warnen"
+      ],
+      "vocab": [
+        {
+          "word": "warnen",
+          "pos": "Verb",
+          "meaning": "警告，提醒警惕",
+          "exampleDe": "Der Wetterdienst warnte vor starkem Sturm an der Küste.",
+          "exampleZh": "气象部门警告沿海将有强风暴。"
+        }
+      ]
+    },
+    {
+      "id": "dw-lgn-79966293-s5",
+      "startTime": 56.5,
+      "endTime": 68.82,
+      "german": "Tokio sprach von einer schwerwiegenden Verletzung seiner Souveränität und legte scharfen Protest bei Moskau ein.",
+      "chinese": "东京方面称此举是对日本主权的严重侵犯，并向莫斯科提出了严正抗议。",
+      "clozeWords": [
+        "schwerwiegenden",
+        "Souveränität",
+        "Protest"
+      ],
+      "vocab": [
+        {
+          "word": "schwerwiegend",
+          "pos": "Adjektiv",
+          "meaning": "严重的，后果重大的",
+          "exampleDe": "Der Bericht deckte schwerwiegende Sicherheitsmängel auf.",
+          "exampleZh": "报告揭示了严重的安全隐患。"
+        },
+        {
+          "word": "die Souveränität",
+          "pos": "Nomen",
+          "meaning": "主权，独立自主权",
+          "exampleDe": "Jeder Staat pocht auf die Wahrung seiner Souveränität.",
+          "exampleZh": "每个国家都强调维护自身主权。"
+        }
+      ]
+    }
+  ]
+}

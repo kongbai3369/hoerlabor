@@ -1,0 +1,126 @@
+{
+  "id": "sg-tempolimit-in-deutschland-sg-3",
+  "title": "Tempolimit in Deutschland",
+  "level": "A2",
+  "source": "Slow German",
+  "sourceCategory": "podcast",
+  "topic": "Verkehr & Mobilität",
+  "taskSection": "Slow German · Annik Rubens (SG 326)",
+  "license": "Slow German Podcast (CC BY-NC-SA)",
+  "audioUrl": "https://audio.podigee-cdn.net/2648551-m-2e52a3f79764609ff70fc79774be642d.mp3?source=feed",
+  "originalAudioUrl": "https://audio.podigee-cdn.net/2648551-m-2e52a3f79764609ff70fc79774be642d.mp3?source=feed",
+  "originalPageUrl": "https://feed.slowgerman.com/319-tempolimit-in-deutschland-sg-326",
+  "duration": 711.84,
+  "segments": [
+    {
+      "id": "sg-tempolimit-in-deutschland-sg-3-s1",
+      "startTime": 8.1,
+      "endTime": 18.8,
+      "german": "Ich weiß noch, dass meine Cousine aus den USA mal zu Besuch bei mir war und unbedingt die berühmte deutsche Autobahn sehen wollte.",
+      "chinese": "我还记得，我来自美国的表妹曾经来我家做客，当时她一心想亲眼看看著名的德国高速公路。",
+      "clozeWords": [
+        "Cousine",
+        "Besuch",
+        "unbedingt",
+        "Autobahn"
+      ],
+      "vocab": [
+        {
+          "word": "die Autobahn",
+          "pos": "Nomen",
+          "meaning": "高速公路",
+          "exampleDe": "Auf deutschen Autobahnen gibt es viel Fernverkehr.",
+          "exampleZh": "德国高速公路上的长途车流量很大。",
+          "plural": "die Autobahnen"
+        },
+        {
+          "word": "unbedingt",
+          "pos": "Adverb",
+          "meaning": "一定，务必",
+          "exampleDe": "Du solltest diese Ausstellung unbedingt besuchen.",
+          "exampleZh": "你一定要去看看这个展览。"
+        }
+      ]
+    },
+    {
+      "id": "sg-tempolimit-in-deutschland-sg-3-s2",
+      "startTime": 18.8,
+      "endTime": 30.28,
+      "german": "Sie war enttäuscht. Sie kommt aus Los Angeles, und dort gibt es ja 10-spurige Straßen, alles ist riesig.",
+      "chinese": "结果她有些失望。她来自洛杉矶，那里动辄有十条车道的超级公路，一切都大得惊人。",
+      "clozeWords": [
+        "enttäuscht",
+        "Straßen",
+        "riesig"
+      ],
+      "vocab": [
+        {
+          "word": "enttäuscht",
+          "pos": "Adjektiv",
+          "meaning": "失望的，沮丧的",
+          "exampleDe": "Nach der Absage war er sehr enttäuscht.",
+          "exampleZh": "被拒绝后他感到非常失望。"
+        },
+        {
+          "word": "riesig",
+          "pos": "Adjektiv",
+          "meaning": "巨大的，庞大的",
+          "exampleDe": "Vor dem Gebäude steht ein riesiger Baum.",
+          "exampleZh": "大楼前矗立着一棵参天大树。"
+        }
+      ]
+    },
+    {
+      "id": "sg-tempolimit-in-deutschland-sg-3-s3",
+      "startTime": 30.28,
+      "endTime": 38.84,
+      "german": "Die Autobahn, die ich ihr gezeigt habe, hatte nur zwei Spuren und war eher langweilig.",
+      "chinese": "而我带她看的那段高速公路只有双向两车道，看起来相当平淡无奇。",
+      "clozeWords": [
+        "gezeigt",
+        "Spuren",
+        "langweilig"
+      ],
+      "vocab": [
+        {
+          "word": "die Spur",
+          "pos": "Nomen",
+          "meaning": "车道，痕迹",
+          "exampleDe": "Bitte bleiben Sie im Stau auf Ihrer Spur.",
+          "exampleZh": "堵车时请保持在自己的车道内行驶。",
+          "plural": "die Spuren"
+        }
+      ]
+    },
+    {
+      "id": "sg-tempolimit-in-deutschland-sg-3-s4",
+      "startTime": 38.84,
+      "endTime": 47.51,
+      "german": "Was aber wirklich so ist: Auf vielen Strecken gibt es kein allgemeines Tempolimit.",
+      "chinese": "但真正让人惊讶的事实是：在德国许多路段上并没有统一的最高限速。",
+      "clozeWords": [
+        "Strecken",
+        "allgemeines",
+        "Tempolimit"
+      ],
+      "vocab": [
+        {
+          "word": "das Tempolimit",
+          "pos": "Nomen",
+          "meaning": "最高限速",
+          "exampleDe": "Auf dieser Landstraße gilt ein Tempolimit von 80.",
+          "exampleZh": "这条乡村公路限速80公里每小时。",
+          "plural": "die Tempolimits"
+        },
+        {
+          "word": "die Strecke",
+          "pos": "Nomen",
+          "meaning": "路段，距离，路程",
+          "exampleDe": "Die Strecke zwischen Berlin und Hamburg ist gut ausgebaut.",
+          "exampleZh": "柏林至汉堡之间的线路建设得很完善。",
+          "plural": "die Strecken"
+        }
+      ]
+    }
+  ]
+}

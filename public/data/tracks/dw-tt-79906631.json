@@ -1,0 +1,132 @@
+{
+  "id": "dw-tt-79906631",
+  "title": "Erinnern an den Holocaust",
+  "level": "B1",
+  "source": "DW Deutsch Lernen",
+  "sourceCategory": "podcast",
+  "topic": "Kultur & Geschichte",
+  "taskSection": "DW Top-Thema · 慢速专题与词汇",
+  "license": "Deutsche Welle (DW) Deutsch Lernen",
+  "audioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/23E0A4CC_2-podcast-2296-79906631.mp3",
+  "originalAudioUrl": "https://radiodownloaddw-a.akamaihd.net/Events/podcasts/de/2296_DKpodcast_topthemamitvokabeln_de/23E0A4CC_2-podcast-2296-79906631.mp3",
+  "originalPageUrl": "https://learngerman.dw.com/de/erinnern-an-den-holocaust/l-79906631",
+  "duration": 191.61,
+  "segments": [
+    {
+      "id": "dw-tt-79906631-s1",
+      "startTime": 12.24,
+      "endTime": 21.34,
+      "german": "Fehlender Respekt in KZ-Gedenkstätten und Kritik an der deutschen Erinnerungskultur machen Fachleuten Sorgen.",
+      "chinese": "集中营纪念馆内出现的失礼不敬行为以及对德国历史记忆文化的批评，令专家学者感到担忧。",
+      "clozeWords": [
+        "Respekt",
+        "Erinnerungskultur",
+        "Sorgen"
+      ],
+      "vocab": [
+        {
+          "word": "der Respekt",
+          "pos": "Nomen",
+          "meaning": "尊重，敬重",
+          "exampleDe": "Man sollte historischen Orten mit Respekt begegnen.",
+          "exampleZh": "人们应当以敬重之心对待历史纪念场所。"
+        },
+        {
+          "word": "die Erinnerungskultur",
+          "pos": "Nomen",
+          "meaning": "历史记忆文化，反思文化",
+          "exampleDe": "Die Erinnerungskultur ist ein fester Teil der deutschen Demokratie.",
+          "exampleZh": "历史反思与记忆文化是德国民主的重要组成部分。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79906631-s2",
+      "startTime": 21.34,
+      "endTime": 28.81,
+      "german": "Gleichzeitig gibt es immer weniger Zeitzeuginnen und Zeitzeugen, die vom Holocaust berichten können.",
+      "chinese": "与此同时，能够亲口讲述大屠杀经历的历史亲历者与见证人正变得越来越少。",
+      "clozeWords": [
+        "weniger",
+        "Zeitzeugen",
+        "berichten"
+      ],
+      "vocab": [
+        {
+          "word": "der Zeitzeuge",
+          "pos": "Nomen",
+          "meaning": "历史见证人，亲历者",
+          "exampleDe": "Zeitzeugen berichten oft vor Schulklassen über ihr Leben.",
+          "exampleZh": "历史亲历者常常在学校班级讲述自身经历。",
+          "plural": "die Zeitzeugen"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79906631-s3",
+      "startTime": 28.81,
+      "endTime": 38.4,
+      "german": "In der KZ-Gedenkstätte Buchenwald machen manche Jugendliche Fotos von sich: Dabei lachen sie und zeigen den Hitlergruß.",
+      "chinese": "在布痕瓦尔德集中营纪念馆，有些青少年会拍自拍照：拍照时他们不仅嘻笑，甚至还行纳粹礼。",
+      "clozeWords": [
+        "manche",
+        "lachen",
+        "Hitlergruß"
+      ],
+      "vocab": [
+        {
+          "word": "der Hitlergruß",
+          "pos": "Nomen",
+          "meaning": "纳粹敬礼（在德国属违法行为）",
+          "exampleDe": "Das Zeigen des Hitlergrußes ist in Deutschland strafbar.",
+          "exampleZh": "在德国行纳粹敬礼属于违法犯罪行为。",
+          "plural": "die Hitlergrüße"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79906631-s4",
+      "startTime": 38.4,
+      "endTime": 42.18,
+      "german": "Die Fotos stellen sie später in die sozialen Medien.",
+      "chinese": "随后他们还会把这些照片上传发布到社交媒体上。",
+      "clozeWords": [
+        "stellen",
+        "später",
+        "sozialen",
+        "Medien"
+      ],
+      "vocab": [
+        {
+          "word": "ins Netz stellen",
+          "pos": "Ausdruck",
+          "meaning": "上传，发布到网上",
+          "exampleDe": "Ohne Überlegung stellen manche Fotos in soziale Medien.",
+          "exampleZh": "有人不假思索地把照片发到社交媒体上。"
+        }
+      ]
+    },
+    {
+      "id": "dw-tt-79906631-s5",
+      "startTime": 42.18,
+      "endTime": 52.25,
+      "german": "So etwas passiert laut Jens-Christian Wagner, dem Direktor der Stiftung Gedenkstätten Buchenwald und Mittelbau-Dora, in den letzten Jahren immer häufiger.",
+      "chinese": "据布痕瓦尔德及米特尔鲍-多拉纪念馆基金会主任延斯-克里斯蒂安·瓦格纳透露，此类事件近几年正变得越来越频繁。",
+      "clozeWords": [
+        "Direktor",
+        "Stiftung",
+        "häufiger"
+      ],
+      "vocab": [
+        {
+          "word": "die Stiftung",
+          "pos": "Nomen",
+          "meaning": "基金会",
+          "exampleDe": "Die Stiftung fördert Bildungsprojekte für Jugendliche.",
+          "exampleZh": "该基金会资助面向青少年的教育项目。",
+          "plural": "die Stiftungen"
+        }
+      ]
+    }
+  ]
+}

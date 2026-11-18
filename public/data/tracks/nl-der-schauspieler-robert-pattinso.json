@@ -1,0 +1,152 @@
+{
+  "id": "nl-der-schauspieler-robert-pattinso",
+  "title": "Der Schauspieler Robert Pattinson wird der neue \"James Bond\"",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Kultur & Medien",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/der_schauspieler_robert_pattinson_wird_der_neue_james_bond_dlf_20261118_0810_8694f5ea.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/der_schauspieler_robert_pattinson_wird_der_neue_james_bond_dlf_20261118_0810_8694f5ea.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/robert-pattinson-wird-james-bond-100.html",
+  "duration": 68.57,
+  "segments": [
+    {
+      "id": "nl-der-schauspieler-robert-pattinso-s1",
+      "startTime": 0.17,
+      "endTime": 12.77,
+      "german": "Der Schauspieler Robert Pattinson wird der neue \"James Bond\". James Bond ist eine bekannte Film-Figur. Der Geheim-Agent wurde schon von mehreren Schauspielern gespielt.",
+      "chinese": "演员罗伯特·帕丁森将成为新一任“詹姆斯·邦德”。詹姆斯·邦德是一位家喻户晓的电影角色，这位秘密特工此前已由多位演员扮演过。",
+      "clozeWords": [
+        "Schauspieler",
+        "bekannte",
+        "gespielt"
+      ],
+      "vocab": [
+        {
+          "word": "der Schauspieler",
+          "pos": "Nomen",
+          "meaning": "男演员",
+          "exampleDe": "Der Schauspieler erhielt großen Applaus für seine Rolle.",
+          "exampleZh": "这位演员因其饰演的角色赢得了热烈掌声。",
+          "plural": "die Schauspieler"
+        },
+        {
+          "word": "der Geheimagent",
+          "pos": "Nomen",
+          "meaning": "秘密特工，间谍",
+          "exampleDe": "In dem Film arbeitet die Hauptfigur als Geheimagent.",
+          "exampleZh": "电影的主角是一名秘密特工。",
+          "plural": "die Geheimagenten"
+        }
+      ]
+    },
+    {
+      "id": "nl-der-schauspieler-robert-pattinso-s2",
+      "startTime": 12.77,
+      "endTime": 23.33,
+      "german": "Jetzt wurde entschieden, wer der neue James Bond wird: Es ist der Schauspieler Robert Pattinson. Pattinson kommt aus dem Land Groß-Britannien.",
+      "chinese": "如今新任詹姆斯·邦德的人选已经敲定：正是演员罗伯特·帕丁森。帕丁森来自英国。",
+      "clozeWords": [
+        "entschieden",
+        "kommt"
+      ],
+      "vocab": [
+        {
+          "word": "entscheiden",
+          "pos": "Verb",
+          "meaning": "决定，裁决",
+          "exampleDe": "Die Jury hat über den besten Film entschieden.",
+          "exampleZh": "评委会选出了最佳影片。"
+        }
+      ]
+    },
+    {
+      "id": "nl-der-schauspieler-robert-pattinso-s3",
+      "startTime": 23.33,
+      "endTime": 35.3,
+      "german": "Er ist 40 Jahre alt. Er ist durch seine Rolle als Vampir in den \"Twilight\"-Filmen bekannt geworden. Er hat zuletzt zum Beispiel in \"Die Odyssee\" und \"Batman\" mitgespielt.",
+      "chinese": "他今年40岁，最初凭借《暮光之城》系列电影中的吸血鬼一角成名。他近期还参演了《奥德赛》和《蝙蝠侠》等影片。",
+      "clozeWords": [
+        "Rolle",
+        "bekannt",
+        "mitgespielt"
+      ],
+      "vocab": [
+        {
+          "word": "die Rolle",
+          "pos": "Nomen",
+          "meaning": "角色",
+          "exampleDe": "Sie spielt eine wichtige Rolle im neuen Theaterstück.",
+          "exampleZh": "她在这部新戏剧中担任重要角色。",
+          "plural": "die Rollen"
+        },
+        {
+          "word": "mitspielen",
+          "pos": "Verb",
+          "meaning": "参演，参与（游戏/比赛）",
+          "exampleDe": "In diesem Film spielen viele bekannte Stars mit.",
+          "exampleZh": "这部电影有很多知名明星参演。"
+        }
+      ]
+    },
+    {
+      "id": "nl-der-schauspieler-robert-pattinso-s4",
+      "startTime": 35.3,
+      "endTime": 51.38,
+      "german": "Film- Experten sagen: Pattinson gibt den Figuren oft etwas Besonderes. Das könnte auch bei James Bond so werden. Bisher wurde James Bond als cooler Mann gezeigt, der sich vor allem für Frauen und Autos interessiert.",
+      "chinese": "电影专家表示：帕丁森常常会赋予角色某种独特的气质，詹姆斯·邦德这一角色也可能会这样。过去詹姆斯·邦德一直被塑造成一位主要只对女性和汽车感兴趣的冷酷男人。",
+      "clozeWords": [
+        "Besonderes",
+        "bisher",
+        "interessiert"
+      ],
+      "vocab": [
+        {
+          "word": "der Experte",
+          "pos": "Nomen",
+          "meaning": "专家，行家",
+          "exampleDe": "Laut Experten wird der Film ein großer Erfolg.",
+          "exampleZh": "据专家称，这部电影将会大获成功。",
+          "plural": "die Experten"
+        },
+        {
+          "word": "sich interessieren",
+          "pos": "Verb",
+          "meaning": "对……感兴趣（für + A）",
+          "exampleDe": "Er interessiert sich sehr für europäische Filmgeschichte.",
+          "exampleZh": "他对欧洲电影史很感兴趣。"
+        }
+      ]
+    },
+    {
+      "id": "nl-der-schauspieler-robert-pattinso-s5",
+      "startTime": 51.38,
+      "endTime": 68.19,
+      "german": "Viele sagen: Das ist sexistisch. Einige Film-Fans glauben: Pattinson könnte vielleicht einen verletzlicheren James Bond spielen. Der 1. Film mit Robert Pattinson als James Bond wird wahrscheinlich im Jahr 2028 fertig sein.",
+      "chinese": "很多人认为这种形象带有性别歧视色彩。部分影迷相信，帕丁森或许会塑造一个更加敏感脆弱的詹姆斯·邦德。由罗伯特·帕丁森主演的第一部邦德电影预计将于2028年制作完成。",
+      "clozeWords": [
+        "sexistisch",
+        "verletzlicheren",
+        "wahrscheinlich"
+      ],
+      "vocab": [
+        {
+          "word": "sexistisch",
+          "pos": "Adjektiv",
+          "meaning": "性别歧视的",
+          "exampleDe": "Alte Werbespots wirken heute oft sexistisch.",
+          "exampleZh": "一些老式广告在今天看来往往带有性别歧视。"
+        },
+        {
+          "word": "verletzlich",
+          "pos": "Adjektiv",
+          "meaning": "脆弱的，易受伤害的",
+          "exampleDe": "Im Gespräch zeigte er auch seine verletzliche Seite.",
+          "exampleZh": "交谈中他也展现出了自己脆弱的一面。"
+        }
+      ]
+    }
+  ]
+}

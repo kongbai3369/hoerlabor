@@ -14,15 +14,19 @@ import {
   PanelRightClose,
   PanelRightOpen,
   Play,
+  ExternalLink,
+  Loader2,
 } from 'lucide-react';
 import type { ListeningTrack, SentenceSegment } from '../types/listening';
+import { LEVEL_BADGE_STYLE } from '../types/listening';
 import { type AudioPlayerControls, speakGermanWord } from '../hooks/useAudioPlayer';
 import { useListeningStore } from '../store/useListeningStore';
-import { LEVEL_BADGE_STYLE } from '../types/listening';
+import { SourceBadge } from './SourceBadge';
 
 interface TranscriptViewProps {
   track: ListeningTrack;
   player: AudioPlayerControls;
+  isLoadingDetail?: boolean;
   isSidebarOpen?: boolean;
   onToggleSidebar?: () => void;
   isVocabOpen?: boolean;
@@ -30,28 +34,49 @@ interface TranscriptViewProps {
 }
 
 const GERMAN_CHARS = ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü'];
+const TOKEN_SPLIT_REGEX = /([A-Za-zÄÖÜäöüß]+(?:-[A-Za-zÄÖÜäöüß]+)*)/g;
+const WORD_TOKEN_TEST = /^[A-Za-zÄÖÜäöüß]+(?:-[A-Za-zÄÖÜäöüß]+)*$/;
+
+function normalizeUmlaut(str: string): string {
+  return str
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/Ä/g, 'Ae')
+    .replace(/Ö/g, 'Oe')
+    .replace(/Ü/g, 'Ue')
+    .replace(/ß/g, 'ss');
+}
 
 function isGermanWordMatch(input: string, target: string): boolean {
   const cleanInput = input.trim();
   if (!cleanInput) return false;
   if (cleanInput === target) return true;
-
-  const normalizeUmlaut = (str: string) =>
-    str
-      .replace(/ä/g, 'ae')
-      .replace(/ö/g, 'oe')
-      .replace(/ü/g, 'ue')
-      .replace(/Ä/g, 'Ae')
-      .replace(/Ö/g, 'Oe')
-      .replace(/Ü/g, 'Ue')
-      .replace(/ß/g, 'ss');
-
   return normalizeUmlaut(cleanInput) === normalizeUmlaut(target);
+}
+
+function isGermanLettersMatchIgnoringCase(input: string, target: string): boolean {
+  const cleanInput = input.trim().toLowerCase();
+  if (!cleanInput) return false;
+  const cleanTarget = target.toLowerCase();
+  return (
+    cleanInput === cleanTarget ||
+    normalizeUmlaut(cleanInput) === normalizeUmlaut(cleanTarget)
+  );
+}
+
+function matchesClozeToken(token: string, clozeWords: string[]): boolean {
+  if (clozeWords.includes(token)) return true;
+  if (token.includes('-')) {
+    return clozeWords.some((cw) => cw.toLowerCase() === token.toLowerCase());
+  }
+  return false;
 }
 
 export const TranscriptView: React.FC<TranscriptViewProps> = ({
   track,
   player,
+  isLoadingDetail = false,
   isSidebarOpen = true,
   onToggleSidebar,
   isVocabOpen = true,
@@ -61,9 +86,11 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
     displayMode,
     dictationInputs,
     starredSegmentIds,
+    completedTrackIds,
     isWordLookupActive,
     toggleWordLookup,
     toggleStarSegment,
+    saveDictationScore,
     setDictationInput,
     clearTrackDictation,
   } = useListeningStore();
@@ -72,9 +99,11 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
   const [showAnswerHints, setShowAnswerHints] = useState(false);
   const [onlyStarred, setOnlyStarred] = useState(false);
   const [focusedInputKey, setFocusedInputKey] = useState<string | null>(null);
+  const [lookupNotice, setLookupNotice] = useState<string | null>(null);
 
   const segmentRefs = useRef<Record<number, HTMLDivElement | null>>({});
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
+  const noticeTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const activeEl = segmentRefs.current[player.activeSegmentIndex];
@@ -83,6 +112,23 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
     }
   }, [player.activeSegmentIndex, track.id]);
 
+  useEffect(() => {
+    return () => {
+      if (noticeTimerRef.current !== null) {
+        window.clearTimeout(noticeTimerRef.current);
+      }
+    };
+  }, []);
+
+  const handleWordSpeak = async (word: string) => {
+    const status = await speakGermanWord(word);
+    if (status === 'missing') {
+      setLookupNotice(`「${word}」暂未入库，建议在联网更新字库后点读`);
+      if (noticeTimerRef.current !== null) window.clearTimeout(noticeTimerRef.current);
+      noticeTimerRef.current = window.setTimeout(() => setLookupNotice(null), 2400);
+    }
+  };
+
   const togglePeekSegment = (segId: string, e: React.MouseEvent) => {
     e.stopPropagation();
     setPeekedSegments((prev) => ({ ...prev, [segId]: !prev[segId] }));
@@ -90,18 +136,31 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
 
   const handleInsertGermanChar = (char: string) => {
     if (!focusedInputKey) return;
-    const currentVal = dictationInputs[focusedInputKey] || '';
-    setDictationInput(focusedInputKey, currentVal + char);
     const inputEl = inputRefs.current[focusedInputKey];
-    if (inputEl) inputEl.focus();
+    const currentVal = dictationInputs[focusedInputKey] || '';
+
+    if (inputEl && typeof inputEl.selectionStart === 'number') {
+      const start = inputEl.selectionStart;
+      const end = inputEl.selectionEnd ?? start;
+      const nextVal = currentVal.slice(0, start) + char + currentVal.slice(end);
+      setDictationInput(focusedInputKey, nextVal);
+      const nextCaret = start + char.length;
+      requestAnimationFrame(() => {
+        inputEl.focus();
+        inputEl.setSelectionRange(nextCaret, nextCaret);
+      });
+    } else {
+      setDictationInput(focusedInputKey, currentVal + char);
+      if (inputEl) inputEl.focus();
+    }
   };
 
   const allBlankKeys = useMemo(() => {
     const keys: string[] = [];
     track.segments.forEach((seg) => {
-      const tokens = seg.german.split(/([A-Za-zÄÖÜäöüß]+)/g);
+      const tokens = seg.german.split(TOKEN_SPLIT_REGEX);
       tokens.forEach((token, tokenIdx) => {
-        if (seg.clozeWords.includes(token)) {
+        if (matchesClozeToken(token, seg.clozeWords)) {
           keys.push(`${track.id}:${seg.id}:${tokenIdx}`);
         }
       });
@@ -123,34 +182,51 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
     }
   };
 
-  const calculateDictationStats = () => {
-    let totalBlanks = 0;
-    let correctBlanks = 0;
+  const { totalBlanks, correctBlanks } = useMemo(() => {
+    let total = 0;
+    let correct = 0;
 
     track.segments.forEach((seg) => {
-      const tokens = seg.german.split(/([A-Za-zÄÖÜäöüß]+)/g);
+      const tokens = seg.german.split(TOKEN_SPLIT_REGEX);
       tokens.forEach((token, tokenIdx) => {
-        if (seg.clozeWords.includes(token)) {
-          totalBlanks += 1;
+        if (matchesClozeToken(token, seg.clozeWords)) {
+          total += 1;
           const key = `${track.id}:${seg.id}:${tokenIdx}`;
           const val = dictationInputs[key] || '';
           if (isGermanWordMatch(val, token)) {
-            correctBlanks += 1;
+            correct += 1;
           }
         }
       });
     });
 
-    return { totalBlanks, correctBlanks };
-  };
+    return { totalBlanks: total, correctBlanks: correct };
+  }, [dictationInputs, track.id, track.segments]);
 
-  const { totalBlanks, correctBlanks } = calculateDictationStats();
+  useEffect(() => {
+    if (displayMode === 'dictation' && totalBlanks > 0) {
+      const hasAnyInput = allBlankKeys.some((k) => Boolean(dictationInputs[k]?.trim()));
+      if (hasAnyInput) {
+        saveDictationScore(track.id, correctBlanks, totalBlanks);
+      }
+    }
+  }, [
+    allBlankKeys,
+    correctBlanks,
+    dictationInputs,
+    displayMode,
+    saveDictationScore,
+    totalBlanks,
+    track.id,
+  ]);
+
   const trackStarredCount = track.segments.filter((s) =>
     starredSegmentIds.includes(s.id)
   ).length;
+  const isTrackCompleted = completedTrackIds.includes(track.id);
 
   const renderGermanSentence = (seg: SentenceSegment, isActive: boolean) => {
-    const tokens = seg.german.split(/([A-Za-zÄÖÜäöüß]+)/g);
+    const tokens = seg.german.split(TOKEN_SPLIT_REGEX);
 
     if (displayMode !== 'dictation') {
       return (
@@ -160,8 +236,8 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
           }`}
         >
           {tokens.map((token, idx) => {
-            const isWord = /^[A-Za-zÄÖÜäöüß]+$/.test(token);
-            const isKeyword = seg.clozeWords.includes(token);
+            const isWord = WORD_TOKEN_TEST.test(token);
+            const isKeyword = matchesClozeToken(token, seg.clozeWords);
 
             if (!isWord) {
               return <React.Fragment key={idx}>{token}</React.Fragment>;
@@ -173,7 +249,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                   key={idx}
                   onClick={(e) => {
                     e.stopPropagation();
-                    speakGermanWord(token);
+                    void handleWordSpeak(token);
                   }}
                   title={`点击听微软 Katja 标准德语发音: ${token}`}
                   className={`rounded-md px-1 py-0.5 transition-all cursor-pointer bg-indigo-50/60 hover:bg-indigo-100/90 text-indigo-950 underline decoration-indigo-300 decoration-dotted underline-offset-4 ${
@@ -205,7 +281,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
     return (
       <div className="text-xl font-medium leading-loose text-slate-800 flex flex-wrap items-baseline gap-y-2">
         {tokens.map((token, tokenIdx) => {
-          if (!seg.clozeWords.includes(token)) {
+          if (!matchesClozeToken(token, seg.clozeWords)) {
             return (
               <span key={tokenIdx} className="whitespace-pre-wrap">
                 {token}
@@ -216,6 +292,8 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
           const inputKey = `${track.id}:${seg.id}:${tokenIdx}`;
           const userVal = dictationInputs[inputKey] || '';
           const isCorrect = isGermanWordMatch(userVal, token);
+          const isCaseOnlyDiff =
+            !isCorrect && isGermanLettersMatchIgnoringCase(userVal, token);
           const widthCh = Math.max(token.length + 3, 8);
 
           return (
@@ -239,8 +317,10 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                   className={`px-2.5 py-1 text-base font-mono rounded-lg border outline-none transition-all text-center shadow-xs ${
                     isCorrect
                       ? 'bg-emerald-50 border-emerald-500 text-emerald-800 font-bold ring-1 ring-emerald-500/20'
+                      : isCaseOnlyDiff
+                      ? 'bg-amber-50 border-amber-500 text-amber-900 font-semibold ring-1 ring-amber-400/30'
                       : userVal.length > 0
-                      ? 'bg-amber-50 border-amber-400 text-amber-900 font-medium'
+                      ? 'bg-rose-50/70 border-rose-300 text-rose-900 font-medium'
                       : 'bg-white border-slate-300 text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20'
                   }`}
                 />
@@ -248,6 +328,11 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 ml-1 shrink-0" />
                 )}
               </span>
+              {isCaseOnlyDiff && !showAnswerHints && (
+                <span className="text-[11px] text-amber-700 font-medium mt-0.5">
+                  拼写正确 · 注意大小写
+                </span>
+              )}
               {showAnswerHints && !isCorrect && (
                 <span className="text-xs text-amber-700 font-mono mt-1 font-semibold">
                   答案: {token}
@@ -263,12 +348,12 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
   return (
     <main className="flex-1 flex flex-col h-full bg-slate-50/50 overflow-hidden relative">
       <header className="px-4 py-3 sm:px-5 sm:py-3.5 border-b border-slate-200/80 bg-white/95 backdrop-blur-md flex flex-wrap items-center justify-between gap-2.5 sm:gap-3 shrink-0 shadow-xs z-10">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 min-w-0">
           {onToggleSidebar && (
             <button
               onClick={onToggleSidebar}
               title={isSidebarOpen ? '收起曲库侧栏' : '展开曲库侧栏'}
-              className="hidden lg:flex p-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 border border-slate-200/70 transition cursor-pointer shadow-2xs"
+              className="hidden lg:flex p-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 border border-slate-200/70 transition cursor-pointer shadow-2xs shrink-0"
             >
               {isSidebarOpen ? (
                 <PanelLeftClose className="w-4 h-4" />
@@ -278,7 +363,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
             </button>
           )}
 
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-2 mb-1.5 flex-wrap">
               <span
                 className={`px-2.5 py-0.5 text-xs font-bold rounded-md border shadow-2xs ${
@@ -287,15 +372,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
               >
                 {track.level}
               </span>
-              <span
-                className={`inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full font-semibold border ${
-                  track.source === 'Goethe-Institut'
-                    ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
-                    : 'bg-amber-50 text-amber-900 border-amber-300'
-                }`}
-              >
-                {track.source === 'Goethe-Institut' ? '🏛️ 歌德学院官网真题' : '🎓 德福官网官方真题'}
-              </span>
+              <SourceBadge track={track} />
               <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md border border-indigo-200/80 font-medium">
                 🏷️ {track.topic}
               </span>
@@ -308,10 +385,28 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
                 </span>
               )}
               <span className="text-[11px] text-emerald-700 font-medium bg-emerald-50/70 border border-emerald-200 px-2 py-0.5 rounded-full">
-                🎧 德语真题原声 · {track.segments.length}句精选
+                🎧 {track.audioUrl ? '德语原声' : 'TTS 驱动'} · {track.segments.length} 句
               </span>
+              {isTrackCompleted && (
+                <span className="inline-flex items-center gap-1 text-[11px] text-emerald-800 bg-emerald-100/80 border border-emerald-300 px-2 py-0.5 rounded-full font-semibold">
+                  <CheckCircle2 className="w-3 h-3" />
+                  <span>已精听</span>
+                </span>
+              )}
+              {track.originalPageUrl && (
+                <a
+                  href={track.originalPageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] text-slate-600 hover:text-indigo-700 bg-slate-100 hover:bg-indigo-50 border border-slate-200 px-2 py-0.5 rounded-full transition font-medium"
+                  title="查看原始出处网页"
+                >
+                  <span>原文出处</span>
+                  <ExternalLink className="w-2.5 h-2.5" />
+                </a>
+              )}
             </div>
-            <h2 className="text-base md:text-lg font-bold text-slate-900 tracking-tight">
+            <h2 className="text-base md:text-lg font-bold text-slate-900 tracking-tight truncate">
               {track.title}
             </h2>
           </div>
@@ -328,8 +423,8 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
             }`}
             title={
               isWordLookupActive
-                ? '点词查音已开启：点击单词听真人单字发音（点击关闭，恢复卡片播放整句原声）'
-                : '点词查音已关闭：轻触卡片直接播放原声MP3（点击开启单字发音）'
+                ? '点词查音已开启：点击单词听微软 Katja 标准德语发音（点击关闭，恢复卡片播放整句原声）'
+                : '点词查音已关闭：轻触卡片直接播放原声（点击开启微软 Katja 单字点读）'
             }
           >
             <Volume2 className="w-3.5 h-3.5" />
@@ -416,198 +511,206 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({
 
       {/* 点词查音模式开启时的醒目横幅 */}
       {isWordLookupActive && (
-        <div className="bg-indigo-50 border-b border-indigo-200/80 px-4 py-2 flex items-center justify-between text-xs text-indigo-900 shrink-0 select-none">
-          <div className="flex items-center gap-2">
+        <div className="bg-indigo-50 border-b border-indigo-200/80 px-4 py-2 flex items-center justify-between text-xs text-indigo-900 shrink-0 select-none gap-3">
+          <div className="flex items-center gap-2 min-w-0">
             <Volume2 className="w-4 h-4 text-indigo-600 shrink-0 animate-pulse" />
-            <span className="font-medium">
-              点词查音已开启：轻触文中任意单词即可播放微软 Katja 标准发音。点击句首序号可单独精听该句。
+            <span className="font-medium truncate">
+              {lookupNotice ||
+                '点词查音已开启：轻触文中任意单词即可播放微软 Katja 标准德语发音；点击句首序号可单独精听该句。'}
             </span>
           </div>
           <button
             onClick={toggleWordLookup}
-            className="text-xs font-bold text-indigo-700 hover:text-indigo-900 bg-white border border-indigo-200 px-2 py-0.5 rounded shadow-2xs ml-2 shrink-0 cursor-pointer"
+            className="text-xs font-bold text-indigo-700 hover:text-indigo-900 bg-white border border-indigo-200 px-2 py-0.5 rounded shadow-2xs shrink-0 cursor-pointer"
           >
             退出查词
           </button>
         </div>
       )}
 
-      {/* 句子卡片流：留足 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] 确保末句绝不被底部播放器与底部导航遮挡 */}
+      {/* 句子卡片流：留足安全底距，绝不被底部播放器遮挡 */}
       <div className="flex-1 overflow-y-auto px-3.5 sm:px-4 md:px-8 py-5 sm:py-6 pb-[calc(9rem+env(safe-area-inset-bottom,0px))] md:pb-40 space-y-4">
-        {track.segments.map((seg, idx) => {
-          const isStarred = starredSegmentIds.includes(seg.id);
-          if (onlyStarred && !isStarred) return null;
+        {isLoadingDetail && track.segments.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-20 text-slate-500 gap-3">
+            <Loader2 className="w-6 h-6 animate-spin text-indigo-600" />
+            <span className="text-sm font-medium">正在加载本篇精听文稿与时间轴…</span>
+          </div>
+        ) : (
+          track.segments.map((seg, idx) => {
+            const isStarred = starredSegmentIds.includes(seg.id);
+            if (onlyStarred && !isStarred) return null;
 
-          const isActive = idx === player.activeSegmentIndex;
-          const isBlind = displayMode === 'blind' && !peekedSegments[seg.id];
+            const isActive = idx === player.activeSegmentIndex;
+            const isBlind = displayMode === 'blind' && !peekedSegments[seg.id];
 
-          return (
-            <div
-              key={seg.id}
-              ref={(el) => {
-                segmentRefs.current[idx] = el;
-              }}
-              onClick={() => player.seekToSegment(idx, true)}
-              className={`group relative rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-200 cursor-pointer overflow-hidden ${
-                isActive
-                  ? 'bg-white border border-indigo-200/90 shadow-[0_8px_24px_-4px_rgba(79,70,229,0.12),0_2px_6px_-1px_rgba(79,70,229,0.08)] ring-1 ring-indigo-500/15'
-                  : 'bg-white/85 hover:bg-white border border-slate-200/80 hover:border-indigo-200/70 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-sm'
-              }`}
-            >
-              {/* 激活句专有圆润普鲁士蓝垂直导轨 */}
-              {isActive && (
-                <div className="absolute left-0 top-3 bottom-3 w-1.5 bg-gradient-to-b from-indigo-500 to-indigo-700 rounded-r-full shadow-sm shadow-indigo-500/30" />
-              )}
-
-              <div className="flex items-center justify-between mb-2.5">
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      player.playSegment(idx, 'single');
-                    }}
-                    title={`点击立即精听第 ${idx + 1} 句`}
-                    className={`w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center transition-all cursor-pointer ${
-                      isActive
-                        ? 'bg-indigo-600 text-white shadow-xs ring-2 ring-indigo-200 scale-105'
-                        : 'bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white'
-                    }`}
-                  >
-                    {isActive ? (
-                      player.isPlaying ? (
-                        <Volume2 className="w-3.5 h-3.5 animate-pulse" />
-                      ) : (
-                        <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
-                      )
-                    ) : (
-                      idx + 1
-                    )}
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      player.playSegment(idx, 'single');
-                    }}
-                    title={`单独精听第 ${idx + 1} 句`}
-                    className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${
-                      isActive
-                        ? 'bg-indigo-100 text-indigo-800'
-                        : 'bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600'
-                    }`}
-                  >
-                    <Play className="w-3 h-3 fill-current" />
-                    <span>播此句</span>
-                  </button>
-
-                  {isActive && !player.isShadowingPause && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-indigo-200/70 shadow-2xs">
-                      <Volume2 className="w-3.5 h-3.5 animate-pulse text-indigo-600 shrink-0" />
-                      <span className="hidden sm:inline">
-                        {player.isLoopingSentence
-                          ? '单句循环精听中'
-                          : isWordLookupActive
-                          ? '当前朗读句 · 点词查音中'
-                          : player.playbackMode === 'single'
-                          ? '单句精听中 · 播完即停'
-                          : '连续原声播放中'}
-                      </span>
-                      <span className="sm:hidden">
-                        {player.isLoopingSentence
-                          ? '单句循环'
-                          : isWordLookupActive
-                          ? '点词查音'
-                          : player.playbackMode === 'single'
-                          ? '单句精听'
-                          : '原声朗读'}
-                      </span>
-                    </span>
-                  )}
-
-                  {isActive && player.isShadowingPause && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 shadow-2xs">
-                      <Mic className="w-3.5 h-3.5 animate-bounce text-emerald-600" />
-                      <span>请开口跟读复述...</span>
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex items-center gap-2">
-                  {displayMode === 'blind' && (
-                    <button
-                      onClick={(e) => togglePeekSegment(seg.id, e)}
-                      className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 font-medium transition cursor-pointer shadow-2xs"
-                    >
-                      {peekedSegments[seg.id] ? (
-                        <>
-                          <EyeOff className="w-3.5 h-3.5 text-slate-600" />
-                          <span>遮罩</span>
-                        </>
-                      ) : (
-                        <>
-                          <Eye className="w-3.5 h-3.5 text-slate-600" />
-                          <span>核对</span>
-                        </>
-                      )}
-                    </button>
-                  )}
-
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleStarSegment(seg.id);
-                    }}
-                    title={isStarred ? '取消难句星标' : '标记为重点难句'}
-                    className={`p-1.5 rounded-lg transition cursor-pointer ${
-                      isStarred
-                        ? 'text-amber-500 bg-amber-50 hover:bg-amber-100 shadow-2xs'
-                        : 'text-slate-400 hover:text-amber-500 hover:bg-slate-100'
-                    }`}
-                  >
-                    <Star
-                      className="w-4 h-4"
-                      fill={isStarred ? 'currentColor' : 'none'}
-                    />
-                  </button>
-                </div>
-              </div>
-
+            return (
               <div
-                className={`transition-all duration-200 ${
-                  isBlind ? 'blur-md select-none opacity-50' : ''
+                key={seg.id}
+                ref={(el) => {
+                  segmentRefs.current[idx] = el;
+                }}
+                onClick={() => player.seekToSegment(idx, true)}
+                className={`group relative rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-200 cursor-pointer overflow-hidden ${
+                  isActive
+                    ? 'bg-white border border-indigo-200/90 shadow-[0_8px_24px_-4px_rgba(79,70,229,0.12),0_2px_6px_-1px_rgba(79,70,229,0.08)] ring-1 ring-indigo-500/15'
+                    : 'bg-white/85 hover:bg-white border border-slate-200/80 hover:border-indigo-200/70 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-sm'
                 }`}
               >
-                {renderGermanSentence(seg, isActive)}
+                {/* 激活句专有圆润普鲁士蓝垂直导轨 */}
+                {isActive && (
+                  <div className="absolute left-0 top-3 bottom-3 w-1.5 bg-gradient-to-b from-indigo-500 to-indigo-700 rounded-r-full shadow-sm shadow-indigo-500/30" />
+                )}
 
-                {(displayMode === 'bilingual' ||
-                  (displayMode === 'blind' && peekedSegments[seg.id]) ||
-                  displayMode === 'dictation') && (
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed font-normal">
-                    {seg.chinese}
-                  </p>
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        player.playSegment(idx, 'single');
+                      }}
+                      title={`点击立即精听第 ${idx + 1} 句（播完即停，不改变当前连播设置）`}
+                      className={`w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center transition-all cursor-pointer ${
+                        isActive
+                          ? 'bg-indigo-600 text-white shadow-xs ring-2 ring-indigo-200 scale-105'
+                          : 'bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white'
+                      }`}
+                    >
+                      {isActive ? (
+                        player.isPlaying ? (
+                          <Volume2 className="w-3.5 h-3.5 animate-pulse" />
+                        ) : (
+                          <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                        )
+                      ) : (
+                        idx + 1
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        player.playSegment(idx, 'single');
+                      }}
+                      title={`单独精听第 ${idx + 1} 句`}
+                      className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${
+                        isActive
+                          ? 'bg-indigo-100 text-indigo-800'
+                          : 'bg-slate-100 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600'
+                      }`}
+                    >
+                      <Play className="w-3 h-3 fill-current" />
+                      <span>播此句</span>
+                    </button>
+
+                    {isActive && !player.isShadowingPause && (
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-indigo-200/70 shadow-2xs">
+                        <Volume2 className="w-3.5 h-3.5 animate-pulse text-indigo-600 shrink-0" />
+                        <span className="hidden sm:inline">
+                          {player.isLoopingSentence
+                            ? '单句循环精听中'
+                            : isWordLookupActive
+                            ? '当前朗读句 · 点词查音中'
+                            : player.playbackMode === 'single'
+                            ? '单句精听中 · 播完即停'
+                            : '连续原声播放中'}
+                        </span>
+                        <span className="sm:hidden">
+                          {player.isLoopingSentence
+                            ? '单句循环'
+                            : isWordLookupActive
+                            ? '点词查音'
+                            : player.playbackMode === 'single'
+                            ? '单句精听'
+                            : '原声朗读'}
+                        </span>
+                      </span>
+                    )}
+
+                    {isActive && player.isShadowingPause && (
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 shadow-2xs">
+                        <Mic className="w-3.5 h-3.5 animate-bounce text-emerald-600" />
+                        <span>请开口跟读复述...</span>
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {displayMode === 'blind' && (
+                      <button
+                        onClick={(e) => togglePeekSegment(seg.id, e)}
+                        className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 font-medium transition cursor-pointer shadow-2xs"
+                      >
+                        {peekedSegments[seg.id] ? (
+                          <>
+                            <EyeOff className="w-3.5 h-3.5 text-slate-600" />
+                            <span>遮罩</span>
+                          </>
+                        ) : (
+                          <>
+                            <Eye className="w-3.5 h-3.5 text-slate-600" />
+                            <span>核对</span>
+                          </>
+                        )}
+                      </button>
+                    )}
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleStarSegment(seg.id);
+                      }}
+                      title={isStarred ? '取消难句星标' : '标记为重点难句'}
+                      className={`p-1.5 rounded-lg transition cursor-pointer ${
+                        isStarred
+                          ? 'text-amber-500 bg-amber-50 hover:bg-amber-100 shadow-2xs'
+                          : 'text-slate-400 hover:text-amber-500 hover:bg-slate-100'
+                      }`}
+                    >
+                      <Star
+                        className="w-4 h-4"
+                        fill={isStarred ? 'currentColor' : 'none'}
+                      />
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  className={`transition-all duration-200 ${
+                    isBlind ? 'blur-md select-none opacity-50' : ''
+                  }`}
+                >
+                  {renderGermanSentence(seg, isActive)}
+
+                  {(displayMode === 'bilingual' ||
+                    (displayMode === 'blind' && peekedSegments[seg.id]) ||
+                    displayMode === 'dictation') && (
+                    <p className="mt-3 text-sm text-slate-600 leading-relaxed font-normal">
+                      {seg.chinese}
+                    </p>
+                  )}
+                </div>
+
+                {isBlind && (
+                  <div className="mt-3 inline-flex items-center justify-between gap-3 text-xs text-amber-800 bg-amber-50/90 px-3 py-1.5 rounded-xl border border-amber-200/80 font-medium w-full sm:w-auto shadow-2xs">
+                    <div className="flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      <span>盲听训练中：点击卡片可重新听句</span>
+                    </div>
+                    <button
+                      onClick={(e) => togglePeekSegment(seg.id, e)}
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white hover:bg-amber-100 text-amber-900 border border-amber-300 font-semibold transition cursor-pointer text-[11px] shadow-2xs"
+                    >
+                      <Eye className="w-3 h-3 text-amber-700" />
+                      <span>核对原文</span>
+                    </button>
+                  </div>
                 )}
               </div>
-
-              {isBlind && (
-                <div className="mt-3 inline-flex items-center justify-between gap-3 text-xs text-amber-800 bg-amber-50/90 px-3 py-1.5 rounded-xl border border-amber-200/80 font-medium w-full sm:w-auto shadow-2xs">
-                  <div className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>盲听训练中：点击卡片可重新听句</span>
-                  </div>
-                  <button
-                    onClick={(e) => togglePeekSegment(seg.id, e)}
-                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white hover:bg-amber-100 text-amber-900 border border-amber-300 font-semibold transition cursor-pointer text-[11px] shadow-2xs"
-                  >
-                    <Eye className="w-3 h-3 text-amber-700" />
-                    <span>核对原文</span>
-                  </button>
-                </div>
-              )}
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
     </main>
   );

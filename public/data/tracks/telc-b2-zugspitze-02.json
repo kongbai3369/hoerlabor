@@ -1,0 +1,129 @@
+{
+  "id": "telc-b2-zugspitze-02",
+  "title": "Radiointerview: Sommerlicher Neuschnee auf der Zugspitze",
+  "level": "B2",
+  "source": "telc",
+  "sourceCategory": "exam",
+  "topic": "Wetter & Reisen",
+  "taskSection": "telc B2 · Hörverstehen Teil 2 (Radiointerview)",
+  "license": "telc gGmbH Modellsatz",
+  "audioUrl": "/audio/tracks/telc_b2_zugspitze_02.mp3",
+  "originalAudioUrl": "/audio/tracks/telc_b2_zugspitze_02.mp3",
+  "originalPageUrl": "https://shop.telc.net/de_DE/",
+  "duration": 54.23,
+  "segments": [
+    {
+      "id": "telc-b2-zugspitze-02-s1",
+      "startTime": 0.0,
+      "endTime": 8.61,
+      "german": "Die Zugspitze sieht man zurzeit, wenn ich aus meinem Bürofenster rausschaue.",
+      "chinese": "我现在从办公室窗户往外看就能看到楚格峰。",
+      "clozeWords": [
+        "zurzeit",
+        "Bürofenster",
+        "rausschaue"
+      ],
+      "vocab": [
+        {
+          "word": "rausschauen",
+          "pos": "Verb",
+          "meaning": "朝外看，望向窗外（口语 = herausschauen）",
+          "exampleDe": "Wenn ich morgens rausschaue, sehe ich sofort die Berge.",
+          "exampleZh": "我早上朝外看时立刻就能看到群山。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-zugspitze-02-s2",
+      "startTime": 8.61,
+      "endTime": 12.7,
+      "german": "Die Zugspitze ist tief verschneit, der Wettersteingrat ist auch verschneit, aber wie gesagt, weiter unten ist alles grün und es ist wirklich gut zum Anschauen.",
+      "chinese": "楚格峰现在积雪很深，韦特施泰因山脊也覆盖着白雪；不过话说回来，山脚往下一片翠绿，景色其实非常赏心悦目。",
+      "clozeWords": [
+        "verschneit",
+        "weiter",
+        "Anschauen"
+      ],
+      "vocab": [
+        {
+          "word": "verschneit",
+          "pos": "Adjektiv",
+          "meaning": "被大雪覆盖的，白雪皑皑的",
+          "exampleDe": "Im Winter bieten verschneite Gipfel ein herrliches Panorama.",
+          "exampleZh": "冬天白雪覆盖的山峰呈现壮丽全景。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-zugspitze-02-s3",
+      "startTime": 12.7,
+      "endTime": 21.8,
+      "german": "Was sagen eigentlich die Feriengäste zum schlechten Wetter in den Bergen? Maulen die eigentlich schon kräftig herum oder sagen die sich: „Na ja, wir machen was draus“?",
+      "chinese": "度假游客对山区糟糕的天气作何反应？大家已经在激烈抱怨了，还是抱着“哎呀，我们照样自得其乐吧”的心态？",
+      "clozeWords": [
+        "Feriengäste",
+        "herum",
+        "draus"
+      ],
+      "vocab": [
+        {
+          "word": "maulen",
+          "pos": "Verb",
+          "meaning": "抱怨，嘟囔发牢骚（口语）",
+          "exampleDe": "Einige Gäste maulten zuerst über den Dauerregen.",
+          "exampleZh": "一开始有几位客人抱怨阴雨连绵。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-zugspitze-02-s4",
+      "startTime": 21.8,
+      "endTime": 44.5,
+      "german": "Na, das ist Gott sei Dank in Garmisch-Partenkirchen so, dass es genügend Alternativen gibt: Wir haben ja unheimlich viel zu bieten, und das schätzen die Leute. Es gibt ein Schwimmbad, es gibt ein Eisstadion, wo die Leute Schlittschuh laufen können. Zurzeit fahren sie auch gern rauf nach Oberammergau zu den Passionsspielen.",
+      "chinese": "这个嘛，幸好在加米施-帕滕基兴总有足够多的替代活动选择：我们这里能提供的项目实在非常丰富，游客们也很看重这一点。这里有游泳馆，还有可以滑冰的冰上运动场。眼下大家也很喜欢乘车上去上阿默高观看耶稣受难剧。",
+      "clozeWords": [
+        "genügend",
+        "Alternativen",
+        "schätzen"
+      ],
+      "vocab": [
+        {
+          "word": "die Alternative",
+          "pos": "Nomen",
+          "meaning": "替代方案，备选方案",
+          "exampleDe": "Bei Regen braucht man gute Alternativen für Ausflüge.",
+          "exampleZh": "下雨天郊游需要充足的室内备选方案。",
+          "plural": "die Alternativen"
+        },
+        {
+          "word": "schätzen",
+          "pos": "Verb",
+          "meaning": "珍视，赞赏；估算",
+          "exampleDe": "Urlauber schätzen das vielfältige Kulturprogramm.",
+          "exampleZh": "度假者很欣赏丰富多彩的文化活动安排。"
+        }
+      ]
+    },
+    {
+      "id": "telc-b2-zugspitze-02-s5",
+      "startTime": 44.5,
+      "endTime": 54.23,
+      "german": "Es gibt 200 Kilometer Wanderwege – also genügend Alternativen, wo man auch bei Schlechtwetter was machen kann; es gibt dreimal täglich Kurkonzerte und so, und es wird den Leuten nicht langweilig, das ist wichtig.",
+      "chinese": "此外这里还有200公里长的徒步步道——所以即使遇上坏天气也有足够多可做的事；每天还举办三次温泉疗养音乐会之类活动，客人们绝对不会觉得无聊，这非常重要。",
+      "clozeWords": [
+        "Wanderwege",
+        "Schlechtwetter",
+        "langweilig"
+      ],
+      "vocab": [
+        {
+          "word": "das Schlechtwetter",
+          "pos": "Nomen",
+          "meaning": "恶劣天气，坏天气",
+          "exampleDe": "Auch bei Schlechtwetter bleiben die Museen gut besucht.",
+          "exampleZh": "即便遇到恶劣天气，博物馆也依然游人如织。"
+        }
+      ]
+    }
+  ]
+}

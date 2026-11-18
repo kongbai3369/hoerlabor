@@ -1,0 +1,131 @@
+{
+  "id": "sg-wiedereinfuehrung-der-wehrpfli",
+  "title": "Wiedereinführung der Wehrpflicht",
+  "level": "A2",
+  "source": "Slow German",
+  "sourceCategory": "podcast",
+  "topic": "Politik & Gesellschaft",
+  "taskSection": "Slow German · Annik Rubens (SG 322)",
+  "license": "Slow German Podcast (CC BY-NC-SA)",
+  "audioUrl": "https://audio.podigee-cdn.net/2648545-m-217cb40994312752a5e5d0402c9b404d.mp3?source=feed",
+  "originalAudioUrl": "https://audio.podigee-cdn.net/2648545-m-217cb40994312752a5e5d0402c9b404d.mp3?source=feed",
+  "originalPageUrl": "https://feed.slowgerman.com/315-wiedereinfuhrung-der-wehrpflicht-sg-322",
+  "duration": 589.4,
+  "segments": [
+    {
+      "id": "sg-wiedereinfuehrung-der-wehrpfli-s1",
+      "startTime": 1.15,
+      "endTime": 10.36,
+      "german": "Gibt es bald wieder eine Wehrpflicht in Deutschland?",
+      "chinese": "德国很快又要恢复普遍义务兵役制了吗？",
+      "clozeWords": [
+        "bald",
+        "Wehrpflicht",
+        "Deutschland"
+      ],
+      "vocab": [
+        {
+          "word": "die Wehrpflicht",
+          "pos": "Nomen",
+          "meaning": "义务兵役制",
+          "exampleDe": "In einigen Ländern gilt weiterhin eine Wehrpflicht.",
+          "exampleZh": "在一些国家至今仍实行义务兵役制。"
+        }
+      ]
+    },
+    {
+      "id": "sg-wiedereinfuehrung-der-wehrpfli-s2",
+      "startTime": 10.36,
+      "endTime": 15.38,
+      "german": "Ich bin dieses Jahr 50 geworden.",
+      "chinese": "我今年刚刚年满50岁。",
+      "clozeWords": [
+        "dieses",
+        "Jahr",
+        "geworden"
+      ],
+      "vocab": [
+        {
+          "word": "werden",
+          "pos": "Verb",
+          "meaning": "成为，变为（年龄增长）",
+          "exampleDe": "Im Oktober wird mein Bruder dreißig Jahre alt.",
+          "exampleZh": "今年十月我哥哥就满三十岁了。"
+        }
+      ]
+    },
+    {
+      "id": "sg-wiedereinfuehrung-der-wehrpfli-s3",
+      "startTime": 15.38,
+      "endTime": 26.69,
+      "german": "Als ich eine junge Erwachsene war, war es ganz normal, dass die Männer „zum Bund“ gingen oder Zivildienst leisteten.",
+      "chinese": "在我还是一名刚步入社会的年轻人时，男性“入伍服役”或从事社会替代役（民役）是再正常不过的事。",
+      "clozeWords": [
+        "Erwachsene",
+        "normal",
+        "Zivildienst"
+      ],
+      "vocab": [
+        {
+          "word": "der Zivildienst",
+          "pos": "Nomen",
+          "meaning": "社会替代役，民役",
+          "exampleDe": "Früher leisteten viele junge Männer statt des Militärs Zivildienst.",
+          "exampleZh": "过去许多年轻男子选择用社会民役代替兵役。"
+        }
+      ]
+    },
+    {
+      "id": "sg-wiedereinfuehrung-der-wehrpfli-s4",
+      "startTime": 26.69,
+      "endTime": 37.58,
+      "german": "Das bedeutet, dass die jungen Männer meiner Generation für ungefähr ein Jahr einen Militärdienst leisten mussten.",
+      "chinese": "这意味着，我那一代的年轻男性必须履行大约一年的兵役义务。",
+      "clozeWords": [
+        "bedeutet",
+        "Generation",
+        "ungefähr",
+        "Militärdienst"
+      ],
+      "vocab": [
+        {
+          "word": "die Generation",
+          "pos": "Nomen",
+          "meaning": "一代人",
+          "exampleDe": "Jede Generation erlebt den technischen Wandel anders.",
+          "exampleZh": "每一代人对技术变革的体验各不相同。",
+          "plural": "die Generationen"
+        },
+        {
+          "word": "einen Dienst leisten",
+          "pos": "Ausdruck",
+          "meaning": "履行义务，服役",
+          "exampleDe": "Er hat ein freiwilliges soziales Jahr geleistet.",
+          "exampleZh": "他参加了一年的志愿社会服务。"
+        }
+      ]
+    },
+    {
+      "id": "sg-wiedereinfuehrung-der-wehrpfli-s5",
+      "startTime": 37.58,
+      "endTime": 40.76,
+      "german": "Sie waren in dieser Zeit Soldaten.",
+      "chinese": "在那段时间里，他们就是军人。",
+      "clozeWords": [
+        "dieser",
+        "Zeit",
+        "Soldaten"
+      ],
+      "vocab": [
+        {
+          "word": "der Soldat",
+          "pos": "Nomen",
+          "meaning": "士兵，军人",
+          "exampleDe": "Die Soldaten halfen beim Hochwasserschutz.",
+          "exampleZh": "士兵们协助开展了防洪救灾。",
+          "plural": "die Soldaten"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "nl-die-ukraine-hat-eine-wichtige-kr",
+  "title": "Die Ukraine hat eine wichtige Krim-Brücke von Russland kaputt gemacht",
+  "level": "A2",
+  "source": "Nachrichtenleicht",
+  "sourceCategory": "news",
+  "topic": "Politik & Weltgeschehen",
+  "taskSection": "Nachrichtenleicht · 慢速德语新闻",
+  "license": "Deutschlandradio / Bildungsnutzung",
+  "audioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/die_ukraine_hat_eine_wichtige_krim_bruecke_von_russland_dlf_20261118_0809_5f876d97.mp3",
+  "originalAudioUrl": "https://download.deutschlandfunk.de/file/dradio/2026/11/18/die_ukraine_hat_eine_wichtige_krim_bruecke_von_russland_dlf_20261118_0809_5f876d97.mp3",
+  "originalPageUrl": "https://www.nachrichtenleicht.de/krim-bruecke-getroffen-100.html",
+  "duration": 76.04,
+  "segments": [
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s1",
+      "startTime": 0.36,
+      "endTime": 12.11,
+      "german": "Die Ukraine hat eine wichtige Krim-Brücke von Russland kaputt gemacht. In der Ukraine ist Krieg. Die Ukraine verteidigt sich seit Jahren gegen Russland.",
+      "chinese": "乌克兰摧毁了俄罗斯通往克里米亚的一座重要大桥。乌克兰正在经历战争，多年来一直在抵抗俄罗斯。",
+      "clozeWords": [
+        "wichtige",
+        "Krieg",
+        "verteidigt"
+      ],
+      "vocab": [
+        {
+          "word": "kaputt machen",
+          "pos": "Ausdruck",
+          "meaning": "损坏，摧毁（口语/浅易表达）",
+          "exampleDe": "Der Sturm hat viele Dächer kaputt gemacht.",
+          "exampleZh": "暴风雨损坏了许多屋顶。"
+        },
+        {
+          "word": "der Krieg",
+          "pos": "Nomen",
+          "meaning": "战争",
+          "exampleDe": "Seit Jahren leidet das Land unter dem Krieg.",
+          "exampleZh": "这个国家多年来一直饱受战争之苦。",
+          "plural": "die Kriege"
+        },
+        {
+          "word": "sich verteidigen",
+          "pos": "Verb",
+          "meaning": "自卫，防御，保卫自己",
+          "exampleDe": "Die Stadt konnte sich erfolgreich verteidigen.",
+          "exampleZh": "这座城市成功地保卫了自己。"
+        }
+      ]
+    },
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s2",
+      "startTime": 12.11,
+      "endTime": 20.79,
+      "german": "Jetzt hat die Ukraine eine wichtige Brücke mit Raketen getroffen. Die Brücke führt von Russland zur Halb-Insel Krim.",
+      "chinese": "如今乌克兰用导弹击中了一座重要的桥梁。这座桥从俄罗斯通向克里米亚半岛。",
+      "clozeWords": [
+        "Raketen",
+        "getroffen",
+        "führt"
+      ],
+      "vocab": [
+        {
+          "word": "die Rakete",
+          "pos": "Nomen",
+          "meaning": "导弹，火箭",
+          "exampleDe": "Die Rakete flog über das Meer.",
+          "exampleZh": "导弹飞越大海。",
+          "plural": "die Raketen"
+        },
+        {
+          "word": "treffen",
+          "pos": "Verb",
+          "meaning": "击中，遇见",
+          "exampleDe": "Der Ball hat genau das Tor getroffen.",
+          "exampleZh": "球正好击中了球门。"
+        },
+        {
+          "word": "die Halbinsel",
+          "pos": "Nomen",
+          "meaning": "半岛",
+          "exampleDe": "Die Krim liegt auf einer Halbinsel am Schwarzen Meer.",
+          "exampleZh": "克里米亚位于黑海的一座半岛上。",
+          "plural": "die Halbinseln"
+        }
+      ]
+    },
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s3",
+      "startTime": 20.79,
+      "endTime": 34.15,
+      "german": "Die Krim gehört zur Ukraine. Russland hat aber im Jahr 2014 Soldaten auf die Krim geschickt und die Krim besetzt. Deswegen greift die Ukraine auch die Krim an.",
+      "chinese": "克里米亚属于乌克兰。然而俄罗斯在2014年向克里米亚派遣了士兵并占领了该地区，因此乌克兰也对克里米亚发动袭击。",
+      "clozeWords": [
+        "gehört",
+        "Soldaten",
+        "besetzt"
+      ],
+      "vocab": [
+        {
+          "word": "gehören",
+          "pos": "Verb",
+          "meaning": "属于（+ 第三格）",
+          "exampleDe": "Diese Tasche gehört meiner Schwester.",
+          "exampleZh": "这个包是我妹妹的。"
+        },
+        {
+          "word": "besetzen",
+          "pos": "Verb",
+          "meaning": "占领，占据",
+          "exampleDe": "Fremde Truppen haben die Region besetzt.",
+          "exampleZh": "外国军队占领了该地区。"
+        },
+        {
+          "word": "angreifen",
+          "pos": "Verb",
+          "meaning": "进攻，袭击",
+          "exampleDe": "Im Morgengrauen griffen die Truppen an.",
+          "exampleZh": "部队在黎明时分发动了进攻。"
+        }
+      ]
+    },
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s4",
+      "startTime": 34.15,
+      "endTime": 45.28,
+      "german": "Zwischen der Krim und dem russischen Fest-Land gab es lange keine Verbindung. 2018 hat Russland dann die Brücke zur Krim gebaut.",
+      "chinese": "长期以来，克里米亚与俄罗斯本土之间没有陆路连接。2018年俄罗斯修建了这座通往克里米亚的大桥。",
+      "clozeWords": [
+        "Verbindung",
+        "gebaut"
+      ],
+      "vocab": [
+        {
+          "word": "das Festland",
+          "pos": "Nomen",
+          "meaning": "大陆，本土",
+          "exampleDe": "Vom Festland fährt eine Fähre zur Insel.",
+          "exampleZh": "从本土有一班渡轮开往海岛。"
+        },
+        {
+          "word": "die Verbindung",
+          "pos": "Nomen",
+          "meaning": "连接，交通线路，联系",
+          "exampleDe": "Es gibt eine schnelle Zugverbindung zwischen beiden Städten.",
+          "exampleZh": "这两座城市之间有高速列车连接。",
+          "plural": "die Verbindungen"
+        }
+      ]
+    },
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s5",
+      "startTime": 45.28,
+      "endTime": 52.35,
+      "german": "Viele sagen: Die Brücke ist ein wichtiges Symbol für Russland. Die Brücke soll zeigen: Die Krim gehört zu Russland.",
+      "chinese": "许多人表示，这座桥对俄罗斯来说是一个重要象征，旨在表明“克里米亚属于俄罗斯”。",
+      "clozeWords": [
+        "wichtiges",
+        "Symbol",
+        "zeigen"
+      ],
+      "vocab": [
+        {
+          "word": "das Symbol",
+          "pos": "Nomen",
+          "meaning": "象征，符号",
+          "exampleDe": "Die Taube gilt weltweit als Symbol des Friedens.",
+          "exampleZh": "鸽子在世界各地被视为和平的象征。",
+          "plural": "die Symbole"
+        }
+      ]
+    },
+    {
+      "id": "nl-die-ukraine-hat-eine-wichtige-kr-s6",
+      "startTime": 52.35,
+      "endTime": 75.79,
+      "german": "Jetzt hat die Ukraine die Straße auf der Brücke kaputt gemacht. Das russische Militär bringt über die Brücke Waffen und andere Dinge zu seinen Soldaten auf die Krim und in die Süd-Ukraine. Die Ukraine hofft: Vielleicht können sich die russischen Soldaten dort jetzt nicht mehr so gut verteidigen.",
+      "chinese": "现在乌克兰破坏了桥面道路。俄军原本通过这座桥向克里米亚和乌克兰南部的士兵运送武器及其他物资。乌克兰方面希望：那里的俄军此后或许将难以再有效防守。",
+      "clozeWords": [
+        "Militär",
+        "Waffen",
+        "hofft"
+      ],
+      "vocab": [
+        {
+          "word": "das Militär",
+          "pos": "Nomen",
+          "meaning": "军队，军方",
+          "exampleDe": "Das Militär sicherte die Straßen ab.",
+          "exampleZh": "军方封锁并守卫了道路。"
+        },
+        {
+          "word": "die Waffe",
+          "pos": "Nomen",
+          "meaning": "武器",
+          "exampleDe": "Schwere Waffen dürfen nicht transportiert werden.",
+          "exampleZh": "禁止运输重型武器。",
+          "plural": "die Waffen"
+        },
+        {
+          "word": "hoffen",
+          "pos": "Verb",
+          "meaning": "希望，期盼",
+          "exampleDe": "Wir hoffen auf eine baldige Einigung.",
+          "exampleZh": "我们希望尽快达成协议。"
+        }
+      ]
+    }
+  ]
+}
